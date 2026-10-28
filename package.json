@@ -1,0 +1,34 @@
+{
+  "name": "ielts-practice",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
+    "dev:web": "npm run dev --workspace @ielts/web",
+    "dev:api": "npm run dev --workspace @ielts/api",
+    "build": "npm run build --workspace @ielts/web",
+    "build:api": "npm run build --workspace @ielts/api",
+    "test": "npm run test --workspace @ielts/shared",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "smoke:db": "tsx scripts/smoke-db.ts",
+    "seed:admin": "tsx scripts/seed-admin.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "gen:audio": "powershell -ExecutionPolicy Bypass -File scripts/generate-audio.ps1"
+  },
+  "devDependencies": {
+    "@breezystack/lamejs": "^1.2.7",
+    "@electric-sql/pglite": "^0.5.12",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}

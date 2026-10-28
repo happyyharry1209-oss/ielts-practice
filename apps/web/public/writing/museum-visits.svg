@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="title desc">
+  <title id="title">Annual visits to three museums, 2000 to 2020</title>
+  <desc id="desc">Grouped bar chart. The City Museum received 1.2 million visits in 2000, 1.5 million in 2010 and 0.9 million in 2020. The Art Gallery received 0.8, 1.1 and 1.4 million. The Science Centre received 0.4, 0.9 and 1.8 million.</desc>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <text x="40" y="36" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Annual visits to three museums (millions), 2000–2020</text>
+
+  <!-- legend -->
+  <g font-family="system-ui, sans-serif" font-size="13" fill="#334155">
+    <rect x="40" y="56" width="14" height="14" rx="3" fill="#2563eb"/>
+    <text x="60" y="67">City Museum</text>
+    <rect x="168" y="56" width="14" height="14" rx="3" fill="#16a34a"/>
+    <text x="188" y="67">Art Gallery</text>
+    <rect x="286" y="56" width="14" height="14" rx="3" fill="#ea580c"/>
+    <text x="306" y="67">Science Centre</text>
+  </g>
+
+  <!-- gridlines -->
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="80" y1="400" x2="760" y2="400"/>
+    <line x1="80" y1="315" x2="760" y2="315"/>
+    <line x1="80" y1="230" x2="760" y2="230"/>
+    <line x1="80" y1="145" x2="760" y2="145"/>
+    <line x1="80" y1="60"  x2="760" y2="60"/>
+  </g>
+
+  <!-- y axis labels -->
+  <g font-family="system-ui, sans-serif" font-size="12" fill="#64748b" text-anchor="end">
+    <text x="70" y="404">0</text>
+    <text x="70" y="319">0.5</text>
+    <text x="70" y="234">1.0</text>
+    <text x="70" y="149">1.5</text>
+    <text x="70" y="64">2.0</text>
+  </g>
+
+  <!-- 2000 -->
+  <g>
+    <rect x="92"  y="196" width="40" height="204" rx="3" fill="#2563eb"/>
+    <rect x="140" y="264" width="40" height="136" rx="3" fill="#16a34a"/>
+    <rect x="188" y="332" width="40" height="68"  rx="3" fill="#ea580c"/>
+  </g>
+  <!-- 2010 -->
+  <g>
+    <rect x="352" y="145" width="40" height="255" rx="3" fill="#2563eb"/>
+    <rect x="400" y="213" width="40" height="187" rx="3" fill="#16a34a"/>
+    <rect x="448" y="247" width="40" height="153" rx="3" fill="#ea580c"/>
+  </g>
+  <!-- 2020 -->
+  <g>
+    <rect x="612" y="247" width="40" height="153" rx="3" fill="#2563eb"/>
+    <rect x="660" y="162" width="40" height="238" rx="3" fill="#16a34a"/>
+    <rect x="708" y="94"  width="40" height="306" rx="3" fill="#ea580c"/>
+  </g>
+
+  <!-- x axis labels -->
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#334155" text-anchor="middle">
+    <text x="160" y="426">2000</text>
+    <text x="420" y="426">2010</text>
+    <text x="680" y="426">2020</text>
+  </g>
+
+  <!-- axis line -->
+  <line x1="80" y1="400" x2="760" y2="400" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <text x="40" y="470" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">Source: city tourism office</text>
+</svg>

@@ -1,0 +1,102 @@
+{
+  "id": "speaking-001",
+  "skill": "speaking",
+  "title": "Speaking — Demo Test 1",
+  "description": "Part 1 interview, Part 2 long turn, Part 3 discussion.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Where you live",
+      "questions": [
+        "Do you live in a house or an apartment?",
+        "What do you like most about the area where you live?",
+        "Is it a quiet place or a busy one?",
+        "Would you like to move somewhere else in the future?"
+      ]
+    },
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What do you do — do you work or are you a student?",
+        "What do you enjoy most about it?",
+        "What would you like to do in the future?",
+        "Do you prefer working alone or in a team?"
+      ]
+    },
+    {
+      "topic": "Free time",
+      "questions": [
+        "What do you usually do in your free time?",
+        "How much free time do you have during the week?",
+        "Do you prefer spending free time at home or outdoors?",
+        "Did you have more free time when you were a child?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "A skill you would like to learn",
+      "points": [
+        "what the skill is",
+        "how you would learn it",
+        "how long you think it would take",
+        "why you want to learn it"
+      ],
+      "closing": "and explain why this skill is important to you."
+    },
+    {
+      "id": "c2",
+      "topic": "A place you enjoy visiting",
+      "points": [
+        "where it is",
+        "how often you go there",
+        "what you do there",
+        "who you usually go with"
+      ],
+      "closing": "and explain why you enjoy visiting this place."
+    },
+    {
+      "id": "c3",
+      "topic": "A person who influenced you",
+      "points": [
+        "who the person is",
+        "how you know them",
+        "what they did",
+        "how they influenced you"
+      ],
+      "closing": "and explain why their influence mattered to you."
+    },
+    {
+      "id": "c4",
+      "topic": "A decision you regret",
+      "points": [
+        "what the decision was",
+        "when you made it",
+        "why you made it",
+        "what happened afterwards"
+      ],
+      "closing": "and explain what you would do differently now."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Learning new skills",
+      "questions": [
+        "Why do some people find it easier to learn new skills than others?",
+        "Should schools teach practical skills as well as academic subjects?",
+        "Is it better to learn a skill from a teacher or from the internet?",
+        "Do you think people stop learning new skills as they get older?"
+      ]
+    },
+    {
+      "topic": "Making decisions",
+      "questions": [
+        "What kinds of decisions are hardest for people to make?",
+        "Should young people ask their parents for advice about big decisions?",
+        "How has the internet changed the way people make decisions?",
+        "Are people today more or less confident about their decisions than in the past?"
+      ]
+    }
+  ]
+}

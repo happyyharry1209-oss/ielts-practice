@@ -1,0 +1,529 @@
+{
+  "id": "listening-001",
+  "skill": "listening",
+  "title": "Listening — Demo Test 1",
+  "description": "Original practice test. Four sections, 40 questions.",
+  "durationSec": 1800,
+  "transferSec": 600,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Section 1 — Sports centre membership enquiry",
+      "audioUrl": "/audio/listening-001/section1.mp3",
+      "transcript": "RECEPTIONIST: Good morning, Riverside Sports Centre. How can I help?\n\nCALLER: Hello, I'd like some information about joining the centre. My name's Daniel Brooks.\n\nRECEPTIONIST: Certainly. Could you spell your surname for me?\n\nCALLER: Yes, it's B-R-O-O-K-S.\n\nRECEPTIONIST: Thank you, Mr Brooks. And what's the best phone number for you?\n\nCALLER: It's 0784 229 5163.\n\nRECEPTIONIST: 0784 229 5163. Got it. Now, which activities are you interested in?\n\nCALLER: Well, I mainly want to play badminton. I used to play at university.\n\nRECEPTIONIST: We have four badminton courts. Which evening would suit you best?\n\nCALLER: Thursday, I think. That's the only evening I'm free.\n\nRECEPTIONIST: Thursday's fine — the courts are usually quieter then. Are you in full-time education at the moment?\n\nCALLER: Yes, I'm doing a master's degree.\n\nRECEPTIONIST: In that case you'd be eligible for a student membership. That's thirty-two pounds a month, and there's a one-off joining fee of fifteen pounds.\n\nCALLER: That sounds reasonable. What about the swimming pool?\n\nRECEPTIONIST: The pool opens at half past six in the morning and closes at ten at night. You'll need a one-pound coin for the lockers, by the way.\n\nCALLER: And is there parking?\n\nRECEPTIONIST: Yes, but it's only free after six in the evening. Before that you pay at the machine.\n\nCALLER: Understood. One more thing — do new members get anything?\n\nRECEPTIONIST: Yes, everyone gets a free induction session with one of our instructors, so you can find your way around the equipment.\n\nCALLER: That's great. I'll come in on Saturday to sign up.\n\nRECEPTIONIST: Perfect. See you then.",
+      "questions": [
+        {
+          "id": "l1q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "Surname: ______",
+          "instructions": "Complete the form. Write ONE WORD ONLY.",
+          "answer": "Brooks",
+          "wordLimit": 1,
+          "explanation": "The caller spells B-R-O-O-K-S.",
+          "location": "Early in the conversation"
+        },
+        {
+          "id": "l1q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "Phone number: ______",
+          "instructions": "Complete the form.",
+          "answer": "0784 229 5163",
+          "wordLimit": 3,
+          "acceptableAnswers": ["07842295163", "0784 2295163"],
+          "explanation": "The caller gives 0784 229 5163.",
+          "location": "Early in the conversation"
+        },
+        {
+          "id": "l1q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Main activity: ______",
+          "instructions": "Complete the form. Write ONE WORD ONLY.",
+          "answer": "badminton",
+          "wordLimit": 1,
+          "explanation": "He mainly wants to play badminton.",
+          "location": "Middle of the conversation"
+        },
+        {
+          "id": "l1q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Preferred evening: ______",
+          "instructions": "Complete the form. Write ONE WORD ONLY.",
+          "answer": "Thursday",
+          "wordLimit": 1,
+          "explanation": "Thursday is the only evening he is free.",
+          "location": "Middle of the conversation"
+        },
+        {
+          "id": "l1q5",
+          "number": 5,
+          "type": "form-completion",
+          "prompt": "Membership type: ______ membership",
+          "instructions": "Complete the form. Write ONE WORD ONLY.",
+          "answer": "student",
+          "wordLimit": 1,
+          "explanation": "He is doing a master's degree, so he is eligible for a student membership.",
+          "location": "Middle of the conversation"
+        },
+        {
+          "id": "l1q6",
+          "number": 6,
+          "type": "form-completion",
+          "prompt": "Monthly fee: £______",
+          "instructions": "Complete the form.",
+          "answer": "32",
+          "wordLimit": 2,
+          "acceptableAnswers": ["thirty-two", "thirty two"],
+          "explanation": "Thirty-two pounds a month.",
+          "location": "Middle of the conversation"
+        },
+        {
+          "id": "l1q7",
+          "number": 7,
+          "type": "note-completion",
+          "prompt": "The swimming pool opens at ______ am.",
+          "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+          "answer": "6:30",
+          "wordLimit": 2,
+          "acceptableAnswers": ["6.30", "six thirty"],
+          "explanation": "The pool opens at half past six in the morning.",
+          "location": "Later in the conversation"
+        },
+        {
+          "id": "l1q8",
+          "number": 8,
+          "type": "note-completion",
+          "prompt": "Lockers require a one-pound ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "coin",
+          "wordLimit": 1,
+          "explanation": "You need a one-pound coin for the lockers.",
+          "location": "Later in the conversation"
+        },
+        {
+          "id": "l1q9",
+          "number": 9,
+          "type": "note-completion",
+          "prompt": "Parking is free after ______ pm.",
+          "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+          "answer": "6",
+          "wordLimit": 2,
+          "acceptableAnswers": ["six", "6.00"],
+          "explanation": "Parking is free after six in the evening.",
+          "location": "Later in the conversation"
+        },
+        {
+          "id": "l1q10",
+          "number": 10,
+          "type": "note-completion",
+          "prompt": "New members receive a free ______ session.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "induction",
+          "wordLimit": 1,
+          "explanation": "Everyone gets a free induction session.",
+          "location": "End of the conversation"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Section 2 — Welcome talk at an eco park",
+      "audioUrl": "/audio/listening-001/section2.mp3",
+      "transcript": "GUIDE: Hello everyone, and welcome to Riverside Eco Park. I'm Maya, one of the volunteer guides, and I'll give you a short introduction before you explore.\n\nThe park opened twelve years ago on the site of an old water-treatment works, and it's now home to more than four hundred species of plants and animals. This year we've added something new: a butterfly garden next to the main lake. It's already attracting several species that we haven't seen here before.\n\nIf you'd like to join one of our guided walks, they leave from the main entrance every hour, on the hour. The walks take about ninety minutes and cover roughly two kilometres. I'd strongly recommend bringing walking shoes — some of the paths are uneven, especially after rain — and a waterproof jacket, because the weather here changes quickly.\n\nThe café near the car park serves hot food until four o'clock, but I should mention that it's closed on Mondays. The children's play area is right next to the café, so parents can keep an eye on the kids while they have a coffee.\n\nIf you're interested in plants, the rare orchid is flowering at the moment in the wetland area, which is the wet ground beyond the second bridge. Please stay on the boardwalk there — the soil is fragile.\n\nA word about bikes: you're welcome to cycle on the main track, but bicycles aren't allowed on the north path, because it's narrow and shared with walkers.\n\nIf I could ask one favour: our biggest problem at the moment is litter. The bins are emptied every morning, but on busy weekends they fill up quickly, so please take your rubbish home with you.\n\nFinally, if you'd like to help look after the park, we have a volunteers' group. They meet on the first Saturday of each month at nine o'clock by the tool shed. No experience is needed — just bring gloves.\n\nRight, does anyone have any questions before we set off?",
+      "questions": [
+        {
+          "id": "l2q11",
+          "number": 11,
+          "type": "multiple-choice",
+          "prompt": "What is new at the park this year?",
+          "options": [
+            "a butterfly garden",
+            "a second bridge",
+            "a new café",
+            "a larger car park"
+          ],
+          "answer": "A",
+          "explanation": "The guide says they have added a butterfly garden next to the main lake.",
+          "location": "Opening of the talk"
+        },
+        {
+          "id": "l2q12",
+          "number": 12,
+          "type": "multiple-choice",
+          "prompt": "Where do the guided walks start?",
+          "options": [
+            "at the café",
+            "at the main entrance",
+            "at the tool shed",
+            "at the wetland area"
+          ],
+          "answer": "B",
+          "explanation": "The walks leave from the main entrance every hour.",
+          "location": "Middle of the talk"
+        },
+        {
+          "id": "l2q13",
+          "number": 13,
+          "type": "multiple-choice",
+          "prompt": "What does the guide recommend bringing?",
+          "options": [
+            "a map",
+            "walking shoes",
+            "a camera",
+            "a bicycle"
+          ],
+          "answer": "B",
+          "explanation": "She strongly recommends walking shoes because some paths are uneven.",
+          "location": "Middle of the talk"
+        },
+        {
+          "id": "l2q14",
+          "number": 14,
+          "type": "multiple-choice",
+          "prompt": "On which day is the café closed?",
+          "options": ["Sunday", "Monday", "Tuesday", "Friday"],
+          "answer": "B",
+          "explanation": "The café is closed on Mondays.",
+          "location": "Middle of the talk"
+        },
+        {
+          "id": "l2q15",
+          "number": 15,
+          "type": "multiple-choice",
+          "prompt": "What is the park's biggest problem at the moment?",
+          "options": [
+            "litter",
+            "a lack of volunteers",
+            "damage from visitors' dogs",
+            "too few parking spaces"
+          ],
+          "answer": "A",
+          "explanation": "The guide mentions that litter is their biggest problem at the moment.",
+          "location": "Near the end of the talk"
+        },
+        {
+          "id": "l2q16",
+          "number": 16,
+          "type": "note-completion",
+          "prompt": "The children's play area is next to the ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "café",
+          "wordLimit": 1,
+          "acceptableAnswers": ["cafe"],
+          "explanation": "The play area is right next to the café.",
+          "location": "Middle of the talk"
+        },
+        {
+          "id": "l2q17",
+          "number": 17,
+          "type": "note-completion",
+          "prompt": "Guided walks take about ______ minutes.",
+          "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+          "answer": "90",
+          "wordLimit": 2,
+          "acceptableAnswers": ["ninety"],
+          "explanation": "The walks take about ninety minutes.",
+          "location": "Middle of the talk"
+        },
+        {
+          "id": "l2q18",
+          "number": 18,
+          "type": "note-completion",
+          "prompt": "The rare orchid can be seen in the ______ area.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "wetland",
+          "wordLimit": 1,
+          "explanation": "The rare orchid is flowering in the wetland area.",
+          "location": "Late in the talk"
+        },
+        {
+          "id": "l2q19",
+          "number": 19,
+          "type": "note-completion",
+          "prompt": "Bicycles are not allowed on the ______ path.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "north",
+          "wordLimit": 1,
+          "explanation": "Bicycles are not allowed on the north path.",
+          "location": "Late in the talk"
+        },
+        {
+          "id": "l2q20",
+          "number": 20,
+          "type": "note-completion",
+          "prompt": "Volunteers meet on the first ______ of each month.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "Saturday",
+          "wordLimit": 1,
+          "explanation": "The volunteers' group meets on the first Saturday of each month.",
+          "location": "End of the talk"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Section 3 — Students discussing a research project",
+      "audioUrl": "/audio/listening-001/section3.mp3",
+      "transcript": "TUTOR: Come in, both of you. So, how's the project going?\n\nANNA: It's going well, I think. We've finished the reading and we're ready to start collecting data.\n\nTUTOR: Remind me what the focus is.\n\nANNA: We're looking at the effect of city noise on the songs of small birds — specifically whether birds in busy areas sing at a higher pitch to be heard over traffic.\n\nTUTOR: That's a nice question. What's your plan for the data?\n\nTOM: We're going to use smartphones to record birdsong. They're not as good as professional recorders, but we can use a lot of them, so we can cover more sites.\n\nTUTOR: How many sites?\n\nTOM: Six, to begin with — three near main roads and three in quieter parks.\n\nTUTOR: Good. And when will you record?\n\nANNA: At dawn, when the birds are most active. We'll do five mornings at each site.\n\nTUTOR: That's sensible. Have you thought about permission? You'll need a permit from the council to record in the parks.\n\nTOM: We didn't know that. We'll apply this week.\n\nTUTOR: Do it early — it can take a while. One thing I'd suggest is that you write the literature review first, before the data collection. It'll help you sharpen the question, and you'll need it for the ethics form anyway.\n\nANNA: That makes sense. Is there anything you'd recommend reading?\n\nTUTOR: There's a good book by Helen Smith on urban birdsong. I'll email you the reference.\n\nTOM: Thanks. And how long should the final presentation be?\n\nTUTOR: Twelve minutes, plus five minutes for questions. And remember, the project deadline is the end of the month — so you've got about three weeks.\n\nANNA: We'll make it work. Thanks for your time.",
+      "questions": [
+        {
+          "id": "l3q21",
+          "number": 21,
+          "type": "multiple-choice",
+          "prompt": "What is the main topic of the students' project?",
+          "options": [
+            "noise levels in city parks",
+            "the effect of city noise on birdsong",
+            "the behaviour of birds in zoos",
+            "traffic problems near schools"
+          ],
+          "answer": "B",
+          "explanation": "Anna says they are looking at the effect of city noise on the songs of small birds.",
+          "location": "Early in the discussion"
+        },
+        {
+          "id": "l3q22",
+          "number": 22,
+          "type": "multiple-choice",
+          "prompt": "What does the tutor suggest the students should do first?",
+          "options": [
+            "apply for a permit",
+            "buy better recorders",
+            "write the literature review",
+            "find more recording sites"
+          ],
+          "answer": "C",
+          "explanation": "The tutor says: 'One thing I'd suggest is that you write the literature review first.'",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q23",
+          "number": 23,
+          "type": "multiple-choice",
+          "prompt": "How will the students collect their data?",
+          "options": [
+            "with professional recorders",
+            "with smartphones",
+            "by interviewing local residents",
+            "by counting birds by hand"
+          ],
+          "answer": "B",
+          "explanation": "Tom says they will use smartphones to record birdsong.",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q24",
+          "number": 24,
+          "type": "multiple-choice",
+          "prompt": "What must the students obtain from the council?",
+          "options": [
+            "a permit",
+            "a loan",
+            "a letter of reference",
+            "an insurance certificate"
+          ],
+          "answer": "A",
+          "explanation": "They need a permit from the council to record in the parks.",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q25",
+          "number": 25,
+          "type": "multiple-choice",
+          "prompt": "When is the project deadline?",
+          "options": [
+            "the end of this week",
+            "the end of the month",
+            "the middle of next month",
+            "the end of the term"
+          ],
+          "answer": "B",
+          "explanation": "The tutor says the deadline is the end of the month.",
+          "location": "End of the discussion"
+        },
+        {
+          "id": "l3q26",
+          "number": 26,
+          "type": "note-completion",
+          "prompt": "The students will record birdsong at ______ sites.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "six",
+          "wordLimit": 1,
+          "acceptableAnswers": ["6"],
+          "explanation": "Tom says six sites to begin with.",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q27",
+          "number": 27,
+          "type": "note-completion",
+          "prompt": "Recordings will be made at ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "dawn",
+          "wordLimit": 1,
+          "explanation": "Anna says they will record at dawn.",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q28",
+          "number": 28,
+          "type": "note-completion",
+          "prompt": "The students must obtain a ______ from the council.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "permit",
+          "wordLimit": 1,
+          "explanation": "A permit is needed to record in the parks.",
+          "location": "Middle of the discussion"
+        },
+        {
+          "id": "l3q29",
+          "number": 29,
+          "type": "note-completion",
+          "prompt": "The tutor recommends a book by Helen ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "Smith",
+          "wordLimit": 1,
+          "explanation": "The tutor recommends a book by Helen Smith.",
+          "location": "Late in the discussion"
+        },
+        {
+          "id": "l3q30",
+          "number": 30,
+          "type": "note-completion",
+          "prompt": "The final presentation should last ______ minutes.",
+          "instructions": "Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+          "answer": "12",
+          "wordLimit": 2,
+          "acceptableAnswers": ["twelve"],
+          "explanation": "The presentation should be twelve minutes long.",
+          "location": "End of the discussion"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Section 4 — Lecture on the history of the bicycle",
+      "audioUrl": "/audio/listening-001/section4.mp3",
+      "transcript": "LECTURER: Good afternoon. Today I want to look at the history of a machine most of us take for granted: the bicycle.\n\nThe story begins in 1817, when a German baron called Karl von Drais built a wooden machine with two wheels in line, a seat, and a handlebar. It had no pedals at all. The rider sat on it and pushed his feet against the ground to move forward, a bit like running while sitting down. It was slow, but it was the first two-wheeled vehicle that balanced on its own.\n\nIn the 1860s, a French design attached pedals directly to the front wheel. This was faster, but the solid wooden wheels and the lack of any suspension made it extremely uncomfortable on cobbled streets. It earned a memorable nickname: the boneshaker.\n\nBy the 1870s, designers had realised that a larger front wheel meant more distance per turn of the pedals. The result was the penny-farthing, with a huge front wheel and a tiny rear one. It was fast, but it was also dangerous: the rider sat high up, and a small stone in the road could throw him over the handlebars.\n\nThe modern shape of the bicycle arrived in 1885 with John Kemp Starley's Rover. It had two wheels of equal size, a chain driving the rear wheel, and a frame that kept the rider low and stable. This \"safety bicycle\" is essentially the machine we ride today.\n\nThe ride became far more comfortable in 1888, when John Boyd Dunlop, a Scottish vet, patented the pneumatic tyre — a rubber tyre filled with air instead of solid rubber. Combined with the safety frame, this made cycling smooth enough for ordinary people, including women in long skirts.\n\nThe social effects were enormous. Cycling gave women a degree of freedom that had been difficult to achieve, and it changed the design of women's clothing: long skirts were replaced by shorter ones and, eventually, by trousers. Some historians argue that the bicycle did more for women's mobility than any other invention of the period.\n\nThe 1890s saw a bicycle boom, with hundreds of manufacturers and a craze for cycling in Europe and North America. Prices fell, and the machine moved from a rich person's toy to everyday transport.\n\nToday, the bicycle is again being taken seriously as a solution to urban problems. In the Netherlands and Denmark, cities have invested heavily in infrastructure for cyclists, and cycling is often described as one of the most efficient forms of transport ever invented: it uses no fuel, takes up little space, and keeps the rider fit. Not bad for a wooden machine from 1817.\n\nNow, before I take questions, let me mention the reading for next week...",
+      "questions": [
+        {
+          "id": "l4q31",
+          "number": 31,
+          "type": "note-completion",
+          "prompt": "The first bicycle was built in ______ by Karl von Drais.",
+          "instructions": "Write ONE WORD AND/OR A NUMBER.",
+          "answer": "1817",
+          "wordLimit": 1,
+          "explanation": "The lecture begins the story in 1817.",
+          "location": "Opening of the lecture"
+        },
+        {
+          "id": "l4q32",
+          "number": 32,
+          "type": "note-completion",
+          "prompt": "The early machine had no ______ and was moved by pushing the feet against the ground.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "pedals",
+          "wordLimit": 1,
+          "explanation": "It had no pedals at all.",
+          "location": "Early in the lecture"
+        },
+        {
+          "id": "l4q33",
+          "number": 33,
+          "type": "note-completion",
+          "prompt": "The 1860s model was nicknamed the ______ because it was so uncomfortable.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "boneshaker",
+          "wordLimit": 1,
+          "explanation": "Solid wooden wheels earned it the nickname 'boneshaker'.",
+          "location": "Middle of the lecture"
+        },
+        {
+          "id": "l4q34",
+          "number": 34,
+          "type": "note-completion",
+          "prompt": "The penny-farthing had a very large ______ wheel.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "front",
+          "wordLimit": 1,
+          "explanation": "A huge front wheel and a tiny rear one.",
+          "location": "Middle of the lecture"
+        },
+        {
+          "id": "l4q35",
+          "number": 35,
+          "type": "note-completion",
+          "prompt": "The \"safety bicycle\" was designed by John Kemp ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "Starley",
+          "wordLimit": 1,
+          "explanation": "John Kemp Starley's Rover appeared in 1885.",
+          "location": "Middle of the lecture"
+        },
+        {
+          "id": "l4q36",
+          "number": 36,
+          "type": "note-completion",
+          "prompt": "The pneumatic ______ was patented by John Boyd Dunlop in 1888.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "tyre",
+          "wordLimit": 1,
+          "acceptableAnswers": ["tire"],
+          "explanation": "Dunlop patented the pneumatic tyre.",
+          "location": "Middle of the lecture"
+        },
+        {
+          "id": "l4q37",
+          "number": 37,
+          "type": "note-completion",
+          "prompt": "Cycling gave women greater ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "freedom",
+          "wordLimit": 1,
+          "acceptableAnswers": ["mobility", "independence"],
+          "explanation": "Cycling gave women a degree of freedom that had been difficult to achieve.",
+          "location": "Late in the lecture"
+        },
+        {
+          "id": "l4q38",
+          "number": 38,
+          "type": "note-completion",
+          "prompt": "The bicycle changed the design of women's ______.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "clothing",
+          "wordLimit": 1,
+          "acceptableAnswers": ["clothes", "dresses", "skirts"],
+          "explanation": "Long skirts were replaced by shorter ones and eventually trousers.",
+          "location": "Late in the lecture"
+        },
+        {
+          "id": "l4q39",
+          "number": 39,
+          "type": "note-completion",
+          "prompt": "The Netherlands and Denmark have invested heavily in ______ for cyclists.",
+          "instructions": "Write NO MORE THAN TWO WORDS.",
+          "answer": "infrastructure",
+          "wordLimit": 2,
+          "acceptableAnswers": ["cycle paths", "cycle lanes", "bike lanes"],
+          "explanation": "Cities have invested heavily in infrastructure for cyclists.",
+          "location": "End of the lecture"
+        },
+        {
+          "id": "l4q40",
+          "number": 40,
+          "type": "note-completion",
+          "prompt": "Cycling is described as one of the most ______ forms of transport.",
+          "instructions": "Write ONE WORD ONLY.",
+          "answer": "efficient",
+          "wordLimit": 1,
+          "explanation": "Cycling is described as one of the most efficient forms of transport.",
+          "location": "End of the lecture"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ielts-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build:api
+    startCommand: npm start --workspace @ielts/api
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: AUTO_MIGRATE
+        value: "true"

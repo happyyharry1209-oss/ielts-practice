@@ -1,0 +1,26 @@
+{
+  "id": "writing-001",
+  "skill": "writing",
+  "title": "Writing — Demo Test 1",
+  "description": "Task 1 (report) and Task 2 (essay), 60 minutes in total.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The chart below shows the number of visits to three museums in a European city in 2000, 2010 and 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "imageUrl": "/writing/museum-visits.svg",
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people believe that university education should be free for all students, while others argue that students should pay at least part of the cost.\n\nDiscuss both views and give your own opinion.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40,
+      "modelAnswer": "Few questions about higher education are as politically charged as who should pay for it. Those who support free university education argue that it widens access and benefits society as a whole; their opponents insist that graduates, who enjoy most of the financial reward, should contribute to the cost. In my view, a mixed system is the most defensible.\n\nThe case for free tuition rests on the idea that education is a public good. Graduates tend to earn more, pay more tax, and rely less on state support, so the money spent on teaching is largely recovered over a working lifetime. Free tuition also removes a powerful barrier for students from low-income families, who are often the most reluctant to take on debt, even when loans are available. Countries such as Germany and Norway have shown that this model is workable, and their universities remain internationally competitive.\n\nOn the other hand, free tuition is expensive, and the money has to come from somewhere: higher taxes, larger classes, or lower spending elsewhere in the education system. Critics also point out that free university education subsidises the future earnings of people who will, on average, be among the highest earners in the country. If graduates pay nothing, the cost falls on those who never attend university, which many regard as unfair.\n\nA sensible compromise is to keep tuition low and income-contingent. Students could pay a modest contribution, with grants for those from poorer backgrounds and loans repaid only once earnings exceed a certain threshold. Australia and the United Kingdom have adopted versions of this approach.\n\nIn conclusion, while free university education is an attractive ideal, a targeted system that shares the cost between graduates and the state is more sustainable, and it protects access for the students who need help most.",
+      "wordLimit": null
+    }
+  ]
+}

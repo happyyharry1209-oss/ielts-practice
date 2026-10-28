@@ -1,0 +1,521 @@
+{
+  "id": "reading-001",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Academic Reading — Demo Test 1",
+  "description": "Original practice test. Three passages, 40 questions, 60 minutes.",
+  "durationSec": 3600,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Bees of the City",
+      "body": "**A**  For most of the twentieth century, the city was regarded as a hostile place for wildlife. Yet in the last decade, rooftop hives have appeared on offices, hotels and apartment blocks in London, Paris, New York and Tokyo. Urban beekeeping has become a hobby, a corporate gift and, for some, a symbol of environmental responsibility.\n\n**B**  There are practical reasons why bees can do well in cities. Gardens, parks and railway embankments provide a remarkable variety of flowers, often in bloom for longer than farmland crops. Cities are also warmer than the surrounding countryside: the \"urban heat island\" effect can extend the flowering season by several weeks. And, crucially, urban gardens generally contain far fewer pesticides than the fields of intensive agriculture.\n\n**C**  Not everyone is convinced that more hives are good news. Critics point out that the number of managed hives in some cities has risen faster than the available forage. When thousands of colonies compete for the same flowers, even strong colonies can struggle, and the result may be weaker bees rather than healthier ones. \"Beekeeping is an agricultural activity, not a conservation measure,\" one ecologist argues.\n\n**D**  Research supports a cautious view. A 2019 study of London's honeybees found that, in areas with a high density of hives, wild bee species were less diverse, possibly because managed colonies take a large share of the pollen and nectar. The study did not show that beekeeping causes the decline, but it did suggest that adding hives is not a reliable way to help wild pollinators.\n\n**E**  So what does help? Ecologists tend to agree on a short list: plant more flowers, leave wild areas unmown, avoid pesticides, and provide nesting sites. These measures support the many wild bee species that do not live in hives at all — solitary bees, bumblebees and hoverflies. A single flowering hedge can do more for local biodiversity than a rooftop hive.\n\n**F**  None of this means that hobby beekeeping is pointless. It can raise awareness of pollinators, and a well-managed hive produces honey without harming wild species if the local environment has enough flowers. But the claim that keeping bees \"saves the bees\" is misleading. The insects most in need of help are rarely the ones in a box.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Rooftop hives can now be found in several major cities.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A names London, Paris, New York and Tokyo.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "Intensive farmland contains fewer pesticides than city gardens.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph B says urban gardens contain far fewer pesticides than farmland fields, so the statement is reversed.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The urban heat island effect can make the flowering season longer.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph B says the effect can extend the flowering season by several weeks.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Ecologists agree that adding more hives is the best way to protect wild bees.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraphs D and E argue that more hives are not a reliable way to help wild pollinators; planting and habitat measures are preferred.",
+          "location": "Paragraphs D–E"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "true-false-not-given",
+          "prompt": "The 2019 London study found lower wild bee diversity where hive density was high.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph D: in areas with a high density of hives, wild bee species were less diverse.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "true-false-not-given",
+          "prompt": "The writer believes a flowering hedge can support more biodiversity than a rooftop hive.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph E ends with exactly this comparison.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "sentence-completion",
+          "prompt": "Urban beekeeping has been used by companies as a kind of ______.",
+          "instructions": "Choose NO MORE THAN TWO WORDS from the passage.",
+          "answer": "corporate gift",
+          "wordLimit": 2,
+          "explanation": "Paragraph A lists 'a corporate gift' among the roles of urban beekeeping.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Urban flowers are often in bloom for longer than farmland ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "crops",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: flowers 'often in bloom for longer than farmland crops'.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "Critics argue that the number of hives has grown faster than the supply of ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "forage",
+          "wordLimit": 1,
+          "acceptableAnswers": ["food"],
+          "explanation": "Paragraph C: hives have risen faster than the available forage.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "The 2019 study suggested that adding hives is not a reliable way to help ______ pollinators.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "wild",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: not a reliable way to help wild pollinators.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "short-answer",
+          "prompt": "What do ecologists recommend leaving unmown to help pollinators?",
+          "instructions": "Choose NO MORE THAN TWO WORDS from the passage.",
+          "answer": "wild areas",
+          "wordLimit": 2,
+          "explanation": "Paragraph E recommends leaving wild areas unmown.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "short-answer",
+          "prompt": "Name ONE group of pollinators mentioned that does not live in hives.",
+          "instructions": "Choose NO MORE THAN TWO WORDS from the passage.",
+          "answer": "bumblebees",
+          "wordLimit": 2,
+          "acceptableAnswers": ["solitary bees", "hoverflies", "wild bees"],
+          "explanation": "Paragraph E names solitary bees, bumblebees and hoverflies as hive-free pollinators.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "short-answer",
+          "prompt": "What does the writer say hobby beekeeping can raise?",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "awareness",
+          "wordLimit": 1,
+          "explanation": "Paragraph F: 'It can raise awareness of pollinators'.",
+          "location": "Paragraph F"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Why We Forget",
+      "body": "**A**  Forgetting is often treated as a failure, something to be prevented with effort or technology. In fact, most everyday forgetting is a normal consequence of how memory works: the brain is constantly deciding what to keep and what to discard. Without this filtering, we would be overwhelmed by irrelevant detail.\n\n**B**  The first systematic study of forgetting was carried out by Hermann Ebbinghaus in 1885. Using himself as a subject, he memorised lists of nonsense syllables and tested his recall at intervals. The resulting \"forgetting curve\" showed that memory loss is steepest in the first hours and days after learning, then gradually levels off. More than a century later, the shape of the curve has proved remarkably robust.\n\n**C**  One explanation is interference. New memories can disrupt older ones, and older memories can make it harder to form new ones. Sleep appears to play an important role here: during sleep, the brain replays and consolidates recent experience, which seems to protect memories from interference.\n\n**D**  A different account emphasises retrieval failure. Memories may be stored but inaccessible without the right cue. The tip-of-the-tongue experience — knowing that you know a word but being unable to produce it — is a familiar example. Recall is also context-dependent: material learned in one room is often remembered better in the same room.\n\n**E**  Some researchers now argue that forgetting is not merely a flaw but a feature. Clearing outdated information allows the mind to generalise and to respond flexibly to a changing world. On this view, the mind is less like a warehouse and more like a library that regularly removes books no longer borrowed. Forgetting, in other words, is part of remembering well.",
+      "questions": [
+        {
+          "id": "p2q14",
+          "number": 14,
+          "type": "matching-information",
+          "prompt": "a study conducted in the nineteenth century",
+          "instructions": "Which paragraph contains the following information?",
+          "options": ["A", "B", "C", "D", "E"],
+          "answer": "B",
+          "explanation": "Ebbinghaus carried out his study in 1885 (Paragraph B).",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p2q15",
+          "number": 15,
+          "type": "matching-information",
+          "prompt": "the idea that forgetting can serve a useful purpose",
+          "instructions": "Which paragraph contains the following information?",
+          "options": ["A", "B", "C", "D", "E"],
+          "answer": "E",
+          "explanation": "Paragraph E argues forgetting is 'a feature', not merely a flaw.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p2q16",
+          "number": 16,
+          "type": "matching-information",
+          "prompt": "the influence of sleep on memory",
+          "instructions": "Which paragraph contains the following information?",
+          "options": ["A", "B", "C", "D", "E"],
+          "answer": "C",
+          "explanation": "Paragraph C explains that sleep consolidates recent experience.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p2q17",
+          "number": 17,
+          "type": "matching-information",
+          "prompt": "the difficulty of producing a word that one knows",
+          "instructions": "Which paragraph contains the following information?",
+          "options": ["A", "B", "C", "D", "E"],
+          "answer": "D",
+          "explanation": "Paragraph D describes the tip-of-the-tongue experience.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p2q18",
+          "number": 18,
+          "type": "multiple-choice",
+          "prompt": "According to the passage, the forgetting curve shows that memory loss is fastest",
+          "options": [
+            "many years after learning",
+            "in the first hours and days",
+            "during sleep",
+            "when material is tested repeatedly"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: memory loss is steepest in the first hours and days after learning.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p2q19",
+          "number": 19,
+          "type": "multiple-choice",
+          "prompt": "Interference theory suggests that forgetting may be caused by",
+          "options": [
+            "the brain deleting information at random",
+            "other memories competing",
+            "a lack of sleep only",
+            "storing memories in the wrong room"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: new memories disrupt older ones and vice versa.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p2q20",
+          "number": 20,
+          "type": "multiple-choice",
+          "prompt": "The writer compares the mind to a library in order to show that",
+          "options": [
+            "memories are stored in fixed locations",
+            "forgetting can be a sensible process",
+            "libraries are better than warehouses",
+            "all memories are eventually lost"
+          ],
+          "answer": "B",
+          "explanation": "The library image supports the view that removing books is part of good management — forgetting as a feature.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p2q21",
+          "number": 21,
+          "type": "multiple-choice",
+          "prompt": "The writer's overall attitude towards forgetting is that it is",
+          "options": [
+            "a sign of cognitive decline",
+            "unavoidable but harmful",
+            "normal and often beneficial",
+            "mainly caused by ageing"
+          ],
+          "answer": "C",
+          "explanation": "The whole passage, especially Paragraph E, presents forgetting as normal and useful.",
+          "location": "Passage 2 overall"
+        },
+        {
+          "id": "p2q22",
+          "number": 22,
+          "type": "summary-completion",
+          "prompt": "Ebbinghaus studied memory using lists of ______ syllables.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY from the passage.",
+          "answer": "nonsense",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: lists of nonsense syllables.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p2q23",
+          "number": 23,
+          "type": "summary-completion",
+          "prompt": "Interference theory suggests that ______ helps to consolidate memories.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY from the passage.",
+          "answer": "sleep",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: during sleep the brain replays and consolidates recent experience.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p2q24",
+          "number": 24,
+          "type": "summary-completion",
+          "prompt": "Memories may be hard to access without a suitable ______.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY from the passage.",
+          "answer": "cue",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: memories may be inaccessible without the right cue.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p2q25",
+          "number": 25,
+          "type": "summary-completion",
+          "prompt": "Recall depends on ______: people remember more in the place where they learned.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY from the passage.",
+          "answer": "context",
+          "wordLimit": 1,
+          "explanation": "Paragraph D describes recall as context-dependent.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p2q26",
+          "number": 26,
+          "type": "summary-completion",
+          "prompt": "Forgetting may help the brain to discard ______ information.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY from the passage.",
+          "answer": "outdated",
+          "wordLimit": 1,
+          "explanation": "Paragraph E: clearing outdated information allows the mind to generalise.",
+          "location": "Paragraph E"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "The Second-Hand Economy",
+      "body": "**A**  Buying used goods was once associated with necessity, a choice made by people who could not afford anything better. In the past decade, resale has acquired a different image. Online marketplaces and resale apps have made it easy to buy and sell everything from designer coats to children's bicycles, and second-hand shopping is now presented as stylish, thrifty and responsible.\n\n**B**  The most powerful driver, however, is money. As living costs have risen, households have looked for ways to reduce spending and to recover value from things they no longer use. A coat that can be resold is cheaper to own than one that cannot.\n\n**C**  The environmental case is less straightforward than it appears. Reusing a product does avoid the emissions of making a new one, and extending a garment's life is clearly better than throwing it away. But the benefits depend on how the item is transported, how often it is actually worn, and what happens to it afterwards. Returns and long-distance shipping can reduce the savings considerably.\n\n**D**  Brands have responded in different ways. Some have launched their own resale platforms, hoping to keep control of the second-hand market and to attract customers who would not pay full price. Others worry that resale could take sales from new products, and some have been accused of designing goods that are hard to repair.\n\n**E**  Behind the friendly interface, resale has practical problems. Authentication is difficult and expensive: distinguishing genuine items from counterfeits requires trained staff and specialist equipment. Sorting centres also depend on large numbers of workers doing repetitive and sometimes precarious jobs.\n\n**F**  What happens next will depend partly on regulation. Several governments are considering rules on product durability and on the \"right to repair\", which would make resale easier and more trustworthy. Standardised labels for second-hand condition are also being discussed. The market is likely to keep growing, but its environmental reputation will depend on whether these problems are addressed.",
+      "questions": [
+        {
+          "id": "p3q27",
+          "number": 27,
+          "type": "yes-no-not-given",
+          "prompt": "The writer says second-hand goods were once seen as inferior.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph A: used goods were 'associated with necessity... people who could not afford anything better'.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p3q28",
+          "number": 28,
+          "type": "yes-no-not-given",
+          "prompt": "The main reason for the growth of resale is concern about the environment.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph B says the most powerful driver is money.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p3q29",
+          "number": 29,
+          "type": "yes-no-not-given",
+          "prompt": "Reusing a product always reduces its total environmental impact.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C says the benefits depend on transport, frequency of use and what happens afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p3q30",
+          "number": 30,
+          "type": "yes-no-not-given",
+          "prompt": "Some brands worry that resale may reduce sales of new products.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph D: 'Others worry that resale could take sales from new products'.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p3q31",
+          "number": 31,
+          "type": "yes-no-not-given",
+          "prompt": "Counterfeit goods are a problem for resale platforms.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph E: authentication means distinguishing genuine items from counterfeits.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p3q32",
+          "number": 32,
+          "type": "yes-no-not-given",
+          "prompt": "The writer expects the resale market to shrink.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph F says the market is likely to keep growing.",
+          "location": "Paragraph F"
+        },
+        {
+          "id": "p3q33",
+          "number": 33,
+          "type": "matching-headings",
+          "prompt": "Paragraph A",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A new image" },
+            { "id": "ii", "text": "The money motive" },
+            { "id": "iii", "text": "Environmental trade-offs" },
+            { "id": "iv", "text": "How businesses are responding" },
+            { "id": "v", "text": "Problems behind the platform" },
+            { "id": "vi", "text": "The road ahead" }
+          ],
+          "answer": "i",
+          "explanation": "Paragraph A contrasts the old image of second-hand goods with the new one.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p3q34",
+          "number": 34,
+          "type": "matching-headings",
+          "prompt": "Paragraph C",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A new image" },
+            { "id": "ii", "text": "The money motive" },
+            { "id": "iii", "text": "Environmental trade-offs" },
+            { "id": "iv", "text": "How businesses are responding" },
+            { "id": "v", "text": "Problems behind the platform" },
+            { "id": "vi", "text": "The road ahead" }
+          ],
+          "answer": "iii",
+          "explanation": "Paragraph C weighs the environmental benefits against transport and returns.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p3q35",
+          "number": 35,
+          "type": "matching-headings",
+          "prompt": "Paragraph E",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A new image" },
+            { "id": "ii", "text": "The money motive" },
+            { "id": "iii", "text": "Environmental trade-offs" },
+            { "id": "iv", "text": "How businesses are responding" },
+            { "id": "v", "text": "Problems behind the platform" },
+            { "id": "vi", "text": "The road ahead" }
+          ],
+          "answer": "v",
+          "explanation": "Paragraph E deals with authentication and labour problems.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p3q36",
+          "number": 36,
+          "type": "matching-headings",
+          "prompt": "Paragraph F",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A new image" },
+            { "id": "ii", "text": "The money motive" },
+            { "id": "iii", "text": "Environmental trade-offs" },
+            { "id": "iv", "text": "How businesses are responding" },
+            { "id": "v", "text": "Problems behind the platform" },
+            { "id": "vi", "text": "The road ahead" }
+          ],
+          "answer": "vi",
+          "explanation": "Paragraph F discusses regulation and what happens next.",
+          "location": "Paragraph F"
+        },
+        {
+          "id": "p3q37",
+          "number": 37,
+          "type": "multiple-choice",
+          "prompt": "What does the writer suggest about the environmental benefits of resale?",
+          "options": [
+            "They are always greater than expected.",
+            "They depend on how items are transported and used.",
+            "They are impossible to measure.",
+            "They are the main reason people buy second-hand."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: the benefits depend on transport, use and disposal.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p3q38",
+          "number": 38,
+          "type": "multiple-choice",
+          "prompt": "Some brands launch their own resale platforms in order to",
+          "options": [
+            "reduce their production costs",
+            "keep control of the second-hand market",
+            "avoid government regulation",
+            "stop customers buying new products"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D: 'hoping to keep control of the second-hand market'.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p3q39",
+          "number": 39,
+          "type": "multiple-choice",
+          "prompt": "Authentication is described as difficult because it",
+          "options": [
+            "requires trained staff and specialist equipment",
+            "is illegal in some countries",
+            "is only possible for designer coats",
+            "is cheaper than making new products"
+          ],
+          "answer": "A",
+          "explanation": "Paragraph E: distinguishing genuine items from counterfeits requires trained staff and specialist equipment.",
+          "location": "Paragraph E"
+        },
+        {
+          "id": "p3q40",
+          "number": 40,
+          "type": "multiple-choice",
+          "prompt": "The writer believes the future of the resale market will partly depend on",
+          "options": [
+            "the price of new goods",
+            "the number of resale apps",
+            "regulation and durability rules",
+            "the opinions of fashion designers"
+          ],
+          "answer": "C",
+          "explanation": "Paragraph F: regulation, product durability and the right to repair.",
+          "location": "Paragraph F"
+        }
+      ]
+    }
+  ]
+}
