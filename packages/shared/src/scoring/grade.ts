@@ -36,6 +36,21 @@ export function isMultiAnswer(type: QuestionType): boolean {
   return MULTI_ANSWER_TYPES.includes(type);
 }
 
+/**
+ * Multi-answer questions are authored as letters (["A", "C"]) but the UI may
+ * store the option text the candidate clicked. Convert text back to letters
+ * before comparing sets.
+ */
+function mapToLetters(values: string[], expected: string[], options?: string[]): string[] {
+  const expectedAreLetters = expected.every((value) => /^[a-z]$/i.test(value.trim()));
+  if (!expectedAreLetters || !options || options.length === 0) return values;
+  return values.map((value) => {
+    const normalized = normalizeText(value);
+    const index = options.findIndex((option) => normalizeText(option) === normalized);
+    return index >= 0 ? String.fromCharCode(65 + index) : value;
+  });
+}
+
 function isEmpty(value: AnswerValue): boolean {
   if (value == null) return true;
   if (Array.isArray(value)) return value.every((v) => !String(v).trim());
@@ -70,8 +85,9 @@ export function gradeQuestion(question: Question, userAnswer: AnswerValue): Item
 
   if (isMultiAnswer(question.type)) {
     const expected = asArray(question.answer);
+    const chosen = mapToLetters(given, expected, question.options);
     const ok =
-      given.length === expected.length && setEquals(given, expected);
+      chosen.length === expected.length && setEquals(chosen, expected);
     return { ...base, correct: ok, reason: ok ? undefined : 'wrong' };
   }
 

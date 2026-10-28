@@ -100,6 +100,16 @@ describe('gradeQuestion — choice', () => {
     expect(gradeQuestion(ma, ['A']).correct).toBe(false);
     expect(gradeQuestion(ma, ['A', 'B']).correct).toBe(false);
   });
+
+  it('accepts option text for multiple-answer', () => {
+    const ma = q({
+      type: 'multiple-answer',
+      answer: ['A', 'C'],
+      options: ['cheaper tickets', 'longer flights', 'more legroom', 'free food'],
+    });
+    expect(gradeQuestion(ma, ['more legroom', 'cheaper tickets']).correct).toBe(true);
+    expect(gradeQuestion(ma, ['cheaper tickets', 'longer flights']).correct).toBe(false);
+  });
 });
 
 describe('gradeQuestions', () => {
