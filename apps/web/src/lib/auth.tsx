@@ -7,21 +7,29 @@ export interface User {
   email: string;
   displayName: string;
   role: 'user' | 'admin';
+  emailVerified: boolean;
   createdAt: string;
 }
 
 interface AuthResponse {
   token: string;
   user: User;
+  /** Present only when the API has no mail provider and is running locally. */
+  debugLink?: string;
 }
 
 interface AuthContextValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (email: string, password: string, displayName: string) => Promise<void>;
+  register: (
+    email: string,
+    password: string,
+    displayName: string,
+  ) => Promise<{ debugLink?: string }>;
   logout: () => void;
   isAdmin: boolean;
+  refreshUser: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -69,6 +77,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       setToken(response.token);
       setUser(response.user);
+      return { debugLink: response.debugLink };
     },
     [],
   );
@@ -78,6 +87,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   }, []);
 
+  const refreshUser = useCallback(async () => {
+    const response = await api<{ user: User }>('/api/auth/me');
+    setUser(response.user);
+  }, []);
+
   const value = useMemo<AuthContextValue>(
     () => ({
       user,
@@ -85,9 +99,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       login,
       register,
       logout,
+      refreshUser,
       isAdmin: user?.role === 'admin',
     }),
-    [user, loading, login, register, logout],
+    [user, loading, login, register, logout, refreshUser],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

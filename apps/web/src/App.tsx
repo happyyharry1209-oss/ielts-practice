@@ -3,14 +3,17 @@ import { Layout } from './components/Layout';
 import { Spinner } from './components/ui';
 import { useAuth } from './lib/auth';
 import Admin from './pages/Admin';
+import ForgotPassword from './pages/ForgotPassword';
 import Home from './pages/Home';
 import ListeningExam from './pages/ListeningExam';
 import Login from './pages/Login';
 import Practice from './pages/Practice';
 import ReadingExam from './pages/ReadingExam';
 import Register from './pages/Register';
+import ResetPassword from './pages/ResetPassword';
 import Result from './pages/Result';
 import SpeakingExam from './pages/SpeakingExam';
+import VerifyEmail from './pages/VerifyEmail';
 import WritingExam from './pages/WritingExam';
 
 function RequireAuth({ withLayout = true }: { withLayout?: boolean }) {
@@ -51,6 +54,9 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/verify-email" element={<VerifyEmail />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
 
       <Route element={<RequireAuth />}>
         <Route path="/" element={<Home />} />

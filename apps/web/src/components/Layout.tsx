@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { setLanguage } from '../lib/i18n';
 import { cn } from '../lib/utils';
@@ -16,6 +18,23 @@ export function Layout() {
   const { user, logout, isAdmin } = useAuth();
   const navigate = useNavigate();
   const language = i18n.language === 'zh-TW' ? 'zh-TW' : 'en';
+  const [resending, setResending] = useState(false);
+  const [debugToken, setDebugToken] = useState<string | null>(null);
+
+  const resendVerification = async () => {
+    setResending(true);
+    try {
+      const response = await api<{ debugLink?: string }>('/api/auth/resend-verification', {
+        method: 'POST',
+      });
+      const token = response.debugLink?.split('token=')[1];
+      if (token) setDebugToken(token);
+    } catch {
+      /* the banner is not critical; ignore failures */
+    } finally {
+      setResending(false);
+    }
+  };
 
   const handleLogout = () => {
     logout();
@@ -87,6 +106,30 @@ export function Layout() {
           </div>
         </div>
       </header>
+
+      {user && !user.emailVerified ? (
+        <div className="border-b border-amber-200 bg-amber-50">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2 text-sm text-amber-900">
+            <span>{t('auth.emailUnverified')}</span>
+            <button
+              type="button"
+              onClick={() => void resendVerification()}
+              disabled={resending}
+              className="font-semibold underline underline-offset-2 disabled:opacity-50"
+            >
+              {resending ? t('auth.resending') : t('auth.resend')}
+            </button>
+            {debugToken ? (
+              <Link
+                to={`/verify-email?token=${debugToken}`}
+                className="rounded-lg bg-amber-900 px-2 py-1 text-xs font-semibold text-amber-50"
+              >
+                {t('auth.debugLink')}
+              </Link>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
 
       <main className="mx-auto max-w-6xl px-4 py-8">
         <Outlet />

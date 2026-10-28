@@ -82,9 +82,14 @@ npm run db:migrate
 |---|---|
 | `DATABASE_URL` | 第 2 步的連線字串 |
 | `CORS_ORIGIN` | `https://<你的帳號>.github.io`（只到 origin，不要加路徑、不要加斜線） |
+| `APP_URL` | `https://<你的帳號>.github.io/<repo>`（驗證信／重設信裡的連結會用到，**一定要設**） |
+| `RESEND_API_KEY` | 可選；不填就把驗證／重設連結印在 Render log |
 | `DEEPSEEK_API_KEY` | 可選；不填就用規則型評分 |
 
 `JWT_SECRET` 由 `render.yaml` 自動產生，不用手動設。
+
+> 沒有 `RESEND_API_KEY` 時，註冊不會真的寄信，但帳號仍可登入（會顯示「未驗證」提示條）；
+> 忘記密碼則需要管理員從 Render log 取連結，或直接用 `seed:admin` 重設密碼。
 
 3. Deploy 完打開 `https://<service>.onrender.com/api/health`，應該看到：
 

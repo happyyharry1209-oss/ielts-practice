@@ -71,4 +71,11 @@ export const env = {
   autoMigrate: process.env.AUTO_MIGRATE !== 'false',
   /** Max AI scoring requests per user per hour. */
   aiHourlyLimit: Number(process.env.AI_HOURLY_LIMIT ?? 20),
+
+  /** Public URL of the web app, used to build links inside emails. */
+  appUrl: (process.env.APP_URL ?? 'http://localhost:5173').replace(/\/+$/, ''),
+  resendApiKey: process.env.RESEND_API_KEY ?? '',
+  mailFrom: process.env.MAIL_FROM ?? 'IELTS Practice <onboarding@resend.dev>',
+  /** Set REGISTRATION_OPEN=false to close public sign-ups. */
+  registrationOpen: process.env.REGISTRATION_OPEN !== 'false',
 };

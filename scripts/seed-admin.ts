@@ -38,7 +38,9 @@ async function main() {
     );
 
     if (existing) {
-      await query("update users set role = 'admin' where id = $1", [existing.id]);
+      await query("update users set role = 'admin', email_verified = true where id = $1", [
+        existing.id,
+      ]);
       if (process.env.ADMIN_RESET_PASSWORD === 'true') {
         await query('update users set password_hash = $1 where id = $2', [
           hashPassword(password),
@@ -53,8 +55,8 @@ async function main() {
     }
 
     await query(
-      `insert into users (email, password_hash, display_name, role)
-       values ($1, $2, $3, 'admin')`,
+      `insert into users (email, password_hash, display_name, role, email_verified)
+       values ($1, $2, $3, 'admin', true)`,
       [email, hashPassword(password), name],
     );
     console.log(`✔ admin account created: ${email}`);

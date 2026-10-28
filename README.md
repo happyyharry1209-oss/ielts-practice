@@ -168,14 +168,34 @@ Both are labelled *estimated*, not official IELTS results.
 | `DATABASE_URL` | yes | Postgres connection string |
 | `JWT_SECRET` | in production | Signs auth tokens; generate 48 random bytes |
 | `CORS_ORIGIN` | yes in production | Comma-separated allowed browser origins |
+| `APP_URL` | in production | Public URL of the web app, used in email links |
 | `PORT` | no | API port (default 8787) |
 | `DEEPSEEK_API_KEY` | no | Enables real AI writing feedback |
 | `AI_HOURLY_LIMIT` | no | AI requests per user per hour (default 20) |
+| `RESEND_API_KEY` | no | Sends verification / reset emails; without it links go to the API log |
+| `MAIL_FROM` | no | Sender address for those emails |
+| `REGISTRATION_OPEN` | no | Set to `false` to close public sign-ups |
 | `CONTENT_DIR` | no | Override the content directory |
 | `AUTO_MIGRATE` | no | Create tables on boot (default true) |
 
 The API loads `.env` from the repo root automatically. Existing environment variables always win,
 which is what hosted platforms expect.
+
+---
+
+## Accounts and passwords
+
+- **Email verification** is soft: accounts work immediately, and an unverified banner appears until
+  the address is confirmed. Verification tokens are stored hashed, single-use and expire in 24 hours.
+- **Password reset** sends a single-use link that expires in 1 hour. Requesting a reset always
+  answers `200`, so the endpoint cannot be used to discover which emails exist.
+- **Email delivery** uses [Resend](https://resend.com) when `RESEND_API_KEY` is set. Without a key
+  the API prints the link to its log — handy locally, and enough to verify an account by hand.
+
+To close public sign-ups, set `REGISTRATION_OPEN=false` on the API. Existing accounts keep working.
+
+> Reset tokens and sessions are independent: changing a password does not invalidate JWTs that were
+> already issued. They expire 7 days after login.
 
 ---
 
@@ -210,7 +230,8 @@ free host such as Render or Fly.io.
 
 1. Push this repo to GitHub.
 2. In Render: **New → Blueprint**, pick the repo (it reads `render.yaml`).
-3. Set `DATABASE_URL`, `CORS_ORIGIN` (your Pages origin) and optionally `DEEPSEEK_API_KEY`.
+3. Set `DATABASE_URL`, `CORS_ORIGIN` (your Pages origin), `APP_URL` (the full Pages URL, e.g.
+   `https://<user>.github.io/<repo>`) and optionally `DEEPSEEK_API_KEY` / `RESEND_API_KEY`.
 4. Deploy, then check `https://<service>.onrender.com/api/health`.
 
 Free Render services sleep after 15 minutes; the first request afterwards is slow.

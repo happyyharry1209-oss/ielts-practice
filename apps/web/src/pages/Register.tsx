@@ -23,10 +23,15 @@ export default function Register() {
     setBusy(true);
     setError(null);
     try {
-      await register(email, password, displayName);
-      navigate('/', { replace: true });
+      const { debugLink } = await register(email, password, displayName);
+      // In local development there is no mail provider, so the API returns the
+      // verification link and we can take the user straight to it.
+      const token = debugLink?.split('token=')[1];
+      if (token) navigate(`/verify-email?token=${token}`, { replace: true });
+      else navigate('/', { replace: true });
     } catch (err) {
       if (err instanceof ApiError && err.status === 409) setError(t('auth.emailTaken'));
+      else if (err instanceof ApiError && err.status === 403) setError(t('auth.registrationClosed'));
       else if (err instanceof ApiError && err.status === 0) setError(t('errors.network'));
       else setError(t('errors.generic'));
     } finally {

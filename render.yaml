@@ -17,6 +17,16 @@ services:
         generateValue: true
       - key: CORS_ORIGIN
         sync: false
+      # Public URL of the web app, used to build verification / reset links.
+      - key: APP_URL
+        sync: false
+      # Optional. Without it, links are printed to the Render logs instead.
+      - key: RESEND_API_KEY
+        sync: false
+      - key: MAIL_FROM
+        value: IELTS Practice <onboarding@resend.dev>
+      - key: REGISTRATION_OPEN
+        value: "true"
       - key: DEEPSEEK_API_KEY
         sync: false
       - key: AI_HOURLY_LIMIT

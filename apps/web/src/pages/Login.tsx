@@ -92,6 +92,15 @@ export default function Login() {
               />
             </Field>
 
+            <div className="-mt-2 flex justify-end">
+              <Link
+                to="/forgot-password"
+                className="text-xs font-medium text-slate-500 hover:text-brand-600"
+              >
+                {t('auth.forgotPassword')}
+              </Link>
+            </div>
+
             {error ? (
               <p className="rounded-xl bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p>
             ) : null}

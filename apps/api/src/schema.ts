@@ -9,6 +9,23 @@ create table if not exists users (
   last_login_at timestamptz
 );
 
+-- Added later: email verification. Separate statements so existing databases
+-- upgrade themselves on the next boot without a manual migration.
+alter table users add column if not exists email_verified boolean not null default false;
+update users set email_verified = true where role = 'admin' and email_verified = false;
+
+create table if not exists auth_tokens (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references users(id) on delete cascade,
+  kind text not null check (kind in ('verify_email', 'reset_password')),
+  token_hash text not null unique,
+  expires_at timestamptz not null,
+  used_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists auth_tokens_user_idx on auth_tokens (user_id, kind);
+
 create table if not exists attempts (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references users(id) on delete cascade,
