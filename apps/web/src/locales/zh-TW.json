@@ -95,10 +95,15 @@
     "clearAnswer": "清除",
     "audioHint": "模擬考模式下錄音只播放一次。",
     "onePlay": "只播一次",
+    "playedOnce": "已播放",
     "replay": "重新播放",
     "practiceMode": "練習模式",
     "mockMode": "模擬考",
-    "listeningTip": "錄音開始前先看題目。"
+    "listeningTip": "錄音開始前先看題目。",
+    "previousPassage": "上一篇文章",
+    "nextPassage": "下一篇文章",
+    "previousSection": "上一個 section",
+    "nextSection": "下一個 section"
   },
   "results": {
     "title": "成績",

@@ -76,6 +76,12 @@ export default function ListeningExam() {
   const section = test.sections[sectionIndex]!;
   const alreadyPlayed = Boolean(played[section.id]);
 
+  const goToSection = (index: number) => {
+    const next = Math.max(0, Math.min(test.sections.length - 1, index));
+    setSectionIndex(next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const startPlayback = async () => {
     const element = audioRef.current;
     if (!element) return;
@@ -108,7 +114,7 @@ export default function ListeningExam() {
                 <button
                   key={item.id}
                   type="button"
-                  onClick={() => setSectionIndex(index)}
+                  onClick={() => goToSection(index)}
                   className={cn(
                     'w-full rounded-lg px-3 py-2 text-left text-xs font-medium transition',
                     index === sectionIndex
@@ -131,7 +137,7 @@ export default function ListeningExam() {
             <button
               key={item.id}
               type="button"
-              onClick={() => setSectionIndex(index)}
+              onClick={() => goToSection(index)}
               className={cn(
                 'rounded-xl px-3 py-1.5 text-sm font-medium transition',
                 index === sectionIndex
@@ -172,7 +178,7 @@ export default function ListeningExam() {
                   disabled={alreadyPlayed || submitting}
                 >
                   <Play className="h-4 w-4" />
-                  {alreadyPlayed ? t('exam.onePlay') : t('exam.onePlay')}
+                  {alreadyPlayed ? t('exam.playedOnce') : t('exam.onePlay')}
                 </button>
                 <span className="text-xs text-slate-500">{t('exam.audioHint')}</span>
               </div>
@@ -192,6 +198,30 @@ export default function ListeningExam() {
               disabled={submitting}
             />
           ))}
+
+          <div className="flex items-center justify-between gap-3 pt-2">
+            <button
+              type="button"
+              className="btn-secondary"
+              disabled={sectionIndex === 0}
+              onClick={() => goToSection(sectionIndex - 1)}
+            >
+              ← {t('exam.previousSection')}
+            </button>
+            {sectionIndex < test.sections.length - 1 ? (
+              <button
+                type="button"
+                className="btn-primary"
+                onClick={() => goToSection(sectionIndex + 1)}
+              >
+                {t('exam.nextSection')} →
+              </button>
+            ) : (
+              <button type="button" className="btn-primary" onClick={() => setConfirmOpen(true)}>
+                {t('exam.submitExam')}
+              </button>
+            )}
+          </div>
         </section>
       </ExamShell>
 

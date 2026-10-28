@@ -95,10 +95,15 @@
     "clearAnswer": "Clear",
     "audioHint": "The recording plays once in mock mode.",
     "onePlay": "Play once",
+    "playedOnce": "Played",
     "replay": "Replay",
     "practiceMode": "Practice mode",
     "mockMode": "Mock exam",
-    "listeningTip": "Read the questions before the recording starts."
+    "listeningTip": "Read the questions before the recording starts.",
+    "previousPassage": "Previous passage",
+    "nextPassage": "Next passage",
+    "previousSection": "Previous section",
+    "nextSection": "Next section"
   },
   "results": {
     "title": "Result",

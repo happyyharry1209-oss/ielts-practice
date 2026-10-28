@@ -66,6 +66,28 @@ export default function ReadingExam() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timer.expired]);
 
+  // Question id -> passage index, so sidebar jumps can switch passage first.
+  const passageIndexFor = useMemo(() => {
+    const map = new Map<string, number>();
+    test?.passages.forEach((item, index) => {
+      item.questions.forEach((question) => map.set(question.id, index));
+    });
+    return map;
+  }, [test]);
+
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!pendingScroll) return;
+    const timer = window.setTimeout(() => {
+      document
+        .getElementById(`q-${pendingScroll}`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setPendingScroll(null);
+    }, 80);
+    return () => window.clearTimeout(timer);
+  }, [pendingScroll, passageIndex]);
+
   if (isLoading) return <Spinner label={t('common.loading')} />;
   if (loadError || !test) {
     return <div className="p-10 text-center text-sm text-rose-600">{errorMessage(loadError)}</div>;
@@ -73,8 +95,23 @@ export default function ReadingExam() {
 
   const passage = test.passages[passageIndex]!;
 
+  const goToPassage = (index: number) => {
+    const next = Math.max(0, Math.min(test.passages.length - 1, index));
+    setPassageIndex(next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const jumpTo = (questionId: string) => {
-    document.getElementById(`q-${questionId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const target = passageIndexFor.get(questionId);
+    if (target === undefined) return;
+    if (target === passageIndex) {
+      document
+        .getElementById(`q-${questionId}`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    setPassageIndex(target);
+    setPendingScroll(questionId);
   };
 
   return (
@@ -127,7 +164,7 @@ export default function ReadingExam() {
             <button
               key={item.id}
               type="button"
-              onClick={() => setPassageIndex(index)}
+              onClick={() => goToPassage(index)}
               className={cn(
                 'rounded-xl px-3 py-1.5 text-sm font-medium transition',
                 index === passageIndex
@@ -161,6 +198,34 @@ export default function ReadingExam() {
                 />
               </div>
             ))}
+
+            <div className="flex items-center justify-between gap-3 pt-2">
+              <button
+                type="button"
+                className="btn-secondary"
+                disabled={passageIndex === 0}
+                onClick={() => goToPassage(passageIndex - 1)}
+              >
+                ← {t('exam.previousPassage')}
+              </button>
+              {passageIndex < test.passages.length - 1 ? (
+                <button
+                  type="button"
+                  className="btn-primary"
+                  onClick={() => goToPassage(passageIndex + 1)}
+                >
+                  {t('exam.nextPassage')} →
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="btn-primary"
+                  onClick={() => setConfirmOpen(true)}
+                >
+                  {t('exam.submitExam')}
+                </button>
+              )}
+            </div>
           </section>
         </div>
       </ExamShell>
