@@ -4,7 +4,6 @@ import { createResetToken } from '../authTokens';
 import { getContent } from '../content';
 import { query, queryOne } from '../db';
 import { HttpError, parseBody, requireAdmin, requireAuth } from '../http';
-import { appLink } from '../mailer';
 
 export const adminRoutes = new Hono();
 
@@ -75,8 +74,11 @@ adminRoutes.patch('/users/:id', async (c) => {
 });
 
 /**
- * Create a password-reset link for a user. This is the fallback when no mail
+ * Create a password-reset token for a user. This is the fallback when no mail
  * provider is configured: the admin copies the link and sends it manually.
+ *
+ * Only the token is returned — the browser builds the absolute URL from its own
+ * origin and base path, so this works even when APP_URL is not configured.
  */
 adminRoutes.post('/users/:id/reset-link', async (c) => {
   const target = await queryOne<{ id: string; email: string }>(
@@ -88,7 +90,7 @@ adminRoutes.post('/users/:id/reset-link', async (c) => {
   const token = await createResetToken(target.id);
   return c.json({
     email: target.email,
-    link: appLink(`reset-password?token=${encodeURIComponent(token)}`),
+    token,
     expiresInMinutes: 60,
   });
 });

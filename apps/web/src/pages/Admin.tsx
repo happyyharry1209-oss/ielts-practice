@@ -72,12 +72,18 @@ export default function Admin() {
 
   const createResetLink = useMutation({
     mutationFn: (id: string) =>
-      api<{ email: string; link: string; expiresInMinutes: number }>(
+      api<{ email: string; token: string; expiresInMinutes: number }>(
         `/api/admin/users/${id}/reset-link`,
         { method: 'POST' },
       ),
     onSuccess: (data) => {
-      setResetInfo({ email: data.email, link: data.link });
+      // Build the absolute URL in the browser: this works on GitHub Pages
+      // sub-paths without needing APP_URL on the server.
+      const path = `${import.meta.env.BASE_URL}#/reset-password?token=${encodeURIComponent(data.token)}`;
+      setResetInfo({
+        email: data.email,
+        link: `${window.location.origin}${path}`,
+      });
       setCopied(false);
     },
   });
