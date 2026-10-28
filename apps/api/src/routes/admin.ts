@@ -1,10 +1,39 @@
 import { Hono } from 'hono';
+import { connect } from 'node:net';
 import { z } from 'zod';
 import { createResetToken } from '../authTokens';
 import { getContent } from '../content';
 import { query, queryOne } from '../db';
 import { HttpError, parseBody, requireAdmin, requireAuth } from '../http';
 import { mailerConfigured, sendMail } from '../mailer';
+
+/** Try a TCP connection so we can tell whether the host blocks SMTP ports. */
+function probe(host: string, port: number, timeoutMs = 8000): Promise<{
+  host: string;
+  port: number;
+  ok: boolean;
+  ms: number;
+  error?: string;
+}> {
+  const started = Date.now();
+  return new Promise((resolve) => {
+    const socket = connect({ host, port });
+    const finish = (ok: boolean, error?: string) => {
+      socket.removeAllListeners();
+      socket.destroy();
+      resolve({ host, port, ok, ms: Date.now() - started, error });
+    };
+    const timer = setTimeout(() => finish(false, 'timeout'), timeoutMs);
+    socket.once('connect', () => {
+      clearTimeout(timer);
+      finish(true);
+    });
+    socket.once('error', (error) => {
+      clearTimeout(timer);
+      finish(false, error.message);
+    });
+  });
+}
 
 export const adminRoutes = new Hono();
 
@@ -125,6 +154,24 @@ adminRoutes.get('/usage', async (c) => {  const days = Math.min(Math.max(Number(
 
 adminRoutes.get('/content', (c) => {
   return c.json(getContent().manifest);
+});
+
+/**
+ * Probe the outgoing SMTP ports. Some hosts block 465/587, which shows up as
+ * "Connection timeout" when sending.
+ */
+adminRoutes.get('/mail-check', async (c) => {
+  const targets: Array<[string, number]> = [
+    ['smtp.gmail.com', 465],
+    ['smtp.gmail.com', 587],
+    ['smtp-relay.brevo.com', 587],
+    ['api.resend.com', 443],
+  ];
+  const results = [];
+  for (const [host, port] of targets) {
+    results.push(await probe(host, port));
+  }
+  return c.json({ results });
 });
 
 /**
