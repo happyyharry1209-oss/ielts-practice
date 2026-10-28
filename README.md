@@ -16,33 +16,37 @@ accounts, saved progress, automatic marking and optional AI feedback on essays.
 
 ## Quick start
 
-Requirements: Node 20.11+ and a Postgres 14+ database (Docker is the easiest way to get one).
+Requirements: Node 20.11+. **No database or Docker needed to try it** — the API defaults to an
+embedded Postgres (PGlite) stored in `.pglite/`.
 
 ```bash
 npm install
-cp .env.example .env        # then edit JWT_SECRET at least
 
-# 1. Start a local database (or point DATABASE_URL at any Postgres)
-docker compose up -d
-
-# 2. Create the tables
-npm run db:migrate
-
-# 3. Create your admin account (credentials are never committed)
+# 1. Create your admin account (credentials are never committed)
 #    bash / macOS / Linux:
 ADMIN_EMAIL=me@example.com ADMIN_PASSWORD='a-long-password' npm run seed:admin
 #    PowerShell:
 #    $env:ADMIN_EMAIL="me@example.com"; $env:ADMIN_PASSWORD="a-long-password"; npm run seed:admin
 
-# 4. Run web + API together
+# 2. Run web + API together (tables are created automatically)
 npm run dev
 ```
 
 - Web: http://localhost:5173
 - API: http://localhost:8787/api/health
 
-Register a normal account in the UI, or log in with the admin account to see **Admin** in the
-navigation bar.
+Delete the `.pglite/` folder to reset all local data. Register a normal account in the UI, or log in
+with the admin account to see **Admin** in the navigation bar.
+
+### Switching to a real Postgres
+
+For anything beyond local preview, use Postgres. Copy `.env.example` to `.env`, set `DATABASE_URL`,
+then:
+
+```bash
+docker compose up -d     # or use Supabase / any Postgres
+npm run db:migrate
+```
 
 ### No database? Check the SQL instead
 

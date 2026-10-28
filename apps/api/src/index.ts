@@ -3,7 +3,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { loadContent, getContent } from './content';
-import { dbHealthy, ensureSchema } from './db';
+import { dbHealthy, dbEngine, ensureSchema } from './db';
 import { env } from './env';
 import { HttpError } from './http';
 import { adminRoutes } from './routes/admin';
@@ -38,6 +38,7 @@ app.get('/api/health', async (c) => {
   return c.json({
     ok: true,
     db: await dbHealthy(),
+    engine: dbEngine,
     ai: Boolean(env.deepseekApiKey),
     contentDir: getContent().dir,
     tests: Object.fromEntries(

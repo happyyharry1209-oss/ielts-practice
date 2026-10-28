@@ -641,6 +641,8 @@ jobs:
 2. **不用 Drizzle**：直接寫 SQL + `pg`，少一層抽象、部署更輕。
 3. **不用 Supabase Auth**：改自建 `users` 表 + JWT，Supabase 只當 Postgres 用（任何 Postgres 都可）。
 4. **口說音檔不上傳**：只存 metadata，錄音留在瀏覽器 session（見 README 限制）。
+5. **本機預覽不需要資料庫**：`DATABASE_URL` 未設定時，API 會用嵌入式 PGlite（`.pglite/`），
+   `npm run dev` 即可開；部署時再換成真正的 Postgres。
 
 ### 尚未完成（建議下一輪）
 

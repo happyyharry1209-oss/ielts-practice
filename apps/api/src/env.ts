@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 
 /**
  * Load .env files without adding a dependency. Values already present in the
@@ -49,11 +50,19 @@ if (isProd && jwtSecret.startsWith('dev-only')) {
   throw new Error('JWT_SECRET must be set in production');
 }
 
+const here = path.dirname(fileURLToPath(import.meta.url));
+
+/**
+ * Local default: an embedded Postgres (PGlite) stored in <repo>/.pglite.
+ * This keeps `npm run dev` working with no Docker and no Postgres install.
+ * Production must set DATABASE_URL.
+ */
+const defaultDatabaseUrl = `pglite:${path.resolve(here, '../../../.pglite')}`;
+
 export const env = {
   isProd,
   port: Number(process.env.PORT ?? 8787),
-  databaseUrl:
-    process.env.DATABASE_URL ?? 'postgres://postgres:postgres@localhost:5432/ielts',
+  databaseUrl: process.env.DATABASE_URL ?? defaultDatabaseUrl,
   jwtSecret,
   corsOrigins: parseOrigins(process.env.CORS_ORIGIN),
   deepseekApiKey: process.env.DEEPSEEK_API_KEY ?? '',

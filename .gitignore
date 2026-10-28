@@ -13,5 +13,6 @@ coverage/
 .npm-cache/
 .tmp/
 .audio-tmp/
+.pglite/
 apps/api/data/
 *.mp3.tmp
