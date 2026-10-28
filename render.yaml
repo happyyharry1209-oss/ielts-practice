@@ -3,8 +3,10 @@ services:
     name: ielts-api
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run build:api
-    startCommand: npm start --workspace @ielts/api
+    # --include=dev: the build needs tsup/typescript, but NODE_ENV=production
+    # would otherwise make npm skip devDependencies.
+    buildCommand: npm ci --include=dev && npm run build:api
+    startCommand: node apps/api/dist/index.js
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
@@ -17,5 +19,7 @@ services:
         sync: false
       - key: DEEPSEEK_API_KEY
         sync: false
+      - key: AI_HOURLY_LIMIT
+        value: "20"
       - key: AUTO_MIGRATE
         value: "true"
