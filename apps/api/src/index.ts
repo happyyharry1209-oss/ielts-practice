@@ -42,6 +42,16 @@ app.get('/api/health', async (c) => {
     engine: dbEngine,
     ai: Boolean(env.deepseekApiKey),
     mail: mailerConfigured(),
+    // Booleans only — never expose the actual credentials. Useful when a
+    // deployment is not picking up environment variables.
+    mailConfig: {
+      smtpHost: Boolean(env.smtpHost),
+      smtpUser: Boolean(env.smtpUser),
+      smtpPass: Boolean(env.smtpPass),
+      resend: Boolean(env.resendApiKey),
+      mailFrom: env.mailFrom,
+      appUrl: env.appUrl,
+    },
     contentDir: getContent().dir,
     tests: Object.fromEntries(
       Object.entries(getContent().manifest).map(([skill, list]) => [skill, list.length]),
