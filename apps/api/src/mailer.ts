@@ -9,7 +9,55 @@ export interface MailResult {
 }
 
 export function mailerConfigured(): boolean {
-  return Boolean(env.smtpHost && env.smtpUser) || Boolean(env.resendApiKey);
+  return Boolean(env.brevoApiKey) || Boolean(env.resendApiKey) || Boolean(env.smtpHost && env.smtpUser);
+}
+
+/** Split `Name <email>` into parts for providers that want them separate. */
+function parseFrom(from: string): { name: string; email: string } {
+  const match = from.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+  if (match) return { name: match[1] || 'IELTS Practice', email: match[2]! };
+  return { name: 'IELTS Practice', email: from.trim() };
+}
+
+/**
+ * Brevo transactional API over HTTPS. Works on hosts that block SMTP ports and
+ * only needs a verified sender address (no domain required).
+ */
+async function sendBrevo(
+  to: string,
+  subject: string,
+  html: string,
+  text: string,
+): Promise<MailResult> {
+  const sender = parseFrom(env.mailFrom);
+  try {
+    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'api-key': env.brevoApiKey,
+        'content-type': 'application/json',
+        accept: 'application/json',
+      },
+      body: JSON.stringify({
+        sender,
+        to: [{ email: to }],
+        subject,
+        htmlContent: html,
+        textContent: text,
+      }),
+      signal: AbortSignal.timeout(20_000),
+    });
+
+    if (!response.ok) {
+      const body = (await response.text()).slice(0, 400);
+      console.error(`[mail] Brevo rejected the message (${response.status}): ${body}`);
+      return { sent: false, reason: 'api-error', error: body };
+    }
+    return { sent: true };
+  } catch (error) {
+    console.error('[mail] Brevo send failed:', (error as Error).message);
+    return { sent: false, reason: 'network', error: (error as Error).message };
+  }
 }
 
 /**
@@ -80,18 +128,24 @@ async function sendResend(
   }
 }
 
-/** SMTP first, then Resend, then the console (development fallback). */
+/**
+ * Delivery order is Brevo → Resend → SMTP → console.
+ * HTTPS providers come first because many hosts block outbound SMTP ports.
+ */
 export async function sendMail(
   to: string,
   subject: string,
   html: string,
   text: string,
 ): Promise<MailResult> {
-  if (env.smtpHost && env.smtpUser) {
-    return sendSmtp(to, subject, html, text);
+  if (env.brevoApiKey) {
+    return sendBrevo(to, subject, html, text);
   }
   if (env.resendApiKey) {
     return sendResend(to, subject, html, text);
+  }
+  if (env.smtpHost && env.smtpUser) {
+    return sendSmtp(to, subject, html, text);
   }
 
   console.log(

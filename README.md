@@ -172,9 +172,10 @@ Both are labelled *estimated*, not official IELTS results.
 | `PORT` | no | API port (default 8787) |
 | `DEEPSEEK_API_KEY` | no | Enables real AI writing feedback |
 | `AI_HOURLY_LIMIT` | no | AI requests per user per hour (default 20) |
-| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` / `SMTP_USER` / `SMTP_PASS` | no | SMTP delivery (Gmail, Brevo, …) — takes priority over Resend |
+| `BREVO_API_KEY` | no | Email over HTTPS (free 300/day, verified sender only) — recommended |
+| `RESEND_API_KEY` | no | Alternative HTTPS email provider |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` / `SMTP_USER` / `SMTP_PASS` | no | SMTP delivery — only works if your host allows ports 465/587 |
 | `MAIL_FROM` | no | Sender address for those emails |
-| `RESEND_API_KEY` | no | Alternative to SMTP; without either one links go to the API log |
 | `REGISTRATION_OPEN` | no | Set to `false` to close public sign-ups |
 | `CONTENT_DIR` | no | Override the content directory |
 | `AUTO_MIGRATE` | no | Create tables on boot (default true) |
@@ -190,19 +191,17 @@ which is what hosted platforms expect.
   the address is confirmed. Verification tokens are stored hashed, single-use and expire in 24 hours.
 - **Password reset** sends a single-use link that expires in 1 hour. Requesting a reset always
   answers `200`, so the endpoint cannot be used to discover which emails exist.
-- **Email delivery** uses SMTP when `SMTP_HOST` is set (Gmail, Brevo, any provider), otherwise
-  [Resend](https://resend.com) when `RESEND_API_KEY` is set. Without either, links go to the API log.
+- **Email delivery** order: Brevo (HTTPS) → Resend (HTTPS) → SMTP → API log. HTTPS providers come
+  first because many hosts, Render included, block outbound SMTP ports entirely.
 
-Gmail setup: turn on 2-Step Verification, create an **App password**, then set
+Brevo setup (free, 300 emails/day, no domain needed):
 
-```
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_SECURE=true
-SMTP_USER=you@gmail.com
-SMTP_PASS=<the 16-character app password>
-MAIL_FROM=IELTS Practice <you@gmail.com>
-```
+1. Create an account at [brevo.com](https://www.brevo.com).
+2. **Senders, Domains & Dedicated IPs → Senders → Add a sender**, then confirm the email.
+3. **SMTP & API → API Keys → Generate a new API key**.
+4. Set `BREVO_API_KEY` and `MAIL_FROM` (the sender you verified) on the API host.
+
+Gmail SMTP only works on hosts that allow ports 465/587; Render does not, so use Brevo there.
 
 Admins can press **Send test email** on the Admin page to check delivery without waiting for a real
 sign-up.

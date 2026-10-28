@@ -75,14 +75,18 @@ export const env = {
   /** Public URL of the web app, used to build links inside emails. */
   appUrl: (process.env.APP_URL ?? 'http://localhost:5173').replace(/\/+$/, ''),
 
-  /** SMTP takes priority over Resend when both are configured. */
+  /**
+   * Delivery order: Brevo (HTTPS) → Resend (HTTPS) → SMTP.
+   * Hosts such as Render block outbound SMTP, so HTTPS APIs come first.
+   */
+  brevoApiKey: process.env.BREVO_API_KEY ?? '',
+  resendApiKey: process.env.RESEND_API_KEY ?? '',
   smtpHost: process.env.SMTP_HOST ?? '',
   smtpPort: Number(process.env.SMTP_PORT ?? 465),
   smtpSecure: (process.env.SMTP_SECURE ?? 'true') !== 'false',
   smtpUser: process.env.SMTP_USER ?? '',
   smtpPass: process.env.SMTP_PASS ?? '',
 
-  resendApiKey: process.env.RESEND_API_KEY ?? '',
   mailFrom: process.env.MAIL_FROM ?? 'IELTS Practice <onboarding@resend.dev>',
   /** Set REGISTRATION_OPEN=false to close public sign-ups. */
   registrationOpen: process.env.REGISTRATION_OPEN !== 'false',

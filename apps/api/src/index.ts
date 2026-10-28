@@ -45,10 +45,11 @@ app.get('/api/health', async (c) => {
     // Booleans only — never expose the actual credentials. Useful when a
     // deployment is not picking up environment variables.
     mailConfig: {
+      brevo: Boolean(env.brevoApiKey),
+      resend: Boolean(env.resendApiKey),
       smtpHost: Boolean(env.smtpHost),
       smtpUser: Boolean(env.smtpUser),
       smtpPass: Boolean(env.smtpPass),
-      resend: Boolean(env.resendApiKey),
       mailFrom: env.mailFrom,
       appUrl: env.appUrl,
     },

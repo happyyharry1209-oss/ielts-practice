@@ -88,28 +88,25 @@ npm run db:migrate
 
 `JWT_SECRET` 由 `render.yaml` 自動產生，不用手動設。
 
-### 寄信設定（Gmail，免費）
+### 寄信設定（Brevo，免費 300 封/天）
 
-1. Google 帳號 → **安全性** → 開啟 **兩步驟驗證**
-2. 同一頁 → **應用程式密碼** → 選「其他」→ 名稱填 `IELTS Practice` → 取得 16 字元密碼
-3. Render → Environment 加上：
+> **Render 會封鎖 SMTP（465/587），所以 Gmail SMTP 在 Render 上一定失敗。**
+> 要用 HTTPS 的寄信 API；Brevo 只需要驗證一個寄件信箱，不用網域。
 
-```
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_SECURE=true
-SMTP_USER=你的@gmail.com
-SMTP_PASS=剛剛拿到的16字元密碼（不用加空格）
-MAIL_FROM=IELTS Practice <你的@gmail.com>
-```
+1. 到 **https://www.brevo.com** 註冊（免費方案）
+2. 左側 **Senders, Domains & Dedicated IPs → Senders → Add a sender**
+   填名字 + 你的 Gmail → 去信箱點驗證信
+3. 右上頭像 → **SMTP & API → API Keys → Generate a new API key**，複製 `xkeysib-...`
+4. Render → Environment：
+   - `BREVO_API_KEY` = 剛剛的 key
+   - `MAIL_FROM` = `IELTS Practice <你驗證過的信箱>`（**編輯既有那列，不要新增**）
+   - `SMTP_*` 可以留著，會被忽略
+5. 存檔 → 等 Live → Admin 頁按 **寄測試信**
 
-4. 存檔後 Render 會自動重啟；到 Admin 頁按 **寄測試信** 確認收得到。
-   `/api/health` 也會顯示 `"mail": true`。
+`/api/health` 的 `mailConfig` 會顯示 `{"brevo": true, ...}`；如果寄不出去，`/api/admin/mail-check`
+可以看到 outbound 埠的連通狀態。
 
-> Gmail 免費上限約每天 500 封，個人使用很夠。`MAIL_FROM` 的信箱要和 `SMTP_USER` 一致，
-> 否則 Google 會拒絕或改寫寄件者。
-
-沒有設定 SMTP 時，註冊不會真的寄信，但帳號仍可登入（會顯示「未驗證」提示條）；
+沒有設定任何寄信服務時，註冊不會真的寄信，但帳號仍可登入（會顯示「未驗證」提示條）；
 忘記密碼可以請管理員在 Admin 頁產生重設連結。
 
 3. Deploy 完打開 `https://<service>.onrender.com/api/health`，應該看到：
