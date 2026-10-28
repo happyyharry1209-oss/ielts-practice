@@ -6,6 +6,7 @@ import { loadContent, getContent } from './content';
 import { dbHealthy, dbEngine, ensureSchema } from './db';
 import { env } from './env';
 import { HttpError } from './http';
+import { mailerConfigured } from './mailer';
 import { adminRoutes } from './routes/admin';
 import { attemptRoutes } from './routes/attempts';
 import { authRoutes } from './routes/auth';
@@ -40,6 +41,7 @@ app.get('/api/health', async (c) => {
     db: await dbHealthy(),
     engine: dbEngine,
     ai: Boolean(env.deepseekApiKey),
+    mail: mailerConfigured(),
     contentDir: getContent().dir,
     tests: Object.fromEntries(
       Object.entries(getContent().manifest).map(([skill, list]) => [skill, list.length]),

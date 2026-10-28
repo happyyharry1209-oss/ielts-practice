@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Badge, Card, PageHeader, Spinner, Stat } from '../components/ui';
-import { api } from '../lib/api';
+import { api, errorMessage } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { formatDate, formatDateTime } from '../lib/utils';
 
@@ -69,6 +69,21 @@ export default function Admin() {
 
   const [resetInfo, setResetInfo] = useState<{ email: string; link: string } | null>(null);
   const [copied, setCopied] = useState(false);
+  const [mailMessage, setMailMessage] = useState<{ ok: boolean; text: string } | null>(null);
+
+  const testMail = useMutation({
+    mutationFn: () =>
+      api<{ sent: boolean; error?: string; to: string }>('/api/admin/test-mail', { method: 'POST' }),
+    onSuccess: (data) => {
+      setMailMessage({
+        ok: data.sent,
+        text: data.sent
+          ? t('admin.testSent', { email: data.to })
+          : data.error ?? t('admin.testFailed'),
+      });
+    },
+    onError: (error) => setMailMessage({ ok: false, text: errorMessage(error) }),
+  });
 
   const createResetLink = useMutation({
     mutationFn: (id: string) =>
@@ -135,6 +150,30 @@ export default function Admin() {
           <p className="text-2xl font-bold">{overview.data?.content.speaking ?? '—'}</p>
         </Card>
       </div>
+
+      <Card className="mt-6 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-slate-800">{t('admin.mailTitle')}</p>
+          <p className="text-xs text-slate-500">{t('admin.mailHint')}</p>
+        </div>
+        <div className="flex items-center gap-3">
+          {mailMessage ? (
+            <span
+              className={`text-xs font-medium ${mailMessage.ok ? 'text-emerald-700' : 'text-rose-700'}`}
+            >
+              {mailMessage.text}
+            </span>
+          ) : null}
+          <button
+            type="button"
+            className="btn-secondary text-xs"
+            disabled={testMail.isPending}
+            onClick={() => testMail.mutate()}
+          >
+            {testMail.isPending ? t('admin.sending') : t('admin.sendTest')}
+          </button>
+        </div>
+      </Card>
 
       <h2 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-wide text-slate-500">
         {t('admin.users')}

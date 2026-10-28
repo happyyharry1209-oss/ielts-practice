@@ -20,11 +20,22 @@ services:
       # Public URL of the web app, used to build verification / reset links.
       - key: APP_URL
         sync: false
-      # Optional. Without it, links are printed to the Render logs instead.
-      - key: RESEND_API_KEY
+      # SMTP delivery (Gmail, Brevo, …). Takes priority over Resend.
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_SECURE
+        value: "true"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
         sync: false
       - key: MAIL_FROM
-        value: IELTS Practice <onboarding@resend.dev>
+        sync: false
+      # Alternative to SMTP. Without either, links are printed to the logs.
+      - key: RESEND_API_KEY
+        sync: false
       - key: REGISTRATION_OPEN
         value: "true"
       - key: DEEPSEEK_API_KEY

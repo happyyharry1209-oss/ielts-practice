@@ -4,6 +4,7 @@ import { createResetToken } from '../authTokens';
 import { getContent } from '../content';
 import { query, queryOne } from '../db';
 import { HttpError, parseBody, requireAdmin, requireAuth } from '../http';
+import { mailerConfigured, sendMail } from '../mailer';
 
 export const adminRoutes = new Hono();
 
@@ -124,4 +125,30 @@ adminRoutes.get('/usage', async (c) => {  const days = Math.min(Math.max(Number(
 
 adminRoutes.get('/content', (c) => {
   return c.json(getContent().manifest);
+});
+
+/**
+ * Send a test email to the admin's own address so SMTP settings can be checked
+ * without waiting for a real sign-up or reset request.
+ */
+adminRoutes.post('/test-mail', async (c) => {
+  const me = await queryOne<{ email: string }>('select email from users where id = $1', [
+    c.get('userId'),
+  ]);
+  if (!me) throw new HttpError(404, 'User not found');
+
+  if (!mailerConfigured()) {
+    throw new HttpError(
+      400,
+      'No mail provider configured. Set SMTP_HOST + SMTP_USER + SMTP_PASS (or RESEND_API_KEY).',
+    );
+  }
+
+  const result = await sendMail(
+    me.email,
+    'IELTS Practice — test email',
+    '<p>If you can read this, email delivery is working.</p>',
+    'If you can read this, email delivery is working.',
+  );
+  return c.json({ ...result, to: me.email });
 });

@@ -1,8 +1,15 @@
+import nodemailer, { type Transporter } from 'nodemailer';
 import { env } from './env';
 
 export interface MailResult {
   sent: boolean;
   reason?: string;
+  /** Provider error message, shown by the admin "test email" button. */
+  error?: string;
+}
+
+export function mailerConfigured(): boolean {
+  return Boolean(env.smtpHost && env.smtpUser) || Boolean(env.resendApiKey);
 }
 
 /**
@@ -14,19 +21,42 @@ export function appLink(pathWithQuery: string): string {
   return `${base}/#/${pathWithQuery.replace(/^\/+/, '')}`;
 }
 
-export async function sendMail(
+let smtpTransport: Transporter | null = null;
+
+function getSmtpTransport(): Transporter | null {
+  if (!env.smtpHost || !env.smtpUser) return null;
+  if (!smtpTransport) {
+    smtpTransport = nodemailer.createTransport({
+      host: env.smtpHost,
+      port: env.smtpPort,
+      secure: env.smtpSecure,
+      auth: env.smtpPass ? { user: env.smtpUser, pass: env.smtpPass } : undefined,
+      connectionTimeout: 15_000,
+      greetingTimeout: 15_000,
+    });
+  }
+  return smtpTransport;
+}
+
+async function sendSmtp(to: string, subject: string, html: string, text: string): Promise<MailResult> {
+  const transport = getSmtpTransport();
+  if (!transport) return { sent: false, reason: 'no-smtp' };
+  try {
+    await transport.sendMail({ from: env.mailFrom, to, subject, html, text });
+    return { sent: true };
+  } catch (error) {
+    const message = (error as Error).message;
+    console.error('[mail] SMTP send failed:', message);
+    return { sent: false, reason: 'smtp-error', error: message };
+  }
+}
+
+async function sendResend(
   to: string,
   subject: string,
   html: string,
   text: string,
 ): Promise<MailResult> {
-  if (!env.resendApiKey) {
-    console.log(
-      `[mail] no provider configured — would send to ${to}\n[mail] subject: ${subject}\n[mail] body:\n${text}`,
-    );
-    return { sent: false, reason: 'no-provider' };
-  }
-
   try {
     const response = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -41,13 +71,33 @@ export async function sendMail(
     if (!response.ok) {
       const body = (await response.text()).slice(0, 300);
       console.error(`[mail] Resend rejected the message (${response.status}): ${body}`);
-      return { sent: false, reason: 'api-error' };
+      return { sent: false, reason: 'api-error', error: body };
     }
     return { sent: true };
   } catch (error) {
     console.error('[mail] send failed:', (error as Error).message);
-    return { sent: false, reason: 'network' };
+    return { sent: false, reason: 'network', error: (error as Error).message };
   }
+}
+
+/** SMTP first, then Resend, then the console (development fallback). */
+export async function sendMail(
+  to: string,
+  subject: string,
+  html: string,
+  text: string,
+): Promise<MailResult> {
+  if (env.smtpHost && env.smtpUser) {
+    return sendSmtp(to, subject, html, text);
+  }
+  if (env.resendApiKey) {
+    return sendResend(to, subject, html, text);
+  }
+
+  console.log(
+    `[mail] no provider configured — would send to ${to}\n[mail] subject: ${subject}\n[mail] body:\n${text}`,
+  );
+  return { sent: false, reason: 'no-provider' };
 }
 
 function layout(title: string, body: string, footer: string): string {
