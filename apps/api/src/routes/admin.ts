@@ -1,8 +1,10 @@
 import { Hono } from 'hono';
 import { z } from 'zod';
+import { createResetToken } from '../authTokens';
 import { getContent } from '../content';
 import { query, queryOne } from '../db';
 import { HttpError, parseBody, requireAdmin, requireAuth } from '../http';
+import { appLink } from '../mailer';
 
 export const adminRoutes = new Hono();
 
@@ -72,8 +74,26 @@ adminRoutes.patch('/users/:id', async (c) => {
   return c.json({ user: rows[0] });
 });
 
-adminRoutes.get('/usage', async (c) => {
-  const days = Math.min(Math.max(Number(c.req.query('days') ?? 30), 1), 365);
+/**
+ * Create a password-reset link for a user. This is the fallback when no mail
+ * provider is configured: the admin copies the link and sends it manually.
+ */
+adminRoutes.post('/users/:id/reset-link', async (c) => {
+  const target = await queryOne<{ id: string; email: string }>(
+    'select id, email from users where id = $1',
+    [c.req.param('id')],
+  );
+  if (!target) throw new HttpError(404, 'User not found');
+
+  const token = await createResetToken(target.id);
+  return c.json({
+    email: target.email,
+    link: appLink(`reset-password?token=${encodeURIComponent(token)}`),
+    expiresInMinutes: 60,
+  });
+});
+
+adminRoutes.get('/usage', async (c) => {  const days = Math.min(Math.max(Number(c.req.query('days') ?? 30), 1), 365);
   const daily = await query(
     `select date_trunc('day', created_at)::date as day,
             count(*)::int as calls,

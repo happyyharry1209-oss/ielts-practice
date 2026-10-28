@@ -88,9 +88,13 @@ export function Layout() {
             </button>
             {user ? (
               <div className="flex items-center gap-2">
-                <span className="hidden max-w-[140px] truncate text-sm text-slate-600 sm:inline">
+                <Link
+                  to="/account"
+                  title={t('account.title')}
+                  className="hidden max-w-[140px] truncate text-sm text-slate-600 hover:text-brand-600 sm:inline"
+                >
                   {user.displayName || user.email}
-                </span>
+                </Link>
                 {isAdmin ? (
                   <span className="chip bg-slate-900 text-white">{t('admin.admin')}</span>
                 ) : null}

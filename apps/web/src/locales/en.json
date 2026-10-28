@@ -67,7 +67,19 @@
     "emailUnverified": "Your email is not verified yet.",
     "resend": "Resend email",
     "resending": "Sending…",
-    "debugLink": "Open verification link"
+    "debugLink": "Open verification link",
+    "noMailHint": "Didn't get an email? Ask the site admin to generate a reset link for you."
+  },
+  "account": {
+    "title": "Account",
+    "subtitle": "Manage your login details.",
+    "verified": "Verified",
+    "unverified": "Not verified",
+    "changeTitle": "Change password",
+    "currentPassword": "Current password",
+    "change": "Change password",
+    "changed": "Password updated.",
+    "wrongCurrent": "Current password is incorrect."
   },
   "home": {
     "greeting": "Hi, {{name}}",
@@ -226,6 +238,11 @@
     "makeUser": "Make user",
     "search": "Search by email or name",
     "noUsers": "No users found.",
+    "resetLink": "Reset link",
+    "resetLinkFor": "Reset link for {{email}}",
+    "resetLinkHint": "Valid for 1 hour and single use. Copy it and send it to the person yourself.",
+    "copy": "Copy",
+    "copied": "Copied",
     "readingCount": "Reading tests",
     "listeningCount": "Listening tests",
     "writingCount": "Writing tests",

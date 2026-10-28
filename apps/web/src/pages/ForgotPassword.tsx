@@ -55,7 +55,9 @@ export default function ForgotPassword() {
               >
                 {t('auth.debugLink')}
               </Link>
-            ) : null}
+            ) : (
+              <p className="mt-3 text-xs text-emerald-700/80">{t('auth.noMailHint')}</p>
+            )}
           </div>
         ) : (
           <form className="mt-6 space-y-4" onSubmit={submit}>

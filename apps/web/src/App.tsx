@@ -3,6 +3,7 @@ import { Layout } from './components/Layout';
 import { Spinner } from './components/ui';
 import { useAuth } from './lib/auth';
 import Admin from './pages/Admin';
+import Account from './pages/Account';
 import ForgotPassword from './pages/ForgotPassword';
 import Home from './pages/Home';
 import ListeningExam from './pages/ListeningExam';
@@ -62,6 +63,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/practice/:skill" element={<Practice />} />
         <Route path="/result/:attemptId" element={<Result />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/admin" element={<Admin />} />
       </Route>
 

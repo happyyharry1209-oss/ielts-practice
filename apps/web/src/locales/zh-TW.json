@@ -67,7 +67,19 @@
     "emailUnverified": "你的電子郵件尚未驗證。",
     "resend": "重寄驗證信",
     "resending": "寄送中…",
-    "debugLink": "開啟驗證連結"
+    "debugLink": "開啟驗證連結",
+    "noMailHint": "沒收到信？請網站管理員幫你產生重設連結。"
+  },
+  "account": {
+    "title": "帳號",
+    "subtitle": "管理你的登入資訊。",
+    "verified": "已驗證",
+    "unverified": "未驗證",
+    "changeTitle": "修改密碼",
+    "currentPassword": "目前密碼",
+    "change": "修改密碼",
+    "changed": "密碼已更新。",
+    "wrongCurrent": "目前密碼不正確。"
   },
   "home": {
     "greeting": "你好，{{name}}",
@@ -226,6 +238,11 @@
     "makeUser": "設為一般使用者",
     "search": "用 email 或名稱搜尋",
     "noUsers": "找不到使用者。",
+    "resetLink": "重設連結",
+    "resetLinkFor": "{{email}} 的重設連結",
+    "resetLinkHint": "1 小時內有效、只能使用一次。請自己複製並傳給對方。",
+    "copy": "複製",
+    "copied": "已複製",
     "readingCount": "閱讀試卷",
     "listeningCount": "聽力試卷",
     "writingCount": "寫作試卷",

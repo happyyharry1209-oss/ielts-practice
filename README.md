@@ -192,6 +192,13 @@ which is what hosted platforms expect.
 - **Email delivery** uses [Resend](https://resend.com) when `RESEND_API_KEY` is set. Without a key
   the API prints the link to its log — handy locally, and enough to verify an account by hand.
 
+There are three ways to change a password:
+
+1. **Signed in** — `/account` (the link on your name in the header) asks for the current password.
+2. **Forgot it** — `/forgot-password` sends a single-use link (needs a mail provider).
+3. **No mail provider** — an admin opens **Admin**, clicks *Reset link* next to a user and sends the
+   generated link by hand. It expires in 1 hour.
+
 To close public sign-ups, set `REGISTRATION_OPEN=false` on the API. Existing accounts keep working.
 
 > Reset tokens and sessions are independent: changing a password does not invalidate JWTs that were

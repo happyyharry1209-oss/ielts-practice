@@ -1,6 +1,7 @@
 import { Hono } from 'hono';
 import { z } from 'zod';
 import { hashPassword, signToken, verifyPassword } from '../auth';
+import { createResetToken } from '../authTokens';
 import { query, queryOne } from '../db';
 import { env } from '../env';
 import { checkRateLimit, HttpError, parseBody, requireAuth } from '../http';
@@ -65,12 +66,7 @@ async function sendVerification(userId: string, email: string): Promise<string |
 }
 
 async function sendPasswordReset(userId: string, email: string): Promise<string | undefined> {
-  const token = createToken();
-  await query(
-    `insert into auth_tokens (user_id, kind, token_hash, expires_at)
-     values ($1, 'reset_password', $2, $3)`,
-    [userId, hashToken(token), tokenExpiry('reset_password')],
-  );
+  const token = await createResetToken(userId);
   const link = appLink(`reset-password?token=${encodeURIComponent(token)}`);
   const mail = resetPasswordMail(link);
   const result = await sendMail(email, mail.subject, mail.html, mail.text);
@@ -175,15 +171,35 @@ authRoutes.post('/forgot-password', async (c) => {
 
   let debugLink: string | undefined;
   if (user) {
-    await query(
-      `update auth_tokens set used_at = now()
-       where user_id = $1 and kind = 'reset_password' and used_at is null`,
-      [user.id],
-    );
+    // createResetToken invalidates any older unused reset tokens.
     debugLink = await sendPasswordReset(user.id, user.email);
   }
 
   return c.json({ ok: true, debugLink });
+});
+
+const changePasswordSchema = z.object({
+  currentPassword: z.string().min(1).max(200),
+  newPassword: z.string().min(8).max(200),
+});
+
+authRoutes.post('/change-password', requireAuth, async (c) => {
+  const body = await parseBody(c, changePasswordSchema);
+  const row = await queryOne<UserRow>('select * from users where id = $1', [c.get('userId')]);
+  if (!row) throw new HttpError(401, 'Account no longer exists');
+
+  if (!verifyPassword(body.currentPassword, row.password_hash)) {
+    throw new HttpError(400, 'Current password is incorrect');
+  }
+  if (body.currentPassword === body.newPassword) {
+    throw new HttpError(400, 'The new password must be different from the current one');
+  }
+
+  await query('update users set password_hash = $1 where id = $2', [
+    hashPassword(body.newPassword),
+    row.id,
+  ]);
+  return c.json({ ok: true });
 });
 
 authRoutes.post('/reset-password', async (c) => {

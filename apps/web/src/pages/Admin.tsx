@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Badge, Card, PageHeader, Spinner, Stat } from '../components/ui';
@@ -63,6 +64,21 @@ export default function Admin() {
       api(`/api/admin/users/${id}`, { method: 'PATCH', json: { role } }),
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: ['admin', 'users'] });
+    },
+  });
+
+  const [resetInfo, setResetInfo] = useState<{ email: string; link: string } | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const createResetLink = useMutation({
+    mutationFn: (id: string) =>
+      api<{ email: string; link: string; expiresInMinutes: number }>(
+        `/api/admin/users/${id}/reset-link`,
+        { method: 'POST' },
+      ),
+    onSuccess: (data) => {
+      setResetInfo({ email: data.email, link: data.link });
+      setCopied(false);
     },
   });
 
@@ -154,19 +170,29 @@ export default function Admin() {
                   <td className="px-4 py-3 text-slate-500">{user.attempts}</td>
                   <td className="px-4 py-3 text-slate-500">{user.writing_submissions}</td>
                   <td className="px-4 py-3 text-right">
-                    <button
-                      type="button"
-                      className="btn-ghost text-xs"
-                      disabled={changeRole.isPending}
-                      onClick={() =>
-                        changeRole.mutate({
-                          id: user.id,
-                          role: user.role === 'admin' ? 'user' : 'admin',
-                        })
-                      }
-                    >
-                      {user.role === 'admin' ? t('admin.makeUser') : t('admin.makeAdmin')}
-                    </button>
+                    <div className="flex justify-end gap-1">
+                      <button
+                        type="button"
+                        className="btn-ghost text-xs"
+                        disabled={createResetLink.isPending}
+                        onClick={() => createResetLink.mutate(user.id)}
+                      >
+                        {t('admin.resetLink')}
+                      </button>
+                      <button
+                        type="button"
+                        className="btn-ghost text-xs"
+                        disabled={changeRole.isPending}
+                        onClick={() =>
+                          changeRole.mutate({
+                            id: user.id,
+                            role: user.role === 'admin' ? 'user' : 'admin',
+                          })
+                        }
+                      >
+                        {user.role === 'admin' ? t('admin.makeUser') : t('admin.makeAdmin')}
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -177,6 +203,45 @@ export default function Admin() {
           ) : null}
         </div>
       )}
+
+      {resetInfo ? (
+        <div className="card mt-3 space-y-2 p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            {t('admin.resetLinkFor', { email: resetInfo.email })}
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <input
+              readOnly
+              value={resetInfo.link}
+              className="input flex-1 font-mono text-xs"
+              onFocus={(event) => event.currentTarget.select()}
+            />
+            <button
+              type="button"
+              className="btn-secondary text-xs"
+              onClick={() => {
+                navigator.clipboard
+                  .writeText(resetInfo.link)
+                  .then(() => {
+                    setCopied(true);
+                    window.setTimeout(() => setCopied(false), 1500);
+                  })
+                  .catch(() => undefined);
+              }}
+            >
+              {copied ? t('admin.copied') : t('admin.copy')}
+            </button>
+            <button
+              type="button"
+              className="btn-ghost text-xs"
+              onClick={() => setResetInfo(null)}
+            >
+              {t('common.close')}
+            </button>
+          </div>
+          <p className="text-xs text-slate-400">{t('admin.resetLinkHint')}</p>
+        </div>
+      ) : null}
 
       <h2 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-wide text-slate-500">
         {t('admin.aiUsage')}
