@@ -601,3 +601,51 @@ jobs:
 ---
 
 *本計劃為草案，可依你的回饋調整。*
+
+---
+
+## 11. 實作進度（已完成）
+
+計劃已落地為可運行的程式碼，第一版 MVP 完成。
+
+### 已完成
+
+| 模組 | 狀態 |
+|---|---|
+| 前端 React 19 + Vite + TS + Tailwind + HashRouter | ✅ 建置通過（4 MB dist，含音檔） |
+| 中英雙語介面（i18next，約 130 條字串） | ✅ |
+| 登入 / 註冊 / JWT / scrypt 密碼雜湊 | ✅ |
+| 管理員角色 + 最小管理後台（使用者、用量、題庫統計） | ✅ |
+| 聽力：4 section、40 題、音檔、計時、交卷評分 | ✅ 音檔已用 SAPI 生成（3.5 MB MP3） |
+| 閱讀：3 篇、40 題、雙欄、題號導航、交卷評分 | ✅ |
+| 寫作：Task 1/2、字數、草稿自動儲存、AI 或規則型評分 | ✅ |
+| 口說：Part 1–3、Part 2 準備/作答計時、錄音回放 | ✅ |
+| 共用判分引擎（正規化、字數限制、TFNG 簡寫、多選集合比對） | ✅ 19 項單元測試 |
+| 題庫 schema 驗證器 | ✅ 4 份試卷 0 error 0 warning |
+| 分數換算表（Listening / Reading Academic / General） | ✅ |
+| 部署設定：GitHub Actions、render.yaml、docker-compose | ✅ |
+| 環境變數 seed 的管理員帳號腳本 | ✅ 不寫死密碼 |
+
+### 驗證結果
+
+- `npm run typecheck`：三個 workspace 全部通過
+- `npm test`：19 / 19 通過
+- `npm run validate:content`：4 份試卷，0 error、0 warning
+- `npm run smoke:db`：對真實 Postgres 引擎（PGlite）跑 17 條 SQL，全部通過
+- API 實測：`/api/health`、`/api/content/manifest`、答案不外洩、DB 未連線時回 503
+- `npm run build`（含 `VITE_BASE=/ielts-practice/`）：通過，音檔正確打包
+
+### 與原計劃的差異
+
+1. **套件管理器改用 npm workspaces**：pnpm 12（Rust 版）在這台機器上會 stack overflow。
+2. **不用 Drizzle**：直接寫 SQL + `pg`，少一層抽象、部署更輕。
+3. **不用 Supabase Auth**：改自建 `users` 表 + JWT，Supabase 只當 Postgres 用（任何 Postgres 都可）。
+4. **口說音檔不上傳**：只存 metadata，錄音留在瀏覽器 session（見 README 限制）。
+
+### 尚未完成（建議下一輪）
+
+- Email 驗證與密碼重設（公開註冊前必做）
+- 口說音檔上傳到物件儲存 + 逐字稿
+- 更多題庫（目前各 1 份）
+- 瀏覽器 E2E 測試（Playwright）
+- 深色模式、錯題本、單字本
