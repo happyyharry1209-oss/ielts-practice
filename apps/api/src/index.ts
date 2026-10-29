@@ -11,6 +11,7 @@ import { adminRoutes } from './routes/admin';
 import { attemptRoutes } from './routes/attempts';
 import { authRoutes } from './routes/auth';
 import { contentRoutes } from './routes/content';
+import { reviewRoutes } from './routes/review';
 import { speakingRoutes } from './routes/speaking';
 import { writingRoutes } from './routes/writing';
 
@@ -63,6 +64,7 @@ app.get('/api/health', async (c) => {
 app.route('/api/auth', authRoutes);
 app.route('/api/content', contentRoutes);
 app.route('/api/attempts', attemptRoutes);
+app.route('/api/review', reviewRoutes);
 app.route('/api/writing', writingRoutes);
 app.route('/api/speaking', speakingRoutes);
 app.route('/api/admin', adminRoutes);

@@ -21,7 +21,8 @@
     "logout": "登出",
     "login": "登入",
     "signup": "註冊",
-    "language": "語言"
+    "language": "語言",
+    "review": "錯題本"
   },
   "auth": {
     "signIn": "登入",
@@ -262,6 +263,23 @@
     "backHome": "返回儀表板",
     "totalUsers": "使用者數",
     "totalAttempts": "已提交練習"
+  },
+  "review": {
+    "title": "錯題本",
+    "subtitle": "你答錯過的題目，最新的排在前面。",
+    "empty": "沒有錯題",
+    "emptyHint": "做完一份閱讀或聽力，答錯的題目會出現在這裡。",
+    "retryAll": "重練 {{count}} 題",
+    "count": "{{count}} 題",
+    "yourAnswer": "你的答案",
+    "correctAnswer": "正確答案",
+    "markMastered": "標記已掌握",
+    "marked": "已掌握",
+    "sessionTitle": "重練錯題",
+    "sessionSubtitle": "{{count}} 題，不計時。",
+    "checkAnswers": "對答案",
+    "resultLine": "答對 {{correct}} / {{total}} 題",
+    "backToList": "返回錯題本"
   },
   "errors": {
     "network": "連不到伺服器。API 有在跑嗎？",

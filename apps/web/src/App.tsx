@@ -13,6 +13,8 @@ import ReadingExam from './pages/ReadingExam';
 import Register from './pages/Register';
 import ResetPassword from './pages/ResetPassword';
 import Result from './pages/Result';
+import Review from './pages/Review';
+import ReviewSession from './pages/ReviewSession';
 import SpeakingExam from './pages/SpeakingExam';
 import VerifyEmail from './pages/VerifyEmail';
 import WritingExam from './pages/WritingExam';
@@ -63,6 +65,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/practice/:skill" element={<Practice />} />
         <Route path="/result/:attemptId" element={<Result />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/review/session" element={<ReviewSession />} />
         <Route path="/account" element={<Account />} />
         <Route path="/admin" element={<Admin />} />
       </Route>

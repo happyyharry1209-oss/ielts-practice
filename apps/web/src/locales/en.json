@@ -21,7 +21,8 @@
     "logout": "Log out",
     "login": "Log in",
     "signup": "Sign up",
-    "language": "Language"
+    "language": "Language",
+    "review": "Review"
   },
   "auth": {
     "signIn": "Log in",
@@ -262,6 +263,23 @@
     "backHome": "Back to dashboard",
     "totalUsers": "Users",
     "totalAttempts": "Submitted attempts"
+  },
+  "review": {
+    "title": "Wrong answers",
+    "subtitle": "Questions you got wrong, newest first.",
+    "empty": "No wrong answers",
+    "emptyHint": "Finish a reading or listening paper and your mistakes will show up here.",
+    "retryAll": "Retry {{count}} questions",
+    "count": "{{count}} questions",
+    "yourAnswer": "Your answer",
+    "correctAnswer": "Correct answer",
+    "markMastered": "Mark as mastered",
+    "marked": "Mastered",
+    "sessionTitle": "Retry wrong answers",
+    "sessionSubtitle": "{{count}} questions, no timer.",
+    "checkAnswers": "Check answers",
+    "resultLine": "{{correct}} / {{total}} correct",
+    "backToList": "Back to wrong answers"
   },
   "errors": {
     "network": "Cannot reach the server. Is the API running?",

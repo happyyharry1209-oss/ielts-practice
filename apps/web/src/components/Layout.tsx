@@ -70,6 +70,9 @@ export function Layout() {
             <NavLink to="/practice/speaking" className={navClass}>
               {t('home.skillSpeaking')}
             </NavLink>
+            <NavLink to="/review" className={navClass}>
+              {t('nav.review')}
+            </NavLink>
             {isAdmin ? (
               <NavLink to="/admin" className={navClass}>
                 {t('nav.admin')}
