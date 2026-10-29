@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Practise IELTS listening, reading, writing and speaking with progress tracking." />
     <title>IELTS Practice</title>
+    <script>
+      // Apply the saved theme before paint to avoid a flash of the wrong colours.
+      (function () {
+        try {
+          var stored = localStorage.getItem('ielts.theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (error) {
+          /* ignore */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

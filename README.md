@@ -231,6 +231,14 @@ using the most recent response per question so a later correct answer clears it.
 - **Mark as mastered** hides a question from the notebook for good.
 - Marking inside a retry session keeps the question on screen so you can still read the explanation.
 
+## Speaking recordings and dark mode
+
+- Every finished recording is saved to **IndexedDB** automatically and listed under **Saved
+  recordings** on the Speaking page, with playback, download and delete. It survives a refresh and is
+  never uploaded.
+- **Dark mode** is toggled from the moon/sun icon in the header. The choice is stored in
+  `localStorage` and applied before first paint, so there is no flash.
+
 ---
 
 ## Admin account
@@ -305,10 +313,10 @@ The app uses `HashRouter`, so deep links work on Pages without server rewrites
 
 ## Known limitations
 
-- **No email verification or password reset.** Add a mail provider before opening registration to
-  the public.
-- **Speaking audio is not uploaded.** Only metadata is stored; recordings stay in the browser
-  session. Add object storage if you want a history.
+- **Email needs a provider.** Verification and reset links are sent through Brevo/Resend; without
+  one they are only printed to the server log.
+- **Speaking audio is not uploaded.** Recordings are saved in the browser's IndexedDB, so they
+  survive a refresh but stay on that device. Clearing site data deletes them.
 - **Speaking is not auto-scored.** Part 1–3 give prompts, timing and recording.
 - **AI bands are estimates.** Treat them as ±0.5–1.0, never as an official score.
 - **The demo papers are short.** They are original practice material, not full-length simulations
@@ -318,4 +326,4 @@ The app uses `HashRouter`, so deep links work on Pages without server rewrites
 ## Roadmap
 
 More papers (the format is designed for bulk authoring), Speaking transcription, a vocabulary
-notebook, a wrong-answer drill mode, offline PWA support, and PDF score reports.
+notebook, offline PWA support, and PDF score reports.

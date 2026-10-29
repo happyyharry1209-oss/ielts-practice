@@ -22,7 +22,9 @@
     "login": "登入",
     "signup": "註冊",
     "language": "語言",
-    "review": "錯題本"
+    "review": "錯題本",
+    "darkMode": "深色模式",
+    "lightMode": "淺色模式"
   },
   "auth": {
     "signIn": "登入",
@@ -221,7 +223,11 @@
     "youShouldSay": "你應該提到：",
     "newCard": "下一張卡",
     "finish": "完成練習",
-    "intro": "自然地說就好。這一版的口說不做自動評分。"
+    "intro": "自然地說就好。這一版的口說不做自動評分。",
+    "savedTitle": "已保存的錄音",
+    "savedHint": "只存在這個瀏覽器",
+    "savedEmpty": "還沒有保存的錄音。",
+    "download": "下載"
   },
   "admin": {
     "title": "管理後台",

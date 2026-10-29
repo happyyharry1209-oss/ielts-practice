@@ -1,9 +1,11 @@
+import { Moon, Sun } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { setLanguage } from '../lib/i18n';
+import { toggleTheme } from '../lib/theme';
 import { cn } from '../lib/utils';
 
 function navClass({ isActive }: { isActive: boolean }): string {
@@ -18,6 +20,7 @@ export function Layout() {
   const { user, logout, isAdmin } = useAuth();
   const navigate = useNavigate();
   const language = i18n.language === 'zh-TW' ? 'zh-TW' : 'en';
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
   const [resending, setResending] = useState(false);
   const [debugToken, setDebugToken] = useState<string | null>(null);
 
@@ -81,6 +84,15 @@ export function Layout() {
           </nav>
 
           <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setDark(toggleTheme() === 'dark')}
+              className="rounded-lg px-2 py-1.5 text-slate-500 hover:bg-slate-100"
+              title={dark ? t('nav.lightMode') : t('nav.darkMode')}
+              aria-label={dark ? t('nav.lightMode') : t('nav.darkMode')}
+            >
+              {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
             <button
               type="button"
               onClick={() => setLanguage(language === 'en' ? 'zh-TW' : 'en')}

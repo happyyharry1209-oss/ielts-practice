@@ -45,3 +45,144 @@
 .reading-body p {
   margin-bottom: 1rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Dark theme
+   The app is built from a small set of Tailwind utilities, so the theme swaps
+   them centrally under .dark instead of duplicating dark: variants everywhere.
+   --------------------------------------------------------------------------- */
+
+.dark body {
+  background-color: #020617;
+  color: #e2e8f0;
+}
+
+/* Surfaces */
+.dark .bg-white {
+  background-color: #0f172a;
+}
+.dark .bg-white\/90 {
+  background-color: rgba(15, 23, 42, 0.9);
+}
+.dark .bg-slate-50 {
+  background-color: #020617;
+}
+.dark .bg-slate-100 {
+  background-color: #1e293b;
+}
+.dark .bg-slate-900 {
+  background-color: #1e293b;
+}
+
+/* Borders */
+.dark .border-slate-200,
+.dark .border-slate-100 {
+  border-color: #1e293b;
+}
+.dark .border-slate-300 {
+  border-color: #334155;
+}
+.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1e293b;
+}
+
+/* Text */
+.dark .text-slate-900 {
+  color: #f1f5f9;
+}
+.dark .text-slate-800 {
+  color: #e2e8f0;
+}
+.dark .text-slate-700 {
+  color: #cbd5e1;
+}
+.dark .text-slate-600 {
+  color: #cbd5e1;
+}
+.dark .text-slate-500 {
+  color: #94a3b8;
+}
+.dark .text-slate-400 {
+  color: #94a3b8;
+}
+
+/* Hover surfaces */
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100:hover {
+  background-color: #1e293b;
+}
+.dark .hover\:bg-slate-200:hover {
+  background-color: #334155;
+}
+
+/* Shared components */
+.dark .card {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+.dark .input {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+.dark .input::placeholder {
+  color: #64748b;
+}
+.dark .btn-secondary {
+  background-color: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+.dark .btn-secondary:hover {
+  background-color: #1e293b;
+}
+.dark .btn-ghost {
+  color: #cbd5e1;
+}
+.dark .btn-ghost:hover {
+  background-color: #1e293b;
+}
+
+/* Pastel surfaces used by banners, badges and result cards */
+.dark .bg-emerald-50,
+.dark .bg-emerald-100 {
+  background-color: rgba(6, 78, 59, 0.35);
+}
+.dark .bg-rose-50,
+.dark .bg-rose-100 {
+  background-color: rgba(76, 5, 25, 0.35);
+}
+.dark .bg-amber-50,
+.dark .bg-amber-100 {
+  background-color: rgba(69, 26, 3, 0.4);
+}
+.dark .bg-brand-50,
+.dark .bg-brand-100 {
+  background-color: rgba(49, 46, 129, 0.45);
+}
+.dark .bg-sky-50,
+.dark .bg-sky-100 {
+  background-color: rgba(8, 47, 73, 0.45);
+}
+
+.dark .text-emerald-700,
+.dark .text-emerald-800 {
+  color: #6ee7b7;
+}
+.dark .text-rose-700 {
+  color: #fda4af;
+}
+.dark .text-amber-700,
+.dark .text-amber-800,
+.dark .text-amber-900 {
+  color: #fcd34d;
+}
+.dark .text-brand-700 {
+  color: #a5b4fc;
+}
+.dark .text-sky-600 {
+  color: #7dd3fc;
+}
+.dark .text-slate-600\/70 {
+  color: #94a3b8;
+}

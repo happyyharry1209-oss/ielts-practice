@@ -1,11 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import { Mic, Square, Trash2 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { Download, Mic, Square, Trash2 } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import type { SpeakingTest } from '@ielts/shared';
 import { Badge, Spinner } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
+import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
+import type { SavedRecording } from '../lib/recordings';
 import { useRecorder } from '../lib/useExam';
 import { cn, formatClock } from '../lib/utils';
 
@@ -29,6 +31,29 @@ export default function SpeakingExam() {
   const [seconds, setSeconds] = useState(0);
   const [notes, setNotes] = useState('');
   const recorder = useRecorder();
+  const [saved, setSaved] = useState<SavedRecording[]>([]);
+  const startedAtRef = useRef<number | null>(null);
+  const savedBlobRef = useRef<Blob | null>(null);
+
+  const refreshSaved = useCallback(async () => {
+    try {
+      setSaved(await listRecordings());
+    } catch {
+      /* IndexedDB can be unavailable in private mode */
+    }
+  }, []);
+
+  useEffect(() => {
+    void refreshSaved();
+  }, [refreshSaved]);
+
+  const handleDelete = useCallback(
+    async (id: string) => {
+      await deleteRecording(id).catch(() => undefined);
+      await refreshSaved();
+    },
+    [refreshSaved],
+  );
 
   const part1 = useMemo(
     () =>
@@ -66,6 +91,7 @@ export default function SpeakingExam() {
     if (phase === 'prep' && seconds >= 60) {
       setSeconds(0);
       setPhase('speak');
+      startedAtRef.current = Date.now();
       void recorder.start();
     } else if (phase === 'speak' && seconds >= 120) {
       recorder.stop();
@@ -77,6 +103,32 @@ export default function SpeakingExam() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, seconds]);
+
+  // Persist the finished recording so it survives a refresh.
+  useEffect(() => {
+    if (!test || !recorder.blob) return;
+    if (recorder.blob === savedBlobRef.current) return;
+    savedBlobRef.current = recorder.blob;
+
+    const startedAt = startedAtRef.current ?? Date.now();
+    const durationSec = Math.max(1, Math.round((Date.now() - startedAt) / 1000));
+    const topic =
+      part === 2
+        ? (card?.topic ?? 'Part 2')
+        : `${current?.topic ?? ''}: ${current?.question ?? ''}`;
+
+    void saveRecording({
+      contentId: test.id,
+      part,
+      topic,
+      durationSec,
+      mimeType: recorder.blob.type || 'audio/webm',
+      blob: recorder.blob,
+    })
+      .then(() => refreshSaved())
+      .catch(() => undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [recorder.blob]);
 
   useEffect(() => {
     setIndex(0);
@@ -192,6 +244,7 @@ export default function SpeakingExam() {
                     onClick={() => {
                       setPhase('speak');
                       setSeconds(0);
+                      startedAtRef.current = Date.now();
                       void recorder.start();
                     }}
                   >
@@ -268,7 +321,10 @@ export default function SpeakingExam() {
                   <button
                     type="button"
                     className="btn-primary"
-                    onClick={() => void recorder.start()}
+                    onClick={() => {
+                      startedAtRef.current = Date.now();
+                      void recorder.start();
+                    }}
                   >
                     <Mic className="h-4 w-4" /> {t('speaking.startRecording')}
                   </button>
@@ -302,7 +358,73 @@ export default function SpeakingExam() {
             </div>
           </>
         )}
+
+        <section className="mt-6">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {t('speaking.savedTitle')}
+            </h2>
+            <span className="text-xs text-slate-400">{t('speaking.savedHint')}</span>
+          </div>
+
+          {saved.length === 0 ? (
+            <p className="card p-4 text-sm text-slate-500">{t('speaking.savedEmpty')}</p>
+          ) : (
+            <div className="space-y-3">
+              {saved.map((recording) => (
+                <SavedItem key={recording.id} recording={recording} onDelete={handleDelete} />
+              ))}
+            </div>
+          )}
+        </section>
       </main>
+    </div>
+  );
+}
+
+function SavedItem({
+  recording,
+  onDelete,
+}: {
+  recording: SavedRecording;
+  onDelete: (id: string) => void;
+}) {
+  const { t, i18n } = useTranslation();
+  const [url, setUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const objectUrl = URL.createObjectURL(recording.blob);
+    setUrl(objectUrl);
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [recording.blob]);
+
+  const date = new Date(recording.createdAt).toLocaleString(
+    i18n.language === 'zh-TW' ? 'zh-TW' : 'en-GB',
+    { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' },
+  );
+  const extension = recording.mimeType.includes('mp4') ? 'm4a' : 'webm';
+
+  return (
+    <div className="card p-4">
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge tone="rose">Part {recording.part}</Badge>
+        <span className="text-xs text-slate-400">{date}</span>
+        <span className="text-xs text-slate-400">{formatClock(recording.durationSec)}</span>
+      </div>
+      <p className="mt-2 text-sm text-slate-700">{recording.topic}</p>
+      {url ? <audio src={url} controls className="mt-2 w-full" /> : null}
+      <div className="mt-2 flex flex-wrap gap-1">
+        <a
+          className="btn-ghost text-xs"
+          href={url ?? '#'}
+          download={`ielts-speaking-p${recording.part}-${recording.createdAt}.${extension}`}
+        >
+          <Download className="h-3.5 w-3.5" /> {t('speaking.download')}
+        </a>
+        <button type="button" className="btn-ghost text-xs" onClick={() => onDelete(recording.id)}>
+          <Trash2 className="h-3.5 w-3.5" /> {t('speaking.deleteRecording')}
+        </button>
+      </div>
     </div>
   );
 }

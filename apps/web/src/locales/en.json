@@ -22,7 +22,9 @@
     "login": "Log in",
     "signup": "Sign up",
     "language": "Language",
-    "review": "Review"
+    "review": "Review",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
   },
   "auth": {
     "signIn": "Log in",
@@ -221,7 +223,11 @@
     "youShouldSay": "You should say:",
     "newCard": "Next card",
     "finish": "Finish practice",
-    "intro": "Speak naturally. There is no automatic marking for Speaking in this version."
+    "intro": "Speak naturally. There is no automatic marking for Speaking in this version.",
+    "savedTitle": "Saved recordings",
+    "savedHint": "Stored in this browser only",
+    "savedEmpty": "No saved recordings yet.",
+    "download": "Download"
   },
   "admin": {
     "title": "Admin",

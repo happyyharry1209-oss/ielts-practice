@@ -115,6 +115,8 @@ export interface RecorderState {
   recording: boolean;
   error: string | null;
   url: string | null;
+  /** Latest finished recording, for persistence. */
+  blob: Blob | null;
   start: () => Promise<void>;
   stop: () => void;
   clear: () => void;
@@ -125,6 +127,7 @@ export function useRecorder(): RecorderState {
   const [recording, setRecording] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [url, setUrl] = useState<string | null>(null);
+  const [blob, setBlob] = useState<Blob | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -167,8 +170,9 @@ export function useRecorder(): RecorderState {
         if (event.data.size > 0) chunksRef.current.push(event.data);
       };
       recorder.onstop = () => {
-        const blob = new Blob(chunksRef.current, { type: recorder.mimeType || 'audio/webm' });
-        setUrl(URL.createObjectURL(blob));
+        const finished = new Blob(chunksRef.current, { type: recorder.mimeType || 'audio/webm' });
+        setBlob(finished);
+        setUrl(URL.createObjectURL(finished));
       };
       recorder.start();
       recorderRef.current = recorder;
@@ -186,5 +190,5 @@ export function useRecorder(): RecorderState {
     };
   }, []);
 
-  return { supported, recording, error, url, start, stop, clear };
+  return { supported, recording, error, url, blob, start, stop, clear };
 }
