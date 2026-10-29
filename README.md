@@ -220,6 +220,19 @@ To close public sign-ups, set `REGISTRATION_OPEN=false` on the API. Existing acc
 
 ---
 
+## Wrong-answer notebook
+
+`/review` collects every question you answered **incorrectly** (unanswered questions are not counted),
+using the most recent response per question so a later correct answer clears it.
+
+- Grouped by paper, with your answer, the correct answer and the explanation.
+- **Retry** opens the same questions without a timer, marks them with the normal grader and does not
+  create an attempt, so your stats stay clean.
+- **Mark as mastered** hides a question from the notebook for good.
+- Marking inside a retry session keeps the question on screen so you can still read the explanation.
+
+---
+
 ## Admin account
 
 ```bash
