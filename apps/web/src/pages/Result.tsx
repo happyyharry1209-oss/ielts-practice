@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import type { Question, QuestionType } from '@ielts/shared';
 import { QuestionInput } from '../components/QuestionInput';
-import { Card, PageHeader, Spinner } from '../components/ui';
+import { PageHeader, Spinner } from '../components/ui';
 import type { ContentManifest } from '@ielts/shared';
 import { api, errorMessage } from '../lib/api';
 import { bandColor, cn } from '../lib/utils';
@@ -81,46 +81,43 @@ export default function Result() {
         }
       />
 
-      <div className="grid gap-4 sm:grid-cols-3">
-        <Card className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            {t('results.band')}
-          </p>
-          <p className={cn('mt-1 text-5xl font-black', bandColor(attempt.band))}>
+      <section className="grid border-y border-line md:grid-cols-[0.9fr_1.1fr]">
+        <div className="border-b border-line py-7 md:border-b-0 md:border-r md:pr-8">
+          <p className="eyebrow">{t('results.band')}</p>
+          <p className={cn('mt-3 font-serif text-7xl font-medium tracking-[-0.05em]', bandColor(attempt.band))}>
             {attempt.band != null ? attempt.band.toFixed(1) : '—'}
+            <span className="ml-1 font-sans text-lg font-normal text-slate-400">/ 9</span>
           </p>
-          <p className="mt-2 text-xs text-slate-400">{t('results.disclaimer')}</p>
-        </Card>
-        <Card className="flex flex-col justify-center">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            {t('results.correct')}
-          </p>
-          <p className="mt-1 text-3xl font-bold text-slate-900">
-            {attempt.raw_score ?? 0}
-            <span className="text-base font-normal text-slate-400"> / {attempt.total ?? 0}</span>
-          </p>
-          <p className="mt-1 text-xs text-slate-400">
-            {t('results.scoreLine', {
-              correct: attempt.raw_score ?? 0,
-              total: attempt.total ?? 0,
-            })}
-          </p>
-        </Card>
-        <Card className="flex flex-col justify-center">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            {t('results.answered')}
-          </p>
-          <p className="mt-1 text-3xl font-bold text-slate-900">
-            {answered}
-            <span className="text-base font-normal text-slate-400"> / {items.length}</span>
-          </p>
-          <p className="mt-1 text-xs text-slate-400">
-            {t('results.unanswered')}: {items.length - answered}
-          </p>
-        </Card>
-      </div>
+          <p className="mt-3 max-w-md text-xs leading-5 text-slate-500">{t('results.disclaimer')}</p>
+        </div>
+        <div className="grid grid-cols-2 md:pl-8">
+          <div className="py-7 md:pr-6">
+            <p className="eyebrow">{t('results.correct')}</p>
+            <p className="mt-2 font-serif text-4xl font-medium text-ink">
+              {attempt.raw_score ?? 0}
+              <span className="font-sans text-sm font-normal text-slate-400"> / {attempt.total ?? 0}</span>
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              {t('results.scoreLine', {
+                correct: attempt.raw_score ?? 0,
+                total: attempt.total ?? 0,
+              })}
+            </p>
+          </div>
+          <div className="border-l border-line py-7 pl-5 md:pl-6">
+            <p className="eyebrow">{t('results.answered')}</p>
+            <p className="mt-2 font-serif text-4xl font-medium text-ink">
+              {answered}
+              <span className="font-sans text-sm font-normal text-slate-400"> / {items.length}</span>
+            </p>
+            <p className="mt-2 text-xs text-slate-500">
+              {t('results.unanswered')}: {items.length - answered}
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <h2 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-wide text-slate-500">
+      <h2 className="mb-4 mt-10 border-b border-ink pb-3 font-serif text-2xl font-semibold text-ink">
         {t('results.review')}
       </h2>
 

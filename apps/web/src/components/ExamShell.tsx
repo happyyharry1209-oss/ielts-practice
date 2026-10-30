@@ -8,8 +8,8 @@ export function TimerPill({ remaining, mode }: { remaining: number; mode: 'mock'
   return (
     <div
       className={cn(
-        'flex items-center gap-2 rounded-xl px-3 py-1.5 text-sm font-semibold tabular-nums',
-        urgent ? 'bg-rose-100 text-rose-700' : 'bg-slate-100 text-slate-700',
+        'flex min-h-10 items-center gap-2 rounded-sm px-3 py-1.5 text-sm font-semibold tabular-nums',
+        urgent ? 'bg-rose-100 text-rose-700' : 'bg-paper/10 text-paper/80',
       )}
       title={mode === 'mock' ? t('exam.mockMode') : t('exam.practiceMode')}
     >
@@ -46,25 +46,30 @@ export function ExamShell({
 }) {
   const { t } = useTranslation();
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50">
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3">
+    <div className="exam-surface flex min-h-screen flex-col">
+      <header className="sticky top-0 z-30 border-b border-paper/15 bg-ink text-paper shadow-sm">
+        <div className="mx-auto flex min-h-[70px] max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-semibold text-slate-900">{title}</p>
-            {subtitle ? <p className="truncate text-xs text-slate-500">{subtitle}</p> : null}
+            <p className="truncate font-serif text-base font-semibold text-paper">{title}</p>
+            {subtitle ? <p className="truncate text-[11px] text-paper/55">{subtitle}</p> : null}
           </div>
           <div className="flex items-center gap-2">
-            <span className="hidden rounded-xl bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 sm:inline">
+            <span className="hidden min-h-10 items-center rounded-sm bg-paper/10 px-3 py-1.5 text-xs font-medium text-paper/75 sm:inline-flex">
               {answered} / {total}
             </span>
             {timer}
-            <button type="button" className="btn-primary" onClick={onSubmit} disabled={disabled}>
+            <button
+              type="button"
+              className="btn bg-brand-600 text-white hover:bg-brand-500"
+              onClick={onSubmit}
+              disabled={disabled}
+            >
               {submitLabel}
             </button>
           </div>
         </div>
       </header>
-      <main className="mx-auto flex w-full max-w-[1400px] flex-1 gap-6 px-4 py-6">
+      <main className="mx-auto flex w-full max-w-[1400px] flex-1 gap-6 px-4 py-6 lg:py-8">
         <div className="min-w-0 flex-1">{children}</div>
         {sidebar ? <aside className="hidden w-64 shrink-0 lg:block">{sidebar}</aside> : null}
       </main>
@@ -91,9 +96,9 @@ export function ConfirmDialog({
 }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/55 p-4 backdrop-blur-sm">
       <div className="card w-full max-w-md p-6">
-        <h2 className="text-lg font-semibold text-slate-900">{title}</h2>
+        <h2 className="font-serif text-2xl font-semibold text-ink">{title}</h2>
         <p className="mt-2 text-sm text-slate-600">{body}</p>
         <div className="mt-6 flex justify-end gap-2">
           <button type="button" className="btn-secondary" onClick={onCancel}>

@@ -12,7 +12,9 @@
     "words": "words",
     "saving": "Saving…",
     "saved": "Saved",
-    "optional": "optional"
+    "optional": "optional",
+    "journal": "Personal Study Journal",
+    "legal": "Independent IELTS practice tool. IELTS is a registered trademark of the British Council, IDP: IELTS Australia and Cambridge University Press & Assessment. All practice questions are original."
   },
   "nav": {
     "home": "Dashboard",
@@ -24,7 +26,11 @@
     "language": "Language",
     "review": "Review",
     "darkMode": "Dark mode",
-    "lightMode": "Light mode"
+    "lightMode": "Light mode",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Primary navigation",
+    "mobile": "Mobile navigation"
   },
   "auth": {
     "signIn": "Log in",
@@ -72,6 +78,10 @@
     "resending": "Sending…",
     "debugLink": "Open verification link",
     "noMailHint": "Didn't get an email? Ask the site admin to generate a reset link for you."
+    ,
+    "benefitOne": "Reading, listening, writing and speaking in one place",
+    "benefitTwo": "Automatic marking with clear explanations",
+    "benefitThree": "Focused writing feedback and saved speaking practice"
   },
   "account": {
     "title": "Account",
@@ -86,7 +96,7 @@
   },
   "home": {
     "greeting": "Hi, {{name}}",
-    "subtitle": "Pick a paper and keep the streak going.",
+    "subtitle": "Start with the skill you want to strengthen today. Short practice, full mock tests and wrong-answer retries all become part of one personal study record.",
     "startPractice": "Start practising",
     "bestBand": "Best band",
     "attempts": "Attempts",
@@ -108,7 +118,17 @@
     "heroLabel": "Today's practice",
     "weekAttempts": "Practices this week",
     "activeDays": "Active days (30)",
-    "bestBandHint": "Across reading and listening"
+    "bestBandHint": "Across reading and listening",
+    "headlineLead": "Make every practice leave a trail of",
+    "headlineAccent": "visible",
+    "headlineTail": " progress.",
+    "viewWeek": "View this week",
+    "chooseSkill": "What will you practise today?",
+    "fourSkills": "Your four skills",
+    "recentHint": "Latest first",
+    "noteLabel": "A note for today",
+    "note": "Consistency matters more than one perfect score. Completing one small section today still moves you forward.",
+    "noteSignature": "A small practice, every day."
   },
   "practice": {
     "title": "Choose a test",
@@ -158,6 +178,12 @@
     "nextPassage": "Next passage",
     "previousSection": "Previous section",
     "nextSection": "Next section"
+    ,
+    "typeAnswer": "Type your answer",
+    "selectHeading": "Select a heading",
+    "wordLimitError": "Your answer exceeded the word limit, so it could not score."
+    ,
+    "audioError": "This recording could not be played."
   },
   "results": {
     "title": "Result",

@@ -116,19 +116,19 @@ export default function WritingExam() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
+    <div className="exam-surface min-h-screen">
+      <header className="sticky top-0 z-30 border-b border-paper/15 bg-ink text-paper shadow-sm">
+        <div className="mx-auto flex min-h-[70px] max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-semibold text-slate-900">{test.title}</p>
-            <p className="text-xs text-slate-500">
+            <p className="truncate font-serif text-base font-semibold text-paper">{test.title}</p>
+            <p className="text-[11px] text-paper/55">
               {task.suggestedMinutes} {t('common.min')} · {t('writing.minWords', { count: task.minWords })}
             </p>
           </div>
           <span
             className={cn(
-              'rounded-xl px-3 py-1.5 text-sm font-semibold tabular-nums',
-              words >= task.minWords ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-600',
+              'rounded-sm px-3 py-1.5 text-xs font-semibold tabular-nums',
+              words >= task.minWords ? 'bg-emerald-50 text-emerald-700' : 'bg-paper/10 text-paper/75',
             )}
           >
             {t('writing.wordCount', { count: words })}
@@ -136,7 +136,7 @@ export default function WritingExam() {
           <TimerPill remaining={timer.remaining} mode={mode} />
           <button
             type="button"
-            className="btn-primary"
+            className="btn bg-brand-600 text-white hover:bg-brand-500"
             onClick={() => void submit()}
             disabled={submitting || words < 30}
           >
@@ -145,7 +145,7 @@ export default function WritingExam() {
         </div>
       </header>
 
-      <main className="mx-auto grid max-w-5xl gap-5 px-4 py-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+      <main className="mx-auto grid max-w-5xl gap-6 px-4 py-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:py-8">
         <div className="space-y-4">
           <div className="flex gap-2">
             {test.tasks.map((item, index) => (
@@ -154,7 +154,7 @@ export default function WritingExam() {
                 type="button"
                 onClick={() => setTaskIndex(index)}
                 className={cn(
-                  'rounded-xl px-3 py-1.5 text-sm font-medium transition',
+                  'min-h-10 rounded-sm px-3 py-1.5 text-xs font-semibold transition',
                   index === taskIndex
                     ? 'bg-slate-900 text-white'
                     : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50',
@@ -165,12 +165,12 @@ export default function WritingExam() {
             ))}
           </div>
 
-          <div className="card p-5">
+          <div className="card border-t-2 border-t-amber-500 p-5 sm:p-7">
             <Badge tone="amber">{t(`writing.task${task.task}`)}</Badge>
             <p className="mt-3 text-xs text-slate-500">
               {task.task === 1 ? t('writing.taskIntro1') : t('writing.taskIntro2')}
             </p>
-            <div className="mt-3">
+            <div className="mt-4 border-t border-line pt-4">
               <Markdown text={task.prompt} />
             </div>
             {task.imageUrl ? (
@@ -189,14 +189,14 @@ export default function WritingExam() {
         </div>
 
         <div className="space-y-4">
-          <div className="card p-4">
+          <div className="card border-t-2 border-t-brand-600 p-4 sm:p-5">
             <textarea
               value={draft}
               onChange={(event) =>
                 setDrafts((previous) => ({ ...previous, [task.id]: event.target.value }))
               }
               placeholder={t('writing.startTyping')}
-              className="min-h-[420px] w-full resize-y rounded-xl border border-slate-200 p-4 text-[15px] leading-7 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+              className="min-h-[420px] w-full resize-y rounded-sm border border-line bg-surface p-4 font-serif text-[16px] leading-7 text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
               spellCheck
             />
             <div className="mt-2 flex items-center justify-between text-xs text-slate-400">
@@ -210,13 +210,13 @@ export default function WritingExam() {
           ) : null}
 
           {feedback ? (
-            <div className="card space-y-5 p-5">
+            <div className="card space-y-5 border-t-2 border-t-brand-600 p-5 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                     {t('writing.overallBand')}
                   </p>
-                  <p className={`text-4xl font-black ${bandColor(feedback.overall)}`}>
+                  <p className={`font-serif text-4xl font-medium ${bandColor(feedback.overall)}`}>
                     {feedback.overall.toFixed(1)}
                   </p>
                   <p className="mt-1 text-xs text-slate-400">

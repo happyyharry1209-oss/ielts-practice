@@ -1,4 +1,5 @@
 import type { Question } from '@ielts/shared';
+import { useTranslation } from 'react-i18next';
 import type { AnswerValue } from '../lib/useExam';
 import { cn, letterFor } from '../lib/utils';
 
@@ -52,6 +53,7 @@ export function QuestionInput({
   disabled,
   showNumber = true,
 }: Props) {
+  const { t } = useTranslation();
   const options = question.options ?? [];
   const isText = TEXT_TYPES.has(question.type);
   const isMulti = question.type === 'multiple-answer';
@@ -82,7 +84,7 @@ export function QuestionInput({
   return (
     <div
       className={cn(
-        'rounded-2xl border bg-white p-4 transition',
+        'rounded-md border bg-surface p-4 transition',
         review
           ? review.correct
             ? 'border-emerald-200 bg-emerald-50/40'
@@ -94,7 +96,7 @@ export function QuestionInput({
         {showNumber ? (
           <span
             className={cn(
-              'mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold',
+              'mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-sm text-xs font-bold',
               review
                 ? review.correct
                   ? 'bg-emerald-600 text-white'
@@ -122,13 +124,13 @@ export function QuestionInput({
                 value={selectedValue}
                 disabled={disabled}
                 onChange={(event) => onChange(event.target.value)}
-                placeholder="Type your answer"
+                placeholder={t('exam.typeAnswer')}
                 autoComplete="off"
                 spellCheck={false}
               />
               {question.wordLimit ? (
                 <p className="mt-1 text-xs text-slate-400">
-                  Max {question.wordLimit} word{question.wordLimit > 1 ? 's' : ''}.
+                  {t('exam.wordLimit', { count: question.wordLimit })}
                 </p>
               ) : null}
             </div>
@@ -139,7 +141,7 @@ export function QuestionInput({
               disabled={disabled}
               onChange={(event) => onChange(event.target.value || null)}
             >
-              <option value="">— Select a heading —</option>
+              <option value="">{t('exam.selectHeading')}</option>
               {(question.bank ?? []).map((heading) => (
                 <option key={heading.id} value={heading.id}>
                   {heading.id}. {heading.text}
@@ -158,7 +160,7 @@ export function QuestionInput({
                     disabled={disabled}
                     onClick={() => toggleMulti(option)}
                     className={cn(
-                      'flex items-start gap-2 rounded-xl border px-3 py-2 text-left text-sm transition',
+                      'flex min-h-11 items-start gap-2 rounded-sm border px-3 py-2 text-left text-sm transition',
                       checked
                         ? 'border-brand-500 bg-brand-50 text-brand-800'
                         : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50',
@@ -166,7 +168,7 @@ export function QuestionInput({
                   >
                     <span
                       className={cn(
-                        'mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border text-[11px] font-bold',
+                        'mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border text-[11px] font-bold',
                         checked ? 'border-brand-500 bg-brand-500 text-white' : 'border-slate-300 text-slate-500',
                       )}
                     >
@@ -194,7 +196,7 @@ export function QuestionInput({
                     disabled={disabled}
                     onClick={() => onChange(option)}
                     className={cn(
-                      'flex items-start gap-2 rounded-xl border px-3 py-2 text-left text-sm transition',
+                      'flex min-h-11 items-start gap-2 rounded-sm border px-3 py-2 text-left text-sm transition',
                       review && isExpected
                         ? 'border-emerald-500 bg-emerald-50'
                         : review && checked
@@ -205,7 +207,7 @@ export function QuestionInput({
                     )}
                   >
                     {!NO_LETTER_TYPES.has(question.type) && !singleLetterOptions ? (
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 text-[11px] font-bold text-slate-500">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-slate-300 text-[11px] font-bold text-slate-500">
                         {letterFor(index)}
                       </span>
                     ) : null}
@@ -219,14 +221,14 @@ export function QuestionInput({
           {review ? (
             <div className="mt-3 space-y-1 border-t border-slate-200/70 pt-3 text-sm">
               <p>
-                <span className="text-slate-500">Your answer: </span>
+                <span className="text-slate-500">{t('results.yourAnswer')}: </span>
                 <span className={review.correct ? 'font-semibold text-emerald-700' : 'font-semibold text-rose-700'}>
                   {asText(review.userAnswer ?? undefined) || '—'}
                 </span>
               </p>
               {!review.correct ? (
                 <p>
-                  <span className="text-slate-500">Correct answer: </span>
+                  <span className="text-slate-500">{t('results.correctAnswer')}: </span>
                   <span className="font-semibold text-emerald-700">
                     {Array.isArray(review.expected) ? review.expected.join(' / ') : review.expected}
                   </span>
@@ -234,17 +236,19 @@ export function QuestionInput({
               ) : null}
               {review.reason === 'word-limit' ? (
                 <p className="text-xs font-medium text-rose-600">
-                  Your answer exceeded the word limit, so it could not score.
+                  {t('exam.wordLimitError')}
                 </p>
               ) : null}
               {review.explanation ? (
                 <p className="text-slate-600">
-                  <span className="font-medium text-slate-700">Why: </span>
+                  <span className="font-medium text-slate-700">{t('results.explanation')}: </span>
                   {review.explanation}
                 </p>
               ) : null}
               {review.location ? (
-                <p className="text-xs text-slate-400">Location: {review.location}</p>
+                <p className="text-xs text-slate-400">
+                  {t('results.location')}: {review.location}
+                </p>
               ) : null}
             </div>
           ) : null}

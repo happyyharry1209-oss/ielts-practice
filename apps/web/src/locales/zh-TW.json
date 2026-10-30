@@ -12,7 +12,9 @@
     "words": "字",
     "saving": "儲存中…",
     "saved": "已儲存",
-    "optional": "選填"
+    "optional": "選填",
+    "journal": "個人備考手冊",
+    "legal": "這是獨立的 IELTS 練習工具。IELTS 是 British Council、IDP: IELTS Australia 及 Cambridge University Press & Assessment 的註冊商標。本站所有練習題皆為原創內容。"
   },
   "nav": {
     "home": "儀表板",
@@ -24,7 +26,11 @@
     "language": "語言",
     "review": "錯題本",
     "darkMode": "深色模式",
-    "lightMode": "淺色模式"
+    "lightMode": "淺色模式",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單",
+    "primary": "主要導覽",
+    "mobile": "手機導覽"
   },
   "auth": {
     "signIn": "登入",
@@ -72,6 +78,10 @@
     "resending": "寄送中…",
     "debugLink": "開啟驗證連結",
     "noMailHint": "沒收到信？請網站管理員幫你產生重設連結。"
+    ,
+    "benefitOne": "閱讀、聽力、寫作與口說集中在同一處",
+    "benefitTwo": "自動批改，附有清楚的答案解析",
+    "benefitThree": "具體的寫作回饋與保存的口說錄音"
   },
   "account": {
     "title": "帳號",
@@ -86,7 +96,7 @@
   },
   "home": {
     "greeting": "你好，{{name}}",
-    "subtitle": "選一份考卷，繼續保持練習。",
+    "subtitle": "從今天最想加強的一科開始。短題練習、完整模擬考與錯題重練，都會整理成一份屬於你的學習記錄。",
     "startPractice": "開始練習",
     "bestBand": "最佳分數",
     "attempts": "練習次數",
@@ -108,7 +118,17 @@
     "heroLabel": "開始今天的練習",
     "weekAttempts": "本週練習",
     "activeDays": "近 30 天有練習",
-    "bestBandHint": "閱讀與聽力最佳"
+    "bestBandHint": "閱讀、聽力與寫作最佳",
+    "headlineLead": "讓每一次練習，都留下",
+    "headlineAccent": "看得見",
+    "headlineTail": "的軌跡。",
+    "viewWeek": "查看本週紀錄",
+    "chooseSkill": "今天想練哪一科？",
+    "fourSkills": "四項核心能力",
+    "recentHint": "最新紀錄",
+    "noteLabel": "寫給今天的你",
+    "note": "穩定比一次高分更重要。今天完成一個小段落，也算往前。",
+    "noteSignature": "每天一點，持續累積。"
   },
   "practice": {
     "title": "選擇試卷",
@@ -158,6 +178,12 @@
     "nextPassage": "下一篇文章",
     "previousSection": "上一個 section",
     "nextSection": "下一個 section"
+    ,
+    "typeAnswer": "輸入答案",
+    "selectHeading": "選擇一個標題",
+    "wordLimitError": "答案超過字數限制，因此未能計分。"
+    ,
+    "audioError": "未能播放這段錄音。"
   },
   "results": {
     "title": "成績",

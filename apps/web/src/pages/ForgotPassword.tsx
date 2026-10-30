@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { AuthShell } from '../components/AuthShell';
 import { Field } from '../components/ui';
 import { ApiError, api } from '../lib/api';
 
@@ -34,16 +35,11 @@ export default function ForgotPassword() {
   const token = debugLink ? extractToken(debugLink) : null;
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 p-6">
-      <div className="w-full max-w-sm">
-        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-sm font-black text-white">
-          IE
-        </span>
-        <h1 className="mt-6 text-2xl font-bold text-slate-900">{t('auth.forgotTitle')}</h1>
-        <p className="mt-1 text-sm text-slate-500">{t('auth.forgotSubtitle')}</p>
+    <AuthShell title={t('auth.forgotTitle')} subtitle={t('auth.forgotSubtitle')}>
+      <div>
 
         {sent ? (
-          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+          <div className="mt-6 rounded-md border border-emerald-200 bg-emerald-50 p-4">
             <p className="text-sm font-semibold text-emerald-800">{t('auth.forgotSent')}</p>
             <p className="mt-1 text-sm text-emerald-700">
               {t('auth.forgotSentHint', { email })}
@@ -88,7 +84,7 @@ export default function ForgotPassword() {
           </Link>
         </p>
       </div>
-    </div>
+    </AuthShell>
   );
 }
 

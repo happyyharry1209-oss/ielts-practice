@@ -43,7 +43,7 @@ function RequireAuth({ withLayout = true }: { withLayout?: boolean }) {
 function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3">
-      <p className="text-4xl font-black text-slate-300">404</p>
+      <p className="font-serif text-7xl font-medium text-brand-600">404</p>
       <p className="text-sm text-slate-500">Page not found.</p>
       <a className="btn-secondary" href="#/">
         Back to dashboard

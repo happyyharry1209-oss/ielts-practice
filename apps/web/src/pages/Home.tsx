@@ -1,11 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { BookOpen, Headphones, Mic, PenLine, Sparkles } from 'lucide-react';
+import { ArrowUpRight, BookOpen, Headphones, Mic, PenLine } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Badge, Card, Stat } from '../components/ui';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
-import { bandColor, formatDate, formatDateTime } from '../lib/utils';
+import { bandColor, cn, formatDate, formatDateTime } from '../lib/utils';
 
 interface SkillStat {
   skill: string;
@@ -45,22 +44,30 @@ interface StatsResponse {
 }
 
 const SKILL_META = [
-  { key: 'reading', icon: BookOpen, accent: 'bg-emerald-50 text-emerald-600' },
-  { key: 'listening', icon: Headphones, accent: 'bg-sky-50 text-sky-600' },
-  { key: 'writing', icon: PenLine, accent: 'bg-amber-50 text-amber-600' },
-  { key: 'speaking', icon: Mic, accent: 'bg-rose-50 text-rose-600' },
+  {
+    key: 'reading',
+    icon: BookOpen,
+    accent: 'bg-[#e0e8df] text-[#466e56] dark:bg-sage/20 dark:text-sage',
+  },
+  {
+    key: 'listening',
+    icon: Headphones,
+    accent: 'bg-[#dfe9ee] text-[#4d7892] dark:bg-sky-900/40 dark:text-sky-300',
+  },
+  {
+    key: 'writing',
+    icon: PenLine,
+    accent: 'bg-[#efe3cc] text-[#946221] dark:bg-amber-900/40 dark:text-amber-300',
+  },
+  {
+    key: 'speaking',
+    icon: Mic,
+    accent: 'bg-[#ecdcd5] text-[#a55441] dark:bg-rose-900/40 dark:text-rose-300',
+  },
 ] as const;
 
-function Progress({ band }: { band: number | null }) {
-  const pct = band == null ? 0 : Math.min(100, (band / 9) * 100);
-  return (
-    <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-slate-100">
-      <div
-        className="h-full rounded-full bg-gradient-to-r from-brand-400 to-brand-600 transition-all"
-        style={{ width: `${pct}%` }}
-      />
-    </div>
-  );
+function skillKey(skill: string): string {
+  return `${skill.charAt(0).toUpperCase()}${skill.slice(1)}`;
 }
 
 export default function Home() {
@@ -83,182 +90,216 @@ export default function Home() {
     if (entry.best_band == null) return best;
     return best == null ? entry.best_band : Math.max(best, entry.best_band);
   }, null);
+  const headlineBand = Math.max(bestOverall ?? 0, bestWriting ?? 0) || null;
 
   return (
     <div>
-      <section className="relative mb-6 overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-600 to-indigo-800 p-6 text-white shadow-lg shadow-brand-600/20 sm:p-8">
-        <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/10 blur-2xl" />
-        <div className="relative">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-100">
-            {t('home.heroLabel')}
-          </p>
-          <h1 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
-            {t('home.greeting', { name: user?.displayName || user?.email?.split('@')[0] || '' })}
+      <section className="grid gap-8 pb-9 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16 lg:pb-12">
+        <div>
+          <h1 className="editorial-title max-w-3xl">
+            <span className="block">{t('home.headlineLead')}</span>
+            <span className="block whitespace-nowrap">
+              <em className="text-brand-600">{t('home.headlineAccent')}</em>
+              {t('home.headlineTail')}
+            </span>
           </h1>
-          <p className="mt-1 text-sm text-brand-100">{t('home.subtitle')}</p>
-
-          <div className="mt-5 flex flex-wrap items-center gap-2">
-            <Link to="/practice/reading" className="btn bg-white text-brand-700 hover:bg-brand-50">
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600">{t('home.subtitle')}</p>
+          <div className="mt-7 flex flex-wrap items-center gap-5">
+            <Link to="/practice/reading" className="btn-primary gap-6 px-5">
               {t('home.startPractice')}
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
+            <button
+              type="button"
+              className="border-b border-ink pb-1 text-xs font-semibold text-ink"
+              onClick={() => document.getElementById('recent')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              {t('home.viewWeek')}
+            </button>
             {isAdmin ? (
-              <Link to="/admin" className="btn bg-white/15 text-white hover:bg-white/25">
+              <Link to="/admin" className="text-xs font-semibold text-slate-500 hover:text-ink">
                 {t('home.adminPanel')}
               </Link>
             ) : null}
           </div>
+        </div>
 
-          <div className="mt-6 flex flex-wrap gap-8 text-sm">
-            <div>
-              <p className="text-2xl font-bold">{data?.activity.weekAttempts ?? 0}</p>
-              <p className="text-xs text-brand-100">{t('home.weekAttempts')}</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">{data?.activity.activeDays30 ?? 0}</p>
-              <p className="text-xs text-brand-100">{t('home.activeDays')}</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">{totalAttempts}</p>
-              <p className="text-xs text-brand-100">{t('home.attempts')}</p>
-            </div>
+        <div className="grid grid-cols-[1fr_auto] items-end border-t border-line pt-5 lg:border-l lg:border-t-0 lg:py-5 lg:pl-10">
+          <div>
+            <p className="eyebrow">{t('home.bestBand')}</p>
+            <p className="mt-3 font-serif text-[64px] font-medium leading-[0.85] tracking-[-0.05em] text-ink">
+              {headlineBand != null ? headlineBand.toFixed(1) : '—'}
+              <span className="ml-1 font-sans text-lg text-slate-500">/9</span>
+            </p>
           </div>
+          <p className="max-w-[145px] text-right font-serif text-xs leading-5 text-slate-500 lg:text-left">
+            {t('home.bestBandHint')}
+          </p>
         </div>
       </section>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {SKILL_META.map((meta) => {
+      <section className="grid grid-cols-3 border-y border-line">
+        {[
+          [data?.activity.weekAttempts ?? 0, t('home.weekAttempts')],
+          [data?.activity.activeDays30 ?? 0, t('home.activeDays')],
+          [totalAttempts, t('home.attempts')],
+        ].map(([value, label], index) => (
+          <div
+            key={String(label)}
+            className={cn('flex items-baseline gap-3 py-4', index > 0 && 'border-l border-line pl-4 sm:pl-8')}
+          >
+            <b className="font-serif text-2xl font-medium text-ink sm:text-[28px]">{value}</b>
+            <span className="text-[10px] leading-4 text-slate-500">{label}</span>
+          </div>
+        ))}
+      </section>
+
+      <div className="mb-2 mt-9 flex items-end justify-between">
+        <h2 className="section-title">{t('home.chooseSkill')}</h2>
+        <span className="hidden text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400 sm:block">
+          {t('home.fourSkills')}
+        </span>
+      </div>
+
+      <section className="border-t border-ink">
+        {SKILL_META.map((meta, index) => {
           const Icon = meta.icon;
           const stat = statFor(meta.key);
           const band = meta.key === 'writing' ? bestWriting : stat?.best_band ?? null;
-          return (
-            <Card key={meta.key} className="card-hover flex flex-col">
-              <div className="flex items-center justify-between">
-                <div
-                  className={`inline-flex h-10 w-10 items-center justify-center rounded-xl ${meta.accent}`}
-                >
-                  <Icon className="h-5 w-5" />
-                </div>
-                <span className="text-[11px] text-slate-400">
-                  {stat?.last_at ? formatDate(stat.last_at, i18n.language) : '—'}
-                </span>
-              </div>
-              <h3 className="mt-3 text-base font-semibold text-slate-900">
-                {t(`home.skill${meta.key.charAt(0).toUpperCase()}${meta.key.slice(1)}`)}
-              </h3>
-              <p className="mt-1 flex-1 text-xs leading-5 text-slate-500">
-                {t(`home.${meta.key}Desc`)}
-              </p>
+          const pct = band == null ? 0 : Math.min(100, (band / 9) * 100);
 
-              <div className="mt-4 flex items-end justify-between">
-                <div>
-                  <p className="text-[11px] uppercase tracking-wide text-slate-400">
-                    {t('home.bestBand')}
-                  </p>
-                  <p className={`text-3xl font-black ${bandColor(band)}`}>
+          return (
+            <div key={meta.key} className="skill-row">
+              <span className="font-serif text-[10px] text-brand-600">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div className="flex min-w-0 items-center gap-3">
+                <span className={cn('grid h-9 w-9 shrink-0 place-items-center rounded-full', meta.accent)}>
+                  <Icon className="h-4 w-4" strokeWidth={1.7} />
+                </span>
+                <div className="min-w-0">
+                  <h3 className="font-serif text-xl font-semibold text-ink sm:text-[23px]">
+                    {t(`home.skill${skillKey(meta.key)}`)}
+                  </h3>
+                  <span className={cn('mt-1 block font-serif text-lg sm:hidden', bandColor(band))}>
                     {band != null ? band.toFixed(1) : '—'}
-                  </p>
+                  </span>
                 </div>
-                <Link to={`/practice/${meta.key}`} className="btn-secondary text-xs">
-                  {t('home.practiceNow')}
-                </Link>
               </div>
-              <Progress band={band} />
-            </Card>
+              <div className="min-w-0">
+                <p className="text-xs leading-5 text-slate-500">{t(`home.${meta.key}Desc`)}</p>
+                <div className="track">
+                  <span style={{ width: `${pct}%` }} />
+                </div>
+              </div>
+              <div className="hidden sm:block">
+                <small className="block text-[8px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                  {t('home.bestBand')}
+                </small>
+                <b className={cn('font-serif text-2xl font-medium', bandColor(band))}>
+                  {band != null ? band.toFixed(1) : '—'}
+                </b>
+              </div>
+              <Link
+                to={`/practice/${meta.key}`}
+                className="flex items-center justify-between border-b border-ink pb-2 text-[10px] font-semibold text-ink"
+              >
+                {t('home.practiceNow')}
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           );
         })}
-      </div>
+      </section>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-3">
-        <Stat
-          label={t('home.bestBand')}
-          value={bestOverall != null ? bestOverall.toFixed(1) : '—'}
-          hint={t('home.bestBandHint')}
-        />
-        <Stat
-          label={t('home.writingFeedback')}
-          value={data?.writing.length ?? 0}
-          hint={bestWriting != null ? `${t('home.bestBand')}: ${bestWriting.toFixed(1)}` : undefined}
-        />
-        <Stat label={t('admin.joined')} value={formatDate(user?.createdAt, i18n.language)} />
-      </div>
-
-      <h2 className="mb-3 mt-8 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-        {t('home.recent')}
-      </h2>
-      {isLoading ? (
-        <div className="space-y-2">
-          {[0, 1, 2].map((index) => (
-            <div key={index} className="card flex items-center gap-3 p-4">
-              <div className="skeleton h-8 w-16" />
-              <div className="flex-1 space-y-2">
-                <div className="skeleton h-3 w-1/2" />
-                <div className="skeleton h-2 w-1/4" />
-              </div>
-              <div className="skeleton h-6 w-10" />
-            </div>
-          ))}
-        </div>
-      ) : (data?.recent.length ?? 0) === 0 ? (
-        <Card className="flex flex-col items-center gap-2 p-10 text-center">
-          <Sparkles className="h-6 w-6 text-brand-500" />
-          <p className="text-sm font-semibold text-slate-700">{t('home.noData')}</p>
-          <Link to="/practice/reading" className="btn-primary mt-2 text-xs">
-            {t('home.startPractice')}
-          </Link>
-        </Card>
-      ) : (
-        <div className="card divide-y divide-slate-100 overflow-hidden">
-          {data?.recent.map((attempt) => (
-            <Link
-              key={attempt.id}
-              to={`/result/${attempt.id}`}
-              className="flex items-center gap-3 px-5 py-3 transition hover:bg-slate-50"
-            >
-              <Badge tone={attempt.skill === 'reading' ? 'emerald' : 'sky'}>
-                {t(`home.skill${attempt.skill.charAt(0).toUpperCase()}${attempt.skill.slice(1)}`)}
-              </Badge>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-slate-800">{attempt.title}</p>
-                <p className="text-xs text-slate-400">
-                  {formatDateTime(attempt.submitted_at, i18n.language)} · {attempt.mode}
-                </p>
-              </div>
-              <div className="text-right">
-                <p className={`text-lg font-bold ${bandColor(attempt.band)}`}>
-                  {attempt.band != null ? attempt.band.toFixed(1) : '—'}
-                </p>
-                <p className="text-xs text-slate-400">
-                  {attempt.raw_score ?? 0}/{attempt.total ?? 0}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-
-      {(data?.writing.length ?? 0) > 0 ? (
-        <>
-          <h2 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-wide text-slate-500">
-            {t('home.writingFeedback')}
-          </h2>
-          <div className="card divide-y divide-slate-100 overflow-hidden">
-            {data?.writing.map((entry) => (
-              <div key={entry.id} className="flex items-center gap-3 px-5 py-3">
-                <Badge tone="amber">{entry.task_id}</Badge>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-medium text-slate-800">{entry.title}</p>
-                  <p className="text-xs text-slate-400">
-                    {formatDateTime(entry.created_at, i18n.language)} · {entry.word_count} words
-                  </p>
-                </div>
-                <p className={`text-lg font-bold ${bandColor(entry.ai_band)}`}>
-                  {entry.ai_band != null ? entry.ai_band.toFixed(1) : '—'}
-                </p>
-              </div>
-            ))}
+      <div className="mt-11 grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-14" id="recent">
+        <section>
+          <div className="mb-3 flex items-end justify-between">
+            <h2 className="section-title">{t('home.recent')}</h2>
+            <span className="text-[9px] uppercase tracking-[0.13em] text-slate-400">
+              {t('home.recentHint')}
+            </span>
           </div>
-        </>
-      ) : null}
+          {isLoading ? (
+            <div className="space-y-3 border-t border-ink pt-4">
+              {[0, 1, 2].map((index) => (
+                <div key={index} className="skeleton h-12 w-full" />
+              ))}
+            </div>
+          ) : (data?.recent.length ?? 0) === 0 ? (
+            <div className="border-y border-line py-10 text-center">
+              <p className="font-serif text-xl text-ink">{t('home.noData')}</p>
+              <Link to="/practice/reading" className="btn-primary mt-5 text-xs">
+                {t('home.startPractice')}
+              </Link>
+            </div>
+          ) : (
+            <div className="border-t border-ink">
+              {data?.recent.map((attempt) => (
+                <Link
+                  key={attempt.id}
+                  to={`/result/${attempt.id}`}
+                  className="grid grid-cols-[48px_minmax(0,1fr)_52px] items-center gap-3 border-b border-line py-3.5 transition hover:bg-surface/60"
+                >
+                  <span className="font-serif text-[9px] uppercase text-brand-600">
+                    {attempt.skill.slice(0, 4)}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate text-xs font-semibold text-ink">{attempt.title}</p>
+                    <p className="mt-0.5 text-[10px] text-slate-500">
+                      {formatDateTime(attempt.submitted_at, i18n.language)} ·{' '}
+                      {attempt.mode === 'mock' ? t('exam.mockMode') : t('exam.practiceMode')}
+                    </p>
+                  </div>
+                  <p className={cn('text-right font-serif text-xl', bandColor(attempt.band))}>
+                    {attempt.band != null ? attempt.band.toFixed(1) : '—'}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {(data?.writing.length ?? 0) > 0 ? (
+            <div className="mt-7">
+              <h3 className="mb-3 font-serif text-xl font-semibold text-ink">
+                {t('home.writingFeedback')}
+              </h3>
+              <div className="border-t border-line">
+                {data?.writing.map((entry) => (
+                  <div
+                    key={entry.id}
+                    className="grid grid-cols-[60px_minmax(0,1fr)_44px] items-center gap-3 border-b border-line py-3"
+                  >
+                    <span className="text-[9px] font-semibold uppercase text-slate-500">
+                      {entry.task_id}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="truncate text-xs font-semibold text-ink">{entry.title}</p>
+                      <p className="mt-0.5 text-[10px] text-slate-500">
+                        {formatDate(entry.created_at, i18n.language)} · {entry.word_count}{' '}
+                        {t('common.words')}
+                      </p>
+                    </div>
+                    <p className={cn('text-right font-serif text-xl', bandColor(entry.ai_band))}>
+                      {entry.ai_band != null ? entry.ai_band.toFixed(1) : '—'}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </section>
+
+        <aside className="self-start bg-ink p-6 text-paper sm:p-8">
+          <p className="font-serif text-xs uppercase tracking-[0.13em] text-paper/60">
+            {t('home.noteLabel')}
+          </p>
+          <p className="mt-4 font-serif text-xl leading-[1.45] sm:text-[24px]">{t('home.note')}</p>
+          <p className="mt-7 text-[9px] font-semibold uppercase tracking-[0.14em] text-paper/45">
+            {t('home.noteSignature')}
+          </p>
+        </aside>
+      </div>
     </div>
   );
 }

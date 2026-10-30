@@ -66,30 +66,30 @@ export default function Review() {
       />
 
       {total === 0 ? (
-        <Card className="flex flex-col items-center gap-2 p-12 text-center">
+        <Card className="flex flex-col items-center gap-2 border-line py-12 text-center">
           <CheckCheck className="h-8 w-8 text-emerald-500" />
-          <p className="text-sm font-semibold text-slate-700">{t('review.empty')}</p>
+          <p className="font-serif text-xl font-semibold text-ink">{t('review.empty')}</p>
           <p className="text-sm text-slate-500">{t('review.emptyHint')}</p>
         </Card>
       ) : (
-        <div className="space-y-6">
+        <div className="space-y-7">
           {data?.groups.map((group) => (
-            <section key={`${group.skill}:${group.contentId}`}>
-              <div className="mb-2 flex items-center gap-2">
+            <section key={`${group.skill}:${group.contentId}`} className="border-t border-ink pt-3">
+              <div className="mb-3 flex flex-wrap items-center gap-2">
                 <Badge tone={group.skill === 'reading' ? 'emerald' : 'sky'}>
                   {t(`home.skill${group.skill.charAt(0).toUpperCase()}${group.skill.slice(1)}`)}
                 </Badge>
-                <h2 className="text-sm font-semibold text-slate-800">{group.title}</h2>
+                <h2 className="font-serif text-lg font-semibold text-ink">{group.title}</h2>
                 <span className="text-xs text-slate-400">
                   {t('review.count', { count: group.questions.length })}
                 </span>
               </div>
 
-              <div className="space-y-2">
+              <div className="border-y border-line">
                 {group.questions.map((question) => (
-                  <div key={question.id} className="card p-4">
+                  <div key={question.id} className="border-b border-line py-4 last:border-b-0">
                     <div className="flex gap-3">
-                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-900 text-[11px] font-bold text-white">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-sm bg-ink text-[11px] font-bold text-paper">
                         {question.number}
                       </span>
                       <div className="min-w-0 flex-1">
@@ -97,7 +97,7 @@ export default function Review() {
                           {question.prompt}
                         </p>
 
-                        <div className="mt-2 grid gap-1 text-sm sm:grid-cols-2">
+                        <div className="mt-2 grid gap-2 border-l-2 border-line pl-3 text-sm sm:grid-cols-2">
                           <p>
                             <span className="text-xs text-slate-400">
                               {t('review.yourAnswer')}:{' '}
@@ -106,7 +106,7 @@ export default function Review() {
                               {asText(question.yourAnswer)}
                             </span>
                           </p>
-                          <p>
+                          <p className="sm:border-l sm:border-line sm:pl-3">
                             <span className="text-xs text-slate-400">
                               {t('review.correctAnswer')}:{' '}
                             </span>

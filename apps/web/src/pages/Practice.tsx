@@ -1,16 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import { CheckCircle2, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import type { ContentManifest, Skill, TestSummary } from '@ielts/shared';
 import { Badge, PageHeader } from '../components/ui';
 import { api } from '../lib/api';
-import { bandColor } from '../lib/utils';
+import { bandColor, cn } from '../lib/utils';
 import { clearStoredAnswers } from '../lib/useExam';
 
 const SKILLS: Skill[] = ['reading', 'listening', 'writing', 'speaking'];
-
 const TONE: Record<string, 'emerald' | 'sky' | 'amber' | 'rose'> = {
   reading: 'emerald',
   listening: 'sky',
@@ -31,7 +30,6 @@ export default function Practice() {
   const [mode, setMode] = useState<'mock' | 'practice'>('mock');
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
-
   const current = (skill ?? 'reading') as Skill;
   const valid = SKILLS.includes(current);
 
@@ -39,7 +37,6 @@ export default function Practice() {
     queryKey: ['manifest'],
     queryFn: () => api<ContentManifest>('/api/content/manifest'),
   });
-
   const { data: stats } = useQuery({
     queryKey: ['stats'],
     queryFn: () => api<StatsResponse>('/api/attempts/stats'),
@@ -54,7 +51,6 @@ export default function Practice() {
   }, [stats]);
 
   const tests: TestSummary[] = valid ? data?.[current] ?? [] : [];
-
   const visible = tests.filter((test) => {
     const done = bestByContent.has(`${current}:${test.id}`);
     if (filter === 'new' && done) return false;
@@ -70,7 +66,7 @@ export default function Practice() {
   };
 
   if (!valid) {
-    return <div className="text-sm text-slate-500">{t('errors.notFound')}</div>;
+    return <div className="py-10 text-sm text-slate-500">{t('errors.notFound')}</div>;
   }
 
   return (
@@ -80,18 +76,24 @@ export default function Practice() {
         subtitle={t('practice.testCount', { count: tests.length })}
         actions={
           current === 'reading' || current === 'listening' ? (
-            <div className="flex rounded-xl border border-slate-200 bg-white p-1 text-xs font-semibold">
+            <div className="flex border border-line bg-surface p-1 text-[11px] font-semibold">
               <button
                 type="button"
                 onClick={() => setMode('mock')}
-                className={`rounded-lg px-3 py-1.5 transition ${mode === 'mock' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-700'}`}
+                className={cn(
+                  'min-h-9 px-3 transition',
+                  mode === 'mock' ? 'bg-ink text-paper' : 'text-slate-500 hover:text-ink',
+                )}
               >
                 {t('exam.mockMode')}
               </button>
               <button
                 type="button"
                 onClick={() => setMode('practice')}
-                className={`rounded-lg px-3 py-1.5 transition ${mode === 'practice' ? 'bg-slate-900 text-white' : 'text-slate-500 hover:text-slate-700'}`}
+                className={cn(
+                  'min-h-9 px-3 transition',
+                  mode === 'practice' ? 'bg-ink text-paper' : 'text-slate-500 hover:text-ink',
+                )}
               >
                 {t('exam.practiceMode')}
               </button>
@@ -100,11 +102,11 @@ export default function Practice() {
         }
       />
 
-      <div className="mb-4 flex flex-wrap items-center gap-2">
+      <div className="mb-5 flex flex-wrap items-center gap-2">
         <div className="relative min-w-[220px] flex-1">
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           <input
-            className="input pl-9"
+            className="input border-ink/30 pl-9"
             placeholder={t('practice.search')}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
@@ -115,11 +117,12 @@ export default function Practice() {
             key={value}
             type="button"
             onClick={() => setFilter(value)}
-            className={`rounded-xl px-3 py-2 text-xs font-semibold transition ${
+            className={cn(
+              'min-h-11 border px-3 text-[11px] font-semibold transition',
               filter === value
-                ? 'bg-slate-900 text-white'
-                : 'bg-white text-slate-500 ring-1 ring-slate-200 hover:text-slate-700'
-            }`}
+                ? 'border-ink bg-ink text-paper'
+                : 'border-line bg-transparent text-slate-500 hover:border-ink hover:text-ink',
+            )}
           >
             {t(`practice.filter${value.charAt(0).toUpperCase()}${value.slice(1)}`)}
           </button>
@@ -127,55 +130,56 @@ export default function Practice() {
       </div>
 
       {visible.length === 0 ? (
-        <div className="card p-10 text-center text-sm text-slate-500">{t('practice.noMatch')}</div>
+        <div className="border-y border-line py-12 text-center">
+          <p className="font-serif text-xl text-ink">{t('practice.noMatch')}</p>
+        </div>
       ) : (
-        <div className="grid gap-4 md:grid-cols-2">
-          {visible.map((test) => {
+        <div className="test-list">
+          {visible.map((test, index) => {
             const best = bestByContent.get(`${current}:${test.id}`);
             const done = bestByContent.has(`${current}:${test.id}`);
             return (
-              <div key={test.id} className="card card-hover flex flex-col p-5">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h2 className="text-base font-semibold text-slate-900">{test.title}</h2>
-                    <p className="mt-1 text-sm text-slate-500">{test.description}</p>
+              <article key={test.id} className="test-entry">
+                <span className="font-serif text-[11px] text-brand-600">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="min-w-0">
+                  <div className="mb-2 flex items-center gap-2">
+                    <Badge tone={TONE[current]}>
+                      {t(`home.skill${current.charAt(0).toUpperCase()}${current.slice(1)}`)}
+                    </Badge>
+                    {done ? (
+                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-sage">
+                        <CheckCircle2 className="h-3 w-3" />
+                        {t('practice.done')}
+                      </span>
+                    ) : (
+                      <span className="text-[10px] uppercase tracking-[0.12em] text-slate-400">
+                        {t('practice.new')}
+                      </span>
+                    )}
                   </div>
-                  <Badge tone={TONE[current]}>
-                    {t(`home.skill${current.charAt(0).toUpperCase()}${current.slice(1)}`)}
-                  </Badge>
+                  <h2 className="font-serif text-2xl font-semibold leading-tight text-ink">
+                    {test.title}
+                  </h2>
+                  <p className="mt-2 text-xs leading-5 text-slate-500">{test.description}</p>
                 </div>
-
-                <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-                  <span className="chip bg-slate-100 text-slate-600">
-                    {t('practice.minutes', { count: Math.round(test.durationSec / 60) })}
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] text-slate-500">
+                  <span>{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
+                  <span>{t('practice.questions', { count: test.questionCount })}</span>
+                  <span className={cn('font-serif text-xl', bandColor(best))}>
+                    {done && best != null ? `${t('practice.best')} ${best.toFixed(1)}` : '—'}
                   </span>
-                  <span className="chip bg-slate-100 text-slate-600">
-                    {t('practice.questions', { count: test.questionCount })}
-                  </span>
-                  {done ? (
-                    <span className="chip bg-emerald-100 text-emerald-700">
-                      <CheckCircle2 className="h-3.5 w-3.5" />
-                      {best != null ? `${t('practice.best')} ${best.toFixed(1)}` : t('practice.done')}
-                    </span>
-                  ) : (
-                    <span className="chip bg-slate-100 text-slate-500">{t('practice.new')}</span>
-                  )}
                 </div>
-
-                <div className="mt-5 flex gap-2">
-                  <button type="button" className="btn-primary" onClick={() => start(test)}>
+                <div className="flex items-center justify-between gap-2">
+                  <button type="button" className="btn-primary text-xs" onClick={() => start(test)}>
                     {done ? t('practice.retry') : t('practice.startTest')}
                   </button>
-                  <Link to="/" className="btn-ghost">
-                    {t('common.back')}
+                  <Link to="/" aria-label={t('common.back')} className="text-ink">
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
-                  {done ? (
-                    <span className={`ml-auto self-center text-sm font-bold ${bandColor(best)}`}>
-                      {best != null ? best.toFixed(1) : ''}
-                    </span>
-                  ) : null}
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

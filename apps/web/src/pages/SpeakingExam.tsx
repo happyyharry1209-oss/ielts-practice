@@ -154,22 +154,23 @@ export default function SpeakingExam() {
         : null;
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-4">
-          <h1 className="text-lg font-bold text-slate-900">{test.title}</h1>
-          <p className="mt-1 text-xs text-slate-500">{t('speaking.intro')}</p>
-          <div className="mt-4 flex gap-2">
+    <div className="exam-surface min-h-screen">
+      <header className="border-b border-paper/15 bg-ink text-paper">
+        <div className="mx-auto max-w-4xl px-4 py-5">
+          <p className="eyebrow text-paper/50">{t('home.skillSpeaking')}</p>
+          <h1 className="mt-2 font-serif text-3xl font-medium text-paper">{test.title}</h1>
+          <p className="mt-1 max-w-2xl text-xs leading-5 text-paper/55">{t('speaking.intro')}</p>
+          <div className="mt-5 flex flex-wrap gap-2">
             {([1, 2, 3] as Part[]).map((value) => (
               <button
                 key={value}
                 type="button"
                 onClick={() => setPart(value)}
                 className={cn(
-                  'rounded-xl px-3 py-1.5 text-sm font-medium transition',
+                  'min-h-10 rounded-sm px-3 py-1.5 text-xs font-semibold transition',
                   part === value
-                    ? 'bg-slate-900 text-white'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200',
+                    ? 'bg-paper text-ink'
+                    : 'bg-paper/10 text-paper/65 hover:bg-paper/15 hover:text-paper',
                 )}
               >
                 {t(`speaking.part${value}`)}
@@ -179,10 +180,10 @@ export default function SpeakingExam() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl space-y-4 px-4 py-6">
+      <main className="mx-auto max-w-4xl space-y-5 px-4 py-6 lg:py-8">
         {part === 2 ? (
           <>
-            <div className="card p-5">
+            <div className="card border-t-2 border-t-brand-600 p-5 sm:p-7">
               <div className="flex items-center justify-between">
                 <Badge tone="rose">{t('speaking.cueCard')}</Badge>
                 <button
@@ -199,7 +200,7 @@ export default function SpeakingExam() {
                   {t('speaking.newCard')}
                 </button>
               </div>
-              <h2 className="mt-3 text-lg font-bold text-slate-900">{card?.topic}</h2>
+              <h2 className="mt-3 font-serif text-2xl font-semibold text-ink">{card?.topic}</h2>
               <p className="mt-1 text-sm text-slate-600">{t('speaking.youShouldSay')}</p>
               <ul className="mt-2 space-y-1 text-sm text-slate-700">
                 {card?.points.map((point) => (
@@ -209,11 +210,11 @@ export default function SpeakingExam() {
               <p className="mt-2 text-sm text-slate-600">{card?.closing}</p>
             </div>
 
-            <div className="card p-5">
+            <div className="card border-t-2 border-t-brand-600 p-5 sm:p-7">
               <div className="flex flex-wrap items-center gap-3">
                 <span
                   className={cn(
-                    'rounded-xl px-3 py-1.5 text-sm font-bold tabular-nums',
+                    'rounded-sm px-3 py-1.5 text-xs font-bold tabular-nums',
                     phase === 'speak' ? 'bg-rose-100 text-rose-700' : 'bg-slate-100 text-slate-700',
                   )}
                 >
@@ -281,7 +282,7 @@ export default function SpeakingExam() {
                     id="notes"
                     value={notes}
                     onChange={(event) => setNotes(event.target.value)}
-                    className="min-h-[120px] w-full rounded-xl border border-slate-200 p-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+                    className="min-h-[120px] w-full rounded-sm border border-line bg-surface p-3 text-sm text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                   />
                 </div>
               ) : null}
@@ -305,14 +306,14 @@ export default function SpeakingExam() {
           </>
         ) : (
           <>
-            <div className="card p-5">
+            <div className="card border-t-2 border-t-brand-600 p-5 sm:p-7">
               <div className="flex items-center justify-between">
                 <Badge tone="rose">
                   {t('speaking.question', { number: index + 1 })} / {list.length}
                 </Badge>
                 <span className="text-xs text-slate-400">{current?.topic}</span>
               </div>
-              <p className="mt-4 text-lg font-semibold leading-7 text-slate-900">
+              <p className="mt-4 font-serif text-2xl font-medium leading-8 text-ink">
                 {current?.question}
               </p>
 
@@ -361,7 +362,7 @@ export default function SpeakingExam() {
 
         <section className="mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+            <h2 className="font-serif text-2xl font-semibold text-ink">
               {t('speaking.savedTitle')}
             </h2>
             <span className="text-xs text-slate-400">{t('speaking.savedHint')}</span>

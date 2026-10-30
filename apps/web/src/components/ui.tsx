@@ -15,12 +15,14 @@ export function PageHeader({
   actions?: ReactNode;
 }) {
   return (
-    <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div className="mb-7 flex flex-col gap-4 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">{title}</h1>
-        {subtitle ? <p className="mt-1 text-sm text-slate-500">{subtitle}</p> : null}
+        <h1 className="font-serif text-4xl font-medium tracking-[-0.03em] text-ink sm:text-[42px]">
+          {title}
+        </h1>
+        {subtitle ? <p className="mt-2 text-sm leading-6 text-slate-500">{subtitle}</p> : null}
       </div>
-      {actions ? <div className="flex items-center gap-2">{actions}</div> : null}
+      {actions ? <div className="flex flex-wrap items-center gap-2">{actions}</div> : null}
     </div>
   );
 }
@@ -36,8 +38,8 @@ export function Spinner({ label }: { label?: string }) {
 
 export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   return (
-    <div className="card flex flex-col items-center justify-center gap-2 p-12 text-center">
-      <p className="text-sm font-semibold text-slate-700">{title}</p>
+    <div className="flex flex-col items-center justify-center gap-2 border-y border-line py-12 text-center">
+      <p className="font-serif text-xl font-semibold text-ink">{title}</p>
       {hint ? <p className="text-sm text-slate-500">{hint}</p> : null}
     </div>
   );
@@ -63,10 +65,10 @@ export function Badge({
 
 export function Stat({ label, value, hint }: { label: string; value: ReactNode; hint?: string }) {
   return (
-    <div className="card p-4">
-      <p className="text-xs font-medium uppercase tracking-wide text-slate-500">{label}</p>
-      <p className="mt-1 text-2xl font-bold text-slate-900">{value}</p>
-      {hint ? <p className="mt-1 text-xs text-slate-400">{hint}</p> : null}
+    <div className="border-t border-ink py-4">
+      <p className="eyebrow">{label}</p>
+      <p className="mt-2 font-serif text-3xl font-medium text-ink">{value}</p>
+      {hint ? <p className="mt-1 text-xs text-slate-500">{hint}</p> : null}
     </div>
   );
 }

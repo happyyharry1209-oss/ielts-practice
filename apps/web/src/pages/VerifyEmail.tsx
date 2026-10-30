@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useSearchParams } from 'react-router-dom';
+import { AuthShell } from '../components/AuthShell';
 import { api, errorMessage } from '../lib/api';
 import { useAuth } from '../lib/auth';
 
@@ -34,12 +35,8 @@ export default function VerifyEmail() {
   }, [token, refreshUser]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 p-6">
-      <div className="w-full max-w-sm text-center">
-        <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-sm font-black text-white">
-          IE
-        </span>
-        <h1 className="mt-6 text-2xl font-bold text-slate-900">{t('auth.verifyTitle')}</h1>
+    <AuthShell title={t('auth.verifyTitle')}>
+      <div className="text-center">
 
         {state === 'working' ? <p className="mt-3 text-sm text-slate-500">{t('auth.verifyWorking')}</p> : null}
 
@@ -63,6 +60,6 @@ export default function VerifyEmail() {
           {t('auth.backToLogin')}
         </Link>
       </div>
-    </div>
+    </AuthShell>
   );
 }

@@ -126,7 +126,7 @@ export default function ReadingExam() {
         submitLabel={t('exam.submitExam')}
         disabled={submitting}
         sidebar={
-          <div className="card sticky top-24 p-4">
+          <div className="card sticky top-24 border-t-2 border-t-brand-600 p-4">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
               {t('exam.answered')} {exam.answeredCount}/{questions.length}
             </p>
@@ -144,7 +144,7 @@ export default function ReadingExam() {
                     type="button"
                     onClick={() => jumpTo(question.id)}
                     className={cn(
-                      'flex h-8 items-center justify-center rounded-lg text-xs font-semibold transition',
+                      'flex h-8 items-center justify-center rounded-sm text-xs font-semibold transition',
                       answered
                         ? 'bg-brand-600 text-white'
                         : 'bg-slate-100 text-slate-500 hover:bg-slate-200',
@@ -166,7 +166,7 @@ export default function ReadingExam() {
               type="button"
               onClick={() => goToPassage(index)}
               className={cn(
-                'rounded-xl px-3 py-1.5 text-sm font-medium transition',
+                'min-h-10 rounded-sm px-3 py-1.5 text-xs font-semibold transition',
                 index === passageIndex
                   ? 'bg-slate-900 text-white'
                   : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-50',
@@ -182,9 +182,12 @@ export default function ReadingExam() {
         ) : null}
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <section className="card p-5 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto">
-            <h2 className="mb-3 text-lg font-bold text-slate-900">{passage.title}</h2>
-            <Markdown text={passage.body} />
+          <section className="card p-5 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:p-7">
+            <p className="eyebrow mb-3">{t('exam.passage', { number: passageIndex + 1 })}</p>
+            <h2 className="mb-4 font-serif text-2xl font-semibold text-ink">{passage.title}</h2>
+            <div className="border-t border-line pt-4">
+              <Markdown text={passage.body} />
+            </div>
           </section>
 
           <section className="space-y-3">
