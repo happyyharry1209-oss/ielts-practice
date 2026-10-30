@@ -84,10 +84,17 @@ export default function Result() {
       <section className="grid border-y border-line md:grid-cols-[0.9fr_1.1fr]">
         <div className="border-b border-line py-7 md:border-b-0 md:border-r md:pr-8">
           <p className="eyebrow">{t('results.band')}</p>
-          <p className={cn('mt-3 font-serif text-7xl font-medium tracking-[-0.05em]', bandColor(attempt.band))}>
-            {attempt.band != null ? attempt.band.toFixed(1) : '—'}
-            <span className="ml-1 font-sans text-lg font-normal text-slate-400">/ 9</span>
-          </p>
+          <div className="mt-3 flex items-baseline gap-3 whitespace-nowrap">
+            <p
+              className={cn(
+                'font-serif text-7xl font-medium leading-[0.9] tracking-[-0.05em]',
+                bandColor(attempt.band),
+              )}
+            >
+              {attempt.band != null ? attempt.band.toFixed(1) : '—'}
+            </p>
+            <span className="shrink-0 font-sans text-lg font-normal text-slate-400">/ 9</span>
+          </div>
           <p className="mt-3 max-w-md text-xs leading-5 text-slate-500">{t('results.disclaimer')}</p>
         </div>
         <div className="grid grid-cols-2 md:pl-8">

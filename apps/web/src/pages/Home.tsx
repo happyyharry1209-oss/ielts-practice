@@ -127,10 +127,12 @@ export default function Home() {
         <div className="grid grid-cols-[1fr_auto] items-end border-t border-line pt-5 lg:border-l lg:border-t-0 lg:py-5 lg:pl-10">
           <div>
             <p className="eyebrow">{t('home.bestBand')}</p>
-            <p className="mt-3 font-serif text-[64px] font-medium leading-[0.85] tracking-[-0.05em] text-ink">
-              {headlineBand != null ? headlineBand.toFixed(1) : '—'}
-              <span className="ml-1 font-sans text-lg text-slate-500">/9</span>
-            </p>
+            <div className="mt-3 flex items-baseline gap-3 whitespace-nowrap">
+              <p className="font-serif text-[64px] font-medium leading-[0.85] tracking-[-0.05em] text-ink">
+                {headlineBand != null ? headlineBand.toFixed(1) : '—'}
+              </p>
+              <span className="shrink-0 font-sans text-lg text-slate-500">/ 9</span>
+            </div>
           </div>
           <p className="max-w-[145px] text-right font-serif text-xs leading-5 text-slate-500 lg:text-left">
             {t('home.bestBandHint')}
