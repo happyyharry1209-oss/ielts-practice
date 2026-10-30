@@ -1,0 +1,168 @@
+{
+  "id": "reading-005",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — Rebuilding Coral Reefs",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Can We Rebuild a Reef?",
+      "body": "**A**  Coral reefs cover less than one per cent of the ocean floor, yet they support roughly a quarter of all marine species. In the past thirty years, warming water, pollution and overfishing have damaged reefs across the tropics. When corals are stressed by heat, they expel the algae that live inside their tissues and give them colour; if the heat lasts too long, the coral dies. Bleaching events that once happened every few decades now occur every few years.\n\n**B**  Restoration projects try to speed up recovery. The most common method is coral gardening: fragments are grown on underwater frames, where they are protected from predators and can be cleaned, then transplanted to a damaged reef once they are large enough. Other teams build artificial structures, sometimes by 3D printing, to give new corals a hard surface. A newer approach, larval seeding, collects coral spawn and releases it over a reef in the hope that young corals settle in large numbers.\n\n**C**  The limits are serious. A reef may cover hundreds of square kilometres, while a well-funded project might restore a few hectares. Heat waves can kill transplanted corals as easily as natural ones, and the cost per hectare is high. Researchers are therefore careful to describe restoration as a way of buying time, not a solution. Reducing emissions and protecting reefs from local pressures such as poor water quality remain essential.\n\n**D**  Some projects show that the work can be done at scale. In Florida, nurseries have produced hundreds of thousands of corals that are now planted on reefs, and community groups clean and monitor sites regularly. On the Great Barrier Reef, scientists have tested methods for making corals more tolerant of heat. The results are encouraging, but the researchers are the first to say that restored reefs are not the same as reefs that were never damaged.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "yes-no-not-given",
+          "prompt": "Coral reefs are threatened by rising water temperatures.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph A lists warming water as a cause of damage.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "yes-no-not-given",
+          "prompt": "Coral gardening involves growing fragments before transplanting them.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph B describes fragments grown on frames and then transplanted.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "yes-no-not-given",
+          "prompt": "The writer believes restoration can fully compensate for climate change.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C calls it a way of buying time, not a solution.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "yes-no-not-given",
+          "prompt": "Restoring coral is inexpensive.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C says the cost per hectare is high.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What is a limitation of artificial structures?",
+          "options": [
+            "They attract too many fish.",
+            "They cannot protect corals from heat.",
+            "They are illegal in some countries.",
+            "They cost more than coral gardening."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: heat waves can kill transplanted corals; structures only provide a surface.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What does larval seeding aim to do?",
+          "options": [
+            "Grow large coral fragments in tanks",
+            "Release young corals over a reef in large numbers",
+            "Remove algae from the sea floor",
+            "Cool the water around a reef"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: coral spawn is released so that young corals settle in large numbers.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "According to the passage, what remains essential besides restoration?",
+          "options": [
+            "Building more artificial reefs",
+            "Reducing emissions and local pressures",
+            "Moving corals to colder water",
+            "Encouraging more tourism"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: reducing emissions and protecting reefs from local pressures remain essential.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "summary-completion",
+          "prompt": "Coral fragments are grown on underwater ______ before being moved.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "frames",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: grown on underwater frames.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "summary-completion",
+          "prompt": "Heat waves can ______ transplanted corals.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "kill",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: heat waves can kill transplanted corals.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "summary-completion",
+          "prompt": "In Florida, community groups clean and ______ restored sites.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "monitor",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: community groups clean and monitor sites regularly.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-information",
+          "prompt": "examples of restoration work carried out at scale",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "D",
+          "explanation": "Paragraph D describes Florida nurseries and the Great Barrier Reef tests.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-information",
+          "prompt": "a method that uses manufactured surfaces",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "B",
+          "explanation": "Paragraph B mentions artificial structures, sometimes 3D printed.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-information",
+          "prompt": "the need to deal with the cause of reef damage",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "C",
+          "explanation": "Paragraph C says reducing emissions remains essential.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

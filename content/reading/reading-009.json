@@ -1,0 +1,183 @@
+{
+  "id": "reading-009",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — Working From Anywhere",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The City After the Commute",
+      "body": "**A**  In 2020, millions of office workers were sent home within a few weeks. What was meant to be a temporary arrangement became, for many companies, a permanent option. Employees saved the time and money they had spent travelling, and some moved to smaller towns where housing was cheaper. By 2023, office occupancy in several large cities was still well below its pre-2020 level, and landlords were offering shorter leases to attract tenants.\n\n**B**  The benefits are easy to see. Workers gain flexibility and avoid the daily commute; employers can recruit from a wider area and spend less on desks. Smaller firms that could never afford an office in a capital city can now compete for the same staff. For parents and people with disabilities, remote work has removed barriers that office attendance had kept in place.\n\n**C**  The costs fall unevenly. City centres that depended on office workers have lost customers: sandwich shops, dry cleaners and bus operators all report lower takings. Junior employees lose the informal learning that happens when they sit near experienced colleagues. And the freedom to work from home is not shared equally: builders, nurses and shop staff cannot do their jobs on a laptop, so the benefits tend to flow to professional workers.\n\n**D**  Most predictions now point to a hybrid future rather than the end of the office. Companies bring teams together for a few days a week and allow quiet work at home on others. Cities are adjusting too, converting empty offices into flats and rethinking transport schedules that were designed around the five-day commute. The office is unlikely to disappear, but it is becoming a place people visit rather than a place they occupy.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "yes-no-not-given",
+          "prompt": "Remote work has reduced the time many people spend commuting.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph A: employees saved the time they had spent travelling.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "yes-no-not-given",
+          "prompt": "Every kind of job can be done remotely.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C says builders, nurses and shop staff cannot do their jobs on a laptop.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "yes-no-not-given",
+          "prompt": "City centres have been unaffected by the shift to remote work.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C describes lost customers for shops and bus operators.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "yes-no-not-given",
+          "prompt": "The writer expects offices to disappear completely.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph D says the office is unlikely to disappear.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What advantage do employers gain from remote work?",
+          "options": [
+            "They pay lower taxes.",
+            "They can recruit from a wider area.",
+            "They no longer need managers.",
+            "They can reduce salaries legally."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: employers can recruit from a wider area.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What problem does remote work create for city centres?",
+          "options": [
+            "More traffic congestion",
+            "Fewer customers for local businesses",
+            "Higher rents for offices",
+            "A shortage of office space"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: shops and transport operators report lower takings.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What does the writer suggest about hybrid work?",
+          "options": [
+            "It is a temporary experiment.",
+            "It is likely to remain common.",
+            "It suits only large companies.",
+            "It reduces productivity."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D: most predictions point to a hybrid future.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Workers avoided the daily ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "commute",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: avoid the daily commute.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "Some cities are converting empty offices into ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "flats",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: converting empty offices into flats.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "Junior staff may miss the informal learning that happens near experienced ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "colleagues",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: sitting near experienced colleagues.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-headings",
+          "prompt": "Paragraph A",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A sudden change" },
+            { "id": "ii", "text": "Costs for city centres" },
+            { "id": "iii", "text": "A mixed future" },
+            { "id": "iv", "text": "The cost of housing" }
+          ],
+          "answer": "i",
+          "explanation": "Paragraph A describes the rapid shift to home working in 2020.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-headings",
+          "prompt": "Paragraph C",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A sudden change" },
+            { "id": "ii", "text": "Costs for city centres" },
+            { "id": "iii", "text": "A mixed future" },
+            { "id": "iv", "text": "The cost of housing" }
+          ],
+          "answer": "ii",
+          "explanation": "Paragraph C lists the losses for city-centre businesses and junior staff.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-headings",
+          "prompt": "Paragraph D",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "A sudden change" },
+            { "id": "ii", "text": "Costs for city centres" },
+            { "id": "iii", "text": "A mixed future" },
+            { "id": "iv", "text": "The cost of housing" }
+          ],
+          "answer": "iii",
+          "explanation": "Paragraph D predicts a hybrid future rather than the end of the office.",
+          "location": "Paragraph D"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "reading-007",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — Animal Navigation",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "How Animals Find Their Way",
+      "body": "**A**  Every year, Arctic terns fly from the Arctic to the Antarctic and back, a journey of some seventy thousand kilometres. Sea turtles cross oceans to lay eggs on the beach where they hatched. Monarch butterflies travel thousands of kilometres to a forest they have never seen. How animals achieve such feats without maps or instruments has puzzled people for centuries, and the answer appears to involve not one sense but several working together.\n\n**B**  The sun is the most obvious cue. Birds can use its position to hold a steady direction, but the sun moves across the sky, so an animal must also know the time of day. Experiments in which birds were kept in artificial light for several days showed that their sense of direction shifted with their internal clock, which is strong evidence that they use the sun as a compass. At night, migrating birds appear to use the stars instead, since chicks raised under a planetarium sky learn to orient themselves by the patterns they see.\n\n**C**  A magnetic sense has long been suspected. Many animals contain crystals of magnetite, a magnetic mineral, and some species react to changes in magnetic fields. Yet proving that an animal actually uses this information for navigation is difficult: a change in behaviour might have another cause. After decades of work the evidence is strong in a few species, such as certain birds and sea turtles, but the mechanism is still not settled.\n\n**D**  Smell and landmarks matter too. Salmon are thought to return to their home river by following its chemical signature, and turtles may use the smell of their natal beach. Pigeons appear to combine several cues, relying on smell when the sky is overcast. The picture that emerges is one of redundancy: if one channel is unavailable, another can take over. Navigation, in other words, is less like a single compass than like a set of instruments, each checking the others.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "yes-no-not-given",
+          "prompt": "Migrating animals rely on a single sense to navigate.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph A and D say several senses work together.",
+          "location": "Paragraph A, D"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "yes-no-not-given",
+          "prompt": "Keeping birds in artificial light changed the direction they chose.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph B: their sense of direction shifted with their internal clock.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "yes-no-not-given",
+          "prompt": "Scientists fully understand how the magnetic sense works.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C: the mechanism is still not settled.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "yes-no-not-given",
+          "prompt": "Sea turtles may use the smell of their home beach.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph D: turtles may use the smell of their natal beach.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the artificial-light experiments show?",
+          "options": [
+            "Birds cannot navigate without stars.",
+            "Birds use the sun together with an internal clock.",
+            "Birds prefer artificial light to sunlight.",
+            "Birds lose their magnetic sense indoors."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: their direction shifted with their internal clock, showing the sun is used as a compass.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Why is the evidence for a magnetic sense difficult to prove?",
+          "options": [
+            "Magnetite is rare in animals.",
+            "A change in behaviour might have another cause.",
+            "Magnetic fields cannot be measured.",
+            "Only insects have been studied."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: a change in behaviour might have another cause.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What does the writer conclude about animal navigation?",
+          "options": [
+            "It depends on a single compass.",
+            "It uses several cues that can replace one another.",
+            "It is still completely unexplained.",
+            "It is limited to birds and turtles."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D describes redundancy: if one channel is unavailable, another takes over.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "summary-completion",
+          "prompt": "During the day, birds can use the ______ as a compass.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "sun",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: birds use the sun as a compass.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "summary-completion",
+          "prompt": "Some animals contain crystals of a mineral called ______.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "magnetite",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: crystals of magnetite.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "summary-completion",
+          "prompt": "Salmon may follow the chemical signature of their home ______.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "river",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: return to their home river by following its chemical signature.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "short-answer",
+          "prompt": "What do migrating birds appear to use at night?",
+          "instructions": "Choose ONE WORD ONLY.",
+          "answer": "stars",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: at night, birds appear to use the stars.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "short-answer",
+          "prompt": "Which bird is mentioned as combining several cues?",
+          "instructions": "Choose ONE WORD ONLY.",
+          "answer": "pigeons",
+          "wordLimit": 1,
+          "acceptableAnswers": ["pigeon"],
+          "explanation": "Paragraph D: pigeons appear to combine several cues.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "short-answer",
+          "prompt": "Navigation is compared to a set of ______, each checking the others.",
+          "instructions": "Choose ONE WORD ONLY.",
+          "answer": "instruments",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: like a set of instruments, each checking the others.",
+          "location": "Paragraph D"
+        }
+      ]
+    }
+  ]
+}

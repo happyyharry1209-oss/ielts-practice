@@ -1,0 +1,183 @@
+{
+  "id": "reading-003",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — Rooftop Farming",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Growing Food Above the City",
+      "body": "**A**  Most cities import nearly all of their food. In a typical European capital, less than two per cent of the vegetables eaten are grown inside the city boundary. At the same time, a large share of urban space sits unused: flat roofs cover warehouses, offices and apartment blocks, and most of them do nothing but keep the rain out. In the last fifteen years, a number of cities have begun to treat these surfaces as farmland.\n\n**B**  The benefits are easy to list. Food grown a few hundred metres from the kitchen needs almost no transport, and a green roof can lower the temperature of the building beneath it by several degrees in summer, cutting air-conditioning bills. The plants also slow rainwater, which reduces pressure on drains during storms. Many projects add a social dimension: school groups visit, volunteers learn to grow vegetables, and the produce is sold in local markets.\n\n**C**  The difficulties are practical. A roof is designed to carry snow and wind, not several tonnes of wet soil, so the structure may need reinforcement before planting begins. Waterproofing must be perfect, because a leak beneath a layer of soil is expensive to find and repair. Access is another obstacle: everything, from compost to harvested carrots, has to be carried up a stairwell or a lift. And the cost per square metre is high compared with farmland outside the city.\n\n**D**  The future is likely to be lighter. Hydroponic systems, which grow plants in water rather than soil, weigh far less than conventional beds and can be installed on roofs that could never support a garden. Some cities now offer grants or tax reductions for green roofs. Yet even enthusiasts are careful about the claims they make: rooftop farms can supply fresh herbs, salads and tomatoes, but they will not replace the fields that feed a city.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "yes-no-not-given",
+          "prompt": "Most of the food eaten in cities is grown locally.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph A says cities import nearly all of their food.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "yes-no-not-given",
+          "prompt": "A green roof can reduce the amount of energy used to cool a building.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph B says it can cut air-conditioning bills by lowering the temperature.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "yes-no-not-given",
+          "prompt": "Rooftop farms are expected to replace conventional agriculture.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph D says they will not replace the fields that feed a city.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "yes-no-not-given",
+          "prompt": "The weight of soil is a minor concern for rooftop farmers.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C treats structural reinforcement as a serious, practical difficulty.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What environmental benefit of green roofs is mentioned?",
+          "options": [
+            "They reduce the need to transport food.",
+            "They produce electricity for the building.",
+            "They remove pollution from the air.",
+            "They replace the need for parks."
+          ],
+          "answer": "A",
+          "explanation": "Paragraph B: food grown close to the kitchen needs almost no transport.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Why is a roof often unsuitable for a soil garden?",
+          "options": [
+            "Roofs are too cold in winter.",
+            "Roofs are designed for snow and wind, not heavy soil.",
+            "There is not enough sunlight.",
+            "Building owners are not allowed to plant."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: a roof is designed to carry snow and wind, not tonnes of wet soil.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What is said about hydroponic systems?",
+          "options": [
+            "They produce larger vegetables.",
+            "They need no maintenance.",
+            "They weigh much less than soil beds.",
+            "They are banned in some cities."
+          ],
+          "answer": "C",
+          "explanation": "Paragraph D: they weigh far less than conventional beds.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "summary-completion",
+          "prompt": "Green roofs slow ______ water, reducing pressure on drains.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "rain",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: the plants slow rainwater.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "summary-completion",
+          "prompt": "Before planting, a building may need structural ______.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "reinforcement",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: the structure may need reinforcement.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "summary-completion",
+          "prompt": "Hydroponic systems grow plants in water rather than ______.",
+          "instructions": "Complete the summary. Choose ONE WORD ONLY.",
+          "answer": "soil",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: in water rather than soil.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-headings",
+          "prompt": "Paragraph A",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "An untapped resource" },
+            { "id": "ii", "text": "Practical obstacles" },
+            { "id": "iii", "text": "A modest contribution" },
+            { "id": "iv", "text": "How plants grow" }
+          ],
+          "answer": "i",
+          "explanation": "Paragraph A contrasts imported food with unused flat roofs.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-headings",
+          "prompt": "Paragraph C",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "An untapped resource" },
+            { "id": "ii", "text": "Practical obstacles" },
+            { "id": "iii", "text": "A modest contribution" },
+            { "id": "iv", "text": "How plants grow" }
+          ],
+          "answer": "ii",
+          "explanation": "Paragraph C lists weight, waterproofing, access and cost.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-headings",
+          "prompt": "Paragraph D",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "An untapped resource" },
+            { "id": "ii", "text": "Practical obstacles" },
+            { "id": "iii", "text": "A modest contribution" },
+            { "id": "iv", "text": "How plants grow" }
+          ],
+          "answer": "iii",
+          "explanation": "Paragraph D says rooftop farms will not replace the fields that feed a city.",
+          "location": "Paragraph D"
+        }
+      ]
+    }
+  ]
+}

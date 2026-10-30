@@ -1,0 +1,170 @@
+{
+  "id": "reading-010",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Night Train Returns",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Sleeping on the Move",
+      "body": "**A**  For much of the twentieth century, sleeping cars were a normal way to cross Europe. Then cheap flights arrived, journeys that had taken a night by rail could be made in an hour, and one sleeper service after another was withdrawn. By 2015 only a handful of routes survived, mostly in central and eastern Europe, and many travellers had never seen a night train.\n\n**B**  The revival began with climate policy. As concern about aviation grew, campaigners pointed out that a train journey produces a fraction of the emissions of the equivalent flight. New routes opened: Vienna to Paris, Stockholm to Berlin, and a link from Zurich to Rome. Tickets on some services sell out weeks in advance, and operators report strong demand from families and students as well as business travellers.\n\n**C**  Running a night train is nonetheless difficult. A sleeping carriage carries far fewer passengers than a daytime coach, and it is used for one trip a night rather than several. Staff must work overnight, and trains cross borders where signalling systems and safety rules differ. Suitable carriages are in short supply: many were scrapped, and building new ones takes years. Track access charges, which railways pay to use the network, add another cost that airlines do not face in the same way.\n\n**D**  Governments have begun to help. Several countries now subsidise night services or order new rolling stock, and manufacturers have announced designs with private cabins and bike storage. Even so, few analysts expect night trains to replace short-haul flights entirely. Their value is greatest on journeys of eight to fourteen hours, where a flight plus a night in a hotel is neither cheaper nor faster. For that niche, the sleeper is back.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Night trains became less common as cheap flights spread.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A links the arrival of cheap flights to the withdrawal of sleeper services.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "Sleeper trains are cheaper to operate than daytime trains.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph C explains that a sleeper carries fewer passengers and makes only one trip a night.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "New night routes have opened in Europe in recent years.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph B lists Vienna–Paris, Stockholm–Berlin and Zurich–Rome.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Night trains are expected to replace all short-haul flights.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph D says few analysts expect night trains to replace short-haul flights entirely.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What started the revival of night trains?",
+          "options": [
+            "Rising fuel prices",
+            "Concern about aviation emissions",
+            "A shortage of airport space",
+            "New high-speed lines"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: the revival began with climate policy and concern about aviation.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Which obstacle is mentioned?",
+          "options": [
+            "A lack of passengers",
+            "A shortage of suitable carriages",
+            "Too many night routes",
+            "Poor demand from families"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: suitable carriages are in short supply.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "On which journeys do night trains make most sense?",
+          "options": [
+            "One-hour trips",
+            "Long journeys of eight to fourteen hours",
+            "Journeys within a city",
+            "Any journey over one day"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D: their value is greatest on journeys of eight to fourteen hours.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Sleeper services declined after the arrival of cheap ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "flights",
+          "wordLimit": 1,
+          "explanation": "Paragraph A: cheap flights arrived and services were withdrawn.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "Building new sleeping carriages takes ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "years",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: building new ones takes years.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "Several governments now ______ night services.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "subsidise",
+          "wordLimit": 1,
+          "acceptableAnswers": ["subsidize"],
+          "explanation": "Paragraph D: several countries now subsidise night services.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "short-answer",
+          "prompt": "Which city is linked to Vienna by a new night service?",
+          "instructions": "Choose ONE WORD ONLY.",
+          "answer": "Paris",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: Vienna to Paris.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "short-answer",
+          "prompt": "What do campaigners compare trains with when discussing emissions?",
+          "instructions": "Choose ONE WORD ONLY.",
+          "answer": "aviation",
+          "wordLimit": 1,
+          "acceptableAnswers": ["flights", "aircraft", "planes"],
+          "explanation": "Paragraph B: concern about aviation and the emissions of flights.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "short-answer",
+          "prompt": "What do railways pay to use the network?",
+          "instructions": "Choose NO MORE THAN TWO WORDS.",
+          "answer": "track access charges",
+          "wordLimit": 3,
+          "explanation": "Paragraph C: track access charges, which railways pay to use the network.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

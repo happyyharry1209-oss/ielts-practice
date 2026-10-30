@@ -1,0 +1,169 @@
+{
+  "id": "reading-008",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Science of Bread",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Why Bread Rises",
+      "body": "**A**  Bread is made from four ingredients: flour, water, yeast and salt. What turns them into a loaf is a network of proteins called gluten. When flour is mixed with water, two proteins, glutenin and gliadin, link together and form elastic strands. Kneading stretches and aligns these strands, so the dough can trap gas instead of collapsing. Flour with more protein produces a stronger network, which is why bread flour differs from the flour used for cakes.\n\n**B**  The gas comes from fermentation. Yeast consumes sugars in the flour and produces carbon dioxide and alcohol. The carbon dioxide is caught in the gluten network and inflates the dough; the alcohol evaporates during baking. Both time and temperature matter: a slow, cool fermentation gives the enzymes more time to break down starch and produces a deeper flavour. Sourdough takes this further by relying on wild yeasts and bacteria rather than a single commercial strain, which is why every starter tastes slightly different.\n\n**C**  In the oven, three things happen quickly. The gas in the dough expands, lifting the loaf in a burst known as oven spring. Steam from the dough keeps the surface soft for the first few minutes, allowing the bread to rise before the crust sets. Then the crust browns as proteins and sugars react at high temperature, a process that also creates the toasted flavours many people associate with fresh bread.\n\n**D**  Industrial bread is made differently. Fast fermentation, added enzymes and mechanical mixing produce a loaf in a fraction of the time, and the result is consistent and cheap. Artisan bakers argue that speed costs flavour, while manufacturers point out that their bread stays soft for longer and feeds far more people. The recent revival of home baking suggests that many cooks want to understand the process rather than simply buy the result.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Gluten gives dough its elasticity.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A describes elastic strands formed by gluten proteins.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "Sourdough relies on a single type of yeast.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph B: sourdough uses wild yeasts and bacteria rather than a single commercial strain.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The brown colour of the crust comes from sugar burning.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph C attributes browning to proteins and sugars reacting at high temperature.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Industrial bread is produced faster than artisan bread.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph D: fast fermentation and mechanical mixing produce a loaf in a fraction of the time.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What does yeast produce during fermentation?",
+          "options": [
+            "Gluten",
+            "Carbon dioxide and alcohol",
+            "Salt and water",
+            "Starch"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: carbon dioxide and alcohol.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Why is steam important in the first minutes of baking?",
+          "options": [
+            "It adds flavour to the crumb.",
+            "It keeps the surface soft so the loaf can rise.",
+            "It kills the yeast.",
+            "It makes the bread heavier."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: steam keeps the surface soft, allowing the bread to rise before the crust sets.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What do artisan bakers argue about industrial bread?",
+          "options": [
+            "It is too expensive.",
+            "Speed costs flavour.",
+            "It uses too much salt.",
+            "It is difficult to slice."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D: artisan bakers argue that speed costs flavour.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Kneading develops the ______ network in the dough.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "gluten",
+          "wordLimit": 1,
+          "explanation": "Paragraph A: a network of proteins called gluten, developed by kneading.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "Sourdough relies on wild ______ and bacteria.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "yeasts",
+          "wordLimit": 1,
+          "acceptableAnswers": ["yeast"],
+          "explanation": "Paragraph B: wild yeasts and bacteria.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "The crust browns as proteins and sugars react at high ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "temperature",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: react at high temperature.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-information",
+          "prompt": "how time and temperature affect flavour",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "B",
+          "explanation": "Paragraph B: both time and temperature matter for flavour.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-information",
+          "prompt": "a comparison between factory and handmade bread",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "D",
+          "explanation": "Paragraph D compares industrial and artisan bread.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-information",
+          "prompt": "what happens in the first minutes of baking",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "C",
+          "explanation": "Paragraph C describes oven spring and steam in the first few minutes.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

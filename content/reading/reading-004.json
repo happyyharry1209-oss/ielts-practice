@@ -1,0 +1,169 @@
+{
+  "id": "reading-004",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Barcode",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Stripes That Changed Shopping",
+      "body": "**A**  In the late 1960s, queues at American supermarkets were getting longer. Cashiers typed every price by hand, which was slow and easy to get wrong. A committee of food retailers asked several companies to design a better system, and the winning proposal came from an engineer at IBM named George Laurer. His design used a pattern of black and white bars to represent a number. The Universal Product Code, as it became known, was adopted in 1973, and the first item was scanned in a supermarket in Troy, Ohio, in June 1974: a packet of chewing gum.\n\n**B**  The stripes do not contain the price. They encode a short number that identifies the product, and the checkout computer looks up the price in the store's database. This is why the same bar code can be used in different shops with different prices. A laser reads the pattern as the item passes over a glass window, and a check digit at the end of the number lets the system detect most reading errors.\n\n**C**  The effects reached far beyond the checkout. Because every sale was now recorded automatically, shops could see exactly what was selling and when, and manufacturers could track their products through warehouses and delivery trucks. Loyalty cards later linked that data to individual customers, which raised concerns about how much shops could learn about people's habits.\n\n**D**  Newer systems have appeared. QR codes can hold far more data than a row of stripes, and RFID tags use radio waves to identify items without a line of sight. Yet the ordinary barcode survives because it is extremely cheap: printing one costs almost nothing, and a basic reader is inexpensive. For most packaged goods, it remains the simplest tool that works.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "The barcode was invented to make supermarket checkouts faster.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A describes long queues and hand-typed prices as the problem.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "The first barcode was scanned in 1973.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "The code was adopted in 1973, but the first scan was in June 1974.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The stripes contain the price of the product.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph B says the stripes encode a product number; the price is looked up in a database.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "QR codes have completely replaced barcodes.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph D says the ordinary barcode survives because it is so cheap.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What is the purpose of a check digit?",
+          "options": [
+            "To identify the shop",
+            "To detect reading errors",
+            "To store the price",
+            "To make the code shorter"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: a check digit lets the system detect most reading errors.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was the first product scanned?",
+          "options": [
+            "A loaf of bread",
+            "A packet of chewing gum",
+            "A bottle of milk",
+            "A newspaper"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph A: a packet of chewing gum.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What concern does the passage mention?",
+          "options": [
+            "Barcodes are difficult to print.",
+            "Shops can learn a lot about customers' habits.",
+            "Laser readers damage products.",
+            "Barcodes slow down deliveries."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C mentions loyalty cards and concerns about what shops could learn.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "The first scan took place in Troy, ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "Ohio",
+          "wordLimit": 1,
+          "explanation": "Paragraph A: a supermarket in Troy, Ohio.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "The pattern is read by a ______ as the item passes a glass window.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "laser",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: a laser reads the pattern.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "RFID tags use radio waves rather than a line of ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "sight",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: without a line of sight.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "short-answer",
+          "prompt": "In which year was the Universal Product Code adopted?",
+          "instructions": "Choose NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+          "answer": "1973",
+          "wordLimit": 2,
+          "explanation": "Paragraph A says the code was adopted in 1973.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "short-answer",
+          "prompt": "Which company employed George Laurer?",
+          "instructions": "Choose NO MORE THAN TWO WORDS.",
+          "answer": "IBM",
+          "wordLimit": 2,
+          "explanation": "Paragraph A: an engineer at IBM.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "short-answer",
+          "prompt": "What does the checkout computer look up in the database?",
+          "instructions": "Choose NO MORE THAN TWO WORDS.",
+          "answer": "the price",
+          "wordLimit": 2,
+          "acceptableAnswers": ["price"],
+          "explanation": "Paragraph B: the computer looks up the price in the store's database.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

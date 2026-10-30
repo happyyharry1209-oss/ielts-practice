@@ -1,0 +1,183 @@
+{
+  "id": "reading-006",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Value of Libraries",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "What Is a Library Worth?",
+      "body": "**A**  Public libraries are often judged by the number of books they lend. When a council needs to save money, the figures are easy to quote: loans have fallen, buildings are expensive to heat, and the service looks like a soft target. Yet the same figures say little about what else a library does, and campaigners argue that closures are decided on the wrong measure.\n\n**B**  The benefits are wider than borrowing. A library gives free access to newspapers, computers and the internet, which matters to people who cannot afford a connection at home. Staff help with job applications, benefit forms and language classes. Children who visit with parents arrive at school already familiar with books. Some studies estimate that every pound spent on a library returns several pounds in value to the local economy, though the methods behind such numbers are contested.\n\n**C**  The difficulty is that most of these benefits are slow and hard to count. A child who becomes a confident reader may earn more as an adult, but the gain appears twenty years later and cannot be attributed to one building. Researchers therefore rely on surveys that ask residents what the service is worth to them, and on comparisons with areas that have lost a library. These methods are useful but imprecise, and a library is not a business that can simply be asked to show a profit.\n\n**D**  Many libraries have responded by changing what they offer. Opening hours have been extended in some towns, while others have added spaces for coding clubs, repair workshops and quiet rooms for people working from home. The book collection remains central, but the building is increasingly used for activities that have little to do with borrowing. The argument for keeping libraries open, in other words, no longer rests on loans alone.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Libraries are often assessed using the number of books they lend.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A: public libraries are often judged by the number of books they lend.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "All studies of library value reach the same conclusion.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph B says the methods behind such numbers are contested.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Measuring the benefits of a library is straightforward.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph C says most benefits are slow and hard to count.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Some libraries now host activities that are not about borrowing books.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph D mentions coding clubs, repair workshops and quiet rooms.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Why is it difficult to put a value on a library?",
+          "options": [
+            "Most visitors do not pay for the service.",
+            "Many benefits appear slowly and cannot be attributed to one building.",
+            "Libraries refuse to publish their accounts.",
+            "The cost of books changes every year."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: the benefits are slow, and a child's later earnings cannot be attributed to one building.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What do libraries offer people who are looking for work?",
+          "options": [
+            "Free transport to interviews",
+            "Help with applications and access to computers",
+            "Guaranteed job interviews",
+            "Training in construction"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: staff help with job applications and computers are available.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What is the writer's view about closing libraries?",
+          "options": [
+            "Loan figures are the fairest basis for a decision.",
+            "Decisions should consider more than loan numbers.",
+            "Libraries should be replaced by online services.",
+            "Only large libraries should remain open."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph D concludes that the argument no longer rests on loans alone.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Libraries are often judged by the number of ______ they lend.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "books",
+          "wordLimit": 1,
+          "explanation": "Paragraph A: the number of books they lend.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "People without a home connection can use the library's ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "computers",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: free access to computers and the internet.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "Some libraries now offer space for coding clubs and repair ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "workshops",
+          "wordLimit": 1,
+          "explanation": "Paragraph D: repair workshops.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-headings",
+          "prompt": "Paragraph A",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "Judged by the wrong measure" },
+            { "id": "ii", "text": "Why the numbers are hard" },
+            { "id": "iii", "text": "More than books" },
+            { "id": "iv", "text": "The cost of heating" }
+          ],
+          "answer": "i",
+          "explanation": "Paragraph A argues that closures are decided on the wrong measure.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-headings",
+          "prompt": "Paragraph C",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "Judged by the wrong measure" },
+            { "id": "ii", "text": "Why the numbers are hard" },
+            { "id": "iii", "text": "More than books" },
+            { "id": "iv", "text": "The cost of heating" }
+          ],
+          "answer": "ii",
+          "explanation": "Paragraph C explains why the benefits are slow and hard to count.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-headings",
+          "prompt": "Paragraph D",
+          "instructions": "Choose the correct heading for each paragraph.",
+          "bank": [
+            { "id": "i", "text": "Judged by the wrong measure" },
+            { "id": "ii", "text": "Why the numbers are hard" },
+            { "id": "iii", "text": "More than books" },
+            { "id": "iv", "text": "The cost of heating" }
+          ],
+          "answer": "iii",
+          "explanation": "Paragraph D describes new uses that go beyond borrowing.",
+          "location": "Paragraph D"
+        }
+      ]
+    }
+  ]
+}

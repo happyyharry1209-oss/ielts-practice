@@ -1,0 +1,168 @@
+{
+  "id": "reading-011",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Invention of Paper",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "From Rags to Pages",
+      "body": "**A**  Before paper, people wrote on whatever their surroundings offered. In Mesopotamia, scribes pressed marks into wet clay; in Egypt, they used papyrus, made by layering strips of reed and pressing them together. Elsewhere, parchment was prepared from animal skin. Each material had drawbacks. Clay tablets were heavy, papyrus was fragile and available only where the reed grew, and parchment required a whole animal for a single large sheet, which made it expensive.\n\n**B**  Paper as we know it was developed in China. Tradition credits Cai Lun, a court official, with improving the process around 105 CE, although earlier paper fragments have been found. The method was to beat plant fibres, such as mulberry bark, hemp or old rags, into a pulp in water, pour it onto a screen, press out the water and hang the sheet to dry. The result was light, cheap and strong enough to write on.\n\n**C**  The technique spread slowly. It reached Korea and Japan, and in the eighth century it entered the Islamic world, where paper mills were established in cities such as Samarkand and Baghdad. Paper was far cheaper than parchment, which encouraged copying and book production. From there it crossed into Europe through Spain and Italy, and by the thirteenth century paper mills were operating in several European countries. When printing with movable type appeared in the fifteenth century, demand for paper exploded.\n\n**D**  Modern paper is made from wood pulp, a change that began in the nineteenth century and made paper cheap enough for newspapers and mass-market books. The cost was environmental: forests were cut, and pulping created polluted water. Recycling now supplies a large share of the fibre used in Europe, though paper cannot be recycled indefinitely. The material that once replaced clay and skin is still being reinvented.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "yes-no-not-given",
+          "prompt": "Parchment was cheaper than paper.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph A says parchment required a whole animal, which made it expensive; Paragraph C says paper was far cheaper.",
+          "location": "Paragraph A, C"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "yes-no-not-given",
+          "prompt": "Cai Lun is traditionally credited with improving papermaking.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph B: tradition credits Cai Lun with improving the process.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "yes-no-not-given",
+          "prompt": "Paper reached Europe before it reached the Islamic world.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "NO",
+          "explanation": "Paragraph C says it entered the Islamic world in the eighth century and later crossed into Europe.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "yes-no-not-given",
+          "prompt": "The printing press increased demand for paper.",
+          "options": ["YES", "NO", "NOT GIVEN"],
+          "answer": "YES",
+          "explanation": "Paragraph C: demand for paper exploded when movable type appeared.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which materials were beaten into pulp in early Chinese papermaking?",
+          "options": [
+            "Clay and reeds",
+            "Animal skin and lime",
+            "Mulberry bark, hemp and rags",
+            "Wood chips and sand"
+          ],
+          "answer": "C",
+          "explanation": "Paragraph B lists mulberry bark, hemp or old rags.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Why did paper spread quickly in the Islamic world?",
+          "options": [
+            "It was cheaper than parchment.",
+            "It was stronger than clay.",
+            "It was required by law.",
+            "It could be printed on."
+          ],
+          "answer": "A",
+          "explanation": "Paragraph C: paper was far cheaper than parchment, which encouraged copying.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What changed paper production in the nineteenth century?",
+          "options": [
+            "The use of wood pulp",
+            "The invention of the screen",
+            "The discovery of papyrus",
+            "A ban on rags"
+          ],
+          "answer": "A",
+          "explanation": "Paragraph D: modern paper is made from wood pulp, a change that began in the nineteenth century.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Cai Lun is associated with the year ______ CE.",
+          "instructions": "Choose ONE WORD AND/OR A NUMBER.",
+          "answer": "105",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: around 105 CE.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "The pulp was poured onto a ______ to form a sheet.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "screen",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: pour it onto a screen.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "Paper mills were established in cities such as Samarkand and ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "Baghdad",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: Samarkand and Baghdad.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-information",
+          "prompt": "materials used for writing before paper",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "A",
+          "explanation": "Paragraph A describes clay, papyrus and parchment.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-information",
+          "prompt": "the route by which paper reached Europe",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "C",
+          "explanation": "Paragraph C: through Spain and Italy.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-information",
+          "prompt": "an environmental problem caused by modern papermaking",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "D",
+          "explanation": "Paragraph D mentions forests being cut and polluted water.",
+          "location": "Paragraph D"
+        }
+      ]
+    }
+  ]
+}

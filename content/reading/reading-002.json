@@ -1,0 +1,168 @@
+{
+  "id": "reading-002",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Practice — The Umbrella",
+  "description": "Single passage, 13 questions. Recommended: 20 minutes.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A History of the Umbrella",
+      "body": "**A**  The umbrella is older than most people assume. Shade-giving parasols appear in Egyptian, Assyrian and Chinese art thousands of years ago, carried above rulers as symbols of status rather than protection from rain. The collapsible, rain-proof umbrella seems to have been developed in China, where oiled paper or waxed silk was stretched over a bamboo frame. By the tenth century these were common enough to appear in paintings and to be lent by inns to travellers.\n\n**B**  Europe was slower to accept the device. Umbrellas reached Italy and France in the sixteenth and seventeenth centuries, but early examples were heavy and expensive. In Paris they were first used by women as sunshades; men who carried them risked ridicule, since an umbrella was thought to suggest delicacy. The habit changed in the eighteenth century. Jonas Hanway, a British traveller and writer, is often credited as the first man to carry an umbrella regularly through the streets of London, in the 1750s, and he was mocked for it in the press.\n\n**C**  The modern umbrella owes much to nineteenth-century engineering. In 1852 Samuel Fox, an English steelmaker, patented a frame of steel ribs that was lighter and stronger than the wooden or whalebone frames then in use. Combined with cheaper cotton covers and sewing machines, this made umbrellas affordable for ordinary households. Folding designs followed, and by the end of the century the umbrella had become an everyday object rather than a luxury.\n\n**D**  Today the umbrella is so cheap that it is often treated as disposable. Millions are lost or abandoned each year, and the metal and plastic they contain rarely reach a recycling stream. Some cities have started repair cafés where broken umbrellas are mended, and a few manufacturers now sell models with replaceable canopies. The problem, designers argue, is not the umbrella itself but the assumption that it should cost less than a sandwich.",
+      "questions": [
+        {
+          "id": "p1q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Early parasols were mainly used to keep rain off.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph A says they were carried as symbols of status and used for shade.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "Chinese umbrellas were made using oiled paper.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph A mentions oiled paper or waxed silk over a bamboo frame.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Jonas Hanway was mocked in the press for carrying an umbrella.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "TRUE",
+          "explanation": "Paragraph B says he was mocked for it in the press.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Steel ribs made umbrellas heavier than before.",
+          "options": ["TRUE", "FALSE", "NOT GIVEN"],
+          "answer": "FALSE",
+          "explanation": "Paragraph C says the steel frame was lighter and stronger than wooden or whalebone frames.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Why were umbrellas first used by women in Paris?",
+          "options": [
+            "They were cheaper than hats.",
+            "They were used as sunshades.",
+            "Men were forbidden to carry them.",
+            "They were imported from China."
+          ],
+          "answer": "B",
+          "explanation": "Paragraph B: in Paris they were first used by women as sunshades.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What did Samuel Fox contribute to umbrella design?",
+          "options": [
+            "Cheaper cotton covers",
+            "A frame of steel ribs",
+            "A folding handle",
+            "Waterproof silk"
+          ],
+          "answer": "B",
+          "explanation": "Paragraph C: he patented a frame of steel ribs in 1852.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "According to designers, what is the real problem with modern umbrellas?",
+          "options": [
+            "The quality of the metal",
+            "The cost of recycling",
+            "The expectation that they should be very cheap",
+            "The number of repair cafés"
+          ],
+          "answer": "C",
+          "explanation": "Paragraph D: the problem is the assumption that an umbrella should cost less than a sandwich.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q8",
+          "number": 8,
+          "type": "sentence-completion",
+          "prompt": "Chinese umbrellas were made from oiled ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "paper",
+          "wordLimit": 1,
+          "explanation": "Paragraph A: oiled paper or waxed silk.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "p1q9",
+          "number": 9,
+          "type": "sentence-completion",
+          "prompt": "Samuel Fox patented a frame made of steel ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "ribs",
+          "wordLimit": 1,
+          "explanation": "Paragraph C: a frame of steel ribs.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "p1q10",
+          "number": 10,
+          "type": "sentence-completion",
+          "prompt": "Hanway carried his umbrella through the streets of ______.",
+          "instructions": "Choose ONE WORD ONLY from the passage.",
+          "answer": "London",
+          "wordLimit": 1,
+          "explanation": "Paragraph B: through the streets of London.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q11",
+          "number": 11,
+          "type": "matching-information",
+          "prompt": "changing attitudes towards men who carried umbrellas",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "B",
+          "explanation": "Paragraph B describes the ridicule and the later change in habit.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "p1q12",
+          "number": 12,
+          "type": "matching-information",
+          "prompt": "the environmental cost of cheap umbrellas",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "D",
+          "explanation": "Paragraph D discusses abandoned umbrellas and recycling.",
+          "location": "Paragraph D"
+        },
+        {
+          "id": "p1q13",
+          "number": 13,
+          "type": "matching-information",
+          "prompt": "a development that made umbrellas affordable for ordinary people",
+          "instructions": "Which paragraph contains this information?",
+          "options": ["A", "B", "C", "D"],
+          "answer": "C",
+          "explanation": "Paragraph C explains how steel ribs and cheaper covers reduced the price.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}
