@@ -179,8 +179,33 @@ attemptRoutes.get('/stats', async (c) => {
     for (const summary of list) titles.set(`${summary.skill}:${summary.id}`, summary.title);
   }
 
+  // Per-paper best score, so the practice list can show progress.
+  const byContent = await query<{
+    skill: string;
+    content_id: string;
+    attempts: number;
+    best_band: number | null;
+  }>(
+    `select skill, content_id, count(*)::int as attempts, max(band)::float8 as best_band
+     from attempts
+     where user_id = $1 and submitted_at is not null
+     group by skill, content_id`,
+    [userId],
+  );
+
+  const activity = await queryOne<{ week: number; days30: number }>(
+    `select
+       (select count(*) from attempts
+        where user_id = $1 and submitted_at > now() - interval '7 days')::int as week,
+       (select count(distinct date_trunc('day', submitted_at)) from attempts
+        where user_id = $1 and submitted_at > now() - interval '30 days')::int as days30`,
+    [userId],
+  );
+
   return c.json({
     perSkill,
+    byContent,
+    activity: { weekAttempts: activity?.week ?? 0, activeDays30: activity?.days30 ?? 0 },
     recent: recent.map((r) => ({
       ...r,
       title: titles.get(`${r.skill}:${r.content_id}`) ?? r.content_id,

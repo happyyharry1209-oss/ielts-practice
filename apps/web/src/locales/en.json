@@ -104,7 +104,11 @@
     "speakingDesc": "Part 1–3 prompts with recording and playback.",
     "practiceNow": "Practise now",
     "adminPanel": "Admin panel",
-    "memberSince": "Member since {{date}}"
+    "memberSince": "Member since {{date}}",
+    "heroLabel": "Today's practice",
+    "weekAttempts": "Practices this week",
+    "activeDays": "Active days (30)",
+    "bestBandHint": "Across reading and listening"
   },
   "practice": {
     "title": "Choose a test",
@@ -115,7 +119,16 @@
     "empty": "No tests for this paper yet.",
     "readingVariant": "Academic",
     "general": "General Training",
-    "testCount": "{{count}} test(s)"
+    "testCount": "{{count}} test(s)",
+    "search": "Search tests",
+    "filterAll": "All",
+    "filterNew": "Not done",
+    "filterDone": "Done",
+    "best": "Best",
+    "done": "Done",
+    "new": "New",
+    "retry": "Practise again",
+    "noMatch": "No tests match your search."
   },
   "exam": {
     "timeLeft": "Time left",

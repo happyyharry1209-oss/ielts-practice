@@ -104,7 +104,11 @@
     "speakingDesc": "Part 1–3 題目，可錄音回放。",
     "practiceNow": "立即練習",
     "adminPanel": "管理後台",
-    "memberSince": "註冊於 {{date}}"
+    "memberSince": "註冊於 {{date}}",
+    "heroLabel": "開始今天的練習",
+    "weekAttempts": "本週練習",
+    "activeDays": "近 30 天有練習",
+    "bestBandHint": "閱讀與聽力最佳"
   },
   "practice": {
     "title": "選擇試卷",
@@ -115,7 +119,16 @@
     "empty": "這一項還沒有試卷。",
     "readingVariant": "學術組",
     "general": "一般訓練組",
-    "testCount": "{{count}} 份試卷"
+    "testCount": "{{count}} 份試卷",
+    "search": "搜尋試卷",
+    "filterAll": "全部",
+    "filterNew": "未做",
+    "filterDone": "做過",
+    "best": "最佳",
+    "done": "已完成",
+    "new": "未做",
+    "retry": "再練一次",
+    "noMatch": "沒有符合條件的試卷。"
   },
   "exam": {
     "timeLeft": "剩餘時間",

@@ -39,6 +39,19 @@
   .chip {
     @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold;
   }
+  .card-hover {
+    @apply transition duration-200;
+  }
+  .skeleton {
+    @apply animate-pulse rounded-lg bg-slate-200/70;
+  }
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 15px -3px rgb(15 23 42 / 0.08),
+    0 4px 6px -4px rgb(15 23 42 / 0.08);
 }
 
 /* Keep long reading passages comfortable on small screens. */
@@ -51,6 +64,10 @@
    The app is built from a small set of Tailwind utilities, so the theme swaps
    them centrally under .dark instead of duplicating dark: variants everywhere.
    --------------------------------------------------------------------------- */
+
+.dark .skeleton {
+  background-color: #1e293b;
+}
 
 .dark body {
   background-color: #020617;
