@@ -246,7 +246,7 @@
 }
 
 .dark .bg-slate-900 {
-  background-color: var(--ink);
+  background-color: #243b49;
 }
 
 .dark .border-slate-200,
@@ -324,8 +324,29 @@
   color: #e5a292;
 }
 
+.dark .text-brand-600 {
+  color: #e9a08a;
+}
+
 .dark .text-sky-600 {
   color: #9bc6dd;
+}
+
+/* Band colours need to stay distinguishable on the midnight-blue canvas. */
+.dark .text-emerald-600 {
+  color: #79d2a3;
+}
+
+.dark .text-sky-600 {
+  color: #8fc7e8;
+}
+
+.dark .text-amber-600 {
+  color: #f0c56b;
+}
+
+.dark .text-rose-600 {
+  color: #ff91a4;
 }
 
 @media (max-width: 1023px) {

@@ -279,7 +279,7 @@ export default function WritingExam() {
                   </p>
                   <div className="mt-2 space-y-2">
                     {feedback.errors.map((item, index) => (
-                      <div key={index} className="rounded-xl bg-rose-50/60 p-3 text-sm">
+                      <div key={index} className="rounded-sm bg-rose-50 p-3 text-sm">
                         <p className="text-slate-700">“{item.sentence}”</p>
                         <p className="mt-1 text-xs text-rose-700">{item.issue}</p>
                         <p className="mt-1 text-xs text-emerald-700">→ {item.suggestion}</p>

@@ -87,8 +87,8 @@ export function QuestionInput({
         'rounded-md border bg-surface p-4 transition',
         review
           ? review.correct
-            ? 'border-emerald-200 bg-emerald-50/40'
-            : 'border-rose-200 bg-rose-50/40'
+            ? 'border-emerald-200 bg-emerald-50'
+            : 'border-rose-200 bg-rose-50'
           : 'border-slate-200',
       )}
     >
