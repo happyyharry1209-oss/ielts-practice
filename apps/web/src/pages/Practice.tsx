@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ArrowRight, Check, Clock3, ListChecks, Search } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { ContentManifest, TestSummary } from '@ielts/shared';
 import { EmptyState, LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
@@ -33,6 +33,7 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   const { t } = useTranslation();
   const { user } = useAuth();
   const navigate = useNavigate();
+  const { search: practiceSearch } = useLocation();
   const [mode, setMode] = useState<Mode>('mock');
   const [params, setParams] = useSearchParams();
   const resultsHeading = useRef<HTMLHeadingElement>(null);
@@ -96,7 +97,9 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
 
   const start = (test: TestSummary) => {
     if (hasExamModes) clearStoredAnswers(test.id);
-    navigate(`/exam/${skill}/${test.id}${hasExamModes ? `?mode=${mode}` : ''}`);
+    navigate(`/exam/${skill}/${test.id}${hasExamModes ? `?mode=${mode}` : ''}`, {
+      state: { practiceSearch },
+    });
   };
 
   return (

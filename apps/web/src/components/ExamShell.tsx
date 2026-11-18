@@ -1,6 +1,60 @@
+import { ArrowLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import type { ReactNode } from 'react';
+import type { Skill } from '@ielts/shared';
+import { skillLabel } from '../lib/skills';
 import { cn, formatClock } from '../lib/utils';
+import { Spinner } from './ui';
+
+export function ExamBackLink({ skill, confirmMessage, onLeave }: {
+  skill: Skill;
+  confirmMessage?: string;
+  onLeave?: () => void;
+}) {
+  const { t } = useTranslation();
+  const { state } = useLocation();
+  const practiceSearch: unknown = state?.practiceSearch;
+  const search = typeof practiceSearch === 'string' && practiceSearch.startsWith('?') ? practiceSearch : '';
+
+  return (
+    <Link
+      className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-sm border border-paper/25 px-2.5 text-xs font-semibold text-paper hover:bg-paper/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper"
+      to={{ pathname: `/practice/${skill}`, search }}
+      replace
+      onClick={(event) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (confirmMessage && !window.confirm(confirmMessage)) {
+          event.preventDefault();
+          return;
+        }
+        onLeave?.();
+        window.scrollTo(0, 0);
+      }}
+    >
+      <ArrowLeft size={16} aria-hidden="true" />
+      {t('exam.backToSkill', { skill: t(skillLabel(skill)) })}
+    </Link>
+  );
+}
+
+export function ExamLoadState({ skill, error }: { skill: Skill; error?: string }) {
+  const { t } = useTranslation();
+  return (
+    <div className="exam-surface min-h-screen">
+      <header className="border-b border-paper/15 bg-ink text-paper">
+        <div className="mx-auto max-w-[1400px] px-4 py-3">
+          <ExamBackLink skill={skill} />
+        </div>
+      </header>
+      {error ? (
+        <div className="p-10 text-center text-sm text-rose-600">{error}</div>
+      ) : (
+        <Spinner label={t('common.loading')} />
+      )}
+    </div>
+  );
+}
 
 export function TimerPill({ remaining, mode }: { remaining: number; mode: 'mock' | 'practice' }) {
   const { t } = useTranslation();
@@ -22,6 +76,7 @@ export function TimerPill({ remaining, mode }: { remaining: number; mode: 'mock'
 }
 
 export function ExamShell({
+  back,
   title,
   subtitle,
   timer,
@@ -33,6 +88,7 @@ export function ExamShell({
   children,
   sidebar,
 }: {
+  back: ReactNode;
   title: string;
   subtitle?: string;
   timer: ReactNode;
@@ -49,9 +105,12 @@ export function ExamShell({
     <div className="exam-surface flex min-h-screen flex-col">
       <header className="sticky top-0 z-30 border-b border-paper/15 bg-ink text-paper shadow-sm">
         <div className="mx-auto flex min-h-[70px] max-w-[1400px] flex-wrap items-center gap-3 px-4 py-3">
-          <div className="min-w-0 flex-1">
-            <p className="truncate font-serif text-base font-semibold text-paper">{title}</p>
-            {subtitle ? <p className="truncate text-[11px] text-paper/55">{subtitle}</p> : null}
+          <div className="flex w-full min-w-0 items-center gap-3 sm:w-auto sm:flex-1">
+            {back}
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-serif text-base font-semibold text-paper">{title}</p>
+              {subtitle ? <p className="truncate text-[11px] text-paper/55">{subtitle}</p> : null}
+            </div>
           </div>
           <div className="flex items-center gap-2">
             <span className="hidden min-h-10 items-center rounded-sm bg-paper/10 px-3 py-1.5 text-xs font-medium text-paper/75 sm:inline-flex">

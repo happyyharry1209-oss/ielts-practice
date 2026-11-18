@@ -3,10 +3,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { ReadingTest } from '@ielts/shared';
-import { ConfirmDialog, ExamShell, TimerPill } from '../components/ExamShell';
+import { ConfirmDialog, ExamBackLink, ExamLoadState, ExamShell, TimerPill } from '../components/ExamShell';
 import { Markdown } from '../components/Markdown';
 import { QuestionInput } from '../components/QuestionInput';
-import { Spinner } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { useExamState, useExamTimer } from '../lib/useExam';
 import { cn } from '../lib/utils';
@@ -37,6 +36,7 @@ export default function ReadingExam() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const submittingRef = useRef(false);
+  const leftExam = useRef(false);
 
   const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting);
 
@@ -56,7 +56,7 @@ export default function ReadingExam() {
       });
       void queryClient.invalidateQueries({ queryKey: ['stats'] });
       void queryClient.invalidateQueries({ queryKey: ['review'] });
-      navigate(`/result/${created.attemptId}`, { replace: true });
+      if (!leftExam.current) navigate(`/result/${created.attemptId}`, { replace: true });
     } catch (err) {
       setError(errorMessage(err));
       submittingRef.current = false;
@@ -91,9 +91,9 @@ export default function ReadingExam() {
     return () => window.clearTimeout(timer);
   }, [pendingScroll, passageIndex]);
 
-  if (isLoading) return <Spinner label={t('common.loading')} />;
+  if (isLoading) return <ExamLoadState skill="reading" />;
   if (loadError || !test) {
-    return <div className="p-10 text-center text-sm text-rose-600">{errorMessage(loadError)}</div>;
+    return <ExamLoadState skill="reading" error={errorMessage(loadError)} />;
   }
 
   const passage = test.passages[passageIndex]!;
@@ -120,6 +120,13 @@ export default function ReadingExam() {
   return (
     <>
       <ExamShell
+        back={
+          <ExamBackLink
+            skill="reading"
+            confirmMessage={exam.answeredCount > 0 && !submitting ? t('exam.leaveUnsubmitted') : undefined}
+            onLeave={() => { leftExam.current = true; }}
+          />
+        }
         title={test.title}
         subtitle={`${t('exam.passage', { number: passageIndex + 1 })} · ${passage.title}`}
         timer={<TimerPill remaining={timer.remaining} mode={mode} />}

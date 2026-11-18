@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import type { SpeakingTest } from '@ielts/shared';
+import { ExamBackLink, ExamLoadState } from '../components/ExamShell';
 import { SpeakingFeedbackPanel } from '../components/SpeakingFeedbackPanel';
-import { Badge, Spinner } from '../components/ui';
+import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
 import type { SavedRecording } from '../lib/recordings';
@@ -147,9 +148,9 @@ export default function SpeakingExam() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recorder.blob]);
 
-  if (isLoading) return <Spinner label={t('common.loading')} />;
+  if (isLoading) return <ExamLoadState skill="speaking" />;
   if (loadError || !test) {
-    return <div className="p-10 text-center text-sm text-rose-600">{errorMessage(loadError)}</div>;
+    return <ExamLoadState skill="speaking" error={errorMessage(loadError)} />;
   }
 
   const feedbackPanel = recorder.blob && feedbackStatus?.provider === 'groq' ? (
@@ -170,8 +171,16 @@ export default function SpeakingExam() {
 
   return (
     <div className="exam-surface min-h-screen">
+      <div className="sticky top-0 z-30 bg-ink text-paper">
+        <div className="mx-auto max-w-4xl px-4 py-2">
+          <ExamBackLink
+            skill="speaking"
+            confirmMessage={recorder.busy ? t('exam.leaveRecording') : undefined}
+          />
+        </div>
+      </div>
       <header className="border-b border-paper/15 bg-ink text-paper">
-        <div className="mx-auto max-w-4xl px-4 py-5">
+        <div className="mx-auto max-w-4xl px-4 pb-5">
           <p className="eyebrow text-paper/50">{t('home.skillSpeaking')}</p>
           <h1 className="mt-2 font-serif text-3xl font-medium text-paper">{test.title}</h1>
           <p className="mt-1 max-w-2xl text-xs leading-5 text-paper/55">{t('speaking.intro')}</p>

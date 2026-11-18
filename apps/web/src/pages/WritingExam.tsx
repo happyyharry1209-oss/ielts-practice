@@ -3,9 +3,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams, useSearchParams } from 'react-router-dom';
 import type { WritingTest } from '@ielts/shared';
-import { TimerPill } from '../components/ExamShell';
+import { ExamBackLink, ExamLoadState, TimerPill } from '../components/ExamShell';
 import { Markdown } from '../components/Markdown';
-import { Badge, Spinner } from '../components/ui';
+import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { useExamTimer } from '../lib/useExam';
 import { bandColor, cn, formatClock, assetUrl } from '../lib/utils';
@@ -35,6 +35,8 @@ function countWords(text: string): number {
   const trimmed = text.trim();
   return trimmed ? trimmed.split(/\s+/).length : 0;
 }
+
+const draftKey = (testId: string, taskId: string) => `ielts.draft.${testId}.${taskId}`;
 
 export default function WritingExam() {
   const { t } = useTranslation();
@@ -71,7 +73,7 @@ export default function WritingExam() {
     if (!test || !task) return '';
     if (drafts[task.id] !== undefined) return drafts[task.id]!;
     try {
-      return localStorage.getItem(`ielts.draft.${test.id}.${task.id}`) ?? '';
+      return localStorage.getItem(draftKey(test.id, task.id)) ?? '';
     } catch {
       return '';
     }
@@ -81,7 +83,7 @@ export default function WritingExam() {
     if (!test || !task) return;
     const id = window.setTimeout(() => {
       try {
-        localStorage.setItem(`ielts.draft.${test.id}.${task.id}`, draft);
+        localStorage.setItem(draftKey(test.id, task.id), draft);
         setSavedLabel(true);
         if (savedTimer.current) window.clearTimeout(savedTimer.current);
         savedTimer.current = window.setTimeout(() => setSavedLabel(false), 1500);
@@ -117,20 +119,33 @@ export default function WritingExam() {
     }
   };
 
-  if (isLoading) return <Spinner label={t('common.loading')} />;
+  if (isLoading) return <ExamLoadState skill="writing" />;
   if (loadError || !test || !task) {
-    return <div className="p-10 text-center text-sm text-rose-600">{errorMessage(loadError)}</div>;
+    return <ExamLoadState skill="writing" error={errorMessage(loadError)} />;
   }
+
+  const saveDraftsBeforeLeaving = () => {
+    try {
+      for (const [taskId, text] of Object.entries(drafts)) {
+        localStorage.setItem(draftKey(test.id, taskId), text);
+      }
+    } catch {
+      /* Storage can be unavailable in private mode. */
+    }
+  };
 
   return (
     <div className="exam-surface min-h-screen">
       <header className="sticky top-0 z-30 border-b border-paper/15 bg-ink text-paper shadow-sm">
         <div className="mx-auto flex min-h-[70px] max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
-          <div className="min-w-0 flex-1">
-            <p className="truncate font-serif text-base font-semibold text-paper">{test.title}</p>
-            <p className="text-[11px] text-paper/55">
-              {task.suggestedMinutes} {t('common.min')} · {t('writing.minWords', { count: task.minWords })}
-            </p>
+          <div className="flex w-full min-w-0 items-center gap-3 sm:w-auto sm:flex-1">
+            <ExamBackLink skill="writing" onLeave={saveDraftsBeforeLeaving} />
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-serif text-base font-semibold text-paper">{test.title}</p>
+              <p className="text-[11px] text-paper/55">
+                {task.suggestedMinutes} {t('common.min')} · {t('writing.minWords', { count: task.minWords })}
+              </p>
+            </div>
           </div>
           <span
             className={cn(

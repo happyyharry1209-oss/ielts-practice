@@ -166,6 +166,9 @@
     "clearFilters": "Clear filters"
   },
   "exam": {
+    "backToSkill": "Back to {{skill}}",
+    "leaveUnsubmitted": "Leave this test? Your answers have not been submitted and will be cleared when you start a new attempt.",
+    "leaveRecording": "Leave this test? Leaving stops the current recording, which may not be saved.",
     "timeLeft": "Time left",
     "answered": "Answered",
     "submitExam": "Submit test",

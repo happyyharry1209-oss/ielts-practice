@@ -165,6 +165,9 @@
     "clearFilters": "清除篩選"
   },
   "exam": {
+    "backToSkill": "返回{{skill}}練習",
+    "leaveUnsubmitted": "要離開這份測驗嗎？目前的答案尚未提交，重新開始測驗時會清除。",
+    "leaveRecording": "要離開這份測驗嗎？離開會停止錄音，這段錄音可能無法儲存。",
     "timeLeft": "剩餘時間",
     "answered": "已作答",
     "submitExam": "交卷",
