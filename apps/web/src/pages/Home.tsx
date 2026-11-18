@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { ArrowRight, BookOpen, NotebookPen } from 'lucide-react';
+import { ArrowRight, BookOpen, ClipboardList, NotebookPen } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Spinner } from '../components/ui';
@@ -55,10 +55,16 @@ export default function Home() {
           <h1 className="page-title">{t('home.chooseSkill')}</h1>
           <p className="mt-2 text-sm leading-6 text-muted">{t('home.subtitle')}</p>
         </div>
-        <Link to="/review" className="btn-secondary">
-          <NotebookPen aria-hidden="true" size={17} />
-          {t('nav.review')}
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Link to="/mock" className="btn-primary">
+            <ClipboardList aria-hidden="true" size={17} />
+            {t('mock.nav')}
+          </Link>
+          <Link to="/review" className="btn-secondary">
+            <NotebookPen aria-hidden="true" size={17} />
+            {t('nav.review')}
+          </Link>
+        </div>
       </div>
 
       <div className="grid items-stretch gap-5 lg:grid-cols-[minmax(0,1fr)_17.5rem]">

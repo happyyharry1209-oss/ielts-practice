@@ -1,0 +1,516 @@
+{
+  "id": "listening-501",
+  "skill": "listening",
+  "title": "Listening — Community and campus",
+  "description": "Four original recordings and 40 questions, from a volunteer enquiry to a lecture on building design.",
+  "durationSec": 1800,
+  "transferSec": 600,
+  "sections": [
+    {
+      "title": "Registering for an estuary bird survey",
+      "transcript": "ORGANISER: Shoreline Nature Group, good afternoon. How can I help?\n\nCALLER: I'd like to join the volunteer bird survey. I'm Anika Darlow. That's D-A-R-L-O-W. I recently moved here, so I haven't taken part before.\n\nORGANISER: Welcome, Anika. We have surveys every week from September, but the first session for new volunteers is on Sunday the fourteenth. We tried Saturdays last year, but that clashed with the sailing club.\n\nCALLER: Sunday is fine. A friend said you start at the harbour office.\n\nORGANISER: That's the usual meeting point for the regular team. For your first visit, come to the shelter beside the ferry terminal. Its entrance is painted yellow. Please be there by eight forty-five. The instructor will leave at nine, after checking everyone's equipment.\n\nCALLER: Is there anything special I need to bring? I already have a waterproof jacket, but I haven't bought any binoculars.\n\nORGANISER: We can lend you a pair of binoculars during training. For your feet, please wear boots. Some of the ground stays muddy even after a sunny week, and ordinary trainers will get wet. There's no café at the meeting point, so bring water.\n\nCALLER: Do I need to be able to recognise the birds already? I'm reasonably good with garden birds, but the ones on the coast are unfamiliar.\n\nORGANISER: You'll go with a more experienced volunteer. At each stopping point, the first thing you'll record is the time. People often start by writing the species, but times let researchers compare observations with the tide. After that, use the short codes in the booklet we'll give you.\n\nCALLER: How long does it take? I have a family lunch later that day.\n\nORGANISER: Allow about two hours from the moment the group sets off. The walk itself is not particularly long. Most of the time is spent watching from three locations. We may finish slightly earlier in strong winds.\n\nCALLER: Is there a fee for the training?\n\nORGANISER: No. There's an optional donation box, but you don't need to contribute. We do need an email address, which you can put on the joining form. If weather forces us to cancel, you'll receive an email by six the evening before. We used to send texts, but we couldn't reliably deliver them all.\n\nCALLER: Where can I find that form?\n\nORGANISER: Go to our website and open the page called Take Part. You're looking for the blue button marked New Volunteers. Don't use the printed form inside the summer newsletter. It gives last year's address and has the wrong date. After you register, please read the map on the confirmation page. I'll look forward to meeting you on Sunday.",
+      "id": "s1",
+      "audioUrl": "/audio/listening-501/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Volunteer surname: ______",
+          "answer": "Darlow",
+          "explanation": "Anika spells her surname D-A-R-L-O-W.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "Day of first session: ______",
+          "answer": "Sunday",
+          "explanation": "The first training session is on Sunday the fourteenth.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Meet by the ______ terminal.",
+          "answer": "ferry",
+          "explanation": "Beginners meet at the shelter beside the ferry terminal.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Latest arrival time: ______",
+          "answer": "8:45",
+          "explanation": "The organiser asks volunteers to arrive by eight forty-five.",
+          "instructions": "Write ONE NUMBER ONLY.",
+          "wordLimit": 1,
+          "acceptableAnswers": [
+            "08:45",
+            "8.45",
+            "0845"
+          ]
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "note-completion",
+          "prompt": "Volunteers can borrow a pair of ______.",
+          "answer": "binoculars",
+          "explanation": "The survey group lends binoculars.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "note-completion",
+          "prompt": "Participants should wear ______ on muddy ground.",
+          "answer": "boots",
+          "explanation": "Boots are recommended over ordinary trainers.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What should a volunteer write down first at each stop?",
+          "answer": "B",
+          "explanation": "The organiser says to record the time first.",
+          "options": [
+            "The species",
+            "The time",
+            "The number of birds"
+          ]
+        },
+        {
+          "id": "q8",
+          "number": 8,
+          "type": "multiple-choice",
+          "prompt": "How long should participants allow from the start of the walk?",
+          "answer": "A",
+          "explanation": "The organiser says to allow about two hours.",
+          "options": [
+            "About two hours",
+            "About three hours",
+            "About four hours"
+          ]
+        },
+        {
+          "id": "q9",
+          "number": 9,
+          "type": "multiple-choice",
+          "prompt": "How will participants hear about cancellation?",
+          "answer": "C",
+          "explanation": "Cancellation is sent by email.",
+          "options": [
+            "By phone call",
+            "By text",
+            "By email"
+          ]
+        },
+        {
+          "id": "q10",
+          "number": 10,
+          "type": "multiple-choice",
+          "prompt": "Which button opens the correct form?",
+          "answer": "B",
+          "explanation": "The button is labelled New Volunteers.",
+          "options": [
+            "Take Part",
+            "New Volunteers",
+            "Summer Newsletter"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Welcome to a community repair café",
+      "transcript": "HOST: Before we open the workbenches, I'd like to explain how today's repair café works. We began in the public library, but the library was only available on weekday mornings. We moved to the old fire station so that we could open on Sundays, when more people are free. The large doors also make it easier to bring in bulky items.\n\nIf you've brought something for repair, go to the reception table first. We need to see the item in order to direct you to the right person. Do not join a queue at a workbench until you've collected a numbered ticket from reception. Last month, several lamps turned out to be suitable for the same technician, and tickets are how we keep things fair. There is no charge for labour. We ask for the cost of any new components used, but your technician will ask you before opening a packet or ordering a part.\n\nYou can find the electrical team behind the glass doors. We don't accept microwave ovens. Their internal components require specialist equipment, even if the oven is unplugged. If you have a battery-powered toy, the team can take a look. Check for any removable batteries and take them out before carrying it to the bench.\n\nThe sewing group is downstairs, in the room with the green curtains. Bring the loose button or broken zip if you still have it. People sometimes assume the volunteers will repair a garment while they wait at the café counter, but you'll normally sit with the volunteer and learn how to make the repair yourself. The idea is to make it possible for you to deal with similar problems at home.\n\nIf a repair isn't possible today, our volunteers will suggest another way forward. For example, a metal bracket may have to be made to fit a particular piece of furniture. If it can't be bought, we'll give you details of the local makerspace. They can advise you about producing a replacement.\n\nWe also have a donation shelf beside the exit. Each item left there must work. It's often tempting to leave a broken object for us to practise on, but the shelf is for things another visitor can take away and use immediately. During the afternoon, you're welcome to look around or ask questions. The last new repair starts at a quarter past three, which gives our volunteers time to pack up before four. If you arrive too late, we'll write down the date of our next session and suggest what to bring back.",
+      "id": "s2",
+      "audioUrl": "/audio/listening-501/section2.mp3",
+      "questions": [
+        {
+          "id": "q11",
+          "number": 11,
+          "type": "multiple-choice",
+          "prompt": "Why did the repair café move to the old fire station?",
+          "answer": "B",
+          "explanation": "The previous location was unavailable on Sundays.",
+          "options": [
+            "It was closer to the market.",
+            "It could open on Sundays.",
+            "It offered a lower rent."
+          ]
+        },
+        {
+          "id": "q12",
+          "number": 12,
+          "type": "multiple-choice",
+          "prompt": "What must visitors collect before going to a workbench?",
+          "answer": "C",
+          "explanation": "Reception gives each visitor a numbered ticket.",
+          "options": [
+            "A repair guide",
+            "A tool box",
+            "A numbered ticket"
+          ]
+        },
+        {
+          "id": "q13",
+          "number": 13,
+          "type": "multiple-choice",
+          "prompt": "Which repair expense can visitors be asked to cover?",
+          "answer": "A",
+          "explanation": "There is no labour charge, but visitors can pay for components.",
+          "options": [
+            "New components",
+            "Labour",
+            "The use of tools"
+          ]
+        },
+        {
+          "id": "q14",
+          "number": 14,
+          "type": "note-completion",
+          "prompt": "The electrical team is behind the ______ doors.",
+          "answer": "glass",
+          "explanation": "The host directs visitors to the glass doors.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q15",
+          "number": 15,
+          "type": "multiple-choice",
+          "prompt": "Which electrical item is the team unable to accept?",
+          "answer": "B",
+          "explanation": "Microwave ovens require specialist equipment.",
+          "options": [
+            "A lamp",
+            "A microwave oven",
+            "A battery-powered toy"
+          ]
+        },
+        {
+          "id": "q16",
+          "number": 16,
+          "type": "note-completion",
+          "prompt": "Take out any removable ______ from toys in advance.",
+          "answer": "batteries",
+          "explanation": "Visitors should remove batteries before taking toys to the bench.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q17",
+          "number": 17,
+          "type": "note-completion",
+          "prompt": "The sewing room has ______ curtains.",
+          "answer": "green",
+          "explanation": "The sewing group is in the room with green curtains.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q18",
+          "number": 18,
+          "type": "multiple-choice",
+          "prompt": "Where can visitors get advice about making a replacement bracket?",
+          "answer": "C",
+          "explanation": "The makerspace advises on making a part if it cannot be bought.",
+          "options": [
+            "The public library",
+            "The reception desk",
+            "The local makerspace"
+          ]
+        },
+        {
+          "id": "q19",
+          "number": 19,
+          "type": "multiple-choice",
+          "prompt": "What is required of objects on the donation shelf?",
+          "answer": "A",
+          "explanation": "They must already be working.",
+          "options": [
+            "They must be in working order.",
+            "They must have a label.",
+            "They must have been repaired at the café."
+          ]
+        },
+        {
+          "id": "q20",
+          "number": 20,
+          "type": "note-completion",
+          "prompt": "The final new repair begins at ______.",
+          "answer": "3:15",
+          "explanation": "The last repair starts at a quarter past three.",
+          "instructions": "Write ONE NUMBER ONLY.",
+          "wordLimit": 1,
+          "acceptableAnswers": [
+            "15:15",
+            "3.15",
+            "0315"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Students planning a pedestrian study",
+      "transcript": "LEAH: Our project is about why some neighbourhood streets stay busy throughout the day. Did you look at the sites we can study?\n\nOMAR: I did. The street beside the station is convenient, but we would count a lot of commuters who don't spend time in the area. I think we should use Garden Lane instead. It has a wider mixture of shops, benches and places where people stop. The bridge is difficult to observe because there isn't anywhere safe to stand.\n\nLEAH: Garden Lane sounds right. In our proposal, we said we would interview people. The tutor agreed, as long as we change the order of the activities. She wants us to carry out observations before we write the questions. That way the interviews will follow up things we've actually seen.\n\nOMAR: Fair. For recording movement, how about filming from a window? We wouldn't have to take notes while people are passing.\n\nLEAH: The university suggested a tally sheet. It avoids storing identifiable images and will be easier to use outside. We can record the direction and whether a person pauses, but we shouldn't make guesses about their age. That would be hard to judge consistently. Let's also note the weather at the beginning of each session. A short shower could make a big difference, particularly near the benches.\n\nOMAR: I can do a trial on Monday. What do you think would count as a pause? Three seconds might be enough to give us data, but some people stop that briefly to let another person walk past.\n\nLEAH: Let's use five seconds. That will exclude most interruptions without missing people who stop to check a notice or decide where to go. We'll still have one column for people who turn back before reaching the junction.\n\nOMAR: In the interviews, I was going to ask residents for their postcode.\n\nLEAH: I don't think we need that. We only need to know whether they visit this street regularly. Asking people how often they come will tell us more about the street than asking for a postcode. We should also give them a clear option to stop the interview at any time.\n\nOMAR: How shall we organise the data afterwards?\n\nLEAH: We'll both keep our original sheets until the project has been assessed. But once we're back, could you enter the totals in the shared spreadsheet? I'll make the map, since I've already got a blank copy from the council. It only needs to show the observation points, not the names of businesses.\n\nOMAR: Fine. When do we have to show the tutor our preliminary work? I was planning around the last day of the month.\n\nLEAH: She has moved it earlier to the twenty-second. She's giving us a little longer for the final report, but she wants to review the method before we spend too much time collecting data. For that meeting, we should bring our trial sheets, the draft questions and a clear statement of what the study won't tell us.\n\nOMAR: Yes. We shouldn't claim our street represents the whole city, even if the counts are clear. We'll say we can explain a pattern at one location and propose where it could be checked elsewhere.",
+      "id": "s3",
+      "audioUrl": "/audio/listening-501/section3.mp3",
+      "questions": [
+        {
+          "id": "q21",
+          "number": 21,
+          "type": "multiple-choice",
+          "prompt": "Why does Omar favour Garden Lane?",
+          "answer": "C",
+          "explanation": "There is a wider variety of stopping places and shops.",
+          "options": [
+            "It is next to the university.",
+            "It is used mostly by commuters.",
+            "It has a greater variety of public uses."
+          ]
+        },
+        {
+          "id": "q22",
+          "number": 22,
+          "type": "multiple-choice",
+          "prompt": "What does the tutor want the students to do first?",
+          "answer": "A",
+          "explanation": "The tutor wants observations before they prepare interview questions.",
+          "options": [
+            "Observe the street.",
+            "Write the interview questions.",
+            "Interview business owners."
+          ]
+        },
+        {
+          "id": "q23",
+          "number": 23,
+          "type": "note-completion",
+          "prompt": "To count movement, the students will use a ______ sheet.",
+          "answer": "tally",
+          "explanation": "The university suggested a tally sheet instead of filming.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q24",
+          "number": 24,
+          "type": "multiple-choice",
+          "prompt": "Which personal detail will they avoid estimating?",
+          "answer": "B",
+          "explanation": "Leah says that age cannot be judged consistently.",
+          "options": [
+            "The direction a person is travelling",
+            "A person’s age",
+            "Whether a person paused"
+          ]
+        },
+        {
+          "id": "q25",
+          "number": 25,
+          "type": "note-completion",
+          "prompt": "They will note the ______ at the start of each session.",
+          "answer": "weather",
+          "explanation": "Weather can change behaviour, so it is recorded.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q26",
+          "number": 26,
+          "type": "note-completion",
+          "prompt": "Minimum time counted as a pause: ______ seconds.",
+          "answer": "5",
+          "explanation": "Leah selects five seconds.",
+          "instructions": "Write ONE NUMBER ONLY.",
+          "wordLimit": 1,
+          "acceptableAnswers": [
+            "five"
+          ]
+        },
+        {
+          "id": "q27",
+          "number": 27,
+          "type": "multiple-choice",
+          "prompt": "What will interviewees be asked about?",
+          "answer": "C",
+          "explanation": "They will be asked how often they visit the street.",
+          "options": [
+            "Their home postcode",
+            "Their work schedule",
+            "How often they visit the street"
+          ]
+        },
+        {
+          "id": "q28",
+          "number": 28,
+          "type": "note-completion",
+          "prompt": "Omar will transfer the totals to a shared ______.",
+          "answer": "spreadsheet",
+          "explanation": "Leah asks Omar to enter the totals in the shared spreadsheet.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q29",
+          "number": 29,
+          "type": "multiple-choice",
+          "prompt": "What will Leah prepare?",
+          "answer": "A",
+          "explanation": "Leah will make the map of observation points.",
+          "options": [
+            "The map",
+            "An extra interview script",
+            "A list of businesses"
+          ]
+        },
+        {
+          "id": "q30",
+          "number": 30,
+          "type": "note-completion",
+          "prompt": "Preliminary meeting with tutor: the ______ of the month.",
+          "answer": "22nd",
+          "explanation": "The tutor moved the review forward to the twenty-second.",
+          "instructions": "Write ONE NUMBER ONLY.",
+          "wordLimit": 1,
+          "acceptableAnswers": [
+            "22",
+            "twenty-second"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Lecture on keeping buildings cool at night",
+      "transcript": "LECTURER: Today we are looking at night cooling in buildings. All buildings take in heat during the day. Once the sun has gone down, however, what matters is how quickly they can release it. A design that feels comfortable at lunchtime can still become difficult to sleep in if that heat continues to enter the room during the evening.\n\nAt the workshop you compared lightweight timber with concrete. An important distinction is that heavy materials have greater capacity to store heat. This property is called thermal mass. It isn't automatically an advantage. A concrete surface that receives strong sunshine can store that energy and release it much later. Heavy materials work best when designers prevent unnecessary heat gain and create opportunities for stored heat to leave.\n\nOne example comes from a study of a school in a dry inland town. The researchers expected dark windows to be the main issue, but the largest source of afternoon heat was the roof. Adding a reflective layer above it lowered temperatures more effectively than changing the glass. The team found this by recording surface temperatures as well as indoor air temperatures. Measuring only the air would not have identified the path by which most of the heat was getting in.\n\nA second part of the experiment tested how to move cooler outdoor air through the building. The usual procedure is to open windows on opposite sides so the wind can pass through. In the school, most rooms faced the same direction. Teachers therefore opened narrow vents in the corridor ceiling, allowing the warmest air to rise and leave. The openings had guards, so they could safely be left open overnight.\n\nPassive cooling performs differently in different climates. In a humid coastal city, the outside air may remain warm and damp for much of the night. Bringing more of it inside might make the room feel worse, even if the temperature goes down slightly. For that reason, research teams record humidity as well as temperature. They also ask occupants how comfortable they felt, because thermometer data alone can miss this difference.\n\nThere's another question about where measurements should be made. A sensor on a wall near a vent will be strongly affected by air movement. The team at the school attached one sensor to a stand at the approximate height of a child's desk. They then added a second near the ceiling to measure how strongly warm air collected above the class. A gap of several degrees between the two sensors told the researchers that one number for the whole room would be misleading.\n\nWhat follows for new building design? First, build in controls which people can understand. Second, give a member of staff responsibility for checking that controls are used. The study school initially asked all teachers to remember to open the new vents, but the procedure was far more reliable after it was added to the caretaker's evening checklist. Finally, evaluate the building after a full summer. A single cool week may give the impression that a system works even if it performs poorly in more demanding conditions.",
+      "id": "s4",
+      "audioUrl": "/audio/listening-501/section4.mp3",
+      "questions": [
+        {
+          "id": "q31",
+          "number": 31,
+          "type": "note-completion",
+          "prompt": "Heat storage capacity in building materials is described as thermal ______.",
+          "answer": "mass",
+          "explanation": "The lecturer calls this property thermal mass.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q32",
+          "number": 32,
+          "type": "multiple-choice",
+          "prompt": "Which part was the main source of school heat in the afternoon?",
+          "answer": "C",
+          "explanation": "The researchers identified the roof as the main source.",
+          "options": [
+            "The windows",
+            "The outer walls",
+            "The roof"
+          ]
+        },
+        {
+          "id": "q33",
+          "number": 33,
+          "type": "note-completion",
+          "prompt": "The researchers measured ______ temperatures to find the heat path.",
+          "answer": "surface",
+          "explanation": "Surface readings helped reveal the path of the heat.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q34",
+          "number": 34,
+          "type": "note-completion",
+          "prompt": "The usual ventilation procedure needs windows on ______ sides.",
+          "answer": "opposite",
+          "explanation": "The lecturer describes cross-ventilation through opposite openings.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q35",
+          "number": 35,
+          "type": "note-completion",
+          "prompt": "The school allowed hot air out through vents in the corridor ______.",
+          "answer": "ceiling",
+          "explanation": "The openings used for warm air were in the ceiling.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q36",
+          "number": 36,
+          "type": "multiple-choice",
+          "prompt": "What stops the vents being a safety risk?",
+          "answer": "B",
+          "explanation": "The vents had guards.",
+          "options": [
+            "An alarm system",
+            "Guards",
+            "A timer"
+          ]
+        },
+        {
+          "id": "q37",
+          "number": 37,
+          "type": "note-completion",
+          "prompt": "Coastal research teams must also record ______.",
+          "answer": "humidity",
+          "explanation": "Teams measure humidity because damp air can be uncomfortable.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q38",
+          "number": 38,
+          "type": "note-completion",
+          "prompt": "At the school, the lower sensor was roughly level with a child’s ______.",
+          "answer": "desk",
+          "explanation": "The lower sensor was set at desk height.",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q39",
+          "number": 39,
+          "type": "multiple-choice",
+          "prompt": "Who was ultimately given responsibility for opening the vents?",
+          "answer": "C",
+          "explanation": "The new routine was added to the caretaker’s checklist.",
+          "options": [
+            "The researchers",
+            "The teachers",
+            "The caretaker"
+          ]
+        },
+        {
+          "id": "q40",
+          "number": 40,
+          "type": "multiple-choice",
+          "prompt": "When should cooling performance be evaluated?",
+          "answer": "A",
+          "explanation": "The lecturer recommends reviewing the results after an entire summer.",
+          "options": [
+            "After a full summer",
+            "After the first warm week",
+            "As soon as the building opens"
+          ]
+        }
+      ]
+    }
+  ]
+}

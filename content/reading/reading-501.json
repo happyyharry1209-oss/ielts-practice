@@ -1,0 +1,201 @@
+{
+  "id": "reading-501",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Academic Reading — Designing for Darkness",
+  "description": "An academic article about designing street lighting. One passage and 14 questions.",
+  "durationSec": 1200,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Designing for Darkness",
+      "body": "**A**  For decades, street lamps were treated as a measure of progress. A brighter road suggested investment, and an unlit path seemed to belong to a place that had been overlooked. Municipal engineers usually decided where to provide new lights by looking at traffic, personal safety and maintenance costs. The sky above the street, and the animals that crossed it, rarely figured in these calculations. Today some lighting designers are starting to ask a different question: how much light is needed for a particular activity, and where should it stop? A project in the fictional town of Alderwick illustrates both the value and the difficulty of answering it.\n\n**B**  The project began after volunteers monitoring bats reported that a route beside the railway had lost much of its activity. The route had once provided a continuous line of shelter between an old mill and a riverbank. Lamps had recently been installed at the edge of a new path. Although the path itself was narrow, its lights illuminated nearby bushes and a section of the railway embankment. The team initially planned to compare bat records from before and after installation. However, the earlier counts had been made on unusually warm evenings, so the researchers could not confidently separate the effects of temperature from those of lighting. They instead monitored a second, comparable route during the same evenings.\n\n**C**  Lighting businesses had already advised the council to consider lower-energy bulbs. Yet a bulb that uses less electricity can still illuminate areas an engineer did not intend to light. The relevant feature in Alderwick was the shape of the beam. The researchers tested a metal shield around each fitting so that light fell on the path and less reached the vegetation. At several places, they also moved lights away from overhanging branches. They took measurements at the path edge and in the bushes, which showed that the brightest point on the path did not have to get darker for the bushes to become darker. This mattered because the council wanted to keep an even, comfortable surface for people walking at night.\n\n**D**  There were several suggestions for further reducing illumination. One was to switch every lamp off at a fixed time. Another was to keep them dim until a sensor detected someone approaching. The trial used a different arrangement on two stretches so that staff could ask users about both. The sensor settings initially allowed a light to go out too quickly after a person passed. Walkers who moved slowly could see a dark area ahead before the next lamp came on. Programmers increased the interval between detecting movement and switching the light off. The change mattered most to users who needed more time to cross a slope, even though it slightly reduced the energy saving.\n\n**E**  After the alterations, bat detectors recorded more passes along the sheltered route next to the railway. This result did not establish that the local population had increased. The same animals might simply have been using a familiar route more often. Counts also varied after rain. Still, responses from path users improved during the final weeks and there was little evidence that people were avoiding that section. It would be tempting to conclude that the same design could be copied throughout town. The team rejected this idea: a crossing used by cyclists, for example, involves different sightlines and risks from a walking path behind the mill.\n\n**F**  Alderwick has since added a simple procedure for future projects. Each proposal must explain what people need to see, which surfaces should remain dark, and how local people will be asked about the change. Officials also keep a record of how the equipment has been set. A light that is correctly shielded on the day of installation can be pointed higher after maintenance by someone unaware of the original plan. The town now oils hinges, checks control settings and reviews beam directions during a regular inspection. The principle is straightforward, but it has practical consequences: darkness can be maintained as intentionally as a cycle lane or a town's trees.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "true-false-not-given",
+          "prompt": "Wildlife was a major factor in earlier decisions about installing street lights.",
+          "answer": "FALSE",
+          "explanation": "Earlier decisions were mainly based on traffic, safety and maintenance costs.",
+          "location": "Paragraph A",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "true-false-not-given",
+          "prompt": "The route beside the railway had helped connect two places used by bats.",
+          "answer": "TRUE",
+          "explanation": "The route provided a continuous connection between the old mill and riverbank.",
+          "location": "Paragraph B",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The railway path project cost more than twice the amount originally planned.",
+          "answer": "NOT GIVEN",
+          "explanation": "The project cost and budget are not compared in the passage.",
+          "location": "Paragraph B",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Researchers collected data from both routes on the same evenings.",
+          "answer": "TRUE",
+          "explanation": "The second route was monitored during the same evenings for comparison.",
+          "location": "Paragraph B",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "short-answer",
+          "prompt": "What weather-related variable made it difficult to compare the old counts with the new counts?",
+          "answer": "temperature",
+          "explanation": "The old counts were made on unusually warm evenings.",
+          "location": "Paragraph B",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "sentence-completion",
+          "prompt": "The engineers installed a metal ______ around the lamp fitting to shape the light.",
+          "answer": "shield",
+          "explanation": "A metal shield directed more of the light towards the path.",
+          "location": "Paragraph C",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q7",
+          "number": 7,
+          "type": "multiple-choice",
+          "prompt": "What did the light measurements confirm?",
+          "answer": "C",
+          "explanation": "The bushes could become darker while preserving the brightest point on the path.",
+          "location": "Paragraph C",
+          "options": [
+            "Changing the beam always reduces the light across the entire path.",
+            "Moving lamps away from branches always increases electricity use.",
+            "It was possible to protect vegetation while retaining light on the path.",
+            "The path was naturally bright enough without lights."
+          ]
+        },
+        {
+          "id": "q8",
+          "number": 8,
+          "type": "short-answer",
+          "prompt": "What device detected an approaching person in one part of the trial?",
+          "answer": "sensor",
+          "explanation": "The light was controlled by a sensor that detected movement.",
+          "location": "Paragraph D",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q9",
+          "number": 9,
+          "type": "multiple-choice",
+          "prompt": "Why did the team change the sensor settings?",
+          "answer": "A",
+          "explanation": "Some people had difficulty when lights went out before the next area lit up.",
+          "location": "Paragraph D",
+          "options": [
+            "Some walkers needed more time in lit areas.",
+            "Battery replacements were becoming too expensive.",
+            "The lamps were brighter than the researchers expected.",
+            "Fewer people used the route at weekends."
+          ]
+        },
+        {
+          "id": "q10",
+          "number": 10,
+          "type": "true-false-not-given",
+          "prompt": "The updated sensor timing increased the energy savings.",
+          "answer": "FALSE",
+          "explanation": "Longer periods of light slightly reduced the energy saving.",
+          "location": "Paragraph D",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q11",
+          "number": 11,
+          "type": "true-false-not-given",
+          "prompt": "The data proved that the number of bats in the town had risen.",
+          "answer": "FALSE",
+          "explanation": "More passes could have come from the same bats using the route more often.",
+          "location": "Paragraph E",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ]
+        },
+        {
+          "id": "q12",
+          "number": 12,
+          "type": "short-answer",
+          "prompt": "Apart from the altered lighting, what was mentioned in relation to changing bat counts?",
+          "answer": "rain",
+          "explanation": "The counts also varied after rain.",
+          "location": "Paragraph E",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        },
+        {
+          "id": "q13",
+          "number": 13,
+          "type": "multiple-choice",
+          "prompt": "Why did the team advise against using the same design throughout the town?",
+          "answer": "B",
+          "explanation": "Different sites present different sightlines and dangers.",
+          "location": "Paragraph E",
+          "options": [
+            "It would be technically impossible to use shields elsewhere.",
+            "Different roads and paths have different safety needs.",
+            "The change was disliked by most path users.",
+            "There was insufficient electricity elsewhere in the town."
+          ]
+        },
+        {
+          "id": "q14",
+          "number": 14,
+          "type": "sentence-completion",
+          "prompt": "Alderwick regularly checks the directions of beams as part of its ______.",
+          "answer": "inspection",
+          "explanation": "Staff check the control settings and beam directions during regular inspections.",
+          "location": "Paragraph F",
+          "instructions": "Write ONE WORD ONLY.",
+          "wordLimit": 1
+        }
+      ]
+    }
+  ]
+}

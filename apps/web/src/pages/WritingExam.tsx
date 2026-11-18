@@ -8,6 +8,7 @@ import { Markdown } from '../components/Markdown';
 import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { useExamTimer } from '../lib/useExam';
+import type { MockStage } from '../lib/mock';
 import { bandColor, cn, formatClock, assetUrl } from '../lib/utils';
 
 interface Criterion {
@@ -38,25 +39,27 @@ function countWords(text: string): number {
 
 const draftKey = (testId: string, taskId: string) => `ielts.draft.${testId}.${taskId}`;
 
-export default function WritingExam() {
+export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } = {}) {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
-  const mode = params.get('mode') === 'mock' ? 'mock' : 'practice';
+  const mode = mock || params.get('mode') === 'mock' ? 'mock' : 'practice';
 
   const { data, isLoading, error: loadError } = useQuery({
     queryKey: ['content', 'writing', testId],
     queryFn: () => api<{ test: WritingTest }>(`/api/content/writing/${testId}`),
-    enabled: Boolean(testId),
+    enabled: Boolean(testId) && !mock,
   });
 
   const { data: gradingStatus } = useQuery({
     queryKey: ['writing', 'status'],
     queryFn: () => api<{ provider: 'groq' | 'deepseek' | null }>('/api/writing/status'),
+    enabled: !mock,
   });
-  const submitLabel = t(gradingStatus?.provider === null ? 'writing.submitOffline' : 'writing.submit');
-  const test = data?.test;
+  const submitLabel = t(mock ? 'mock.finishSection' : gradingStatus?.provider === null ? 'writing.submitOffline' : 'writing.submit');
+  const test = mock?.test ?? data?.test;
+  const storageId = mock ? `mock.${mock.id}` : test?.id;
   const [taskIndex, setTaskIndex] = useState(0);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [feedback, setFeedback] = useState<Feedback | null>(null);
@@ -66,24 +69,24 @@ export default function WritingExam() {
   const [savedLabel, setSavedLabel] = useState(false);
   const savedTimer = useRef<number | null>(null);
 
-  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting);
+  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting, mock?.deadline);
   const task = test?.tasks[taskIndex];
 
   const draft = useMemo(() => {
-    if (!test || !task) return '';
+    if (!storageId || !task) return '';
     if (drafts[task.id] !== undefined) return drafts[task.id]!;
     try {
-      return localStorage.getItem(draftKey(test.id, task.id)) ?? '';
+      return localStorage.getItem(draftKey(storageId, task.id)) ?? '';
     } catch {
       return '';
     }
-  }, [drafts, test, task]);
+  }, [drafts, storageId, task]);
 
   useEffect(() => {
-    if (!test || !task) return;
+    if (!storageId || !task) return;
     const id = window.setTimeout(() => {
       try {
-        localStorage.setItem(draftKey(test.id, task.id), draft);
+        localStorage.setItem(draftKey(storageId, task.id), draft);
         setSavedLabel(true);
         if (savedTimer.current) window.clearTimeout(savedTimer.current);
         savedTimer.current = window.setTimeout(() => setSavedLabel(false), 1500);
@@ -92,7 +95,7 @@ export default function WritingExam() {
       }
     }, 600);
     return () => window.clearTimeout(id);
-  }, [draft, test, task]);
+  }, [draft, storageId, task]);
 
   useEffect(() => {
     setFeedback(null);
@@ -106,6 +109,19 @@ export default function WritingExam() {
     setSubmitting(true);
     setError(null);
     try {
+      if (mock) {
+        const answers = { ...drafts };
+        for (const item of test.tasks) {
+          if (answers[item.id] !== undefined) continue;
+          try {
+            answers[item.id] = localStorage.getItem(draftKey(`mock.${mock.id}`, item.id)) ?? '';
+          } catch {
+            answers[item.id] = '';
+          }
+        }
+        await mock.finish({ drafts: answers });
+        return;
+      }
       const response = await api<{ feedback: Feedback }>('/api/writing/submit', {
         method: 'POST',
         json: { contentId: test.id, taskId: task.id, text: draft },
@@ -119,15 +135,20 @@ export default function WritingExam() {
     }
   };
 
+  useEffect(() => {
+    if (mock && timer.expired) void submit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timer.expired]);
+
   if (isLoading) return <ExamLoadState skill="writing" />;
-  if (loadError || !test || !task) {
+  if (loadError || !test || !task || !storageId) {
     return <ExamLoadState skill="writing" error={errorMessage(loadError)} />;
   }
 
   const saveDraftsBeforeLeaving = () => {
     try {
       for (const [taskId, text] of Object.entries(drafts)) {
-        localStorage.setItem(draftKey(test.id, taskId), text);
+        localStorage.setItem(draftKey(storageId, taskId), text);
       }
     } catch {
       /* Storage can be unavailable in private mode. */
@@ -139,7 +160,12 @@ export default function WritingExam() {
       <header className="sticky top-0 z-30 border-b border-paper/15 bg-ink text-paper shadow-sm">
         <div className="mx-auto flex min-h-[70px] max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
           <div className="flex w-full min-w-0 items-center gap-3 sm:w-auto sm:flex-1">
-            <ExamBackLink skill="writing" onLeave={saveDraftsBeforeLeaving} />
+            <ExamBackLink
+              skill="writing"
+              mock={Boolean(mock)}
+              confirmMessage={mock ? t('mock.leave') : undefined}
+              onLeave={saveDraftsBeforeLeaving}
+            />
             <div className="min-w-0 flex-1">
               <p className="truncate font-serif text-base font-semibold text-paper">{test.title}</p>
               <p className="text-[11px] text-paper/55">
@@ -159,8 +185,10 @@ export default function WritingExam() {
           <button
             type="button"
             className="btn bg-brand-600 text-white hover:bg-brand-500"
-            onClick={() => void submit()}
-            disabled={submitting || words < 30}
+            onClick={() => {
+              if (!mock || timer.expired || window.confirm(t('mock.confirmFinish'))) void submit();
+            }}
+            disabled={submitting || (!mock && words < 30)}
           >
             {submitting ? t('writing.submitting') : submitLabel}
           </button>
@@ -239,7 +267,7 @@ export default function WritingExam() {
             ) : null}
           </div>
 
-          <div className="card p-5 text-xs leading-5 text-slate-500">
+          {!mock ? <div className="card p-5 text-xs leading-5 text-slate-500">
             <p className="font-semibold text-slate-700">{t('writing.feedback')}</p>
             <p className="mt-1">
               {t(gradingStatus?.provider === null ? 'writing.offlineDisclaimer' : 'writing.aiDisclaimer')}
@@ -247,7 +275,7 @@ export default function WritingExam() {
             {gradingStatus?.provider === 'groq' ? (
               <p className="mt-1">{t('writing.groqNotice')}</p>
             ) : null}
-          </div>
+          </div> : null}
         </div>
 
         <div className="space-y-4">
@@ -258,6 +286,8 @@ export default function WritingExam() {
                 setDrafts((previous) => ({ ...previous, [task.id]: event.target.value }))
               }
               placeholder={t('writing.startTyping')}
+              readOnly={Boolean(mock && (timer.expired || submitting))}
+              maxLength={30_000}
               className="min-h-[420px] w-full resize-y rounded-sm border border-line bg-surface p-4 font-serif text-[16px] leading-7 text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
               spellCheck
             />

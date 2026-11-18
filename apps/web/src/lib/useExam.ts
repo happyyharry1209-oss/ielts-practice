@@ -86,17 +86,21 @@ export function useExamTimer(
   totalSeconds: number,
   mode: 'mock' | 'practice',
   active = true,
+  deadline?: number,
 ): ExamTimer {
-  const [elapsed, setElapsed] = useState(0);
+  const [ticks, setTicks] = useState(0);
   const [expired, setExpired] = useState(false);
   const firedRef = useRef(false);
 
   useEffect(() => {
     if (!active) return;
-    const id = window.setInterval(() => setElapsed((value) => value + 1), 1000);
+    const id = window.setInterval(() => setTicks((value) => value + 1), 1000);
     return () => window.clearInterval(id);
   }, [active]);
 
+  const elapsed = deadline === undefined
+    ? ticks
+    : Math.min(totalSeconds, Math.max(0, totalSeconds - Math.ceil((deadline - Date.now()) / 1000)));
   const remaining = mode === 'mock' ? Math.max(0, totalSeconds - elapsed) : totalSeconds;
 
   useEffect(() => {
@@ -113,6 +117,7 @@ export function useExamTimer(
 export interface RecorderState {
   supported: boolean;
   recording: boolean;
+  waitingForMic: boolean;
   busy: boolean;
   error: string | null;
   url: string | null;
@@ -220,5 +225,5 @@ export function useRecorder(): RecorderState {
     };
   }, []);
 
-  return { supported, recording: state === 'recording', busy: state !== 'idle', error, url, blob, start, stop, clear };
+  return { supported, recording: state === 'recording', waitingForMic: state === 'starting', busy: state !== 'idle', error, url, blob, start, stop, clear };
 }

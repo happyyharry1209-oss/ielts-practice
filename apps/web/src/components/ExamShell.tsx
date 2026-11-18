@@ -7,8 +7,9 @@ import { skillLabel } from '../lib/skills';
 import { cn, formatClock } from '../lib/utils';
 import { Spinner } from './ui';
 
-export function ExamBackLink({ skill, confirmMessage, onLeave }: {
+export function ExamBackLink({ skill, mock, confirmMessage, onLeave }: {
   skill: Skill;
+  mock?: boolean;
   confirmMessage?: string;
   onLeave?: () => void;
 }) {
@@ -20,7 +21,7 @@ export function ExamBackLink({ skill, confirmMessage, onLeave }: {
   return (
     <Link
       className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-sm border border-paper/25 px-2.5 text-xs font-semibold text-paper hover:bg-paper/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper"
-      to={{ pathname: `/practice/${skill}`, search }}
+      to={mock ? '/mock' : { pathname: `/practice/${skill}`, search }}
       replace
       onClick={(event) => {
         if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -33,7 +34,7 @@ export function ExamBackLink({ skill, confirmMessage, onLeave }: {
       }}
     >
       <ArrowLeft size={16} aria-hidden="true" />
-      {t('exam.backToSkill', { skill: t(skillLabel(skill)) })}
+      {mock ? t('mock.back') : t('exam.backToSkill', { skill: t(skillLabel(skill)) })}
     </Link>
   );
 }

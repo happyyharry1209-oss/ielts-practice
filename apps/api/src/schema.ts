@@ -88,6 +88,18 @@ create table if not exists ai_usage (
 
 create index if not exists ai_usage_user_idx on ai_usage (user_id, created_at desc);
 
+create table if not exists mock_exams (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references users(id) on delete cascade,
+  papers jsonb not null,
+  results jsonb not null default '{}'::jsonb,
+  step integer not null default 0 check (step between 0 and 4),
+  section_started_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists mock_exams_user_idx on mock_exams (user_id, created_at desc);
+
 -- Questions the user answered correctly after review, so they stop showing up.
 create table if not exists review_mastered (
   user_id uuid not null references users(id) on delete cascade,

@@ -11,6 +11,8 @@ const Account = lazy(() => import('./pages/Account'));
 const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const Home = lazy(() => import('./pages/Home'));
 const ListeningExam = lazy(() => import('./pages/ListeningExam'));
+const MockLobby = lazy(() => import('./pages/MockLobby'));
+const MockRunner = lazy(() => import('./pages/MockRunner'));
 const Practice = lazy(() => import('./pages/Practice'));
 const ReadingExam = lazy(() => import('./pages/ReadingExam'));
 const Register = lazy(() => import('./pages/Register'));
@@ -70,6 +72,7 @@ export default function App() {
         <Route element={<RequireAuth />}>
           <Route path="/" element={<Home />} />
           <Route path="/practice/:skill" element={<Practice />} />
+          <Route path="/mock" element={<MockLobby />} />
           <Route path="/result/:attemptId" element={<Result />} />
           <Route path="/review" element={<Review />} />
           <Route path="/review/session" element={<ReviewSession />} />
@@ -78,6 +81,7 @@ export default function App() {
         </Route>
 
         <Route element={<RequireAuth withLayout={false} />}>
+          <Route path="/mock/:id" element={<MockRunner />} />
           <Route path="/exam/reading/:testId" element={<ReadingExam />} />
           <Route path="/exam/listening/:testId" element={<ListeningExam />} />
           <Route path="/exam/writing/:testId" element={<WritingExam />} />

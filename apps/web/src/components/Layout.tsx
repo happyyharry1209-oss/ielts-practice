@@ -73,6 +73,7 @@ export function Layout() {
   const navItems = [
     { to: '/', label: t('nav.home') },
     ...SKILLS.map(({ key }) => ({ to: `/practice/${key}`, label: t(skillLabel(key)) })),
+    { to: '/mock', label: t('mock.nav') },
     { to: '/review', label: t('nav.review') },
     ...(isAdmin ? [{ to: '/admin', label: t('nav.admin') }] : []),
   ];

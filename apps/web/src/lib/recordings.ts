@@ -5,6 +5,8 @@ export interface SavedRecording {
   id: string;
   contentId: string;
   part: number;
+  mockId?: string;
+  promptIndex?: number;
   topic: string;
   durationSec: number;
   createdAt: number;

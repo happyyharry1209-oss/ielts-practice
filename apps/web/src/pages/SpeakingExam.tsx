@@ -1,35 +1,39 @@
 import { useQuery } from '@tanstack/react-query';
 import { Download, Mic, Square, Trash2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import type { SpeakingTest } from '@ielts/shared';
-import { ExamBackLink, ExamLoadState } from '../components/ExamShell';
+import { ExamBackLink, ExamLoadState, TimerPill } from '../components/ExamShell';
 import { SpeakingFeedbackPanel } from '../components/SpeakingFeedbackPanel';
 import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
 import type { SavedRecording } from '../lib/recordings';
-import { useRecorder } from '../lib/useExam';
+import { useExamTimer, useRecorder } from '../lib/useExam';
+import type { MockStage } from '../lib/mock';
 import { cn, formatClock } from '../lib/utils';
 
 type Part = 1 | 2 | 3;
 type Phase = 'idle' | 'prep' | 'speak' | 'done';
 
-export default function SpeakingExam() {
+export default function SpeakingExam({ mock }: { mock?: MockStage<SpeakingTest> } = {}) {
   const { t } = useTranslation();
+  const isFullMock = Boolean(mock);
   const { testId } = useParams<{ testId: string }>();
   const { data, isLoading, error: loadError } = useQuery({
     queryKey: ['content', 'speaking', testId],
     queryFn: () => api<{ test: SpeakingTest }>(`/api/content/speaking/${testId}`),
-    enabled: Boolean(testId),
+    enabled: Boolean(testId) && !mock,
   });
   const { data: feedbackStatus } = useQuery({
     queryKey: ['speaking', 'feedback-status'],
     queryFn: () => api<{ provider: 'groq' | null }>('/api/speaking/status'),
+    enabled: !mock,
   });
 
-  const test = data?.test;
+  const test = mock?.test ?? data?.test;
   const [part, setPart] = useState<Part>(1);
   const [index, setIndex] = useState(0);
   const [cardIndex, setCardIndex] = useState(0);
@@ -38,16 +42,22 @@ export default function SpeakingExam() {
   const [notes, setNotes] = useState('');
   const recorder = useRecorder();
   const [saved, setSaved] = useState<SavedRecording[]>([]);
+  const [finishRequested, setFinishRequested] = useState(false);
+  const [finishing, setFinishing] = useState(false);
+  const [finishError, setFinishError] = useState<string | null>(null);
+  const timer = useExamTimer(test?.durationSec ?? 840, 'mock', isFullMock && !finishing, mock?.deadline);
   const startedAtRef = useRef<number | null>(null);
   const savedBlobRef = useRef<Blob | null>(null);
+  const savingRef = useRef<Promise<void>>(Promise.resolve());
 
   const refreshSaved = useCallback(async () => {
+    if (mock?.id) return;
     try {
-      setSaved(await listRecordings());
+      setSaved((await listRecordings()).filter((recording) => !recording.mockId));
     } catch {
       /* IndexedDB can be unavailable in private mode */
     }
-  }, []);
+  }, [mock?.id]);
 
   useEffect(() => {
     void refreshSaved();
@@ -89,6 +99,7 @@ export default function SpeakingExam() {
   const current = list[index];
 
   async function startRecording() {
+    if (mock && (timer.remaining === 0 || finishRequested || finishing)) return;
     if (part === 2) {
       setSeconds(0);
       setPhase('speak');
@@ -113,7 +124,7 @@ export default function SpeakingExam() {
     } else if (part === 2 && phase === 'speak' && seconds >= 120) {
       recorder.stop();
       setPhase('done');
-      void api('/api/speaking/recordings', {
+      if (!mock) void api('/api/speaking/recordings', {
         method: 'POST',
         json: { contentId: test.id, part: 2, prompt: card.topic, durationSec: 120 },
       }).catch(() => undefined);
@@ -135,9 +146,11 @@ export default function SpeakingExam() {
         ? (card?.topic ?? 'Part 2')
         : `${current?.topic ?? ''}: ${current?.question ?? ''}`;
 
-    void saveRecording({
+    savingRef.current = saveRecording({
       contentId: test.id,
       part,
+      mockId: mock?.id,
+      promptIndex: part === 2 ? cardIndex : index,
       topic,
       durationSec,
       mimeType: recorder.blob.type || 'audio/webm',
@@ -148,12 +161,32 @@ export default function SpeakingExam() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recorder.blob]);
 
+  useEffect(() => {
+    if (isFullMock && timer.expired) setFinishRequested(true);
+  }, [isFullMock, timer.expired]);
+
+  useEffect(() => {
+    if (!mock || !finishRequested || finishing) return;
+    if (recorder.recording) {
+      recorder.stop();
+      return;
+    }
+    if (recorder.busy && !recorder.waitingForMic) return;
+    setFinishRequested(false);
+    setFinishing(true);
+    setFinishError(null);
+    void savingRef.current.then(() => mock.finish({})).catch((error: unknown) => {
+      setFinishError(errorMessage(error));
+      setFinishing(false);
+    });
+  }, [mock, finishRequested, finishing, recorder.busy, recorder.recording, recorder.stop, recorder.waitingForMic]);
+
   if (isLoading) return <ExamLoadState skill="speaking" />;
   if (loadError || !test) {
     return <ExamLoadState skill="speaking" error={errorMessage(loadError)} />;
   }
 
-  const feedbackPanel = recorder.blob && feedbackStatus?.provider === 'groq' ? (
+  const feedbackPanel = !mock && recorder.blob && feedbackStatus?.provider === 'groq' ? (
     <SpeakingFeedbackPanel
       audio={recorder.blob}
       contentId={test.id}
@@ -172,11 +205,27 @@ export default function SpeakingExam() {
   return (
     <div className="exam-surface min-h-screen">
       <div className="sticky top-0 z-30 bg-ink text-paper">
-        <div className="mx-auto max-w-4xl px-4 py-2">
+        <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-2 px-4 py-2">
           <ExamBackLink
             skill="speaking"
-            confirmMessage={recorder.busy ? t('exam.leaveRecording') : undefined}
+            mock={isFullMock}
+            confirmMessage={mock ? t(recorder.busy ? 'mock.leaveRecording' : 'mock.leave') : recorder.busy ? t('exam.leaveRecording') : undefined}
           />
+          {mock ? (
+            <div className="ml-auto flex flex-wrap items-center gap-2">
+              <TimerPill remaining={timer.remaining} mode="mock" />
+              <button
+                type="button"
+                className="btn bg-brand-600 text-white hover:bg-brand-500"
+                disabled={finishing || finishRequested}
+                onClick={() => {
+                  if (timer.expired || window.confirm(t('mock.confirmFinish'))) setFinishRequested(true);
+                }}
+              >
+                {t('mock.finishSection')}
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
       <header className="border-b border-paper/15 bg-ink text-paper">
@@ -213,12 +262,13 @@ export default function SpeakingExam() {
       </header>
 
       <main className="mx-auto max-w-4xl space-y-5 px-4 py-6 lg:py-8">
+        {finishError ? <p role="alert" className="text-sm text-rose-600">{finishError}</p> : null}
         {part === 2 ? (
           <>
             <div className="card border-t-2 border-t-brand-600 p-5 sm:p-7">
               <div className="flex items-center justify-between">
                 <Badge tone="rose">{t('speaking.cueCard')}</Badge>
-                <button
+                {test.part2.length > 1 ? <button
                   type="button"
                   className="btn-ghost text-xs"
                   disabled={recorder.busy}
@@ -231,7 +281,7 @@ export default function SpeakingExam() {
                   }}
                 >
                   {t('speaking.newCard')}
-                </button>
+                </button> : null}
               </div>
               <h2 className="mt-3 font-serif text-2xl font-semibold text-ink">{card?.topic}</h2>
               <p className="mt-1 text-sm text-slate-600">{t('speaking.youShouldSay')}</p>
@@ -392,7 +442,7 @@ export default function SpeakingExam() {
           </>
         )}
 
-        <section className="mt-6">
+        {!mock ? <section className="mt-6">
           <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
             <h2 className="font-serif text-2xl font-semibold text-ink">
               {t('speaking.savedTitle')}
@@ -409,18 +459,20 @@ export default function SpeakingExam() {
               ))}
             </div>
           )}
-        </section>
+        </section> : null}
       </main>
     </div>
   );
 }
 
-function SavedItem({
+export function SavedItem({
   recording,
   onDelete,
+  children,
 }: {
   recording: SavedRecording;
   onDelete: (id: string) => void;
+  children?: ReactNode;
 }) {
   const { t, i18n } = useTranslation();
   const [url, setUrl] = useState<string | null>(null);
@@ -458,6 +510,7 @@ function SavedItem({
           <Trash2 className="h-3.5 w-3.5" /> {t('speaking.deleteRecording')}
         </button>
       </div>
+      {children}
     </div>
   );
 }

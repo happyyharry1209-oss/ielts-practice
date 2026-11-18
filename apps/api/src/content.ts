@@ -48,7 +48,8 @@ function questionCount(test: AnyTest): number {
     case 'writing':
       return test.tasks.length;
     case 'speaking':
-      return test.part1.length + test.part2.length + test.part3.length;
+      return test.part1.reduce((n, topic) => n + topic.questions.length, 0)
+        + test.part2.length + test.part3.reduce((n, topic) => n + topic.questions.length, 0);
   }
 }
 

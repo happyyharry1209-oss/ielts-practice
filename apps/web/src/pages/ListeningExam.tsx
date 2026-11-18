@@ -9,38 +9,61 @@ import { QuestionInput } from '../components/QuestionInput';
 import { api, errorMessage } from '../lib/api';
 import { useExamState, useExamTimer } from '../lib/useExam';
 import { assetUrl, cn } from '../lib/utils';
+import type { MockStage } from '../lib/mock';
 
-export default function ListeningExam() {
+export default function ListeningExam({ mock }: { mock?: MockStage<ListeningTest> } = {}) {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
-  const mode = params.get('mode') === 'practice' ? 'practice' : 'mock';
+  const mode = !mock && params.get('mode') === 'practice' ? 'practice' : 'mock';
 
   const { data, isLoading, error: loadError } = useQuery({
     queryKey: ['content', 'listening', testId],
     queryFn: () => api<{ test: ListeningTest }>(`/api/content/listening/${testId}`),
-    enabled: Boolean(testId),
+    enabled: Boolean(testId) && !mock,
   });
 
-  const test = data?.test;
+  const test = mock?.test ?? data?.test;
   const questions = useMemo(
     () => test?.sections.flatMap((section) => section.questions) ?? [],
     [test],
   );
 
-  const exam = useExamState(test?.id ?? testId ?? '', questions);
+  const exam = useExamState(mock ? `mock.${mock.id}.listening` : test?.id ?? testId ?? '', questions);
   const [sectionIndex, setSectionIndex] = useState(0);
-  const [played, setPlayed] = useState<Record<string, boolean>>({});
+  const playedKey = mock ? `ielts.mock.played.${mock.id}` : null;
+  const [played, setPlayed] = useState<Record<string, boolean>>(() => {
+    if (!playedKey) return {};
+    try {
+      return JSON.parse(localStorage.getItem(playedKey) ?? '{}') ?? {};
+    } catch {
+      return {};
+    }
+  });
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const submittingRef = useRef(false);
   const leftExam = useRef(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const playbackPending = useRef(false);
 
-  const timer = useExamTimer(test?.durationSec ?? 1800, mode, Boolean(test) && !submitting);
+  const timer = useExamTimer(test?.durationSec ?? 1800, mode, Boolean(test) && !submitting, mock?.deadline);
+  const submitLabel = t(mock ? 'mock.finishSection' : 'exam.submitExam');
+
+  function markPlayed(id: string) {
+    const next = { ...played, [id]: true };
+    setPlayed(next);
+    if (playedKey) {
+      try {
+        localStorage.setItem(playedKey, JSON.stringify(next));
+      } catch {
+        /* Browser storage may be unavailable. */
+      }
+    }
+  }
 
   const submit = async () => {
     if (!test || submittingRef.current) return;
@@ -48,6 +71,10 @@ export default function ListeningExam() {
     setSubmitting(true);
     setError(null);
     try {
+      if (mock) {
+        await mock.finish({ responses: exam.answers });
+        return;
+      }
       const created = await api<{ attemptId: string }>('/api/attempts', {
         method: 'POST',
         json: { skill: 'listening', contentId: test.id, mode },
@@ -87,12 +114,16 @@ export default function ListeningExam() {
 
   const startPlayback = async () => {
     const element = audioRef.current;
-    if (!element) return;
+    if (!element || playbackPending.current || alreadyPlayed) return;
+    playbackPending.current = true;
     element.currentTime = 0;
     try {
       await element.play();
+      if (mock) markPlayed(section.id);
     } catch {
       setError(t('exam.audioError'));
+    } finally {
+      playbackPending.current = false;
     }
   };
 
@@ -102,7 +133,8 @@ export default function ListeningExam() {
         back={
           <ExamBackLink
             skill="listening"
-            confirmMessage={exam.answeredCount > 0 && !submitting ? t('exam.leaveUnsubmitted') : undefined}
+            mock={Boolean(mock)}
+            confirmMessage={mock ? t('mock.leave') : exam.answeredCount > 0 && !submitting ? t('exam.leaveUnsubmitted') : undefined}
             onLeave={() => { leftExam.current = true; }}
           />
         }
@@ -112,7 +144,7 @@ export default function ListeningExam() {
         answered={exam.answeredCount}
         total={questions.length}
         onSubmit={() => setConfirmOpen(true)}
-        submitLabel={t('exam.submitExam')}
+        submitLabel={submitLabel}
         disabled={submitting}
         sidebar={
           <div className="card sticky top-24 border-t-2 border-t-sky-500 p-4">
@@ -177,7 +209,7 @@ export default function ListeningExam() {
               controls={mode === 'practice'}
               hidden={mode === 'mock'}
               preload="auto"
-              onEnded={() => setPlayed((previous) => ({ ...previous, [section.id]: true }))}
+              onEnded={() => { if (!mock) markPlayed(section.id); }}
               className="w-full"
             />
             {mode === 'mock' ? (
@@ -186,7 +218,7 @@ export default function ListeningExam() {
                   type="button"
                   className="btn-primary"
                   onClick={() => void startPlayback()}
-                  disabled={alreadyPlayed || submitting}
+                  disabled={alreadyPlayed || submitting || Boolean(mock && timer.expired)}
                 >
                   <Play className="h-4 w-4" />
                   {alreadyPlayed ? t('exam.playedOnce') : t('exam.onePlay')}
@@ -206,7 +238,7 @@ export default function ListeningExam() {
               question={question}
               value={exam.answers[question.id]}
               onChange={(value) => exam.setAnswer(question.id, value)}
-              disabled={submitting}
+              disabled={submitting || Boolean(mock && timer.expired)}
             />
           ))}
 
@@ -229,7 +261,7 @@ export default function ListeningExam() {
               </button>
             ) : (
               <button type="button" className="btn-primary" onClick={() => setConfirmOpen(true)}>
-                {t('exam.submitExam')}
+                {submitLabel}
               </button>
             )}
           </div>
@@ -243,7 +275,7 @@ export default function ListeningExam() {
           answered: exam.answeredCount,
           total: questions.length,
         })}
-        confirmLabel={t('exam.submitExam')}
+        confirmLabel={submitLabel}
         cancelLabel={t('common.cancel')}
         onConfirm={() => {
           setConfirmOpen(false);

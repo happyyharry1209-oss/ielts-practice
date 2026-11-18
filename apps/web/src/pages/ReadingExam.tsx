@@ -9,28 +9,29 @@ import { QuestionInput } from '../components/QuestionInput';
 import { api, errorMessage } from '../lib/api';
 import { useExamState, useExamTimer } from '../lib/useExam';
 import { cn } from '../lib/utils';
+import type { MockStage } from '../lib/mock';
 
-export default function ReadingExam() {
+export default function ReadingExam({ mock }: { mock?: MockStage<ReadingTest> } = {}) {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
-  const mode = params.get('mode') === 'practice' ? 'practice' : 'mock';
+  const mode = !mock && params.get('mode') === 'practice' ? 'practice' : 'mock';
 
   const { data, isLoading, error: loadError } = useQuery({
     queryKey: ['content', 'reading', testId],
     queryFn: () => api<{ test: ReadingTest }>(`/api/content/reading/${testId}`),
-    enabled: Boolean(testId),
+    enabled: Boolean(testId) && !mock,
   });
 
-  const test = data?.test;
+  const test = mock?.test ?? data?.test;
   const questions = useMemo(
     () => test?.passages.flatMap((passage) => passage.questions) ?? [],
     [test],
   );
 
-  const exam = useExamState(test?.id ?? testId ?? '', questions);
+  const exam = useExamState(mock ? `mock.${mock.id}.reading` : test?.id ?? testId ?? '', questions);
   const [passageIndex, setPassageIndex] = useState(0);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -38,7 +39,8 @@ export default function ReadingExam() {
   const submittingRef = useRef(false);
   const leftExam = useRef(false);
 
-  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting);
+  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting, mock?.deadline);
+  const submitLabel = t(mock ? 'mock.finishSection' : 'exam.submitExam');
 
   const submit = async () => {
     if (!test || submittingRef.current) return;
@@ -46,6 +48,10 @@ export default function ReadingExam() {
     setSubmitting(true);
     setError(null);
     try {
+      if (mock) {
+        await mock.finish({ responses: exam.answers });
+        return;
+      }
       const created = await api<{ attemptId: string }>('/api/attempts', {
         method: 'POST',
         json: { skill: 'reading', contentId: test.id, mode },
@@ -123,7 +129,8 @@ export default function ReadingExam() {
         back={
           <ExamBackLink
             skill="reading"
-            confirmMessage={exam.answeredCount > 0 && !submitting ? t('exam.leaveUnsubmitted') : undefined}
+            mock={Boolean(mock)}
+            confirmMessage={mock ? t('mock.leave') : exam.answeredCount > 0 && !submitting ? t('exam.leaveUnsubmitted') : undefined}
             onLeave={() => { leftExam.current = true; }}
           />
         }
@@ -133,7 +140,7 @@ export default function ReadingExam() {
         answered={exam.answeredCount}
         total={questions.length}
         onSubmit={() => setConfirmOpen(true)}
-        submitLabel={t('exam.submitExam')}
+        submitLabel={submitLabel}
         disabled={submitting}
         sidebar={
           <div className="card sticky top-24 border-t-2 border-t-brand-600 p-4">
@@ -207,7 +214,7 @@ export default function ReadingExam() {
                   question={question}
                   value={exam.answers[question.id]}
                   onChange={(value) => exam.setAnswer(question.id, value)}
-                  disabled={submitting}
+                  disabled={submitting || Boolean(mock && timer.expired)}
                 />
               </div>
             ))}
@@ -235,7 +242,7 @@ export default function ReadingExam() {
                   className="btn-primary"
                   onClick={() => setConfirmOpen(true)}
                 >
-                  {t('exam.submitExam')}
+                  {submitLabel}
                 </button>
               )}
             </div>
@@ -250,7 +257,7 @@ export default function ReadingExam() {
           answered: exam.answeredCount,
           total: questions.length,
         })}
-        confirmLabel={t('exam.submitExam')}
+        confirmLabel={submitLabel}
         cancelLabel={t('common.cancel')}
         onConfirm={() => {
           setConfirmOpen(false);

@@ -13,6 +13,7 @@ import { authRoutes } from './routes/auth';
 import { contentRoutes } from './routes/content';
 import { reviewRoutes } from './routes/review';
 import { speakingRoutes } from './routes/speaking';
+import { mockRoutes } from './routes/mock';
 import { writingRoutes } from './routes/writing';
 
 const app = new Hono();
@@ -69,6 +70,7 @@ app.route('/api/attempts', attemptRoutes);
 app.route('/api/review', reviewRoutes);
 app.route('/api/writing', writingRoutes);
 app.route('/api/speaking', speakingRoutes);
+app.route('/api/mock', mockRoutes);
 app.route('/api/admin', adminRoutes);
 
 app.notFound((c) => c.json({ error: 'Not found' }, 404));

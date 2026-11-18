@@ -3,20 +3,22 @@
 #
 #   pwsh -File scripts/generate-audio.ps1
 #
-# Output: apps/web/public/audio/listening-001/section1..4.mp3
+# Output: apps/web/public/audio/<testId>/section1..4.mp3
+
+param([ValidatePattern('^listening-[0-9]+$')] [string] $TestId = 'listening-001')
 
 $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Speech
 
 $root = Resolve-Path (Join-Path $PSScriptRoot "..")
-$contentFile = Join-Path $root "content/listening/listening-001.json"
-$tmpDir = Join-Path $root ".audio-tmp"
-$outDir = Join-Path $root "apps/web/public/audio/listening-001"
+$contentFile = Join-Path $root "content/listening/$TestId.json"
+$tmpDir = Join-Path $root ".audio-tmp/$TestId"
+$outDir = Join-Path $root "apps/web/public/audio/$TestId"
 
 New-Item -ItemType Directory -Force -Path $tmpDir | Out-Null
 New-Item -ItemType Directory -Force -Path $outDir | Out-Null
 
-$data = Get-Content $contentFile -Raw | ConvertFrom-Json
+$data = Get-Content $contentFile -Raw -Encoding UTF8 | ConvertFrom-Json
 $synth = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $synth.SelectVoice("Microsoft Zira Desktop")
 $synth.Rate = -1
