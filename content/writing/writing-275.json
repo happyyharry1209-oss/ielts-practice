@@ -1,0 +1,61 @@
+{
+  "id": "writing-275",
+  "skill": "writing",
+  "title": "Writing Practice — Community translation events — Causes and solutions",
+  "description": "Academic Task 1 data report and Task 2 essay. Causes and solutions. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows attendance at three sessions about public translation services in four reporting periods during one year.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "attendees",
+        "columns": [
+          "January–March",
+          "April–June",
+          "July–September",
+          "October–December"
+        ],
+        "rows": [
+          {
+            "label": "Schools session",
+            "values": [
+              76,
+              68,
+              60,
+              57
+            ]
+          },
+          {
+            "label": "Health session",
+            "values": [
+              115,
+              106,
+              111,
+              97
+            ]
+          },
+          {
+            "label": "Work session",
+            "values": [
+              93,
+              82,
+              78,
+              85
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some residents avoid public services because they are worried about misunderstandings.\n\nWhat are the main causes of this problem, and what measures could help solve it?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

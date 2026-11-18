@@ -1,0 +1,65 @@
+{
+  "id": "writing-185",
+  "skill": "writing",
+  "title": "Writing Practice — Classroom coat storage — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows places to store coats per classroom in four schools in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "places",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "Northfield",
+            "values": [
+              30,
+              27,
+              23
+            ]
+          },
+          {
+            "label": "Stow",
+            "values": [
+              38,
+              35,
+              37
+            ]
+          },
+          {
+            "label": "Cresswell",
+            "values": [
+              23,
+              19,
+              19
+            ]
+          },
+          {
+            "label": "Longbank",
+            "values": [
+              27,
+              33,
+              36
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think children should keep belongings in the same place each day, while others believe schools should share storage between groups to save space.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

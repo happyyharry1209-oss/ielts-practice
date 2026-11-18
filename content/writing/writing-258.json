@@ -1,0 +1,61 @@
+{
+  "id": "writing-258",
+  "skill": "writing",
+  "title": "Writing Practice — Repairing public clocks — Causes and solutions",
+  "description": "Academic Task 1 data report and Task 2 essay. Causes and solutions. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows days that three public clocks were in working order in four reporting periods during one year.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "days",
+        "columns": [
+          "January–March",
+          "April–June",
+          "July–September",
+          "October–December"
+        ],
+        "rows": [
+          {
+            "label": "Clock Tower",
+            "values": [
+              287,
+              297,
+              323,
+              315
+            ]
+          },
+          {
+            "label": "Market Hall",
+            "values": [
+              278,
+              272,
+              264,
+              280
+            ]
+          },
+          {
+            "label": "Station",
+            "values": [
+              290,
+              307,
+              272,
+              260
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Several public clocks are out of order for long periods in historic districts.\n\nWhat are the main causes of this problem, and what measures could help solve it?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

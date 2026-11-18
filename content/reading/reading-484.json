@@ -1,0 +1,105 @@
+{
+  "id": "reading-484",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Reassembling a model ship — Preparing a second trial",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Reassembling a model ship — Preparing a second trial",
+      "body": "**A** In Cairnford, work on small loose pieces losing their original positions had already produced a small collection of assembly photographs. The museum model maker used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: parts assigned with confidence.\n\n**B** The group kept labelled trays during repair for the new trial, which was planned to run for nine weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.\n\n**C** The trial design stated that earlier replacement parts should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What material helped the group plan a second trial?",
+          "options": [
+            "entrance counts",
+            "chalk outlines",
+            "assembly photographs",
+            "portable slip tests"
+          ],
+          "answer": "C",
+          "explanation": "In Cairnford, work on small loose pieces losing their original positions had already produced a small collection of assembly photographs. The museum model maker used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: parts assigned with confidence.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks was the second trial intended to last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "nine",
+          "acceptableAnswers": [
+            "9"
+          ],
+          "wordLimit": 1,
+          "explanation": "The group kept labelled trays during repair for the new trial, which was planned to run for nine weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Volunteers were paid for each completed record.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the group would label a result if it was based on limited evidence?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that earlier replacement parts should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the group retain for the second trial?",
+          "options": [
+            "labelled trays during repair",
+            "staggered start times",
+            "a slight change in the angle",
+            "a textured deck coating"
+          ],
+          "answer": "A",
+          "explanation": "The group kept labelled trays during repair for the new trial, which was planned to run for nine weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What condition did the trial design say to record even when nothing seemed unusual?",
+          "options": [
+            "changes in class size",
+            "wind during rain",
+            "mud on footwear",
+            "earlier replacement parts"
+          ],
+          "answer": "D",
+          "explanation": "The trial design stated that earlier replacement parts should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

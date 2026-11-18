@@ -1,0 +1,61 @@
+{
+  "id": "writing-270",
+  "skill": "writing",
+  "title": "Writing Practice — Tours in local parks — Causes and solutions",
+  "description": "Academic Task 1 data report and Task 2 essay. Causes and solutions. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows people taking part in three types of guided park tour in four reporting periods during one year.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "participants",
+        "columns": [
+          "January–March",
+          "April–June",
+          "July–September",
+          "October–December"
+        ],
+        "rows": [
+          {
+            "label": "Trees",
+            "values": [
+              164,
+              153,
+              159,
+              141
+            ]
+          },
+          {
+            "label": "History",
+            "values": [
+              204,
+              178,
+              170,
+              185
+            ]
+          },
+          {
+            "label": "Birds",
+            "values": [
+              142,
+              168,
+              180,
+              166
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Many residents visit local parks without learning about their history or ecology.\n\nWhat are the main causes of this problem, and what measures could help solve it?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

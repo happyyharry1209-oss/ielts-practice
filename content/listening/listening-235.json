@@ -1,0 +1,91 @@
+{
+  "id": "listening-235",
+  "skill": "listening",
+  "title": "Listening Drill — Changing a display label — Booking",
+  "description": "Phone booking. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Changing a display label — Booking",
+      "audioUrl": "/audio/listening-235/section1.mp3",
+      "transcript": "CALLER: Good morning. I’m enquiring about changing a display label. I missed the last date and I’m hoping there are still places.\n\nADVISER: I’m Felix; ask for me if you need to change your booking. The first available place is at eleven o’clock. The earlier group is full.\n\nCALLER: Could I bring a colleague? Where should we register when we arrive?\n\nADVISER: This group has a limit of sixteen people, so please book for anyone coming with you. Sign the register in the print office. Do not wait outside with the previous group.\n\nCALLER: Thank you. Is there somebody who can explain what we’ll be doing?\n\nADVISER: For questions about the activity itself, speak to the exhibition designer rather than the bookings team. I’ll attach a blank label proof to the confirmation email; there is no need to print it.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "The caller should ask for ______.",
+          "explanation": "I’m Felix; ask for me if you need to change your booking.",
+          "type": "form-completion",
+          "answer": "Felix",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "First available start time: ______ o’clock.",
+          "explanation": "The first available place is at eleven o’clock. The earlier group is full.",
+          "type": "multiple-choice",
+          "options": [
+            "eleven",
+            "nine",
+            "ten",
+            "twelve"
+          ],
+          "answer": "A",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "Maximum participants in the group: ______.",
+          "explanation": "This group has a limit of sixteen people, so please book for anyone coming with you.",
+          "type": "form-completion",
+          "answer": "sixteen",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3,
+          "acceptableAnswers": [
+            "16"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Registration location: ______.",
+          "explanation": "Sign the register in the print office. Do not wait outside with the previous group.",
+          "type": "form-completion",
+          "answer": "print office",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Who can answer questions about the activity?",
+          "explanation": "For questions about the activity itself, speak to the exhibition designer rather than the bookings team.",
+          "type": "multiple-choice",
+          "options": [
+            "collection assistant",
+            "model technician",
+            "shift leader",
+            "exhibition designer"
+          ],
+          "answer": "D",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "The booking e-mail will include a copy of the ______.",
+          "explanation": "I’ll attach a blank label proof to the confirmation email; there is no need to print it.",
+          "type": "form-completion",
+          "answer": "label proof",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

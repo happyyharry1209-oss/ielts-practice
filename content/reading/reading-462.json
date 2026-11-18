@@ -1,0 +1,106 @@
+{
+  "id": "reading-462",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Keeping track of school costumes — Preparing a second trial",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Keeping track of school costumes — Preparing a second trial",
+      "body": "**A** In Millcross, work on costumes being loaned out while repairs are pending had already produced a small collection of wardrobe logs. The school wardrobe organiser used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: the number of unusable returns.\n\n**B** The group kept repair tags visible from the shelf for the new trial, which was planned to run for three weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.\n\n**C** The trial design stated that unrecorded exchanges should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What material helped the group plan a second trial?",
+          "options": [
+            "wardrobe logs",
+            "folder inspections",
+            "photographic comparisons",
+            "route observations"
+          ],
+          "answer": "A",
+          "explanation": "In Millcross, work on costumes being loaned out while repairs are pending had already produced a small collection of wardrobe logs. The school wardrobe organiser used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: the number of unusable returns.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks was the second trial intended to last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "three",
+          "acceptableAnswers": [
+            "3"
+          ],
+          "wordLimit": 1,
+          "explanation": "The group kept repair tags visible from the shelf for the new trial, which was planned to run for three weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Volunteers were told to invent a value whenever a field was empty.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The trial design stated that unrecorded exchanges should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the group would label a result if it was based on limited evidence?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that unrecorded exchanges should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the group retain for the second trial?",
+          "options": [
+            "boxes with adjustable supports",
+            "a test of sample panels in place",
+            "repair tags visible from the shelf",
+            "an early directional sign"
+          ],
+          "answer": "C",
+          "explanation": "The group kept repair tags visible from the shelf for the new trial, which was planned to run for three weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What condition did the trial design say to record even when nothing seemed unusual?",
+          "options": [
+            "wear caused by previous storage",
+            "unrecorded exchanges",
+            "nearby buildings casting shadows",
+            "the timing of matches"
+          ],
+          "answer": "B",
+          "explanation": "The trial design stated that unrecorded exchanges should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "listening-341",
+  "skill": "listening",
+  "title": "Listening Drill — Sailing theory class — Trial review",
+  "description": "Conversation about a trial. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Sailing theory class — Trial review",
+      "audioUrl": "/audio/listening-341/section1.mp3",
+      "transcript": "HOST: You ran two introductory sessions on sailing theory class last week. What happened in the first one?\n\nGUEST: On the first run, several people reported a problem with conflicting signals. At first we wondered whether it was a problem with the instructions. A closer inspection revealed the fault: damaged flag.\n\nHOST: What changed when you ran the session again?\n\nGUEST: On each trial, we now keep a record of marker colour so changes can be compared. For the second trial we let everyone borrow route plan instead of bringing their own. That helped us keep the equipment as consistent as possible.\n\nHOST: What should people who attended do now?\n\nGUEST: Send any suggestions directly to the sailing coach before the next group arrives. The next group comes on Saturday, so we have time to compare notes beforehand.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "The first group struggled with ______.",
+          "explanation": "On the first run, several people reported a problem with conflicting signals.",
+          "type": "multiple-choice",
+          "options": [
+            "loose wraps",
+            "conflicting signals",
+            "wrong turn",
+            "fold damage"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "Staff found the following fault: ______.",
+          "explanation": "A closer inspection revealed the fault: damaged flag.",
+          "type": "multiple-choice",
+          "options": [
+            "loose lid",
+            "faded marker",
+            "damaged flag",
+            "torn bandage"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "The team is now recording ______ on each trial.",
+          "explanation": "On each trial, we now keep a record of marker colour so changes can be compared.",
+          "type": "note-completion",
+          "answer": "marker colour",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Participants borrowed ______ for the second trial.",
+          "explanation": "For the second trial we let everyone borrow route plan instead of bringing their own.",
+          "type": "note-completion",
+          "answer": "route plan",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Send suggestions to the ______.",
+          "explanation": "Send any suggestions directly to the sailing coach before the next group arrives.",
+          "type": "note-completion",
+          "answer": "sailing coach",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Next practice group meets on ______.",
+          "explanation": "The next group comes on Saturday, so we have time to compare notes beforehand.",
+          "type": "note-completion",
+          "answer": "Saturday",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

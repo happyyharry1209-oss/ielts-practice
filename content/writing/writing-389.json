@@ -1,0 +1,60 @@
+{
+  "id": "writing-389",
+  "skill": "writing",
+  "title": "Writing Practice — Local plant advice — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows requests for advice at four public gardening services in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "requests",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Park service",
+            "values": [
+              257,
+              227
+            ]
+          },
+          {
+            "label": "City nursery",
+            "values": [
+              351,
+              321
+            ]
+          },
+          {
+            "label": "Library desk",
+            "values": [
+              161,
+              136
+            ]
+          },
+          {
+            "label": "Garden group",
+            "values": [
+              290,
+              358
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "More garden centres are labelling plants with their water and shade requirements.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

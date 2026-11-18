@@ -1,0 +1,106 @@
+{
+  "id": "reading-360",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Stopping wind at an open café — Building a comparison",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Stopping wind at an open café — Building a comparison",
+      "body": "**A** The café operator had been asked to investigate napkins blowing from outdoor tables in Ravensmere. Its first task was to decide which signs of improvement could be compared between sites. It settled on items lost per busy hour, because the same measure could be applied in the original setting and at a second location.\n\n**B** During a eight-week comparison, the team used reset counts at both places. It recorded outcomes separately for each site. Because differences in table size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.\n\n**C** The team then put forward weighted trays. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What evidence did the surveys use in both places?",
+          "options": [
+            "sample inspections",
+            "reset counts",
+            "sample checks",
+            "dated photographs"
+          ],
+          "answer": "B",
+          "explanation": "During a eight-week comparison, the team used reset counts at both places. It recorded outcomes separately for each site. Because differences in table size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the comparison run?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "eight",
+          "acceptableAnswers": [
+            "8"
+          ],
+          "wordLimit": 1,
+          "explanation": "During a eight-week comparison, the team used reset counts at both places. It recorded outcomes separately for each site. Because differences in table size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The surveys combined all the figures without recording the individual sites.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "During a eight-week comparison, the team used reset counts at both places. It recorded outcomes separately for each site. Because differences in table size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a reason for measuring the two sites again after a change?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The team then put forward weighted trays. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which response did the team recommend trying?",
+          "options": [
+            "illustrated bin labels",
+            "a clear condition notice",
+            "additional mats under storage",
+            "weighted trays"
+          ],
+          "answer": "D",
+          "explanation": "The team then put forward weighted trays. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What possible influence was recorded separately for the comparison?",
+          "options": [
+            "temporary visitors",
+            "station closure times",
+            "differences in table size",
+            "variation in toy weight"
+          ],
+          "answer": "C",
+          "explanation": "During a eight-week comparison, the team used reset counts at both places. It recorded outcomes separately for each site. Because differences in table size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

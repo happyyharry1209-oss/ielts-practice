@@ -1,0 +1,105 @@
+{
+  "id": "reading-280",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Comparing ways to count seedlings — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Comparing ways to count seedlings — Reviewing the evidence",
+      "body": "**A** The garden research group in Cairnford received an old report about overlapping leaves hiding some plants from above. The report compared variation in seedling counts, but some entries had been collected under different conditions. To check the report, reviewers returned to the paired readings rather than treating the published figures as a complete record.\n\n**B** The review covered three weeks. In the first part of that period, the original records did not consistently include different plant sizes. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed a second view from the side as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "paired readings",
+            "route observations",
+            "short visitor trials",
+            "property registers"
+          ],
+          "answer": "A",
+          "explanation": "The garden research group in Cairnford received an old report about overlapping leaves hiding some plants from above. The report compared variation in seedling counts, but some entries had been collected under different conditions. To check the report, reviewers returned to the paired readings rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "three",
+          "acceptableAnswers": [
+            "3"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include different plant sizes. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "A member of the original team took part in the review.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed a second view from the side as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "an early directional sign",
+            "a matt screen cover",
+            "a second view from the side",
+            "a register of alternate names"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed a second view from the side as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "the timing of matches",
+            "different plant sizes",
+            "clouds changing rapidly",
+            "mergers of adjacent streets"
+          ],
+          "answer": "B",
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include different plant sizes. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

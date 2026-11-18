@@ -1,0 +1,65 @@
+{
+  "id": "writing-126",
+  "skill": "writing",
+  "title": "Writing Practice — Vegetation on rail verges — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows rail verge lengths managed for plant variety in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "kilometres",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "Northern",
+            "values": [
+              9.6,
+              10.3,
+              8.9
+            ]
+          },
+          {
+            "label": "West Branch",
+            "values": [
+              15.6,
+              13.9,
+              12.3
+            ]
+          },
+          {
+            "label": "Seaside",
+            "values": [
+              6.6,
+              6,
+              6.3
+            ]
+          },
+          {
+            "label": "Market Line",
+            "values": [
+              10.2,
+              8.7,
+              8.2
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think rail operators should maintain verges mainly for safety, while others believe operators should also manage verges to support local wildlife.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

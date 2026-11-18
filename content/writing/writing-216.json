@@ -1,0 +1,61 @@
+{
+  "id": "writing-216",
+  "skill": "writing",
+  "title": "Writing Practice — Museum object labels — Causes and solutions",
+  "description": "Academic Task 1 data report and Task 2 essay. Causes and solutions. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows objects with labels available in at least two languages in four reporting periods during one year.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent",
+        "columns": [
+          "January–March",
+          "April–June",
+          "July–September",
+          "October–December"
+        ],
+        "rows": [
+          {
+            "label": "Textiles",
+            "values": [
+              42,
+              45,
+              40,
+              38
+            ]
+          },
+          {
+            "label": "Engineering",
+            "values": [
+              32,
+              29,
+              26,
+              24
+            ]
+          },
+          {
+            "label": "Art",
+            "values": [
+              59,
+              55,
+              57,
+              50
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Visitors can struggle to understand labels with specialist language.\n\nWhat are the main causes of this problem, and what measures could help solve it?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

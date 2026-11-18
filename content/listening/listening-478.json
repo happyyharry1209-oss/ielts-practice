@@ -1,0 +1,88 @@
+{
+  "id": "listening-478",
+  "skill": "listening",
+  "title": "Listening Drill — Repairing table lamps — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Repairing table lamps — Guided practice",
+      "audioUrl": "/audio/listening-478/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on repairing table lamps, let me explain what you need and what to record. Collect your materials from the repair classroom before the demonstration begins. Inside the handout you will find a blank repair tag to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: missing shade. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check case condition and write the result down immediately. You then have forty-five minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the service counter. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the repair classroom before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "repair classroom",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank repair tag to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "visit notes",
+            "recipe copy",
+            "layout plan",
+            "repair tag"
+          ],
+          "answer": "D",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: missing shade.",
+          "type": "note-completion",
+          "answer": "missing shade",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check case condition and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "case condition",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have forty-five minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "fifteen",
+            "twenty",
+            "forty-five",
+            "twenty-five"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the service counter.",
+          "type": "note-completion",
+          "answer": "service counter",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
 import { AuthShell } from '../components/AuthShell';
 import { Field } from '../components/ui';
 import { ApiError } from '../lib/api';
@@ -9,14 +9,13 @@ import { useAuth } from '../lib/auth';
 export default function Login() {
   const { t } = useTranslation();
   const { login, user } = useAuth();
-  const navigate = useNavigate();
   const location = useLocation() as { state?: { from?: string } };
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
-  if (user) return <Navigate to="/" replace />;
+  if (user) return <Navigate to={location.state?.from ?? '/'} replace />;
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -24,7 +23,6 @@ export default function Login() {
     setError(null);
     try {
       await login(email, password);
-      navigate(location.state?.from ?? '/', { replace: true });
     } catch (err) {
       if (err instanceof ApiError && err.status === 401) setError(t('auth.invalidCredentials'));
       else if (err instanceof ApiError && err.status === 0) setError(t('errors.network'));

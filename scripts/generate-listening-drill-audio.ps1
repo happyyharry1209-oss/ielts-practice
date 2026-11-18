@@ -1,6 +1,6 @@
 # Generate the MP3 assets for the short listening practices using Windows SAPI.
 # From the repo root: powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/generate-listening-drill-audio.ps1
-param([ValidateRange(2, 100)][int] $First = 2, [ValidateRange(2, 100)][int] $Last = 100)
+param([ValidateRange(2, 500)][int] $First = 2, [ValidateRange(2, 500)][int] $Last = 500)
 
 $ErrorActionPreference = 'Stop'
 if ($Last -lt $First) { throw 'Last must be greater than or equal to First.' }

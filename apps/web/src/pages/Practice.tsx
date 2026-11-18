@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { ArrowRight, Check, Clock3, ListChecks, Search } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { ContentManifest, TestSummary } from '@ielts/shared';
 import { EmptyState, LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
@@ -16,6 +16,7 @@ interface StatsResponse {
 }
 
 const FILTERS = ['all', 'new', 'done'] as const;
+const PAGE_SIZE = 20;
 type Filter = (typeof FILTERS)[number];
 type Mode = 'mock' | 'practice';
 
@@ -33,8 +34,11 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [mode, setMode] = useState<Mode>('mock');
-  const [query, setQuery] = useState('');
-  const [filter, setFilter] = useState<Filter>('all');
+  const [params, setParams] = useSearchParams();
+  const resultsHeading = useRef<HTMLHeadingElement>(null);
+  const query = params.get('q') ?? '';
+  const filterParam = params.get('status');
+  const filter: Filter = filterParam === 'new' || filterParam === 'done' ? filterParam : 'all';
   const skill = current.key;
   const hasExamModes = skill === 'reading' || skill === 'listening';
 
@@ -54,13 +58,41 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
       .filter((entry) => entry.skill === skill)
       .map((entry) => [entry.content_id, entry.best_band]),
   );
-  const search = query.trim().toLowerCase();
-  const visibleTests = tests.filter((test) => {
+  const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const results = tests.filter((test) => {
     const done = progress.has(test.id);
-    if (filter === 'new' && done) return false;
-    if (filter === 'done' && !done) return false;
-    return [test.title, test.description].some((value) => value?.toLowerCase().includes(search));
+    if (hasExamModes && stats.data) {
+      if (filter === 'new' && done) return false;
+      if (filter === 'done' && !done) return false;
+    }
+    const searchable = [test.id, test.title, test.description].join(' ').toLowerCase();
+    return searchTerms.every((term) => searchable.includes(term));
   });
+  const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const requestedPage = Number(params.get('page'));
+  const page = Number.isSafeInteger(requestedPage)
+    ? Math.min(pageCount, Math.max(1, requestedPage))
+    : 1;
+  const firstIndex = (page - 1) * PAGE_SIZE;
+  const pageTests = results.slice(firstIndex, firstIndex + PAGE_SIZE);
+
+  const changeFilters = (search: string, status: Filter) => {
+    const next = new URLSearchParams(params);
+    if (search) next.set('q', search);
+    else next.delete('q');
+    if (status === 'all') next.delete('status');
+    else next.set('status', status);
+    next.delete('page');
+    setParams(next, { replace: true });
+  };
+
+  const changePage = (nextPage: number) => {
+    const next = new URLSearchParams(params);
+    if (nextPage === 1) next.delete('page');
+    else next.set('page', String(nextPage));
+    setParams(next);
+    resultsHeading.current?.focus();
+  };
 
   const start = (test: TestSummary) => {
     if (hasExamModes) clearStoredAnswers(test.id);
@@ -118,12 +150,12 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <div className="relative w-full sm:min-w-52 sm:flex-1">
               <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
-              <input type="search" aria-label={t('practice.search')} className="input pl-9" placeholder={t('practice.search')} value={query} onChange={(event) => setQuery(event.target.value)} />
+              <input type="search" aria-label={t('practice.search')} className="input pl-9" placeholder={t('practice.search')} value={query} onChange={(event) => changeFilters(event.target.value, filter)} />
             </div>
             {hasExamModes && stats.data ? (
               <div role="group" aria-label={t('practice.filterStatus')} className="flex flex-wrap gap-2">
                 {FILTERS.map((value) => (
-                  <button key={value} type="button" aria-pressed={filter === value} onClick={() => setFilter(value)}
+                  <button key={value} type="button" aria-pressed={filter === value} onClick={() => changeFilters(query, value)}
                     className={cn('btn-secondary text-xs', filter === value && 'border-ink bg-ink text-paper hover:bg-ink-soft dark:hover:bg-ink-soft')}>
                     {t(`practice.filter${value.charAt(0).toUpperCase()}${value.slice(1)}`)}
                   </button>
@@ -136,37 +168,63 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
             <p role="status" className="mb-4 text-sm text-muted">{t('errors.progress')}</p>
           ) : null}
 
-          {visibleTests.length === 0 ? (
+          {results.length === 0 ? (
             <div className="card p-8 text-center">
               <p role="status" className="text-sm text-muted">{t('practice.noMatch')}</p>
-              <button className="btn-secondary mt-4" type="button" onClick={() => { setQuery(''); setFilter('all'); }}>
+              <button className="btn-secondary mt-4" type="button" onClick={() => changeFilters('', 'all')}>
                 {t('practice.clearFilters')}
               </button>
             </div>
           ) : (
-            <ul className="space-y-3">
-              {visibleTests.map((test) => {
-                const best = progress.get(test.id);
-                const done = hasExamModes && progress.has(test.id);
-                return (
-                  <li key={test.id} className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
-                    <div className="min-w-0">
-                      <h2 className="break-words font-serif text-[25px] font-semibold leading-tight text-ink">{test.title}</h2>
-                      {test.description ? <p className="mt-1.5 text-sm leading-6 text-muted">{test.description}</p> : null}
-                      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
-                        <span className="inline-flex items-center gap-1.5"><Clock3 aria-hidden="true" size={14} />{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
-                        <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t(skill === 'writing' ? 'practice.tasks' : 'practice.questions', { count: test.questionCount })}</span>
-                        {done ? <span className="inline-flex items-center gap-1.5 text-emerald-700"><Check aria-hidden="true" size={14} />{best != null ? `${t('practice.best')} ${best.toFixed(1)}` : t('practice.done')}</span> : null}
+            <section aria-labelledby="practice-results">
+              <h2 id="practice-results" ref={resultsHeading} tabIndex={-1} className="mb-3 scroll-mt-24 text-sm font-medium text-muted">
+                {t('practice.resultRange', { start: firstIndex + 1, end: firstIndex + pageTests.length, total: results.length })}
+              </h2>
+              <ul className="space-y-3">
+                {pageTests.map((test) => {
+                  const best = progress.get(test.id);
+                  const done = hasExamModes && progress.has(test.id);
+                  const testNumber = test.id.slice(test.id.lastIndexOf('-') + 1);
+                  return (
+                    <li key={test.id} className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+                      <div className="min-w-0">
+                        <h3 className="break-words font-serif text-[25px] font-semibold leading-tight text-ink">{test.title}</h3>
+                        {test.description ? <p className="mt-1.5 text-sm leading-6 text-muted">{test.description}</p> : null}
+                        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
+                          <span className="tabular-nums">{t('practice.setNumber', { number: testNumber })}</span>
+                          <span className="inline-flex items-center gap-1.5"><Clock3 aria-hidden="true" size={14} />{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
+                          <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t(skill === 'writing' ? 'practice.tasks' : 'practice.questions', { count: test.questionCount })}</span>
+                          {done ? <span className="inline-flex items-center gap-1.5 text-emerald-700"><Check aria-hidden="true" size={14} />{best != null ? `${t('practice.best')} ${best.toFixed(1)}` : t('practice.done')}</span> : null}
+                        </div>
                       </div>
-                    </div>
-                    <button type="button" className="btn-primary shrink-0 self-start sm:self-center" onClick={() => start(test)}>
-                      {done ? t('practice.retry') : t('practice.startTest')}
-                      <ArrowRight aria-hidden="true" size={16} />
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+                      <button type="button" className="btn-primary shrink-0 self-start sm:self-center" onClick={() => start(test)}>
+                        {done ? t('practice.retry') : t('practice.startTest')}
+                        <ArrowRight aria-hidden="true" size={16} />
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+              {pageCount > 1 ? (
+                <nav aria-label={t('practice.pagination')} className="mt-5 flex flex-wrap items-center justify-center gap-3">
+                  <button type="button" className="btn-secondary" disabled={page === 1} onClick={() => changePage(page - 1)}>
+                    {t('practice.previousPage')}
+                  </button>
+                  <label className="flex items-center gap-2 text-sm text-muted">
+                    <span className="sr-only">{t('practice.goToPage')}</span>
+                    <select className="input w-auto" value={page} onChange={(event) => changePage(Number(event.target.value))}>
+                      {Array.from({ length: pageCount }, (_, index) => (
+                        <option key={index + 1} value={index + 1}>{index + 1}</option>
+                      ))}
+                    </select>
+                    <span aria-hidden="true">/ {pageCount}</span>
+                  </label>
+                  <button type="button" className="btn-secondary" disabled={page === pageCount} onClick={() => changePage(page + 1)}>
+                    {t('practice.nextPage')}
+                  </button>
+                </nav>
+              ) : null}
+            </section>
           )}
         </>
       )}

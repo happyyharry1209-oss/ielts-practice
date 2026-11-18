@@ -1,0 +1,88 @@
+{
+  "id": "listening-408",
+  "skill": "listening",
+  "title": "Listening Drill — Keeping a freshwater aquarium — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Keeping a freshwater aquarium — Guided practice",
+      "audioUrl": "/audio/listening-408/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on keeping a freshwater aquarium, let me explain what you need and what to record. Collect your materials from the display room before the demonstration begins. Inside the handout you will find a blank observation sheet to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: broken filter. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check water temperature and write the result down immediately. You then have twenty minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the shop entrance. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the display room before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "display room",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank observation sheet to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "sample tag",
+            "observation sheet",
+            "audition slip",
+            "measurement log"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: broken filter.",
+          "type": "note-completion",
+          "answer": "broken filter",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check water temperature and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "water temperature",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have twenty minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "twenty",
+            "twenty-five",
+            "thirty",
+            "forty"
+          ],
+          "answer": "A",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the shop entrance.",
+          "type": "note-completion",
+          "answer": "shop entrance",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

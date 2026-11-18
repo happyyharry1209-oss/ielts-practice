@@ -1,0 +1,60 @@
+{
+  "id": "writing-324",
+  "skill": "writing",
+  "title": "Writing Practice — Borrowed art materials — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows art material loans recorded by four education centres in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "loans",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Hawthorn",
+            "values": [
+              193,
+              201
+            ]
+          },
+          {
+            "label": "Mill Street",
+            "values": [
+              109,
+              106
+            ]
+          },
+          {
+            "label": "Beech House",
+            "values": [
+              244,
+              263
+            ]
+          },
+          {
+            "label": "Old Exchange",
+            "values": [
+              183,
+              162
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Several colleges have introduced a pool of materials that students can borrow.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

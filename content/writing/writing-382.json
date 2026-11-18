@@ -1,0 +1,60 @@
+{
+  "id": "writing-382",
+  "skill": "writing",
+  "title": "Writing Practice — Training hours for volunteer guides — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows average hours of training completed by volunteers at four venues in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "hours",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Town Museum",
+            "values": [
+              11,
+              14
+            ]
+          },
+          {
+            "label": "West Gallery",
+            "values": [
+              16,
+              18
+            ]
+          },
+          {
+            "label": "River House",
+            "values": [
+              10,
+              10
+            ]
+          },
+          {
+            "label": "Old Depot",
+            "values": [
+              24,
+              23
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "More venues use short online courses to prepare volunteer guides.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

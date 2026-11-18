@@ -1,0 +1,106 @@
+{
+  "id": "reading-483",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Monitoring visitors in a quiet reading room — Preparing a second trial",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Monitoring visitors in a quiet reading room — Preparing a second trial",
+      "body": "**A** In Bramley, work on people opening and closing heavy reference books abruptly had already produced a small collection of desk recordings. The reference librarian used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: brief peaks in background noise.\n\n**B** The group kept padded book supports for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.\n\n**C** The trial design stated that meetings in the next room should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What material helped the group plan a second trial?",
+          "options": [
+            "timed checks",
+            "desk recordings",
+            "compass checks",
+            "manual counts"
+          ],
+          "answer": "B",
+          "explanation": "In Bramley, work on people opening and closing heavy reference books abruptly had already produced a small collection of desk recordings. The reference librarian used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: brief peaks in background noise.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks was the second trial intended to last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "eight",
+          "acceptableAnswers": [
+            "8"
+          ],
+          "wordLimit": 1,
+          "explanation": "The group kept padded book supports for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Volunteers were told to invent a value whenever a field was empty.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The trial design stated that meetings in the next room should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the group would label a result if it was based on limited evidence?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that meetings in the next room should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the group retain for the second trial?",
+          "options": [
+            "a shared time signal",
+            "brackets with a locking pin",
+            "separate waiting lines",
+            "padded book supports"
+          ],
+          "answer": "D",
+          "explanation": "The group kept padded book supports for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What condition did the trial design say to record even when nothing seemed unusual?",
+          "options": [
+            "power interruptions",
+            "soft soil around posts",
+            "meetings in the next room",
+            "large tour groups"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that meetings in the next room should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

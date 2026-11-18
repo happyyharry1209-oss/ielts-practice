@@ -1,0 +1,105 @@
+{
+  "id": "reading-364",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Reducing repeated journeys to a tool shed — Building a comparison",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Reducing repeated journeys to a tool shed — Building a comparison",
+      "body": "**A** The allotment committee had been asked to investigate gardeners discovering that the right tools are already borrowed in Millcross. Its first task was to decide which signs of improvement could be compared between sites. It settled on extra trips per afternoon, because the same measure could be applied in the original setting and at a second location.\n\n**B** During a four-week comparison, the team used checkout records at both places. It recorded outcomes separately for each site. Because occasional large classes might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.\n\n**C** The team then put forward a board listing tools in use. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What evidence did the surveys use in both places?",
+          "options": [
+            "player logs",
+            "checkout records",
+            "paired readings",
+            "air sensors"
+          ],
+          "answer": "B",
+          "explanation": "During a four-week comparison, the team used checkout records at both places. It recorded outcomes separately for each site. Because occasional large classes might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the comparison run?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "four",
+          "acceptableAnswers": [
+            "4"
+          ],
+          "wordLimit": 1,
+          "explanation": "During a four-week comparison, the team used checkout records at both places. It recorded outcomes separately for each site. Because occasional large classes might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The two survey sites were exactly one kilometre apart.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a reason for measuring the two sites again after a change?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The team then put forward a board listing tools in use. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which response did the team recommend trying?",
+          "options": [
+            "weighted pieces",
+            "a second view from the side",
+            "raised vents protected from rain",
+            "a board listing tools in use"
+          ],
+          "answer": "D",
+          "explanation": "The team then put forward a board listing tools in use. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What possible influence was recorded separately for the comparison?",
+          "options": [
+            "different winds across the square",
+            "different plant sizes",
+            "occasional large classes",
+            "the type of wood"
+          ],
+          "answer": "C",
+          "explanation": "During a four-week comparison, the team used checkout records at both places. It recorded outcomes separately for each site. Because occasional large classes might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

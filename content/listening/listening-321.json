@@ -1,0 +1,88 @@
+{
+  "id": "listening-321",
+  "skill": "listening",
+  "title": "Listening Drill — Volunteer river clean-up — Trial review",
+  "description": "Conversation about a trial. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Volunteer river clean-up — Trial review",
+      "audioUrl": "/audio/listening-321/section1.mp3",
+      "transcript": "HOST: You ran two introductory sessions on volunteer river clean-up last week. What happened in the first one?\n\nGUEST: On the first run, several people reported a problem with unstable banks. At first we wondered whether it was a problem with the instructions. A closer inspection revealed the fault: flooded path.\n\nHOST: What changed when you ran the session again?\n\nGUEST: On each trial, we now keep a record of water level so changes can be compared. For the second trial we let everyone borrow work gloves instead of bringing their own. That helped us keep the equipment as consistent as possible.\n\nHOST: What should people who attended do now?\n\nGUEST: Send any suggestions directly to the river warden before the next group arrives. The next group comes on Sunday, so we have time to compare notes beforehand.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "The first group struggled with ______.",
+          "explanation": "On the first run, several people reported a problem with unstable banks.",
+          "type": "multiple-choice",
+          "options": [
+            "cracked bowl",
+            "unstable banks",
+            "low volume",
+            "windy conditions"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "Staff found the following fault: ______.",
+          "explanation": "A closer inspection revealed the fault: flooded path.",
+          "type": "multiple-choice",
+          "options": [
+            "missing rug",
+            "wet label",
+            "flooded path",
+            "uneven firing"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "The team is now recording ______ on each trial.",
+          "explanation": "On each trial, we now keep a record of water level so changes can be compared.",
+          "type": "note-completion",
+          "answer": "water level",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Participants borrowed ______ for the second trial.",
+          "explanation": "For the second trial we let everyone borrow work gloves instead of bringing their own.",
+          "type": "note-completion",
+          "answer": "work gloves",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Send suggestions to the ______.",
+          "explanation": "Send any suggestions directly to the river warden before the next group arrives.",
+          "type": "note-completion",
+          "answer": "river warden",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Next practice group meets on ______.",
+          "explanation": "The next group comes on Sunday, so we have time to compare notes beforehand.",
+          "type": "note-completion",
+          "answer": "Sunday",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

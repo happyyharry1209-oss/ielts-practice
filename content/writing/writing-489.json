@@ -1,0 +1,61 @@
+{
+  "id": "writing-489",
+  "skill": "writing",
+  "title": "Writing Practice — Local plant advice — Take a position",
+  "description": "Academic Task 1 data report and Task 2 essay. Take a position. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows requests for advice at three public gardening services over four consecutive years.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "requests",
+        "columns": [
+          "Year 1",
+          "Year 2",
+          "Year 3",
+          "Year 4"
+        ],
+        "rows": [
+          {
+            "label": "Park service",
+            "values": [
+              211,
+              207,
+              201,
+              212
+            ]
+          },
+          {
+            "label": "City nursery",
+            "values": [
+              306,
+              326,
+              286,
+              273
+            ]
+          },
+          {
+            "label": "Library desk",
+            "values": [
+              172,
+              154,
+              137,
+              128
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Garden retailers should be required to tell customers about the growing conditions each plant needs.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

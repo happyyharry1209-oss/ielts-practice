@@ -1,0 +1,106 @@
+{
+  "id": "reading-246",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Changing where school buses stop — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Changing where school buses stop — Reviewing the evidence",
+      "body": "**A** The school transport committee in Ravensmere received an old report about children crossing an entrance used by staff cars. The report compared conflicts between walkers and drivers, but some entries had been collected under different conditions. To check the report, reviewers returned to the arrival observations rather than treating the published figures as a complete record.\n\n**B** The review covered nine weeks. In the first part of that period, the original records did not consistently include special events. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed an alternate drop-off point as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "daily counts",
+            "wardrobe logs",
+            "arrival observations",
+            "player logs"
+          ],
+          "answer": "C",
+          "explanation": "The school transport committee in Ravensmere received an old report about children crossing an entrance used by staff cars. The report compared conflicts between walkers and drivers, but some entries had been collected under different conditions. To check the report, reviewers returned to the arrival observations rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "nine",
+          "acceptableAnswers": [
+            "9"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered nine weeks. In the first part of that period, the original records did not consistently include special events. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The reviewers estimated values for the missing readings.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The review covered nine weeks. In the first part of that period, the original records did not consistently include special events. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed an alternate drop-off point as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "an alternate drop-off point",
+            "smaller late-afternoon orders",
+            "repair tags visible from the shelf",
+            "weighted pieces"
+          ],
+          "answer": "A",
+          "explanation": "The conclusion listed an alternate drop-off point as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "changes in meal attendance",
+            "unrecorded exchanges",
+            "different winds across the square",
+            "special events"
+          ],
+          "answer": "D",
+          "explanation": "The review covered nine weeks. In the first part of that period, the original records did not consistently include special events. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

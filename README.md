@@ -6,7 +6,7 @@ accounts, saved progress, automatic marking and optional AI feedback on essays.
 - Web app: React 19 + Vite + TypeScript + Tailwind, deployable to **GitHub Pages**
 - API: Node 22 + Hono + Postgres
 - Bilingual UI: English / 繁體中文
-- Original practice content: 100 Reading sets, 100 Listening sets, 100 Writing sets, and 1 Speaking set.
+- Original practice content: 500 Reading sets, 500 Listening sets, 500 Writing sets, and 1 Speaking set.
 - The Reading and Listening banks include short drills and full papers. New short drills report raw
   scores. Listening drills include synthetic MP3 audio and transcripts on the results page.
 - Every Writing set includes both Academic Task 1 and Task 2.
@@ -310,7 +310,7 @@ The app uses `HashRouter`, so deep links work on Pages without server rewrites
 | `npm run db:migrate` | Create/upgrade tables |
 | `npm run seed:admin` | Create or promote an admin |
 | `npm run gen:audio` | Rebuild audio for the original Listening paper |
-| `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/generate-listening-drill-audio.ps1` | Rebuild the short Listening drills' MP3s (Windows SAPI + lamejs). Optional `-First` and `-Last` select a range between 2 and 100. |
+| `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/generate-listening-drill-audio.ps1` | Rebuild the short Listening drills' MP3s (Windows SAPI + lamejs). Optional `-First` and `-Last` select a range between 2 and 500. |
 
 ---
 

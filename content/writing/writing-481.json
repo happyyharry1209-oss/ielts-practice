@@ -1,0 +1,61 @@
+{
+  "id": "writing-481",
+  "skill": "writing",
+  "title": "Writing Practice — Life of park bins — Take a position",
+  "description": "Academic Task 1 data report and Task 2 essay. Take a position. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows average useful life of three kinds of public park bins over four consecutive years.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "years",
+        "columns": [
+          "Year 1",
+          "Year 2",
+          "Year 3",
+          "Year 4"
+        ],
+        "rows": [
+          {
+            "label": "Steel",
+            "values": [
+              8.4,
+              8.2,
+              8,
+              8.5
+            ]
+          },
+          {
+            "label": "Timber-clad",
+            "values": [
+              6.6,
+              7,
+              6.1,
+              5.9
+            ]
+          },
+          {
+            "label": "Recycled plastic",
+            "values": [
+              8.3,
+              7.5,
+              6.7,
+              6.2
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Public contracts should give lifetime cost more weight than the initial price.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

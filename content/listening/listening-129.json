@@ -1,0 +1,86 @@
+{
+  "id": "listening-129",
+  "skill": "listening",
+  "title": "Listening Drill — Concert hall acoustics — Briefing",
+  "description": "Session briefing. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Concert hall acoustics — Briefing",
+      "audioUrl": "/audio/listening-129/section1.mp3",
+      "transcript": "ORGANISER: This is a message for everyone joining the session on concert hall acoustics. Please disregard the date on the original notice: it showed Sunday. The group will now meet on Monday, following a change to the staff timetable.\n\nORGANISER: Please wait by the box office; we will enter together. Feel free to come ten minutes early, but please do not go straight to the working area. The one thing you should bring yourself is sound meter. Everything else will be provided.\n\nORGANISER: Allow forty minutes for the group activity, plus extra time if you have a question. We will start by showing you how to check echo length before anyone has a go independently.\n\nORGANISER: You can watch the demonstration a second time if anything is unclear. Before leaving, please give us your completed measurement log so we can offer feedback.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Replacement day: ______.",
+          "explanation": "The group will now meet on Monday, following a change to the staff timetable.",
+          "type": "multiple-choice",
+          "options": [
+            "Tuesday",
+            "Monday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "Meet first at the ______.",
+          "explanation": "Please wait by the box office; we will enter together.",
+          "type": "note-completion",
+          "answer": "box office",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "Please bring: ______.",
+          "explanation": "The one thing you should bring yourself is sound meter. Everything else will be provided.",
+          "type": "note-completion",
+          "answer": "sound meter",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "The group activity lasts ______ minutes.",
+          "explanation": "Allow forty minutes for the group activity, plus extra time if you have a question.",
+          "type": "note-completion",
+          "answer": "forty",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3,
+          "acceptableAnswers": [
+            "40"
+          ]
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Staff will demonstrate how to check ______.",
+          "explanation": "We will start by showing you how to check echo length before anyone has a go independently.",
+          "type": "note-completion",
+          "answer": "echo length",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Hand in this at the end: ______.",
+          "explanation": "Before leaving, please give us your completed measurement log so we can offer feedback.",
+          "type": "note-completion",
+          "answer": "measurement log",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

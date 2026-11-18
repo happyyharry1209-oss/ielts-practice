@@ -1,0 +1,106 @@
+{
+  "id": "reading-131",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Testing temporary path closures — A pilot study",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Testing temporary path closures — A pilot study",
+      "body": "**A** A project in Brackenton began with reports of walkers following an old path when repairs begin. The park planner had heard several complaints, but individual reports could not show how often the problem occurred. The team collected evidence using site observations and chose entries onto closed paths as its main measure. That allowed it to compare different days using the same rule.\n\n**B** The proposed response was paired notices at junctions. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted nine weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.\n\n**C** The first review recorded walking events as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Which evidence did the team use to establish how often the problem occurred?",
+          "options": [
+            "recording samples",
+            "viewing trials",
+            "site observations",
+            "fixed photographs"
+          ],
+          "answer": "C",
+          "explanation": "A project in Brackenton began with reports of walkers following an old path when repairs begin. The park planner had heard several complaints, but individual reports could not show how often the problem occurred. The team collected evidence using site observations and chose entries onto closed paths as its main measure. That allowed it to compare different days using the same rule.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the trial last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "nine",
+          "acceptableAnswers": [
+            "9"
+          ],
+          "wordLimit": 1,
+          "explanation": "The proposed response was paired notices at junctions. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted nine weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "One area continued to use its previous arrangements during the trial.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The proposed response was paired notices at junctions. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted nine weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the reason the researchers did not draw a wider conclusion?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The first review recorded walking events as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What was tried in one area only?",
+          "options": [
+            "paired notices at junctions",
+            "a wider field of view",
+            "high-contrast lettering",
+            "shaded panels over seats"
+          ],
+          "answer": "A",
+          "explanation": "The proposed response was paired notices at junctions. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted nine weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Which factor did the first review record as possibly affecting the comparison?",
+          "options": [
+            "activity at different tides",
+            "changes in light",
+            "train arrival intervals",
+            "walking events"
+          ],
+          "answer": "D",
+          "explanation": "The first review recorded walking events as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

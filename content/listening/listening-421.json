@@ -1,0 +1,88 @@
+{
+  "id": "listening-421",
+  "skill": "listening",
+  "title": "Listening Drill — Volunteer river clean-up — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Volunteer river clean-up — Guided practice",
+      "audioUrl": "/audio/listening-421/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on volunteer river clean-up, let me explain what you need and what to record. Collect your materials from the boating cabin before the demonstration begins. Inside the handout you will find a blank collection tally to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: flooded path. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check water level and write the result down immediately. You then have twenty-five minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the river steps. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the boating cabin before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "boating cabin",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank collection tally to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "observation sketch",
+            "practice chart",
+            "collection tally",
+            "sampling record"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: flooded path.",
+          "type": "note-completion",
+          "answer": "flooded path",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check water level and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "water level",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have twenty-five minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "thirty",
+            "twenty-five",
+            "forty",
+            "forty-five"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the river steps.",
+          "type": "note-completion",
+          "answer": "river steps",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

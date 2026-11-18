@@ -1,0 +1,60 @@
+{
+  "id": "writing-330",
+  "skill": "writing",
+  "title": "Writing Practice — Unclaimed parcel returns — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows parcels returned after no one collected them in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Locker scheme",
+            "values": [
+              16,
+              17
+            ]
+          },
+          {
+            "label": "Post counter",
+            "values": [
+              9,
+              8
+            ]
+          },
+          {
+            "label": "Shop counter",
+            "values": [
+              24,
+              22
+            ]
+          },
+          {
+            "label": "Community desk",
+            "values": [
+              12,
+              10
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some providers send repeated reminders as deadlines approach.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

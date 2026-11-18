@@ -1,0 +1,88 @@
+{
+  "id": "listening-405",
+  "skill": "listening",
+  "title": "Listening Drill — Learning to skate — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Learning to skate — Guided practice",
+      "audioUrl": "/audio/listening-405/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on learning to skate, let me explain what you need and what to record. Collect your materials from the warm room before the demonstration begins. Inside the handout you will find a blank fitting card to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: damaged buckle. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check boot size and write the result down immediately. You then have forty minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the ticket booth. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the warm room before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "warm room",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank fitting card to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "tasting notes",
+            "target list",
+            "fitting card",
+            "completed form"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: damaged buckle.",
+          "type": "note-completion",
+          "answer": "damaged buckle",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check boot size and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "boot size",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have forty minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "twenty",
+            "forty",
+            "twenty-five",
+            "thirty"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the ticket booth.",
+          "type": "note-completion",
+          "answer": "ticket booth",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

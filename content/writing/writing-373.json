@@ -1,0 +1,60 @@
+{
+  "id": "writing-373",
+  "skill": "writing",
+  "title": "Writing Practice — Local history in schools — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows lessons per term using local history as a topic in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "lessons",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Oak High",
+            "values": [
+              10,
+              9
+            ]
+          },
+          {
+            "label": "Wren School",
+            "values": [
+              19,
+              17
+            ]
+          },
+          {
+            "label": "Marsh School",
+            "values": [
+              7,
+              6
+            ]
+          },
+          {
+            "label": "Stone School",
+            "values": [
+              11,
+              13
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some schools ask residents to contribute photographs and oral histories to lessons.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

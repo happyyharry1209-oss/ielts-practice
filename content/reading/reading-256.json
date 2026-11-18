@@ -1,0 +1,105 @@
+{
+  "id": "reading-256",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Surveying heat in station platforms — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Surveying heat in station platforms — Reviewing the evidence",
+      "body": "**A** The platform facilities lead in Cairnford received an old report about waiting passengers moving constantly between shaded areas. The report compared seats shaded at peak times, but some entries had been collected under different conditions. To check the report, reviewers returned to the fixed photographs rather than treating the published figures as a complete record.\n\n**B** The review covered three weeks. In the first part of that period, the original records did not consistently include train arrival intervals. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed shaded panels over seats as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "fixed photographs",
+            "historic surveys",
+            "timed trials",
+            "claim notes"
+          ],
+          "answer": "A",
+          "explanation": "The platform facilities lead in Cairnford received an old report about waiting passengers moving constantly between shaded areas. The report compared seats shaded at peak times, but some entries had been collected under different conditions. To check the report, reviewers returned to the fixed photographs rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "three",
+          "acceptableAnswers": [
+            "3"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include train arrival intervals. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "A member of the original team took part in the review.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed shaded panels over seats as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "a matched overlay of field maps",
+            "lower supports for small boats",
+            "shaded panels over seats",
+            "separate trays by item size"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed shaded panels over seats as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "changes in the name of the road",
+            "train arrival intervals",
+            "different boat weights",
+            "new items being added at lunchtime"
+          ],
+          "answer": "B",
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include train arrival intervals. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

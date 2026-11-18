@@ -1,0 +1,88 @@
+{
+  "id": "listening-452",
+  "skill": "listening",
+  "title": "Listening Drill — Winter bird feeding — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Winter bird feeding — Guided practice",
+      "audioUrl": "/audio/listening-452/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on winter bird feeding, let me explain what you need and what to record. Collect your materials from the observation room before the demonstration begins. Inside the handout you will find a blank feeding record to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: wet perch. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check feeder height and write the result down immediately. You then have thirty minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the nature centre. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the observation room before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "observation room",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank feeding record to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "repair sketch",
+            "feeding record",
+            "test animation",
+            "window sketch"
+          ],
+          "answer": "B",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: wet perch.",
+          "type": "note-completion",
+          "answer": "wet perch",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check feeder height and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "feeder height",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have thirty minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "thirty",
+            "fifteen",
+            "twenty",
+            "twenty-five"
+          ],
+          "answer": "A",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the nature centre.",
+          "type": "note-completion",
+          "answer": "nature centre",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

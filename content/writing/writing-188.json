@@ -1,0 +1,65 @@
+{
+  "id": "writing-188",
+  "skill": "writing",
+  "title": "Writing Practice — Lunch queue length — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows average time spent queueing for lunch at four campuses in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "minutes",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "Road Campus",
+            "values": [
+              11.2,
+              10.3,
+              10.8
+            ]
+          },
+          {
+            "label": "City Campus",
+            "values": [
+              14,
+              12,
+              12
+            ]
+          },
+          {
+            "label": "River Campus",
+            "values": [
+              6.7,
+              8.2,
+              8.8
+            ]
+          },
+          {
+            "label": "New Campus",
+            "values": [
+              8.7,
+              9.9,
+              11.6
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think canteens should serve a smaller number of meals more quickly, while others believe offering several choices is more important than reducing waits.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

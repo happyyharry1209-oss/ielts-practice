@@ -1,0 +1,88 @@
+{
+  "id": "listening-479",
+  "skill": "listening",
+  "title": "Listening Drill — A beginner film edit — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "A beginner film edit — Guided practice",
+      "audioUrl": "/audio/listening-479/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on a beginner film edit, let me explain what you need and what to record. Collect your materials from the edit booth before the demonstration begins. Inside the handout you will find a blank project export to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: damaged drive. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check file format and write the result down immediately. You then have fifteen minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the media lobby. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the edit booth before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "edit booth",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank project export to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "project export",
+            "practice strip",
+            "test clip",
+            "reference photo"
+          ],
+          "answer": "A",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: damaged drive.",
+          "type": "note-completion",
+          "answer": "damaged drive",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check file format and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "file format",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have fifteen minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "twenty",
+            "twenty-five",
+            "thirty",
+            "fifteen"
+          ],
+          "answer": "D",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the media lobby.",
+          "type": "note-completion",
+          "answer": "media lobby",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

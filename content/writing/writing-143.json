@@ -1,0 +1,65 @@
+{
+  "id": "writing-143",
+  "skill": "writing",
+  "title": "Writing Practice — Lending gardening tools — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows gardening tools returned in usable condition in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "North Plot",
+            "values": [
+              82,
+              70,
+              67
+            ]
+          },
+          {
+            "label": "Lake Plots",
+            "values": [
+              82,
+              99,
+              100
+            ]
+          },
+          {
+            "label": "Valley",
+            "values": [
+              52,
+              59,
+              69
+            ]
+          },
+          {
+            "label": "Green Street",
+            "values": [
+              75,
+              78,
+              86
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think tool libraries should ask for a small deposit, while others believe easy access is more important than deposits.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

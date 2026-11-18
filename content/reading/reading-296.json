@@ -1,0 +1,106 @@
+{
+  "id": "reading-296",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Testing screen brightness at an exhibition — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Testing screen brightness at an exhibition — Reviewing the evidence",
+      "body": "**A** The exhibition technician in Cairnford received an old report about labels becoming difficult to read beside large windows. The report compared the proportion of labels read correctly, but some entries had been collected under different conditions. To check the report, reviewers returned to the short visitor trials rather than treating the published figures as a complete record.\n\n**B** The review covered three weeks. In the first part of that period, the original records did not consistently include clouds changing rapidly. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed a matt screen cover as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "short visitor trials",
+            "weighing scales",
+            "fixed photo points",
+            "profile measurements"
+          ],
+          "answer": "A",
+          "explanation": "The exhibition technician in Cairnford received an old report about labels becoming difficult to read beside large windows. The report compared the proportion of labels read correctly, but some entries had been collected under different conditions. To check the report, reviewers returned to the short visitor trials rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "three",
+          "acceptableAnswers": [
+            "3"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include clouds changing rapidly. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Both parts of the review period were retained in the analysis.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include clouds changing rapidly. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed a matt screen cover as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "ventilated storage racks",
+            "small drainage channels",
+            "a matt screen cover",
+            "a removable entrance mat"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed a matt screen cover as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "variation in tray size",
+            "clouds changing rapidly",
+            "wear from maintenance vehicles",
+            "past floor treatments"
+          ],
+          "answer": "B",
+          "explanation": "The review covered three weeks. In the first part of that period, the original records did not consistently include clouds changing rapidly. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

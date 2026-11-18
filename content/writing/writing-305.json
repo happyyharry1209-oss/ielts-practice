@@ -1,0 +1,60 @@
+{
+  "id": "writing-305",
+  "skill": "writing",
+  "title": "Writing Practice — Municipal seed banks — Assess the trade-offs",
+  "description": "Academic Task 1 data report and Task 2 essay. Assess the trade-offs. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows seed varieties kept in four municipal collections in two comparable surveys.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "varieties",
+        "columns": [
+          "First survey",
+          "Second survey"
+        ],
+        "rows": [
+          {
+            "label": "Valley",
+            "values": [
+              119,
+              136
+            ]
+          },
+          {
+            "label": "Eastern district",
+            "values": [
+              74,
+              77
+            ]
+          },
+          {
+            "label": "South Ridge",
+            "values": [
+              104,
+              101
+            ]
+          },
+          {
+            "label": "Town Centre",
+            "values": [
+              205,
+              221
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some public gardens now lend seeds to residents who return seeds the following year.\n\nDo the advantages of this development outweigh the disadvantages?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

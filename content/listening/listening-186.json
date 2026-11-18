@@ -1,0 +1,86 @@
+{
+  "id": "listening-186",
+  "skill": "listening",
+  "title": "Listening Drill — Recording the school garden — Briefing",
+  "description": "Session briefing. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Recording the school garden — Briefing",
+      "audioUrl": "/audio/listening-186/section1.mp3",
+      "transcript": "ORGANISER: This is a message for everyone joining the session on recording the school garden. Please disregard the date on the original notice: it showed Monday. The group will now meet on Tuesday, following a change to the staff timetable.\n\nORGANISER: Please wait by the garden arch; we will enter together. Feel free to come ten minutes early, but please do not go straight to the working area. The one thing you should bring yourself is plant chart. Everything else will be provided.\n\nORGANISER: Allow twenty minutes for the group activity, plus extra time if you have a question. We will start by showing you how to check leaf count before anyone has a go independently.\n\nORGANISER: You can watch the demonstration a second time if anything is unclear. Before leaving, please give us your completed growth log so we can offer feedback.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Replacement day: ______.",
+          "explanation": "The group will now meet on Tuesday, following a change to the staff timetable.",
+          "type": "multiple-choice",
+          "options": [
+            "Wednesday",
+            "Thursday",
+            "Tuesday",
+            "Friday"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "Meet first at the ______.",
+          "explanation": "Please wait by the garden arch; we will enter together.",
+          "type": "note-completion",
+          "answer": "garden arch",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "Please bring: ______.",
+          "explanation": "The one thing you should bring yourself is plant chart. Everything else will be provided.",
+          "type": "note-completion",
+          "answer": "plant chart",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "The group activity lasts ______ minutes.",
+          "explanation": "Allow twenty minutes for the group activity, plus extra time if you have a question.",
+          "type": "note-completion",
+          "answer": "twenty",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3,
+          "acceptableAnswers": [
+            "20"
+          ]
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Staff will demonstrate how to check ______.",
+          "explanation": "We will start by showing you how to check leaf count before anyone has a go independently.",
+          "type": "note-completion",
+          "answer": "leaf count",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Hand in this at the end: ______.",
+          "explanation": "Before leaving, please give us your completed growth log so we can offer feedback.",
+          "type": "note-completion",
+          "answer": "growth log",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

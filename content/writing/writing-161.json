@@ -1,0 +1,65 @@
+{
+  "id": "writing-161",
+  "skill": "writing",
+  "title": "Writing Practice — Headphones in public libraries — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows readers using headphones supplied by four branches in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "readers",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "Market",
+            "values": [
+              223,
+              198,
+              175
+            ]
+          },
+          {
+            "label": "Forge",
+            "values": [
+              285,
+              262,
+              274
+            ]
+          },
+          {
+            "label": "North",
+            "values": [
+              109,
+              93,
+              88
+            ]
+          },
+          {
+            "label": "Kite",
+            "values": [
+              235,
+              286,
+              310
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think libraries should provide equipment to help readers work quietly, while others believe visitors should be expected to bring their own devices.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

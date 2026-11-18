@@ -1,0 +1,105 @@
+{
+  "id": "reading-118",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Surveying moths near lighting — A pilot study",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Surveying moths near lighting — A pilot study",
+      "body": "**A** A project in Cairnford began with reports of moths gathering near brightly lit shop windows. The ecology club had heard several complaints, but individual reports could not show how often the problem occurred. The team collected evidence using standard observation sheets and chose the number of moths per visit as its main measure. That allowed it to compare different days using the same rule.\n\n**B** The proposed response was shields on exterior lamps. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted four weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.\n\n**C** The first review recorded overnight rainfall as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Which evidence did the team use to establish how often the problem occurred?",
+          "options": [
+            "sample checks",
+            "standard observation sheets",
+            "anonymous arrival records",
+            "a complaints register"
+          ],
+          "answer": "B",
+          "explanation": "A project in Cairnford began with reports of moths gathering near brightly lit shop windows. The ecology club had heard several complaints, but individual reports could not show how often the problem occurred. The team collected evidence using standard observation sheets and chose the number of moths per visit as its main measure. That allowed it to compare different days using the same rule.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the trial last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "four",
+          "acceptableAnswers": [
+            "4"
+          ],
+          "wordLimit": 1,
+          "explanation": "The proposed response was shields on exterior lamps. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted four weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The trial started in the first week of April.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the reason the researchers did not draw a wider conclusion?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The first review recorded overnight rainfall as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What was tried in one area only?",
+          "options": [
+            "sorting before transport",
+            "a display explaining the appointment order",
+            "moveable crossing panels",
+            "shields on exterior lamps"
+          ],
+          "answer": "D",
+          "explanation": "The proposed response was shields on exterior lamps. Rather than apply it immediately across the whole site, the team ran a trial in a single area. The trial lasted four weeks. A second area kept its previous arrangements, making it possible to see whether any change occurred at both sites.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "Which factor did the first review record as possibly affecting the comparison?",
+          "options": [
+            "mortar left on the bricks",
+            "urgent cases",
+            "overnight rainfall",
+            "building deliveries"
+          ],
+          "answer": "C",
+          "explanation": "The first review recorded overnight rainfall as a factor that could affect the comparison. The team advised repeating the study under different conditions before drawing a wider conclusion. It kept the evidence from the first trial but published a note about why the figures might not apply elsewhere.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

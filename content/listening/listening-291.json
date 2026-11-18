@@ -1,0 +1,91 @@
+{
+  "id": "listening-291",
+  "skill": "listening",
+  "title": "Listening Drill — Surveying beach pebbles — Booking",
+  "description": "Phone booking. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Surveying beach pebbles — Booking",
+      "audioUrl": "/audio/listening-291/section1.mp3",
+      "transcript": "CALLER: Good morning. I’m enquiring about surveying beach pebbles. I missed the last date and I’m hoping there are still places.\n\nADVISER: I’m Nadia; ask for me if you need to change your booking. The first available place is at eleven o’clock. The earlier group is full.\n\nCALLER: Could I bring a colleague? Where should we register when we arrive?\n\nADVISER: This group has a limit of eight people, so please book for anyone coming with you. Sign the register in the survey hut. Do not wait outside with the previous group.\n\nCALLER: Thank you. Is there somebody who can explain what we’ll be doing?\n\nADVISER: For questions about the activity itself, speak to the beach guide rather than the bookings team. I’ll attach a blank sample grid to the confirmation email; there is no need to print it.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "The caller should ask for ______.",
+          "explanation": "I’m Nadia; ask for me if you need to change your booking.",
+          "type": "form-completion",
+          "answer": "Nadia",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "First available start time: ______ o’clock.",
+          "explanation": "The first available place is at eleven o’clock. The earlier group is full.",
+          "type": "multiple-choice",
+          "options": [
+            "eleven",
+            "nine",
+            "ten",
+            "twelve"
+          ],
+          "answer": "A",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "Maximum participants in the group: ______.",
+          "explanation": "This group has a limit of eight people, so please book for anyone coming with you.",
+          "type": "form-completion",
+          "answer": "eight",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3,
+          "acceptableAnswers": [
+            "8"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Registration location: ______.",
+          "explanation": "Sign the register in the survey hut. Do not wait outside with the previous group.",
+          "type": "form-completion",
+          "answer": "survey hut",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Who can answer questions about the activity?",
+          "explanation": "For questions about the activity itself, speak to the beach guide rather than the bookings team.",
+          "type": "multiple-choice",
+          "options": [
+            "rink attendant",
+            "coach",
+            "print technician",
+            "beach guide"
+          ],
+          "answer": "D",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "The booking e-mail will include a copy of the ______.",
+          "explanation": "I’ll attach a blank sample grid to the confirmation email; there is no need to print it.",
+          "type": "form-completion",
+          "answer": "sample grid",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

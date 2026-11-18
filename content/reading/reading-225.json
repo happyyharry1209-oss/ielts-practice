@@ -1,0 +1,106 @@
+{
+  "id": "reading-225",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Sorting bricks for reuse — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Sorting bricks for reuse — Reviewing the evidence",
+      "body": "**A** The site supervisor in Elmbrook received an old report about reusable bricks being mixed with cracked pieces. The report compared the proportion of intact bricks recovered, but some entries had been collected under different conditions. To check the report, reviewers returned to the sample checks rather than treating the published figures as a complete record.\n\n**B** The review covered four weeks. In the first part of that period, the original records did not consistently include mortar left on the bricks. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed sorting before transport as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "overhead photographs",
+            "sample checks",
+            "visitor worksheets",
+            "anonymous notes"
+          ],
+          "answer": "B",
+          "explanation": "The site supervisor in Elmbrook received an old report about reusable bricks being mixed with cracked pieces. The report compared the proportion of intact bricks recovered, but some entries had been collected under different conditions. To check the report, reviewers returned to the sample checks rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "four",
+          "acceptableAnswers": [
+            "4"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered four weeks. In the first part of that period, the original records did not consistently include mortar left on the bricks. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The reviewers estimated values for the missing readings.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The review covered four weeks. In the first part of that period, the original records did not consistently include mortar left on the bricks. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed sorting before transport as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "an usher near the spare seats",
+            "side-by-side drawings",
+            "a collection of agreed explanations",
+            "sorting before transport"
+          ],
+          "answer": "D",
+          "explanation": "The conclusion listed sorting before transport as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "temporary rain showers",
+            "plants not in bloom",
+            "mortar left on the bricks",
+            "different tour lengths"
+          ],
+          "answer": "C",
+          "explanation": "The review covered four weeks. In the first part of that period, the original records did not consistently include mortar left on the bricks. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

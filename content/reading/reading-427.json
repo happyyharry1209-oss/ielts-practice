@@ -1,0 +1,105 @@
+{
+  "id": "reading-427",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Comparing classroom doors — Preparing a second trial",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Comparing classroom doors — Preparing a second trial",
+      "body": "**A** In Bramley, work on open doors disrupting sessions in adjoining rooms had already produced a small collection of sound logs. The school property team used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: short bursts of corridor noise.\n\n**B** The group kept soft-closing fittings for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.\n\n**C** The trial design stated that lunchtime cleaning should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What material helped the group plan a second trial?",
+          "options": [
+            "anonymous arrival records",
+            "sound logs",
+            "a complaints register",
+            "marker buoys"
+          ],
+          "answer": "B",
+          "explanation": "In Bramley, work on open doors disrupting sessions in adjoining rooms had already produced a small collection of sound logs. The school property team used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: short bursts of corridor noise.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks was the second trial intended to last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "eight",
+          "acceptableAnswers": [
+            "8"
+          ],
+          "wordLimit": 1,
+          "explanation": "The group kept soft-closing fittings for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Volunteers were paid for each completed record.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the group would label a result if it was based on limited evidence?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that lunchtime cleaning should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the group retain for the second trial?",
+          "options": [
+            "a display explaining the appointment order",
+            "moveable crossing panels",
+            "a second sign pointing upriver",
+            "soft-closing fittings"
+          ],
+          "answer": "D",
+          "explanation": "The group kept soft-closing fittings for the new trial, which was planned to run for eight weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What condition did the trial design say to record even when nothing seemed unusual?",
+          "options": [
+            "urgent cases",
+            "building deliveries",
+            "lunchtime cleaning",
+            "strong reflections"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that lunchtime cleaning should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

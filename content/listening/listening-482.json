@@ -1,0 +1,88 @@
+{
+  "id": "listening-482",
+  "skill": "listening",
+  "title": "Listening Drill — First visit to the climbing museum — Guided practice",
+  "description": "Practical demonstration. One synthetic recording, six questions. Recommended time: 7 minutes.",
+  "durationSec": 420,
+  "shortPractice": true,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "First visit to the climbing museum — Guided practice",
+      "audioUrl": "/audio/listening-482/section1.mp3",
+      "transcript": "TUTOR: Before our demonstration on first visit to the climbing museum, let me explain what you need and what to record. Collect your materials from the map gallery before the demonstration begins. Inside the handout you will find a blank visitor card to fill in.\n\nTUTOR: Watch the demonstration once before you try it. Before you begin, check for the fault that affected the previous group: closed walkway. If you notice it, let me know instead of making an adjustment yourself.\n\nTUTOR: Now work in pairs. After the first attempt, check group spacing and write the result down immediately. You then have thirty minutes to compare your result with your partner’s. You can disagree, but both partners should keep a note of what they observed.\n\nTUTOR: On your way out, take anything you borrowed back to the visitor steps. Please leave your notes in the folder so we can discuss them next time.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "prompt": "Collect materials from the ______.",
+          "explanation": "Collect your materials from the map gallery before the demonstration begins.",
+          "type": "note-completion",
+          "answer": "map gallery",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "prompt": "The handout includes a blank ______.",
+          "explanation": "Inside the handout you will find a blank visitor card to fill in.",
+          "type": "multiple-choice",
+          "options": [
+            "sketch sheet",
+            "fitting card",
+            "training log",
+            "visitor card"
+          ],
+          "answer": "D",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "prompt": "First, inspect for this fault: ______.",
+          "explanation": "Before you begin, check for the fault that affected the previous group: closed walkway.",
+          "type": "note-completion",
+          "answer": "closed walkway",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "prompt": "Write down the result of checking ______.",
+          "explanation": "After the first attempt, check group spacing and write the result down immediately.",
+          "type": "note-completion",
+          "answer": "group spacing",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "prompt": "Allow ______ minutes for partner feedback.",
+          "explanation": "You then have thirty minutes to compare your result with your partner’s.",
+          "type": "multiple-choice",
+          "options": [
+            "fifteen",
+            "twenty",
+            "thirty",
+            "twenty-five"
+          ],
+          "answer": "C",
+          "instructions": "Choose the correct option."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "prompt": "Return borrowed items to the ______.",
+          "explanation": "On your way out, take anything you borrowed back to the visitor steps.",
+          "type": "note-completion",
+          "answer": "visitor steps",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "wordLimit": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "writing-421",
+  "skill": "writing",
+  "title": "Writing Practice — Furniture lending — Take a position",
+  "description": "Academic Task 1 data report and Task 2 essay. Take a position. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows household furniture items borrowed through three programmes over four consecutive years.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "items",
+        "columns": [
+          "Year 1",
+          "Year 2",
+          "Year 3",
+          "Year 4"
+        ],
+        "rows": [
+          {
+            "label": "Oak Scheme",
+            "values": [
+              111,
+              96,
+              92,
+              100
+            ]
+          },
+          {
+            "label": "Railway Scheme",
+            "values": [
+              219,
+              261,
+              281,
+              258
+            ]
+          },
+          {
+            "label": "Harbour Scheme",
+            "values": [
+              142,
+              157,
+              179,
+              189
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Landlords should allow incoming tenants to keep furniture left by previous occupants.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

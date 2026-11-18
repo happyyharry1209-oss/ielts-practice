@@ -1,0 +1,105 @@
+{
+  "id": "reading-391",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Surveying arrivals at a public pool — Building a comparison",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Surveying arrivals at a public pool — Building a comparison",
+      "body": "**A** The pool supervisor had been asked to investigate families reaching the ticket counter just before classes change in Brackenton. Its first task was to decide which signs of improvement could be compared between sites. It settled on the length of the peak queue, because the same measure could be applied in the original setting and at a second location.\n\n**B** During a seven-week comparison, the team used entrance counts at both places. It recorded outcomes separately for each site. Because changes in class size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.\n\n**C** The team then put forward staggered start times. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What evidence did the surveys use in both places?",
+          "options": [
+            "entrance counts",
+            "inspection sheets",
+            "pressure readings",
+            "delivery logs"
+          ],
+          "answer": "A",
+          "explanation": "During a seven-week comparison, the team used entrance counts at both places. It recorded outcomes separately for each site. Because changes in class size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the comparison run?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "seven",
+          "acceptableAnswers": [
+            "7"
+          ],
+          "wordLimit": 1,
+          "explanation": "During a seven-week comparison, the team used entrance counts at both places. It recorded outcomes separately for each site. Because changes in class size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The two survey sites were exactly one kilometre apart.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a reason for measuring the two sites again after a change?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The team then put forward staggered start times. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which response did the team recommend trying?",
+          "options": [
+            "deeper divided cells",
+            "shorter stacked rows",
+            "staggered start times",
+            "a fixed order for notice delivery"
+          ],
+          "answer": "C",
+          "explanation": "The team then put forward staggered start times. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What possible influence was recorded separately for the comparison?",
+          "options": [
+            "uneven watering",
+            "changes in class size",
+            "different delivery dates",
+            "temporary road closures"
+          ],
+          "answer": "B",
+          "explanation": "During a seven-week comparison, the team used entrance counts at both places. It recorded outcomes separately for each site. Because changes in class size might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

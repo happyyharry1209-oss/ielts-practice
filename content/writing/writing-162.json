@@ -1,0 +1,65 @@
+{
+  "id": "writing-162",
+  "skill": "writing",
+  "title": "Writing Practice — Household repair spending — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows average household spending on minor repairs in four building types in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "pounds",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "Flats",
+            "values": [
+              67,
+              80,
+              86
+            ]
+          },
+          {
+            "label": "Terraces",
+            "values": [
+              97,
+              110,
+              127
+            ]
+          },
+          {
+            "label": "Semi-detached houses",
+            "values": [
+              127,
+              132,
+              145
+            ]
+          },
+          {
+            "label": "Detached houses",
+            "values": [
+              181,
+              176,
+              170
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think householders should learn to carry out simple repairs, while others believe professional repair services are more reliable and safer.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

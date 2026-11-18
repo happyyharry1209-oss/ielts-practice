@@ -1,0 +1,106 @@
+{
+  "id": "reading-255",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Checking a portable exhibition ramp — Reviewing the evidence",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Checking a portable exhibition ramp — Reviewing the evidence",
+      "body": "**A** The event access volunteer in Bramley received an old report about visitors slowing down at the top of the ramp. The report compared time to enter the room, but some entries had been collected under different conditions. To check the report, reviewers returned to the observations at each entrance rather than treating the published figures as a complete record.\n\n**B** The review covered ten weeks. In the first part of that period, the original records did not consistently include the weight of peoples' bags. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.\n\n**C** The conclusion listed a level resting area as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What did the reviewers go back to when checking the earlier report?",
+          "options": [
+            "wardrobe logs",
+            "player logs",
+            "paired readings",
+            "observations at each entrance"
+          ],
+          "answer": "D",
+          "explanation": "The event access volunteer in Bramley received an old report about visitors slowing down at the top of the ramp. The report compared time to enter the room, but some entries had been collected under different conditions. To check the report, reviewers returned to the observations at each entrance rather than treating the published figures as a complete record.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks were included in the review?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "ten",
+          "acceptableAnswers": [
+            "10"
+          ],
+          "wordLimit": 1,
+          "explanation": "The review covered ten weeks. In the first part of that period, the original records did not consistently include the weight of peoples' bags. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The reviewers estimated values for the missing readings.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The review covered ten weeks. In the first part of that period, the original records did not consistently include the weight of peoples' bags. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a recommendation to give other readers information about how the evidence was gathered?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The conclusion listed a level resting area as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which change was proposed for later consideration?",
+          "options": [
+            "repair tags visible from the shelf",
+            "a level resting area",
+            "weighted pieces",
+            "a second view from the side"
+          ],
+          "answer": "B",
+          "explanation": "The conclusion listed a level resting area as a possible later response. It recommended collecting another set of readings before deciding whether to use it. The new data would be published with the method, so another group could work out whether its own measurements were comparable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What was missing from some of the early entries?",
+          "options": [
+            "the weight of peoples' bags",
+            "unrecorded exchanges",
+            "different winds across the square",
+            "different plant sizes"
+          ],
+          "answer": "A",
+          "explanation": "The review covered ten weeks. In the first part of that period, the original records did not consistently include the weight of peoples' bags. In the later part, the recording sheet included a separate field for it. The reviewers kept readings from both periods, but marked which items were missing rather than guessing what had happened.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

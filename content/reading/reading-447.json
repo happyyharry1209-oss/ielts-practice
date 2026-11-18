@@ -1,0 +1,106 @@
+{
+  "id": "reading-447",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Improving noticeboards for low vision — Preparing a second trial",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Improving noticeboards for low vision — Preparing a second trial",
+      "body": "**A** In Foxhaven, work on leaves and posters partly obscuring public notices had already produced a small collection of viewing trials. The access adviser used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: reading accuracy at a distance.\n\n**B** The group kept high-contrast lettering for the new trial, which was planned to run for four weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.\n\n**C** The trial design stated that changes in light should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What material helped the group plan a second trial?",
+          "options": [
+            "path surveys",
+            "viewing trials",
+            "historic surveys",
+            "timed trials"
+          ],
+          "answer": "B",
+          "explanation": "In Foxhaven, work on leaves and posters partly obscuring public notices had already produced a small collection of viewing trials. The access adviser used this material to plan a second trial. The first report contained several different figures, but for the second trial the group agreed to publish one main outcome: reading accuracy at a distance.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks was the second trial intended to last?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "four",
+          "acceptableAnswers": [
+            "4"
+          ],
+          "wordLimit": 1,
+          "explanation": "The group kept high-contrast lettering for the new trial, which was planned to run for four weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "Volunteers were told to invent a value whenever a field was empty.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The trial design stated that changes in light should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the group would label a result if it was based on limited evidence?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that changes in light should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "What did the group retain for the second trial?",
+          "options": [
+            "a line of inset seats",
+            "a matched overlay of field maps",
+            "lower supports for small boats",
+            "high-contrast lettering"
+          ],
+          "answer": "D",
+          "explanation": "The group kept high-contrast lettering for the new trial, which was planned to run for four weeks. Volunteers were shown a sample record before starting. They were also asked to describe anything unusual in a separate note, so later readers could tell the difference between an ordinary value and one taken during a disruption.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What condition did the trial design say to record even when nothing seemed unusual?",
+          "options": [
+            "wet benches",
+            "changes in the name of the road",
+            "changes in light",
+            "different boat weights"
+          ],
+          "answer": "C",
+          "explanation": "The trial design stated that changes in light should be recorded even when everything else appeared normal. If this information was missing, the team would leave the field blank rather than infer an answer. It would publish a provisional finding and label it clearly if too few readings were available for a reliable result.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

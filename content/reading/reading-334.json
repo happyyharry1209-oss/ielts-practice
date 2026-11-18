@@ -1,0 +1,105 @@
+{
+  "id": "reading-334",
+  "skill": "reading",
+  "variant": "academic",
+  "title": "Reading Drill — Studying wait times at a clinic — Building a comparison",
+  "description": "One short passage, six questions. Recommended time: 10 minutes.",
+  "durationSec": 600,
+  "shortPractice": true,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Studying wait times at a clinic — Building a comparison",
+      "body": "**A** The clinic administrator had been asked to investigate patients seeing late arrivals called first in Hillswick. Its first task was to decide which signs of improvement could be compared between sites. It settled on time from check-in to being called, because the same measure could be applied in the original setting and at a second location.\n\n**B** During a six-week comparison, the team used anonymous arrival records at both places. It recorded outcomes separately for each site. Because urgent cases might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.\n\n**C** The team then put forward a display explaining the appointment order. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "What evidence did the surveys use in both places?",
+          "options": [
+            "visitor worksheets",
+            "anonymous notes",
+            "reader checks",
+            "anonymous arrival records"
+          ],
+          "answer": "D",
+          "explanation": "During a six-week comparison, the team used anonymous arrival records at both places. It recorded outcomes separately for each site. Because urgent cases might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "short-answer",
+          "prompt": "How many weeks did the comparison run?",
+          "instructions": "Write ONE NUMBER or ONE WORD.",
+          "answer": "six",
+          "acceptableAnswers": [
+            "6"
+          ],
+          "wordLimit": 1,
+          "explanation": "During a six-week comparison, the team used anonymous arrival records at both places. It recorded outcomes separately for each site. Because urgent cases might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "true-false-not-given",
+          "prompt": "The two survey sites were exactly one kilometre apart.",
+          "instructions": "Does the statement agree with the information given?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage gives no information about this detail."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a reason for measuring the two sites again after a change?",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The team then put forward a display explaining the appointment order. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "multiple-choice",
+          "prompt": "Which response did the team recommend trying?",
+          "options": [
+            "side-by-side drawings",
+            "a display explaining the appointment order",
+            "a collection of agreed explanations",
+            "a keyed copy in clearer type"
+          ],
+          "answer": "B",
+          "explanation": "The team then put forward a display explaining the appointment order. Its report asked for another comparison after the change had been tried. This would distinguish a genuine effect from an improvement that could have occurred anyway. The report did not assume that the more successful site before the change would be the better site afterwards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "multiple-choice",
+          "prompt": "What possible influence was recorded separately for the comparison?",
+          "options": [
+            "urgent cases",
+            "plants not in bloom",
+            "different tour lengths",
+            "inaccurate original labels"
+          ],
+          "answer": "A",
+          "explanation": "During a six-week comparison, the team used anonymous arrival records at both places. It recorded outcomes separately for each site. Because urgent cases might influence the figures, the team used a column in the record to show when that condition was present. The surveys included quiet periods as well as busy ones.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

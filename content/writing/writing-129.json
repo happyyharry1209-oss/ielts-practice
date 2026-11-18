@@ -1,0 +1,65 @@
+{
+  "id": "writing-129",
+  "skill": "writing",
+  "title": "Writing Practice — Food bank opening hours — Compare two views",
+  "description": "Academic Task 1 data report and Task 2 essay. Compare two views. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows weekly hours when four collection points are open in three years: 2012, 2018 and 2024.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "hours",
+        "columns": [
+          "2012",
+          "2018",
+          "2024"
+        ],
+        "rows": [
+          {
+            "label": "High Lane",
+            "values": [
+              19,
+              17,
+              15
+            ]
+          },
+          {
+            "label": "Market Row",
+            "values": [
+              29,
+              27,
+              28
+            ]
+          },
+          {
+            "label": "Port Road",
+            "values": [
+              13,
+              11,
+              10
+            ]
+          },
+          {
+            "label": "Ash Lane",
+            "values": [
+              26,
+              31,
+              34
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think centres should open at the same predictable times each week, while others believe people who need food should be able to arrange flexible collection.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}
