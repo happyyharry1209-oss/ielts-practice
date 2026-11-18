@@ -43,6 +43,7 @@ app.get('/api/health', async (c) => {
     engine: dbEngine,
     ai: Boolean(env.writingAi),
     aiProvider: env.writingAi?.provider ?? null,
+    speakingAiProvider: env.groq?.provider ?? null,
     mail: mailerConfigured(),
     // Booleans only — never expose the actual credentials. Useful when a
     // deployment is not picking up environment variables.

@@ -281,11 +281,30 @@
     "youShouldSay": "You should say:",
     "newCard": "Next card",
     "finish": "Finish practice",
-    "intro": "Speak naturally. There is no automatic marking for Speaking in this version.",
+    "intro": "Record your answer and listen back.",
     "savedTitle": "Saved recordings",
     "savedHint": "Stored in this browser only",
     "savedEmpty": "No saved recordings yet.",
-    "download": "Download"
+    "download": "Download",
+    "feedback": {
+      "title": "AI speaking feedback",
+      "request": "Get AI feedback",
+      "pending": "Transcribing and reviewing…",
+      "uploadNotice": "Clicking below sends this recording to Groq for transcription and feedback.",
+      "scope": "Feedback is based on the transcript. Pronunciation needs a separate assessment.",
+      "coherence": "Answer development and coherence",
+      "lexical": "Vocabulary",
+      "grammar": "Grammar",
+      "improvements": "What to practise next",
+      "transcript": "Transcript",
+      "pace": "Approximate pace · {{count}} words per minute",
+      "tooLarge": "This recording exceeds 10 MB. Try a shorter answer.",
+      "invalidAudio": "This recording could not be read. Try recording again.",
+      "noSpeech": "Too little speech was detected. Record a fuller answer and try again.",
+      "rateLimit": "The AI usage limit has been reached. Try again later.",
+      "unavailable": "AI feedback is currently unavailable.",
+      "providerError": "AI feedback could not be loaded. Please try again."
+    }
   },
   "admin": {
     "title": "Admin",

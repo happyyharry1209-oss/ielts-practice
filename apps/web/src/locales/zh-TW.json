@@ -280,11 +280,30 @@
     "youShouldSay": "你應該提到：",
     "newCard": "下一張卡",
     "finish": "完成練習",
-    "intro": "自然地說就好。這一版的口說不做自動評分。",
+    "intro": "錄下你的回答，再回聽自己的表達。",
     "savedTitle": "已保存的錄音",
     "savedHint": "只存在這個瀏覽器",
     "savedEmpty": "還沒有保存的錄音。",
-    "download": "下載"
+    "download": "下載",
+    "feedback": {
+      "title": "AI 口語回饋",
+      "request": "取得 AI 回饋",
+      "pending": "正在轉錄和分析…",
+      "uploadNotice": "按下按鈕後，這段錄音會送到 Groq 轉錄並產生回饋。",
+      "scope": "回饋根據逐字稿產生。發音需要另外評估。",
+      "coherence": "內容發展與連貫性",
+      "lexical": "詞彙",
+      "grammar": "文法",
+      "improvements": "下一步可以練甚麼",
+      "transcript": "逐字稿",
+      "pace": "約每分鐘 {{count}} 字",
+      "tooLarge": "錄音超過 10 MB，請試錄一段較短的回答。",
+      "invalidAudio": "無法讀取這段錄音，請重新錄製。",
+      "noSpeech": "偵測到的語音太少，請錄一段較完整的回答再試。",
+      "rateLimit": "已達 AI 用量上限，請稍後再試。",
+      "unavailable": "AI 回饋暫時無法使用。",
+      "providerError": "暫時無法取得 AI 回饋，請再試一次。"
+    }
   },
   "admin": {
     "title": "管理後台",

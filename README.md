@@ -180,7 +180,7 @@ Both are labelled *estimated*, not official IELTS results.
 | `CORS_ORIGIN` | yes in production | Comma-separated allowed browser origins |
 | `APP_URL` | in production | Public URL of the web app, used in email links |
 | `PORT` | no | API port (default 8787) |
-| `GROQ_API_KEY` | no | Enables Groq Writing feedback (takes priority over DeepSeek) |
+| `GROQ_API_KEY` | no | Enables Groq Writing feedback and Speaking transcription and feedback |
 | `DEEPSEEK_API_KEY` | no | Optional alternative provider for existing deployments |
 | `AI_HOURLY_LIMIT` | no | AI requests per user per hour (default 20) |
 | `BREVO_API_KEY` | no | Email over HTTPS (free 300/day, verified sender only) — recommended |
@@ -245,8 +245,13 @@ using the most recent response per question so a later correct answer clears it.
 ## Speaking recordings and dark mode
 
 - Every finished recording is saved to **IndexedDB** automatically and listed under **Saved
-  recordings** on the Speaking page, with playback, download and delete. It survives a refresh and is
-  never uploaded.
+  recordings** on the Speaking page, with playback, download and delete. The saved copy survives a
+  refresh on the same device.
+- With **`GROQ_API_KEY`** configured, **Get AI feedback** sends the latest recording (up to 10 MB)
+  through the API to Whisper Large V3 Turbo. GPT OSS 120B reviews the transcript against the
+  practice prompt and gives feedback on coherence, vocabulary and grammar. The API returns the
+  transcript and feedback to the browser and saves only AI usage totals. Practice recordings can
+  be made and played back locally without requesting AI feedback.
 - **Dark mode** is toggled from the moon/sun icon in the header. The choice is stored in
   `localStorage` and applied before first paint, so there is no flash.
 
@@ -327,9 +332,8 @@ The app uses `HashRouter`, so deep links work on Pages without server rewrites
 
 - **Email needs a provider.** Verification and reset links are sent through Brevo/Resend; without
   one they are only printed to the server log.
-- **Speaking audio is not uploaded.** Recordings are saved in the browser's IndexedDB, so they
-  survive a refresh but stay on that device. Clearing site data deletes them.
-- **Speaking is not auto-scored.** Part 1–3 give prompts, timing and recording.
+- **Speaking feedback is transcript-based.** Pronunciation, stress and intonation require a
+  separate assessment for a full Speaking band.
 - **AI bands are estimates.** Treat them as ±0.5–1.0, never as an official score.
 - **The demo papers are short.** They are original practice material, not full-length simulations
   (though each has 40 questions).
@@ -337,5 +341,5 @@ The app uses `HashRouter`, so deep links work on Pages without server rewrites
 
 ## Roadmap
 
-More papers (the format is designed for bulk authoring), Speaking transcription, a vocabulary
+More papers (the format is designed for bulk authoring), a vocabulary
 notebook, offline PWA support, and PDF score reports.

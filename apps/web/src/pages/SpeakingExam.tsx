@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import type { SpeakingTest } from '@ielts/shared';
+import { SpeakingFeedbackPanel } from '../components/SpeakingFeedbackPanel';
 import { Badge, Spinner } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
@@ -21,6 +22,10 @@ export default function SpeakingExam() {
     queryKey: ['content', 'speaking', testId],
     queryFn: () => api<{ test: SpeakingTest }>(`/api/content/speaking/${testId}`),
     enabled: Boolean(testId),
+  });
+  const { data: feedbackStatus } = useQuery({
+    queryKey: ['speaking', 'feedback-status'],
+    queryFn: () => api<{ provider: 'groq' | null }>('/api/speaking/status'),
   });
 
   const test = data?.test;
@@ -79,21 +84,32 @@ export default function SpeakingExam() {
   );
 
   const card = test?.part2[cardIndex];
+  const list = part === 1 ? part1 : part3;
+  const current = list[index];
+
+  async function startRecording() {
+    if (part === 2) {
+      setSeconds(0);
+      setPhase('speak');
+    }
+    if (await recorder.start()) {
+      startedAtRef.current = Date.now();
+    } else if (part === 2) {
+      setPhase('done');
+    }
+  }
 
   useEffect(() => {
-    if (phase !== 'prep' && phase !== 'speak') return;
+    if (phase !== 'prep' && !(phase === 'speak' && recorder.recording)) return;
     const id = window.setInterval(() => setSeconds((value) => value + 1), 1000);
     return () => window.clearInterval(id);
-  }, [phase]);
+  }, [phase, recorder.recording]);
 
   useEffect(() => {
     if (!test || !card) return;
     if (phase === 'prep' && seconds >= 60) {
-      setSeconds(0);
-      setPhase('speak');
-      startedAtRef.current = Date.now();
-      void recorder.start();
-    } else if (phase === 'speak' && seconds >= 120) {
+      void startRecording();
+    } else if (part === 2 && phase === 'speak' && seconds >= 120) {
       recorder.stop();
       setPhase('done');
       void api('/api/speaking/recordings', {
@@ -109,6 +125,7 @@ export default function SpeakingExam() {
     if (!test || !recorder.blob) return;
     if (recorder.blob === savedBlobRef.current) return;
     savedBlobRef.current = recorder.blob;
+    if (part === 2) setPhase('done');
 
     const startedAt = startedAtRef.current ?? Date.now();
     const durationSec = Math.max(1, Math.round((Date.now() - startedAt) / 1000));
@@ -130,21 +147,19 @@ export default function SpeakingExam() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recorder.blob]);
 
-  useEffect(() => {
-    setIndex(0);
-    setPhase('idle');
-    setSeconds(0);
-    recorder.clear();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [part]);
-
   if (isLoading) return <Spinner label={t('common.loading')} />;
   if (loadError || !test) {
     return <div className="p-10 text-center text-sm text-rose-600">{errorMessage(loadError)}</div>;
   }
 
-  const list = part === 1 ? part1 : part3;
-  const current = list[Math.min(index, Math.max(list.length - 1, 0))];
+  const feedbackPanel = recorder.blob && feedbackStatus?.provider === 'groq' ? (
+    <SpeakingFeedbackPanel
+      audio={recorder.blob}
+      contentId={test.id}
+      part={part}
+      promptIndex={part === 2 ? cardIndex : index}
+    />
+  ) : null;
 
   const recorderError =
     recorder.error === 'denied'
@@ -165,7 +180,15 @@ export default function SpeakingExam() {
               <button
                 key={value}
                 type="button"
-                onClick={() => setPart(value)}
+                onClick={() => {
+                  if (value === part) return;
+                  setPart(value);
+                  setIndex(0);
+                  setPhase('idle');
+                  setSeconds(0);
+                  recorder.clear();
+                }}
+                disabled={recorder.busy}
                 className={cn(
                   'min-h-10 rounded-sm px-3 py-1.5 text-xs font-semibold transition',
                   part === value
@@ -189,6 +212,7 @@ export default function SpeakingExam() {
                 <button
                   type="button"
                   className="btn-ghost text-xs"
+                  disabled={recorder.busy}
                   onClick={() => {
                     setCardIndex((value) => (value + 1) % test.part2.length);
                     setPhase('idle');
@@ -232,6 +256,7 @@ export default function SpeakingExam() {
                     onClick={() => {
                       setPhase('prep');
                       setSeconds(0);
+                      recorder.clear();
                     }}
                   >
                     {t('speaking.prepare')}
@@ -242,12 +267,7 @@ export default function SpeakingExam() {
                   <button
                     type="button"
                     className="btn-secondary"
-                    onClick={() => {
-                      setPhase('speak');
-                      setSeconds(0);
-                      startedAtRef.current = Date.now();
-                      void recorder.start();
-                    }}
+                    onClick={() => void startRecording()}
                   >
                     {t('speaking.startRecording')}
                   </button>
@@ -257,6 +277,7 @@ export default function SpeakingExam() {
                   <button
                     type="button"
                     className="btn-secondary"
+                    disabled={!recorder.recording}
                     onClick={() => {
                       recorder.stop();
                       setPhase('done');
@@ -300,6 +321,7 @@ export default function SpeakingExam() {
                   >
                     <Trash2 className="h-3.5 w-3.5" /> {t('speaking.deleteRecording')}
                   </button>
+                  {feedbackPanel}
                 </div>
               ) : null}
             </div>
@@ -322,10 +344,8 @@ export default function SpeakingExam() {
                   <button
                     type="button"
                     className="btn-primary"
-                    onClick={() => {
-                      startedAtRef.current = Date.now();
-                      void recorder.start();
-                    }}
+                    disabled={recorder.busy || !current}
+                    onClick={() => void startRecording()}
                   >
                     <Mic className="h-4 w-4" /> {t('speaking.startRecording')}
                   </button>
@@ -337,8 +357,8 @@ export default function SpeakingExam() {
                 <button
                   type="button"
                   className="btn-secondary"
+                  disabled={recorder.busy || index >= list.length - 1}
                   onClick={() => {
-                    recorder.stop();
                     recorder.clear();
                     setIndex((value) => Math.min(value + 1, list.length - 1));
                   }}
@@ -354,7 +374,10 @@ export default function SpeakingExam() {
               ) : null}
 
               {recorder.url ? (
-                <audio src={recorder.url} controls className="mt-4 w-full" />
+                <>
+                  <audio src={recorder.url} controls className="mt-4 w-full" />
+                  {feedbackPanel}
+                </>
               ) : null}
             </div>
           </>

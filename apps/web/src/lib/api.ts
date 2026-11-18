@@ -30,12 +30,12 @@ export function setToken(token: string | null): void {
   }
 }
 
-interface RequestOptions extends Omit<RequestInit, 'body'> {
+interface RequestOptions extends RequestInit {
   json?: unknown;
 }
 
 export async function api<T>(path: string, options: RequestOptions = {}): Promise<T> {
-  const { json, headers, ...rest } = options;
+  const { json, body, headers, ...rest } = options;
   const token = getToken();
 
   const response = await fetch(`${API_URL}${path}`, {
@@ -45,7 +45,7 @@ export async function api<T>(path: string, options: RequestOptions = {}): Promis
       ...(token ? { authorization: `Bearer ${token}` } : {}),
       ...(headers ?? {}),
     },
-    body: json !== undefined ? JSON.stringify(json) : undefined,
+    body: json !== undefined ? JSON.stringify(json) : body,
   }).catch(() => {
     throw new ApiError(0, 'network');
   });

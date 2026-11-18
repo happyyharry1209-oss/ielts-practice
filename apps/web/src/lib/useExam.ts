@@ -113,24 +113,26 @@ export function useExamTimer(
 export interface RecorderState {
   supported: boolean;
   recording: boolean;
+  busy: boolean;
   error: string | null;
   url: string | null;
   /** Latest finished recording, for persistence. */
   blob: Blob | null;
-  start: () => Promise<void>;
+  start: () => Promise<boolean>;
   stop: () => void;
   clear: () => void;
 }
 
 /** Thin MediaRecorder wrapper with codec detection for Safari. */
 export function useRecorder(): RecorderState {
-  const [recording, setRecording] = useState(false);
+  const [state, setState] = useState<'idle' | 'starting' | 'recording' | 'finishing'>('idle');
   const [error, setError] = useState<string | null>(null);
   const [url, setUrl] = useState<string | null>(null);
   const [blob, setBlob] = useState<Blob | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
-  const streamRef = useRef<MediaStream | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
+  const urlRef = useRef<string | null>(null);
+  const requestVersion = useRef(0);
+  const startingRef = useRef(false);
 
   const supported =
     typeof window !== 'undefined' &&
@@ -138,57 +140,85 @@ export function useRecorder(): RecorderState {
     Boolean(navigator.mediaDevices?.getUserMedia);
 
   const clear = useCallback(() => {
-    setUrl((previous) => {
-      if (previous) URL.revokeObjectURL(previous);
-      return null;
-    });
+    if (urlRef.current) URL.revokeObjectURL(urlRef.current);
+    urlRef.current = null;
+    setUrl(null);
+    setBlob(null);
+    setError(null);
   }, []);
 
   const stop = useCallback(() => {
-    recorderRef.current?.stop();
-    streamRef.current?.getTracks().forEach((track) => track.stop());
-    streamRef.current = null;
-    setRecording(false);
+    const active = recorderRef.current;
+    if (!active || active.state === 'inactive') return;
+    setState('finishing');
+    active.stop();
+    active.stream.getTracks().forEach((track) => track.stop());
   }, []);
 
   const start = useCallback(async () => {
     if (!supported) {
       setError('unsupported');
-      return;
+      return false;
     }
-    setError(null);
+    if (startingRef.current || recorderRef.current) return false;
     clear();
+    setState('starting');
+    const version = ++requestVersion.current;
+    startingRef.current = true;
+    let stream: MediaStream | undefined;
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-      const mimeType = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4'].find((type) =>
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      if (requestVersion.current !== version) {
+        stream.getTracks().forEach((track) => track.stop());
+        return false;
+      }
+      const mimeType = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg'].find((type) =>
         MediaRecorder.isTypeSupported(type),
       );
       const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
-      chunksRef.current = [];
+      const chunks: Blob[] = [];
       recorder.ondataavailable = (event) => {
-        if (event.data.size > 0) chunksRef.current.push(event.data);
+        if (event.data.size > 0) chunks.push(event.data);
       };
       recorder.onstop = () => {
-        const finished = new Blob(chunksRef.current, { type: recorder.mimeType || 'audio/webm' });
+        recorder.stream.getTracks().forEach((track) => track.stop());
+        if (recorderRef.current !== recorder) return;
+        recorderRef.current = null;
+        setState('idle');
+        if (!chunks.length) return;
+        const finished = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
+        const objectUrl = URL.createObjectURL(finished);
+        urlRef.current = objectUrl;
         setBlob(finished);
-        setUrl(URL.createObjectURL(finished));
+        setUrl(objectUrl);
       };
       recorder.start();
       recorderRef.current = recorder;
-      setRecording(true);
+      setState('recording');
+      return true;
     } catch {
-      setError('denied');
-      setRecording(false);
+      stream?.getTracks().forEach((track) => track.stop());
+      if (requestVersion.current === version) {
+        setError('denied');
+        setState('idle');
+      }
+      return false;
+    } finally {
+      if (requestVersion.current === version) startingRef.current = false;
     }
   }, [supported, clear]);
 
   useEffect(() => {
     return () => {
-      recorderRef.current?.stop();
-      streamRef.current?.getTracks().forEach((track) => track.stop());
+      requestVersion.current += 1;
+      startingRef.current = false;
+      const active = recorderRef.current;
+      recorderRef.current = null;
+      if (active && active.state !== 'inactive') active.stop();
+      active?.stream.getTracks().forEach((track) => track.stop());
+      if (urlRef.current) URL.revokeObjectURL(urlRef.current);
     };
   }, []);
 
-  return { supported, recording, error, url, blob, start, stop, clear };
+  return { supported, recording: state === 'recording', busy: state !== 'idle', error, url, blob, start, stop, clear };
 }

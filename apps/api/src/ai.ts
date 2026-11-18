@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { writingOverall } from '@ielts/shared';
 import { env } from './env';
+import { closedObject, groqStructuredOutput } from './groq';
 
 export interface WritingCriterion {
   key: 'taskAchievement' | 'coherence' | 'lexical' | 'grammar';
@@ -51,10 +52,6 @@ const aiSchema = z.object({
     )
     .default([]),
 });
-
-function closedObject(properties: Record<string, unknown>) {
-  return { type: 'object', properties, required: Object.keys(properties), additionalProperties: false };
-}
 
 const string = { type: 'string' };
 const criterion = closedObject({
@@ -244,15 +241,7 @@ export async function scoreWriting(
         model: ai.model,
         temperature: 0.2,
         ...(ai.provider === 'groq'
-          ? {
-              max_completion_tokens: 2048,
-              reasoning_effort: 'low',
-              include_reasoning: false,
-              response_format: {
-                type: 'json_schema',
-                json_schema: { name: 'ielts_writing_feedback', strict: true, schema: groqWritingSchema },
-              },
-            }
+          ? groqStructuredOutput('ielts_writing_feedback', groqWritingSchema)
           : { response_format: { type: 'json_object' } }),
         messages: [
           {

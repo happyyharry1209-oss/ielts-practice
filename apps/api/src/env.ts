@@ -52,21 +52,22 @@ if (isProd && jwtSecret.startsWith('dev-only')) {
 
 const groqApiKey = process.env.GROQ_API_KEY?.trim();
 const deepseekApiKey = process.env.DEEPSEEK_API_KEY?.trim();
-const writingAi = groqApiKey
+const groq = groqApiKey
   ? {
       provider: 'groq' as const,
       apiKey: groqApiKey,
       model: 'openai/gpt-oss-120b',
       endpoint: 'https://api.groq.com/openai/v1/chat/completions',
     }
-  : deepseekApiKey
+  : null;
+const writingAi = groq ?? (deepseekApiKey
     ? {
         provider: 'deepseek' as const,
         apiKey: deepseekApiKey,
         model: process.env.DEEPSEEK_MODEL ?? 'deepseek-chat',
         endpoint: 'https://api.deepseek.com/chat/completions',
       }
-    : null;
+    : null);
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 
@@ -83,6 +84,7 @@ export const env = {
   databaseUrl: process.env.DATABASE_URL ?? defaultDatabaseUrl,
   jwtSecret,
   corsOrigins: parseOrigins(process.env.CORS_ORIGIN),
+  groq,
   writingAi,
   contentDir: process.env.CONTENT_DIR ?? '',
   autoMigrate: process.env.AUTO_MIGRATE !== 'false',

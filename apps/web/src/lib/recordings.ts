@@ -1,6 +1,5 @@
 /**
- * Speaking recordings live in IndexedDB: they survive a refresh and never
- * leave the browser. Nothing is uploaded, so they are per-browser only.
+ * Saved Speaking recordings live in this browser's IndexedDB.
  */
 export interface SavedRecording {
   id: string;
