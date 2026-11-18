@@ -17,7 +17,7 @@ export function PageHeader({
   return (
     <div className="mb-7 flex flex-col gap-4 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <h1 className="font-serif text-4xl font-medium tracking-[-0.03em] text-ink sm:text-[42px]">
+        <h1 className="page-title">
           {title}
         </h1>
         {subtitle ? <p className="mt-2 text-sm leading-6 text-slate-500">{subtitle}</p> : null}
@@ -29,7 +29,7 @@ export function PageHeader({
 
 export function Spinner({ label }: { label?: string }) {
   return (
-    <div className="flex items-center justify-center gap-3 py-16 text-sm text-slate-500">
+    <div role="status" className="flex items-center justify-center gap-3 py-12 text-sm text-muted">
       <span className="h-5 w-5 animate-spin rounded-full border-2 border-slate-200 border-t-brand-600" />
       {label}
     </div>
@@ -91,6 +91,22 @@ export function Field({
       </label>
       {children}
       {hint ? <p className="mt-1 text-xs text-slate-400">{hint}</p> : null}
+    </div>
+  );
+}
+
+export function LoadError({ message, retryLabel, busy, onRetry }: {
+  message: string;
+  retryLabel: string;
+  busy: boolean;
+  onRetry: () => void;
+}) {
+  return (
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg bg-surface p-5">
+      <p role="alert" className="text-sm text-muted">{message}</p>
+      <button type="button" disabled={busy} onClick={onRetry} className="btn-secondary">
+        {retryLabel}
+      </button>
     </div>
   );
 }

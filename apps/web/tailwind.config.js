@@ -20,6 +20,7 @@ export default {
         ],
       },
       colors: {
+        muted: 'var(--muted)',
         brand: {
           50: '#f8ebe6',
           100: '#f1d9d0',

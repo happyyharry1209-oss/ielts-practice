@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Play } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +13,7 @@ import { assetUrl, cn } from '../lib/utils';
 
 export default function ListeningExam() {
   const { t } = useTranslation();
+  const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
@@ -55,6 +56,8 @@ export default function ListeningExam() {
         method: 'POST',
         json: { responses: exam.answers, durationSec: timer.elapsed },
       });
+      void queryClient.invalidateQueries({ queryKey: ['stats'] });
+      void queryClient.invalidateQueries({ queryKey: ['review'] });
       navigate(`/result/${created.attemptId}`, { replace: true });
     } catch (err) {
       setError(errorMessage(err));

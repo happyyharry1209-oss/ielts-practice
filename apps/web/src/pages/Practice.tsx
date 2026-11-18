@@ -1,188 +1,171 @@
 import { useQuery } from '@tanstack/react-query';
-import { ArrowRight, CheckCircle2, Search } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { ArrowRight, Check, Clock3, ListChecks, Search } from 'lucide-react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import type { ContentManifest, Skill, TestSummary } from '@ielts/shared';
-import { Badge, PageHeader } from '../components/ui';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
+import type { ContentManifest, TestSummary } from '@ielts/shared';
+import { EmptyState, LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
-import { bandColor, cn } from '../lib/utils';
+import { SKILLS, skillLabel } from '../lib/skills';
+import { useAuth } from '../lib/auth';
 import { clearStoredAnswers } from '../lib/useExam';
-
-const SKILLS: Skill[] = ['reading', 'listening', 'writing', 'speaking'];
-const TONE: Record<string, 'emerald' | 'sky' | 'amber' | 'rose'> = {
-  reading: 'emerald',
-  listening: 'sky',
-  writing: 'amber',
-  speaking: 'rose',
-};
+import { cn } from '../lib/utils';
 
 interface StatsResponse {
-  byContent: { skill: string; content_id: string; attempts: number; best_band: number | null }[];
+  byContent: { skill: string; content_id: string; best_band: number | null }[];
 }
 
-type Filter = 'all' | 'new' | 'done';
+const FILTERS = ['all', 'new', 'done'] as const;
+type Filter = (typeof FILTERS)[number];
+type Mode = 'mock' | 'practice';
 
 export default function Practice() {
+  const { skill } = useParams();
   const { t } = useTranslation();
+  const current = SKILLS.find((item) => item.key === skill);
+  if (!current) return <EmptyState title={t('errors.notFound')} />;
+
+  return <TestPicker key={current.key} current={current} />;
+}
+
+function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
+  const { t } = useTranslation();
+  const { user } = useAuth();
   const navigate = useNavigate();
-  const { skill } = useParams<{ skill: string }>();
-  const [mode, setMode] = useState<'mock' | 'practice'>('mock');
+  const [mode, setMode] = useState<Mode>('mock');
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
-  const current = (skill ?? 'reading') as Skill;
-  const valid = SKILLS.includes(current);
+  const skill = current.key;
+  const hasExamModes = skill === 'reading' || skill === 'listening';
 
-  const { data } = useQuery({
+  const manifest = useQuery({
     queryKey: ['manifest'],
     queryFn: () => api<ContentManifest>('/api/content/manifest'),
   });
-  const { data: stats } = useQuery({
-    queryKey: ['stats'],
+  const stats = useQuery({
+    queryKey: ['stats', user?.id],
     queryFn: () => api<StatsResponse>('/api/attempts/stats'),
+    enabled: hasExamModes,
   });
 
-  const bestByContent = useMemo(() => {
-    const map = new Map<string, number | null>();
-    for (const entry of stats?.byContent ?? []) {
-      map.set(`${entry.skill}:${entry.content_id}`, entry.best_band);
-    }
-    return map;
-  }, [stats]);
-
-  const tests: TestSummary[] = valid ? data?.[current] ?? [] : [];
-  const visible = tests.filter((test) => {
-    const done = bestByContent.has(`${current}:${test.id}`);
+  const tests = manifest.data?.[skill] ?? [];
+  const progress = new Map(
+    stats.data?.byContent
+      .filter((entry) => entry.skill === skill)
+      .map((entry) => [entry.content_id, entry.best_band]),
+  );
+  const search = query.trim().toLowerCase();
+  const visibleTests = tests.filter((test) => {
+    const done = progress.has(test.id);
     if (filter === 'new' && done) return false;
     if (filter === 'done' && !done) return false;
-    if (query.trim() && !test.title.toLowerCase().includes(query.trim().toLowerCase())) return false;
-    return true;
+    return [test.title, test.description].some((value) => value?.toLowerCase().includes(search));
   });
 
   const start = (test: TestSummary) => {
-    clearStoredAnswers(test.id);
-    const queryString = current === 'reading' || current === 'listening' ? `?mode=${mode}` : '';
-    navigate(`/exam/${current}/${test.id}${queryString}`);
+    if (hasExamModes) clearStoredAnswers(test.id);
+    navigate(`/exam/${skill}/${test.id}${hasExamModes ? `?mode=${mode}` : ''}`);
   };
-
-  if (!valid) {
-    return <div className="py-10 text-sm text-slate-500">{t('errors.notFound')}</div>;
-  }
 
   return (
     <div>
-      <PageHeader
-        title={`${t('practice.title')} — ${t(`home.skill${current.charAt(0).toUpperCase()}${current.slice(1)}`)}`}
-        subtitle={t('practice.testCount', { count: tests.length })}
-        actions={
-          current === 'reading' || current === 'listening' ? (
-            <div className="flex border border-line bg-surface p-1 text-[11px] font-semibold">
-              <button
-                type="button"
-                onClick={() => setMode('mock')}
-                className={cn(
-                  'min-h-9 px-3 transition',
-                  mode === 'mock' ? 'bg-ink text-paper' : 'text-slate-500 hover:text-ink',
-                )}
-              >
-                {t('exam.mockMode')}
-              </button>
-              <button
-                type="button"
-                onClick={() => setMode('practice')}
-                className={cn(
-                  'min-h-9 px-3 transition',
-                  mode === 'practice' ? 'bg-ink text-paper' : 'text-slate-500 hover:text-ink',
-                )}
-              >
-                {t('exam.practiceMode')}
+      <div className="flex items-center gap-4">
+        <span className={cn('skill-icon', current.accent)}><current.Icon aria-hidden="true" size={21} /></span>
+        <h1 className="page-title">{t(skillLabel(skill))}</h1>
+      </div>
+      <nav aria-label={t('home.chooseSkill')} className="mb-7 mt-5 grid grid-cols-4 gap-1 border-b border-line">
+        {SKILLS.map(({ key }) => (
+          <NavLink key={key} to={`/practice/${key}`} className={({ isActive }) => cn(
+            'flex min-h-11 items-center justify-center border-b-2 px-1 text-center text-sm font-semibold sm:justify-start sm:px-4',
+            isActive ? 'border-brand-600 text-ink' : 'border-transparent text-muted hover:text-ink',
+          )}>
+            {t(skillLabel(key))}
+          </NavLink>
+        ))}
+      </nav>
+
+      {manifest.isLoading ? (
+        <Spinner label={t('common.loading')} />
+      ) : !manifest.data ? (
+        <LoadError message={t('errors.tests')} retryLabel={t('common.retry')} busy={manifest.isFetching} onRetry={() => void manifest.refetch()} />
+      ) : tests.length === 0 ? (
+        <EmptyState title={t('practice.empty')} />
+      ) : (
+        <>
+          {hasExamModes ? (
+            <fieldset className="mb-6">
+              <legend className="mb-3 text-sm font-semibold text-ink">{t('practice.mode')}</legend>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {(['mock', 'practice'] as const).map((value) => (
+                  <label key={value} className={cn(
+                    'flex cursor-pointer items-start gap-3 rounded-lg border bg-surface p-4 transition focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand-500',
+                    mode === value ? 'border-brand-600' : 'border-line hover:border-ink/50',
+                  )}>
+                    <input className="mt-1 h-4 w-4 shrink-0 accent-brand-600" type="radio" name="mode" value={value} checked={mode === value} onChange={() => setMode(value)} />
+                    <span>
+                      <span className="block text-sm font-semibold text-ink">{t(value === 'mock' ? 'exam.mockMode' : 'exam.practiceMode')}</span>
+                      <span className="mt-1 block text-sm leading-5 text-muted">{t(`practice.${value}Hint`)}</span>
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          ) : null}
+
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <div className="relative w-full sm:min-w-52 sm:flex-1">
+              <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
+              <input type="search" aria-label={t('practice.search')} className="input pl-9" placeholder={t('practice.search')} value={query} onChange={(event) => setQuery(event.target.value)} />
+            </div>
+            {hasExamModes && stats.data ? (
+              <div role="group" aria-label={t('practice.filterStatus')} className="flex flex-wrap gap-2">
+                {FILTERS.map((value) => (
+                  <button key={value} type="button" aria-pressed={filter === value} onClick={() => setFilter(value)}
+                    className={cn('btn-secondary text-xs', filter === value && 'border-ink bg-ink text-paper hover:bg-ink-soft dark:hover:bg-ink-soft')}>
+                    {t(`practice.filter${value.charAt(0).toUpperCase()}${value.slice(1)}`)}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
+          {hasExamModes && stats.isError && !stats.data ? (
+            <p role="status" className="mb-4 text-sm text-muted">{t('errors.progress')}</p>
+          ) : null}
+
+          {visibleTests.length === 0 ? (
+            <div className="card p-8 text-center">
+              <p role="status" className="text-sm text-muted">{t('practice.noMatch')}</p>
+              <button className="btn-secondary mt-4" type="button" onClick={() => { setQuery(''); setFilter('all'); }}>
+                {t('practice.clearFilters')}
               </button>
             </div>
-          ) : null
-        }
-      />
-
-      <div className="mb-5 flex flex-wrap items-center gap-2">
-        <div className="relative min-w-[220px] flex-1">
-          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-          <input
-            className="input border-ink/30 pl-9"
-            placeholder={t('practice.search')}
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-          />
-        </div>
-        {(['all', 'new', 'done'] as Filter[]).map((value) => (
-          <button
-            key={value}
-            type="button"
-            onClick={() => setFilter(value)}
-            className={cn(
-              'min-h-11 border px-3 text-[11px] font-semibold transition',
-              filter === value
-                ? 'border-ink bg-ink text-paper'
-                : 'border-line bg-transparent text-slate-500 hover:border-ink hover:text-ink',
-            )}
-          >
-            {t(`practice.filter${value.charAt(0).toUpperCase()}${value.slice(1)}`)}
-          </button>
-        ))}
-      </div>
-
-      {visible.length === 0 ? (
-        <div className="border-y border-line py-12 text-center">
-          <p className="font-serif text-xl text-ink">{t('practice.noMatch')}</p>
-        </div>
-      ) : (
-        <div className="test-list">
-          {visible.map((test, index) => {
-            const best = bestByContent.get(`${current}:${test.id}`);
-            const done = bestByContent.has(`${current}:${test.id}`);
-            return (
-              <article key={test.id} className="test-entry">
-                <span className="font-serif text-[11px] text-brand-600">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <div className="min-w-0">
-                  <div className="mb-2 flex items-center gap-2">
-                    <Badge tone={TONE[current]}>
-                      {t(`home.skill${current.charAt(0).toUpperCase()}${current.slice(1)}`)}
-                    </Badge>
-                    {done ? (
-                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-sage">
-                        <CheckCircle2 className="h-3 w-3" />
-                        {t('practice.done')}
-                      </span>
-                    ) : (
-                      <span className="text-[10px] uppercase tracking-[0.12em] text-slate-400">
-                        {t('practice.new')}
-                      </span>
-                    )}
-                  </div>
-                  <h2 className="font-serif text-2xl font-semibold leading-tight text-ink">
-                    {test.title}
-                  </h2>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">{test.description}</p>
-                </div>
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] text-slate-500">
-                  <span>{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
-                  <span>{t('practice.questions', { count: test.questionCount })}</span>
-                  <span className={cn('font-serif text-xl', bandColor(best))}>
-                    {done && best != null ? `${t('practice.best')} ${best.toFixed(1)}` : '—'}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between gap-2">
-                  <button type="button" className="btn-primary text-xs" onClick={() => start(test)}>
-                    {done ? t('practice.retry') : t('practice.startTest')}
-                  </button>
-                  <Link to="/" aria-label={t('common.back')} className="text-ink">
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
-        </div>
+          ) : (
+            <ul className="space-y-3">
+              {visibleTests.map((test) => {
+                const best = progress.get(test.id);
+                const done = hasExamModes && progress.has(test.id);
+                return (
+                  <li key={test.id} className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+                    <div className="min-w-0">
+                      <h2 className="break-words font-serif text-[25px] font-semibold leading-tight text-ink">{test.title}</h2>
+                      {test.description ? <p className="mt-1.5 text-sm leading-6 text-muted">{test.description}</p> : null}
+                      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
+                        <span className="inline-flex items-center gap-1.5"><Clock3 aria-hidden="true" size={14} />{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
+                        <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t('practice.questions', { count: test.questionCount })}</span>
+                        {done ? <span className="inline-flex items-center gap-1.5 text-emerald-700"><Check aria-hidden="true" size={14} />{best != null ? `${t('practice.best')} ${best.toFixed(1)}` : t('practice.done')}</span> : null}
+                      </div>
+                    </div>
+                    <button type="button" className="btn-primary shrink-0 self-start sm:self-center" onClick={() => start(test)}>
+                      {done ? t('practice.retry') : t('practice.startTest')}
+                      <ArrowRight aria-hidden="true" size={16} />
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </>
       )}
     </div>
   );

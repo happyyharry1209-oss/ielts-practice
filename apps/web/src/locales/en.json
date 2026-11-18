@@ -96,10 +96,10 @@
   },
   "home": {
     "greeting": "Hi, {{name}}",
-    "subtitle": "Start with the skill you want to strengthen today. Short practice, full mock tests and wrong-answer retries all become part of one personal study record.",
+    "subtitle": "Choose a skill to practise or revisit questions you missed.",
     "startPractice": "Start practising",
     "bestBand": "Best band",
-    "attempts": "Attempts",
+    "attempts": "Total tests",
     "writingFeedback": "Writing feedback",
     "noData": "No attempts yet",
     "recent": "Recent activity",
@@ -108,16 +108,16 @@
     "skillListening": "Listening",
     "skillWriting": "Writing",
     "skillSpeaking": "Speaking",
-    "readingDesc": "3 passages, 40 questions, 60 minutes.",
+    "readingDesc": "Single passages and full mock tests.",
     "listeningDesc": "4 sections, 40 questions, about 30 minutes.",
-    "writingDesc": "Task 1 and Task 2 with AI feedback.",
+    "writingDesc": "Practise Task 1 and Task 2 and get writing feedback.",
     "speakingDesc": "Part 1–3 prompts with recording and playback.",
     "practiceNow": "Practise now",
     "adminPanel": "Admin panel",
     "memberSince": "Member since {{date}}",
     "heroLabel": "Today's practice",
-    "weekAttempts": "Practices this week",
-    "activeDays": "Active days (30)",
+    "weekAttempts": "Tests in the last 7 days",
+    "activeDays": "Active days in the last 30",
     "bestBandHint": "Across reading and listening",
     "headlineLead": "Make every practice leave a trail of",
     "headlineAccent": "visible",
@@ -128,14 +128,16 @@
     "recentHint": "Latest first",
     "noteLabel": "A note for today",
     "note": "Consistency matters more than one perfect score. Completing one small section today still moves you forward.",
-    "noteSignature": "A small practice, every day."
+    "noteSignature": "A small practice, every day.",
+    "progress": "Your progress",
+    "noDataHint": "Completed reading and listening tests will appear here."
   },
   "practice": {
     "title": "Choose a test",
     "chooseTest": "Available tests",
     "minutes": "{{count}} min",
     "questions": "{{count}} questions",
-    "startTest": "Start",
+    "startTest": "Start test",
     "empty": "No tests for this paper yet.",
     "readingVariant": "Academic",
     "general": "General Training",
@@ -148,7 +150,12 @@
     "done": "Done",
     "new": "New",
     "retry": "Practise again",
-    "noMatch": "No tests match your search."
+    "noMatch": "No tests match your filters.",
+    "mode": "Choose a mode",
+    "mockHint": "Work against the exam timer.",
+    "practiceHint": "Work at your own pace without a time limit.",
+    "filterStatus": "Filter by completion",
+    "clearFilters": "Clear filters"
   },
   "exam": {
     "timeLeft": "Time left",
@@ -330,6 +337,8 @@
     "network": "Cannot reach the server. Is the API running?",
     "unauthorized": "Please log in again.",
     "generic": "Something went wrong.",
-    "notFound": "Page not found."
+    "notFound": "Page not found.",
+    "progress": "Could not load your progress.",
+    "tests": "Could not load the tests."
   }
 }

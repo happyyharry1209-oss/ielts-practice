@@ -1,64 +1,46 @@
-import { Check } from 'lucide-react';
-import type { ReactNode } from 'react';
+import { BookOpen, Moon, Sun } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { setLanguage } from '../lib/i18n';
+import { toggleTheme } from '../lib/theme';
 
-export function AuthShell({
-  title,
-  subtitle,
-  children,
-}: {
+export function AuthShell({ title, subtitle, children }: {
   title: string;
   subtitle?: string;
   children: ReactNode;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
 
   return (
-    <div className="grid min-h-screen bg-paper lg:grid-cols-[1.05fr_0.95fr]">
-      <aside className="hidden flex-col justify-between bg-ink p-10 text-paper lg:flex xl:p-14">
-        <Link to="/" className="flex items-center gap-3">
-          <span className="grid h-10 w-9 rotate-[-2deg] place-items-center border-[1.5px] border-paper/70 font-serif text-xl">
-            IJ
-          </span>
-          <span>
-            <span className="block font-serif text-xl font-semibold">{t('common.appName')}</span>
-            <span className="mt-1 block text-[8px] uppercase tracking-[0.18em] text-paper/45">
-              {t('common.journal')}
-            </span>
-          </span>
-        </Link>
-
-        <div className="max-w-xl">
-          <h1 className="font-serif text-[52px] font-medium leading-[1.06] tracking-[-0.035em]">
-            {t('common.tagline')}
-          </h1>
-          <div className="mt-9 space-y-3 border-t border-paper/15 pt-6 text-sm text-paper/70">
-            {[t('auth.benefitOne'), t('auth.benefitTwo'), t('auth.benefitThree')].map((item) => (
-              <p key={item} className="flex items-center gap-3">
-                <Check className="h-3.5 w-3.5 text-brand-300" strokeWidth={1.8} />
-                {item}
-              </p>
-            ))}
+    <div className="flex min-h-screen flex-col bg-paper">
+      <header className="border-b border-line">
+        <div className="mx-auto flex h-16 max-w-shell items-center justify-between gap-3 px-4 sm:px-6">
+          <Link to="/" className="flex items-center gap-3 font-serif text-lg font-semibold text-ink">
+            <span className="brand-mark"><BookOpen aria-hidden="true" size={19} /></span>
+            {t('common.appName')}
+          </Link>
+          <div className="flex items-center gap-1">
+            <button type="button" className="btn-ghost px-3" aria-label={t(dark ? 'nav.lightMode' : 'nav.darkMode')} onClick={() => setDark(toggleTheme() === 'dark')}>
+              {dark ? <Sun aria-hidden="true" size={17} /> : <Moon aria-hidden="true" size={17} />}
+            </button>
+            <button type="button" className="btn-ghost px-3 text-xs" title={t('nav.language')} onClick={() => setLanguage(i18n.language === 'en' ? 'zh-TW' : 'en')}>
+              {i18n.language === 'en' ? '中文' : 'EN'}
+            </button>
           </div>
         </div>
-
-        <p className="max-w-md font-serif text-[11px] leading-5 text-paper/40">{t('common.legal')}</p>
-      </aside>
-
-      <main className="flex min-h-screen items-center justify-center px-5 py-12 sm:px-8">
-        <div className="w-full max-w-sm">
-          <Link to="/" className="mb-10 inline-flex items-center gap-3 lg:hidden">
-            <span className="grid h-10 w-9 rotate-[-2deg] place-items-center border-[1.5px] border-ink font-serif text-xl text-ink">
-              IJ
-            </span>
-            <span className="font-serif text-xl font-semibold text-ink">{t('common.appName')}</span>
-          </Link>
-          <h2 className="font-serif text-4xl font-medium tracking-[-0.03em] text-ink">{title}</h2>
-          {subtitle ? <p className="mt-2 text-sm leading-6 text-slate-500">{subtitle}</p> : null}
-          <div className="mt-7">{children}</div>
-        </div>
+      </header>
+      <main className="grid flex-1 place-items-center px-4 py-10 sm:px-6">
+        <section className="card w-full max-w-md p-6 sm:p-9">
+          <h1 className="page-title sm:text-4xl">{title}</h1>
+          {subtitle ? <p className="mt-2 text-sm leading-6 text-muted">{subtitle}</p> : null}
+          <div className="mt-6">{children}</div>
+        </section>
       </main>
+      <footer className="mx-auto max-w-shell px-4 pb-5 text-center text-xs leading-5 text-muted sm:px-6">
+        {t('common.legal')}
+      </footer>
     </div>
   );
 }

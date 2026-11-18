@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams, useSearchParams } from 'react-router-dom';
@@ -38,6 +38,7 @@ function countWords(text: string): number {
 
 export default function WritingExam() {
   const { t } = useTranslation();
+  const queryClient = useQueryClient();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
   const mode = params.get('mode') === 'mock' ? 'mock' : 'practice';
@@ -102,6 +103,7 @@ export default function WritingExam() {
         method: 'POST',
         json: { contentId: test.id, taskId: task.id, text: draft },
       });
+      void queryClient.invalidateQueries({ queryKey: ['stats'] });
       setFeedback(response.feedback);
     } catch (err) {
       setError(errorMessage(err));

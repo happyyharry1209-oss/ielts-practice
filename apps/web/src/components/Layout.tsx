@@ -1,12 +1,14 @@
-import { Menu, Moon, Sun, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { BookOpen, Menu, Moon, Sun, X } from 'lucide-react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { setLanguage } from '../lib/i18n';
 import { toggleTheme } from '../lib/theme';
+import { SKILLS, skillLabel } from '../lib/skills';
 import { cn } from '../lib/utils';
+import { Spinner } from './ui';
 
 function navClass({ isActive }: { isActive: boolean }): string {
   return cn('desktop-nav-link', isActive && 'active');
@@ -27,17 +29,22 @@ export function Layout() {
   const language = i18n.language === 'zh-TW' ? 'zh-TW' : 'en';
   const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
   const [resending, setResending] = useState(false);
   const [debugToken, setDebugToken] = useState<string | null>(null);
 
   useEffect(() => {
     setMenuOpen(false);
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   useEffect(() => {
     if (!menuOpen) return;
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setMenuOpen(false);
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
@@ -64,36 +71,24 @@ export function Layout() {
   };
 
   const navItems = [
-    { to: '/', label: t('nav.home'), end: true },
-    { to: '/practice/reading', label: t('home.skillReading') },
-    { to: '/practice/listening', label: t('home.skillListening') },
-    { to: '/practice/writing', label: t('home.skillWriting') },
-    { to: '/practice/speaking', label: t('home.skillSpeaking') },
+    { to: '/', label: t('nav.home') },
+    ...SKILLS.map(({ key }) => ({ to: `/practice/${key}`, label: t(skillLabel(key)) })),
     { to: '/review', label: t('nav.review') },
     ...(isAdmin ? [{ to: '/admin', label: t('nav.admin') }] : []),
   ];
 
   return (
-    <div className="app-page min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur-md">
-        <div className="mx-auto flex h-[72px] max-w-shell items-center gap-8 px-4">
+        <div className="mx-auto flex h-16 max-w-shell items-center gap-3 px-4 sm:px-6 lg:gap-6">
           <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={t('common.appName')}>
-            <span className="grid h-9 w-8 rotate-[-2deg] place-items-center border-[1.5px] border-ink font-serif text-lg font-semibold text-ink">
-              IJ
-            </span>
-            <span className="min-w-0">
-              <span className="block whitespace-nowrap font-serif text-lg font-semibold leading-none text-ink">
-                {t('common.appName')}
-              </span>
-              <span className="mt-1 hidden text-[8px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:block">
-                {t('common.journal')}
-              </span>
-            </span>
+            <span className="brand-mark"><BookOpen aria-hidden="true" size={19} /></span>
+            <span className="whitespace-nowrap font-serif text-lg font-semibold text-ink">{t('common.appName')}</span>
           </Link>
 
-          <nav className="hidden flex-1 items-center gap-7 lg:flex" aria-label={t('nav.primary')}>
+          <nav className="hidden flex-1 items-center gap-4 lg:flex xl:gap-6" aria-label={t('nav.primary')}>
             {navItems.map((item) => (
-              <NavLink key={item.to} to={item.to} end={item.end} className={navClass}>
+              <NavLink key={item.to} to={item.to} end={item.to === '/'} className={navClass}>
                 {item.label}
               </NavLink>
             ))}
@@ -119,20 +114,15 @@ export function Layout() {
             </button>
             {user ? (
               <>
-                <Link
-                  to="/account"
-                  title={t('account.title')}
-                  className="hidden max-w-[120px] truncate text-xs text-slate-600 transition hover:text-brand-600 sm:inline"
+                <Link to="/account" title={t('account.title')} aria-label={t('account.title')}
+                  className="hidden h-10 w-10 place-items-center rounded-full border border-line bg-surface font-serif text-sm font-semibold text-ink transition hover:border-ink lg:grid"
                 >
-                  {user.displayName || user.email}
-                </Link>
-                <span className="hidden h-8 w-8 place-items-center rounded-full bg-ink font-serif text-xs text-paper sm:grid">
                   {(user.displayName || user.email).charAt(0).toUpperCase()}
-                </span>
+                </Link>
                 <button
                   type="button"
                   onClick={handleLogout}
-                  className="hidden min-h-11 px-2 text-xs text-slate-500 transition hover:text-ink md:block"
+                  className="hidden min-h-11 px-2 text-xs text-slate-500 transition hover:text-ink lg:block"
                 >
                   {t('nav.logout')}
                 </button>
@@ -146,6 +136,7 @@ export function Layout() {
               type="button"
               className="grid h-11 w-11 place-items-center text-ink lg:hidden"
               onClick={() => setMenuOpen((value) => !value)}
+              ref={menuButton}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
               aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
@@ -159,20 +150,21 @@ export function Layout() {
           <nav
             id="mobile-navigation"
             aria-label={t('nav.mobile')}
-            className="border-t border-line bg-paper px-4 py-3 lg:hidden"
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper px-4 py-3 lg:hidden"
           >
             <div className="mx-auto max-w-shell">
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}
                   to={item.to}
-                  end={item.end}
+                  end={item.to === '/'}
                   className={mobileNavClass}
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </NavLink>
               ))}
+              {user ? <NavLink to="/account" className={mobileNavClass} onClick={() => setMenuOpen(false)}>{t('account.title')}</NavLink> : null}
               {user ? (
                 <button
                   type="button"
@@ -211,12 +203,14 @@ export function Layout() {
         </div>
       ) : null}
 
-      <main className="mx-auto max-w-shell px-4 py-8 sm:py-11">
-        <Outlet />
+      <main className="mx-auto w-full max-w-shell flex-1 px-4 py-7 sm:px-6 sm:py-10">
+        <Suspense fallback={<Spinner label={t('common.loading')} />}>
+          <Outlet />
+        </Suspense>
       </main>
 
       <footer className="mt-14 border-t border-line py-6">
-        <div className="mx-auto max-w-shell px-4 font-serif text-[11px] leading-5 text-slate-500">
+        <div className="mx-auto max-w-shell px-4 text-xs leading-5 text-muted sm:px-6">
           <p>{t('common.legal')}</p>
         </div>
       </footer>

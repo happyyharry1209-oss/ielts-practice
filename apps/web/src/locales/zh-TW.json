@@ -96,10 +96,10 @@
   },
   "home": {
     "greeting": "你好，{{name}}",
-    "subtitle": "從今天最想加強的一科開始。短題練習、完整模擬考與錯題重練，都會整理成一份屬於你的學習記錄。",
+    "subtitle": "選一科開始練習，或到錯題本重做答錯的題目。",
     "startPractice": "開始練習",
     "bestBand": "最佳分數",
-    "attempts": "練習次數",
+    "attempts": "累計完成",
     "writingFeedback": "寫作回饋",
     "noData": "尚無練習紀錄",
     "recent": "最近活動",
@@ -108,17 +108,17 @@
     "skillListening": "聽力",
     "skillWriting": "寫作",
     "skillSpeaking": "口說",
-    "readingDesc": "3 篇文章、40 題、60 分鐘。",
-    "listeningDesc": "4 個 section、40 題、約 30 分鐘。",
-    "writingDesc": "Task 1 與 Task 2，附 AI 回饋。",
+    "readingDesc": "單篇閱讀練習與完整模擬試卷。",
+    "listeningDesc": "4 個部分、40 題、約 30 分鐘。",
+    "writingDesc": "練習 Task 1 和 Task 2，取得寫作回饋。",
     "speakingDesc": "Part 1–3 題目，可錄音回放。",
     "practiceNow": "立即練習",
     "adminPanel": "管理後台",
     "memberSince": "註冊於 {{date}}",
     "heroLabel": "開始今天的練習",
-    "weekAttempts": "本週練習",
-    "activeDays": "近 30 天有練習",
-    "bestBandHint": "閱讀、聽力與寫作最佳",
+    "weekAttempts": "近 7 天完成",
+    "activeDays": "近 30 天練習天數",
+    "bestBandHint": "閱讀與聽力的最高分",
     "headlineLead": "讓每一次練習，都留下",
     "headlineAccent": "看得見",
     "headlineTail": "的軌跡。",
@@ -128,14 +128,16 @@
     "recentHint": "最新紀錄",
     "noteLabel": "寫給今天的你",
     "note": "穩定比一次高分更重要。今天完成一個小段落，也算往前。",
-    "noteSignature": "每天一點，持續累積。"
+    "noteSignature": "每天一點，持續累積。",
+    "progress": "我的進度",
+    "noDataHint": "完成閱讀或聽力試卷後，紀錄會顯示在這裏。"
   },
   "practice": {
     "title": "選擇試卷",
     "chooseTest": "可用試卷",
     "minutes": "{{count}} 分鐘",
     "questions": "{{count}} 題",
-    "startTest": "開始",
+    "startTest": "開始作答",
     "empty": "這一項還沒有試卷。",
     "readingVariant": "學術組",
     "general": "一般訓練組",
@@ -148,7 +150,12 @@
     "done": "已完成",
     "new": "未做",
     "retry": "再練一次",
-    "noMatch": "沒有符合條件的試卷。"
+    "noMatch": "沒有符合目前篩選條件的試卷。",
+    "mode": "選擇練習模式",
+    "mockHint": "在考試限時內完成試卷。",
+    "practiceHint": "不限時，按自己的節奏答題。",
+    "filterStatus": "按完成狀態篩選",
+    "clearFilters": "清除篩選"
   },
   "exam": {
     "timeLeft": "剩餘時間",
@@ -330,6 +337,8 @@
     "network": "連不到伺服器。API 有在跑嗎？",
     "unauthorized": "請重新登入。",
     "generic": "發生了錯誤。",
-    "notFound": "找不到頁面。"
+    "notFound": "找不到頁面。",
+    "progress": "暫時無法載入你的進度。",
+    "tests": "暫時無法載入試卷。"
   }
 }
