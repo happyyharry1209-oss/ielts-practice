@@ -1,0 +1,47 @@
+{
+  "id": "speaking-004",
+  "skill": "speaking",
+  "title": "Speaking — Local shops",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on local shops.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Local shops",
+      "questions": [
+        "What kind of shops do you visit most often?",
+        "Do you prefer shopping near home?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a small shop you would miss if it closed.",
+      "points": [
+        "where the shop is",
+        "what it sells",
+        "when you first went there"
+      ],
+      "closing": "and explain what makes it valuable to the area."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Local shops",
+      "questions": [
+        "How can independent shops compete with large retailers?",
+        "Why do some neighbourhoods lose shops even when their population grows?",
+        "How has everyday life connected with local shops changed for people of different ages?"
+      ]
+    }
+  ]
+}

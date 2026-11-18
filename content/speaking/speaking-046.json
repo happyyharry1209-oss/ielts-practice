@@ -1,0 +1,47 @@
+{
+  "id": "speaking-046",
+  "skill": "speaking",
+  "title": "Speaking — Making things",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on making things.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Making things",
+      "questions": [
+        "Do you prefer to make something yourself or buy it?",
+        "What materials do you enjoy working with?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an item you made that someone else used.",
+      "points": [
+        "what you made",
+        "how you put it together",
+        "who used it"
+      ],
+      "closing": "and explain what you learned from seeing another person use it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Making things",
+      "questions": [
+        "Why do some handmade objects keep their value over time?",
+        "What could schools do to make practical making accessible in crowded classrooms?",
+        "How has everyday life connected with making things changed for people of different ages?"
+      ]
+    }
+  ]
+}

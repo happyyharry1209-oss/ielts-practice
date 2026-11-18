@@ -1,0 +1,47 @@
+{
+  "id": "speaking-014",
+  "skill": "speaking",
+  "title": "Speaking — Borrowing things",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on borrowing things.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Borrowing things",
+      "questions": [
+        "What sort of things do you borrow most often?",
+        "Do you usually lend things to people you know?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe something useful you borrowed instead of buying.",
+      "points": [
+        "what you borrowed",
+        "who lent it to you",
+        "how you used it"
+      ],
+      "closing": "and explain why borrowing was a good choice in that situation."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Borrowing things",
+      "questions": [
+        "Which objects are best suited to neighbourhood lending schemes?",
+        "How could a borrowing service encourage users to return things on time?",
+        "How has everyday life connected with borrowing things changed for people of different ages?"
+      ]
+    }
+  ]
+}

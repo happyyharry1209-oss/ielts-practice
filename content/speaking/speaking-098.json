@@ -1,0 +1,47 @@
+{
+  "id": "speaking-098",
+  "skill": "speaking",
+  "title": "Speaking — Getting out of the city",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on getting out of the city.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Getting out of the city",
+      "questions": [
+        "How often do you leave built-up areas for leisure?",
+        "What do you miss when you are away from a city for a long time?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a visit outside the city that gave you a new perspective.",
+      "points": [
+        "where you went",
+        "what was different there",
+        "what you noticed about daily life"
+      ],
+      "closing": "and explain how the visit changed your way of thinking."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Getting out of the city",
+      "questions": [
+        "What connections benefit both cities and nearby rural areas?",
+        "How can rural communities welcome visitors while protecting their way of life?",
+        "How has everyday life connected with getting out of the city changed for people of different ages?"
+      ]
+    }
+  ]
+}

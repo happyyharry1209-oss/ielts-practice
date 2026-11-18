@@ -1,0 +1,47 @@
+{
+  "id": "speaking-009",
+  "skill": "speaking",
+  "title": "Speaking — Staying in touch",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on staying in touch.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Meals",
+      "questions": [
+        "What is a typical breakfast for you?",
+        "When do you usually eat your main meal?",
+        "Which meal of the day do you most look forward to?",
+        "Do you enjoy eating with several other people?"
+      ]
+    },
+    {
+      "topic": "Staying in touch",
+      "questions": [
+        "How do you normally arrange to meet friends?",
+        "Do you prefer brief messages or long calls?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a conversation that helped you understand a friend better.",
+      "points": [
+        "who you spoke to",
+        "what you discussed",
+        "what surprised you"
+      ],
+      "closing": "and explain why you remembered the conversation."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Staying in touch",
+      "questions": [
+        "What are the advantages of talking face to face about difficult issues?",
+        "Does frequent online contact make long-distance friendships easier to maintain?",
+        "What differences would you expect between a large city and a small town in relation to staying in touch?"
+      ]
+    }
+  ]
+}

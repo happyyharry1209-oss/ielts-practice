@@ -1,0 +1,47 @@
+{
+  "id": "speaking-097",
+  "skill": "speaking",
+  "title": "Speaking — Everyday comfort",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on everyday comfort.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Everyday comfort",
+      "questions": [
+        "What conditions make a place comfortable for you?",
+        "Do you find it easy to work in shared spaces?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a place that paid particular attention to visitors' comfort.",
+      "points": [
+        "where it was",
+        "what comfortable features you noticed",
+        "how visitors used them"
+      ],
+      "closing": "and explain why you considered the design successful."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Everyday comfort",
+      "questions": [
+        "How do age and ability influence what makes a public place comfortable?",
+        "What inexpensive changes can make public buildings more welcoming?",
+        "What differences would you expect between a large city and a small town in relation to everyday comfort?"
+      ]
+    }
+  ]
+}

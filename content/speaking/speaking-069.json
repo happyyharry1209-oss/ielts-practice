@@ -1,0 +1,47 @@
+{
+  "id": "speaking-069",
+  "skill": "speaking",
+  "title": "Speaking — Using free time",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on using free time.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Meals",
+      "questions": [
+        "What is a typical breakfast for you?",
+        "When do you usually eat your main meal?",
+        "Which meal of the day do you most look forward to?",
+        "Do you enjoy eating with several other people?"
+      ]
+    },
+    {
+      "topic": "Using free time",
+      "questions": [
+        "How do you usually spend a free hour?",
+        "Do you prefer having plans or deciding at the last minute?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time you used unexpected free time especially well.",
+      "points": [
+        "why the time became available",
+        "what you chose to do",
+        "how you felt afterward"
+      ],
+      "closing": "and explain why you would make a similar choice in the future."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Using free time",
+      "questions": [
+        "What determines how much control people have over their leisure time?",
+        "Can leisure activities lose their appeal if people try to make them too productive?",
+        "What differences would you expect between a large city and a small town in relation to using free time?"
+      ]
+    }
+  ]
+}

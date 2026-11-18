@@ -1,0 +1,47 @@
+{
+  "id": "speaking-035",
+  "skill": "speaking",
+  "title": "Speaking — Meeting new people",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on meeting new people.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Meeting new people",
+      "questions": [
+        "In what settings do you often meet new people?",
+        "What helps you start a conversation with a stranger?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an unexpected conversation with someone you had just met.",
+      "points": [
+        "where you met",
+        "what you talked about",
+        "how the conversation started"
+      ],
+      "closing": "and explain what made it stand out."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Meeting new people",
+      "questions": [
+        "Why do some public spaces encourage conversations between strangers?",
+        "How can universities help students meet people outside their own course?",
+        "What differences would you expect between a large city and a small town in relation to meeting new people?"
+      ]
+    }
+  ]
+}

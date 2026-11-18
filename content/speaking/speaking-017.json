@@ -1,0 +1,47 @@
+{
+  "id": "speaking-017",
+  "skill": "speaking",
+  "title": "Speaking — Watching films",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on watching films.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Weekends",
+      "questions": [
+        "What do you usually do on a Saturday morning?",
+        "Do you prefer busy or quiet weekends?",
+        "Who do you typically see at weekends?",
+        "What will you probably do next weekend?"
+      ]
+    },
+    {
+      "topic": "Watching films",
+      "questions": [
+        "Where do you normally watch films?",
+        "Do you often talk about a film after seeing it?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a film scene that stayed with you.",
+      "points": [
+        "what happened in the scene",
+        "who was in it",
+        "how you reacted when you saw it"
+      ],
+      "closing": "and explain why you think it was effective."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Watching films",
+      "questions": [
+        "What do cinemas offer that watching at home cannot easily reproduce?",
+        "How can films influence attitudes about unfamiliar places?",
+        "What differences would you expect between a large city and a small town in relation to watching films?"
+      ]
+    }
+  ]
+}

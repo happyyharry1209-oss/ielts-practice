@@ -1,0 +1,47 @@
+{
+  "id": "speaking-051",
+  "skill": "speaking",
+  "title": "Speaking — Managing distractions",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on managing distractions.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Managing distractions",
+      "questions": [
+        "What tends to distract you while you work or study?",
+        "Have you found a good place to concentrate?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a change that helped you concentrate on one task.",
+      "points": [
+        "what you were trying to do",
+        "what had been distracting you",
+        "what you changed"
+      ],
+      "closing": "and explain whether the change helped on other occasions too."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Managing distractions",
+      "questions": [
+        "How can shared offices balance collaboration and quiet work?",
+        "What role do technology companies have in helping users manage distractions?",
+        "What differences would you expect between a large city and a small town in relation to managing distractions?"
+      ]
+    }
+  ]
+}

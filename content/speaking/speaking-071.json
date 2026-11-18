@@ -1,0 +1,47 @@
+{
+  "id": "speaking-071",
+  "skill": "speaking",
+  "title": "Speaking — Choosing a seat",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on choosing a seat.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Choosing a seat",
+      "questions": [
+        "Where do you normally sit on a bus or train?",
+        "Do you have a favourite place to sit while studying?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a public place where the seating made people feel welcome.",
+      "points": [
+        "where the place was",
+        "how seating was arranged",
+        "who was using it"
+      ],
+      "closing": "and explain why the arrangement stood out to you."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Choosing a seat",
+      "questions": [
+        "How can seating design help older people use public places?",
+        "What challenges arise when private businesses manage public gathering spaces?",
+        "What differences would you expect between a large city and a small town in relation to choosing a seat?"
+      ]
+    }
+  ]
+}

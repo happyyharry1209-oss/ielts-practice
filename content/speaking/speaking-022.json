@@ -1,0 +1,47 @@
+{
+  "id": "speaking-022",
+  "skill": "speaking",
+  "title": "Speaking — Rainy days",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on rainy days.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Rainy days",
+      "questions": [
+        "Does it rain often where you live?",
+        "What do you enjoy doing when you cannot go out?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an occasion when bad weather led to an enjoyable alternative plan.",
+      "points": [
+        "what had been planned",
+        "what the weather was like",
+        "what you did instead"
+      ],
+      "closing": "and explain why the alternative turned out well."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Rainy days",
+      "questions": [
+        "What infrastructure matters most to cities with frequent heavy rain?",
+        "How does unreliable weather influence businesses that depend on visitors?",
+        "How has everyday life connected with rainy days changed for people of different ages?"
+      ]
+    }
+  ]
+}

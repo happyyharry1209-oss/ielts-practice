@@ -1,0 +1,47 @@
+{
+  "id": "speaking-072",
+  "skill": "speaking",
+  "title": "Speaking — Seasonal habits",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on seasonal habits.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Seasonal habits",
+      "questions": [
+        "Which season changes your routine the most?",
+        "Do you buy different kinds of food in different seasons?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an activity you look forward to at a particular time of year.",
+      "points": [
+        "what the activity is",
+        "when you do it",
+        "who usually joins you"
+      ],
+      "closing": "and explain why the season suits it so well."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Seasonal habits",
+      "questions": [
+        "How do seasonal changes affect different kinds of work?",
+        "Should communities create indoor alternatives for events that depend heavily on the weather?",
+        "How has everyday life connected with seasonal habits changed for people of different ages?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-048",
+  "skill": "speaking",
+  "title": "Speaking — Changes in the neighbourhood",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on changes in the neighbourhood.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Changes in the neighbourhood",
+      "questions": [
+        "How long have you known the area where you live?",
+        "Which places in your area have changed most recently?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a change near your home that you welcomed.",
+      "points": [
+        "what changed",
+        "how you first noticed it",
+        "which people benefited"
+      ],
+      "closing": "and explain why you personally welcomed the change."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Changes in the neighbourhood",
+      "questions": [
+        "How should residents be consulted about building projects?",
+        "Why can improvements to a neighbourhood also create difficulties for some residents?",
+        "How has everyday life connected with changes in the neighbourhood changed for people of different ages?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-041",
+  "skill": "speaking",
+  "title": "Speaking — Teachers and mentors",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on teachers and mentors.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Weekends",
+      "questions": [
+        "What do you usually do on a Saturday morning?",
+        "Do you prefer busy or quiet weekends?",
+        "Who do you typically see at weekends?",
+        "What will you probably do next weekend?"
+      ]
+    },
+    {
+      "topic": "Teachers and mentors",
+      "questions": [
+        "Do you remember a teacher whose lessons you enjoyed?",
+        "Do you ask someone to check your work when you are learning?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a person whose feedback helped you improve.",
+      "points": [
+        "who the person was",
+        "what you were working on",
+        "what the person suggested"
+      ],
+      "closing": "and explain how your performance changed afterward."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Teachers and mentors",
+      "questions": [
+        "What makes feedback easier for students to act on?",
+        "How can workplaces train people to give useful feedback?",
+        "What differences would you expect between a large city and a small town in relation to teachers and mentors?"
+      ]
+    }
+  ]
+}

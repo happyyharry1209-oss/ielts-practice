@@ -1,0 +1,47 @@
+{
+  "id": "speaking-088",
+  "skill": "speaking",
+  "title": "Speaking — Improving a service",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on improving a service.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Improving a service",
+      "questions": [
+        "What good service have you experienced recently?",
+        "Do you usually tell a business what it could improve?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a service that was improved after people gave feedback.",
+      "points": [
+        "what the service was",
+        "what customers had found difficult",
+        "what changed"
+      ],
+      "closing": "and explain why you think the change helped."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Improving a service",
+      "questions": [
+        "How can organisations hear from users who rarely make complaints?",
+        "When should organisations act on individual feedback and when should they wait for more evidence?",
+        "How has everyday life connected with improving a service changed for people of different ages?"
+      ]
+    }
+  ]
+}

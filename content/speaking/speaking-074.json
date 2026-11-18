@@ -1,0 +1,47 @@
+{
+  "id": "speaking-074",
+  "skill": "speaking",
+  "title": "Speaking — Objects with memories",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on objects with memories.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Objects with memories",
+      "questions": [
+        "Do you keep souvenirs from special occasions?",
+        "Where do you keep things that remind you of people?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an ordinary object that has a special meaning to you.",
+      "points": [
+        "what it is",
+        "how you came to have it",
+        "what memory it brings back"
+      ],
+      "closing": "and explain why you decided to keep it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Objects with memories",
+      "questions": [
+        "Can digital records carry the same significance as physical possessions?",
+        "Which possessions can tell historians the most about daily life?",
+        "How has everyday life connected with objects with memories changed for people of different ages?"
+      ]
+    }
+  ]
+}

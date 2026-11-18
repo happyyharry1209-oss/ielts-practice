@@ -1,0 +1,47 @@
+{
+  "id": "speaking-075",
+  "skill": "speaking",
+  "title": "Speaking — Public notices",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on public notices.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Public notices",
+      "questions": [
+        "Which notices do you pay attention to when you go out?",
+        "Do messages on public transport usually catch your eye?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a public notice that led you to discover something useful.",
+      "points": [
+        "where you saw it",
+        "what it told you",
+        "what you did with the information"
+      ],
+      "closing": "and explain why the notice was effective."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Public notices",
+      "questions": [
+        "What are the characteristics of a public notice that people will actually read?",
+        "What are the advantages of using several languages on public signs?",
+        "What differences would you expect between a large city and a small town in relation to public notices?"
+      ]
+    }
+  ]
+}

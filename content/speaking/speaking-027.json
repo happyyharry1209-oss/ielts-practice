@@ -1,0 +1,47 @@
+{
+  "id": "speaking-027",
+  "skill": "speaking",
+  "title": "Speaking — Small purchases",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on small purchases.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Small purchases",
+      "questions": [
+        "What sort of inexpensive things do you buy regularly?",
+        "Do you compare prices for everyday items?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a small purchase that turned out to be unusually useful.",
+      "points": [
+        "what you bought",
+        "why you first bought it",
+        "how you use it now"
+      ],
+      "closing": "and explain what makes it good value."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Small purchases",
+      "questions": [
+        "Why do people sometimes value inexpensive possessions more than costly ones?",
+        "How can packaging affect people's expectations of a product?",
+        "What differences would you expect between a large city and a small town in relation to small purchases?"
+      ]
+    }
+  ]
+}

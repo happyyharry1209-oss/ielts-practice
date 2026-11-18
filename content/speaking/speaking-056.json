@@ -1,0 +1,47 @@
+{
+  "id": "speaking-056",
+  "skill": "speaking",
+  "title": "Speaking — Embarrassing mistakes",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on embarrassing mistakes.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Hobbies",
+      "questions": [
+        "What do you enjoy doing when you have an hour to yourself?",
+        "Are your hobbies different from when you were younger?",
+        "Do your relatives share any of your interests?",
+        "Is there a hobby you would like to learn from someone?"
+      ]
+    },
+    {
+      "topic": "Embarrassing mistakes",
+      "questions": [
+        "How do you usually react when you make a small mistake?",
+        "Do you tell other people when something goes wrong?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a mistake that became an amusing story later.",
+      "points": [
+        "what happened",
+        "who was there",
+        "how you dealt with it"
+      ],
+      "closing": "and explain why you were able to laugh about it afterward."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Embarrassing mistakes",
+      "questions": [
+        "Why do some workplaces treat errors as opportunities while others punish them?",
+        "When can humour help people recover from a mistake?",
+        "How has everyday life connected with embarrassing mistakes changed for people of different ages?"
+      ]
+    }
+  ]
+}

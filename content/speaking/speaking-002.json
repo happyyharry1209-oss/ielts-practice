@@ -1,0 +1,47 @@
+{
+  "id": "speaking-002",
+  "skill": "speaking",
+  "title": "Speaking — Morning routines",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on morning routines.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Morning routines",
+      "questions": [
+        "What is the first thing you usually do after waking up?",
+        "Do your weekends start differently?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a morning when you had to change your usual plans.",
+      "points": [
+        "what you had planned",
+        "what made you change your plans",
+        "what you did instead"
+      ],
+      "closing": "and explain how the change affected the rest of your day."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Morning routines",
+      "questions": [
+        "Why do some people prefer to work early in the morning?",
+        "Should schools and employers let people choose their starting times?",
+        "How has everyday life connected with morning routines changed for people of different ages?"
+      ]
+    }
+  ]
+}

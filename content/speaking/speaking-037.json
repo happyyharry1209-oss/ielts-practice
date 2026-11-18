@@ -1,0 +1,47 @@
+{
+  "id": "speaking-037",
+  "skill": "speaking",
+  "title": "Speaking — Reusing belongings",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on reusing belongings.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Reusing belongings",
+      "questions": [
+        "Which possessions do you try to keep for a long time?",
+        "Do you use anything someone else owned before you?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an object you found a new use for.",
+      "points": [
+        "what it originally was",
+        "why you kept it",
+        "what you use it for now"
+      ],
+      "closing": "and explain what made the new use practical."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Reusing belongings",
+      "questions": [
+        "What could councils do to make reuse easier than throwing things away?",
+        "When is buying a durable new product more practical than repairing an old one?",
+        "What differences would you expect between a large city and a small town in relation to reusing belongings?"
+      ]
+    }
+  ]
+}

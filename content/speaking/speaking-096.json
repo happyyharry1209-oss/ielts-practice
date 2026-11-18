@@ -1,0 +1,47 @@
+{
+  "id": "speaking-096",
+  "skill": "speaking",
+  "title": "Speaking — Handling interruptions",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on handling interruptions.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Handling interruptions",
+      "questions": [
+        "What usually interrupts your work or study?",
+        "Do you find it easy to return to a task after a break?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time when handling an interruption well helped you finish something.",
+      "points": [
+        "what you were doing",
+        "what interrupted you",
+        "how you returned to the task"
+      ],
+      "closing": "and explain what the experience taught you about concentration."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Handling interruptions",
+      "questions": [
+        "What can managers do to reduce unnecessary work interruptions?",
+        "When are interruptions valuable for a team?",
+        "How has everyday life connected with handling interruptions changed for people of different ages?"
+      ]
+    }
+  ]
+}

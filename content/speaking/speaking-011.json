@@ -1,0 +1,47 @@
+{
+  "id": "speaking-011",
+  "skill": "speaking",
+  "title": "Speaking — Keeping fit",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on keeping fit.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Keeping fit",
+      "questions": [
+        "Which activities help you stay active?",
+        "Does weather affect how much exercise you get?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a physical activity you tried for the first time.",
+      "points": [
+        "what you tried",
+        "where you tried it",
+        "what was difficult at first"
+      ],
+      "closing": "and explain whether you would encourage someone else to try it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Keeping fit",
+      "questions": [
+        "How can employers help people who spend much of the day sitting?",
+        "What stops some communities from using public sports facilities?",
+        "What differences would you expect between a large city and a small town in relation to keeping fit?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-040",
+  "skill": "speaking",
+  "title": "Speaking — Useful websites",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on useful websites.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Useful websites",
+      "questions": [
+        "What information do you often look for online?",
+        "Do you have a favourite website for learning something?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an online resource that saved you time on a task.",
+      "points": [
+        "what you needed to do",
+        "how you found the resource",
+        "what it made easier"
+      ],
+      "closing": "and explain why you would use it again."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Useful websites",
+      "questions": [
+        "What makes instructions on public service websites useful to everyone?",
+        "How should people decide whether to pay for an online learning tool?",
+        "How has everyday life connected with useful websites changed for people of different ages?"
+      ]
+    }
+  ]
+}

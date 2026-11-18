@@ -1,0 +1,47 @@
+{
+  "id": "speaking-007",
+  "skill": "speaking",
+  "title": "Speaking — Taking photographs",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on taking photographs.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Daily routines",
+      "questions": [
+        "What do you usually do before leaving home?",
+        "At what time of day do you feel most alert?",
+        "Which part of your routine would you like to change?",
+        "Does your routine change during holidays?"
+      ]
+    },
+    {
+      "topic": "Taking photographs",
+      "questions": [
+        "When do you usually take photographs?",
+        "How do you decide which photographs to keep?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a photograph that tells a story about a place.",
+      "points": [
+        "where it was taken",
+        "what can be seen in it",
+        "what was happening at the time"
+      ],
+      "closing": "and explain what a stranger might learn from the photograph."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Taking photographs",
+      "questions": [
+        "Do photographs influence which destinations people visit?",
+        "How does frequent photo-taking affect the way people remember events?",
+        "What differences would you expect between a large city and a small town in relation to taking photographs?"
+      ]
+    }
+  ]
+}

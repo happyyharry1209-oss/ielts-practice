@@ -1,0 +1,47 @@
+{
+  "id": "speaking-089",
+  "skill": "speaking",
+  "title": "Speaking — Finding affordable activities",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on finding affordable activities.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Weekends",
+      "questions": [
+        "What do you usually do on a Saturday morning?",
+        "Do you prefer busy or quiet weekends?",
+        "Who do you typically see at weekends?",
+        "What will you probably do next weekend?"
+      ]
+    },
+    {
+      "topic": "Finding affordable activities",
+      "questions": [
+        "What things do you do for enjoyment at little cost?",
+        "Do you look for discounts before planning outings?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an inexpensive activity that was more enjoyable than you expected.",
+      "points": [
+        "what you did",
+        "what it cost",
+        "what made it enjoyable"
+      ],
+      "closing": "and explain why you would choose it again."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Finding affordable activities",
+      "questions": [
+        "What should local governments do to keep leisure affordable?",
+        "How can high prices affect which young people join organised activities?",
+        "What differences would you expect between a large city and a small town in relation to finding affordable activities?"
+      ]
+    }
+  ]
+}

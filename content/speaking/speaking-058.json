@@ -1,0 +1,47 @@
+{
+  "id": "speaking-058",
+  "skill": "speaking",
+  "title": "Speaking — Following instructions",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on following instructions.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Following instructions",
+      "questions": [
+        "Do you read instructions before using something new?",
+        "Do pictures or written instructions help you more?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time when clear instructions helped you do something unfamiliar.",
+      "points": [
+        "what you were doing",
+        "where the instructions came from",
+        "what made them easy to follow"
+      ],
+      "closing": "and explain why the experience changed your view of instructions."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Following instructions",
+      "questions": [
+        "How can companies make support documents accessible to speakers of different languages?",
+        "When should institutions offer human assistance as well as written instructions?",
+        "How has everyday life connected with following instructions changed for people of different ages?"
+      ]
+    }
+  ]
+}

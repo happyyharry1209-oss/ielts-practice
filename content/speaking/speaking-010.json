@@ -1,0 +1,47 @@
+{
+  "id": "speaking-010",
+  "skill": "speaking",
+  "title": "Speaking — Working with others",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on working with others.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Working with others",
+      "questions": [
+        "When do you usually need to work with another person?",
+        "Which responsibilities do you enjoy sharing?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a task you completed successfully as part of a team.",
+      "points": [
+        "what the task was",
+        "who took part",
+        "what your contribution was"
+      ],
+      "closing": "and explain what made the team effective."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Working with others",
+      "questions": [
+        "What should schools teach about teamwork?",
+        "Why can groups with different viewpoints reach better decisions?",
+        "How has everyday life connected with working with others changed for people of different ages?"
+      ]
+    }
+  ]
+}

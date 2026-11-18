@@ -1,0 +1,47 @@
+{
+  "id": "speaking-025",
+  "skill": "speaking",
+  "title": "Speaking — Visiting libraries",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on visiting libraries.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Visiting libraries",
+      "questions": [
+        "When did you last use a library or reading room?",
+        "What would make you visit a library more often?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a library or study space where you felt comfortable.",
+      "points": [
+        "where it was",
+        "what facilities it offered",
+        "what you did there"
+      ],
+      "closing": "and explain why you found it easy to concentrate there."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Visiting libraries",
+      "questions": [
+        "What role can libraries play beyond lending books?",
+        "Should libraries prioritise quiet study spaces or social activities?",
+        "What differences would you expect between a large city and a small town in relation to visiting libraries?"
+      ]
+    }
+  ]
+}

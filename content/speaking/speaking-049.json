@@ -1,0 +1,47 @@
+{
+  "id": "speaking-049",
+  "skill": "speaking",
+  "title": "Speaking — Personal goals",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on personal goals.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Personal goals",
+      "questions": [
+        "Do you usually set yourself goals?",
+        "How do you remember what you want to achieve?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a goal that took longer to achieve than you expected.",
+      "points": [
+        "what the goal was",
+        "why it took longer",
+        "how you kept working on it"
+      ],
+      "closing": "and explain what you learned about setting achievable goals."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Personal goals",
+      "questions": [
+        "Can public competition help people achieve personal goals?",
+        "How can schools encourage ambition without making students fear failure?",
+        "What differences would you expect between a large city and a small town in relation to personal goals?"
+      ]
+    }
+  ]
+}

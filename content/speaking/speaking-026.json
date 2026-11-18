@@ -1,0 +1,47 @@
+{
+  "id": "speaking-026",
+  "skill": "speaking",
+  "title": "Speaking — Finding your way",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on finding your way.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Finding your way",
+      "questions": [
+        "Do you ask people for directions or use a map?",
+        "Are you good at recognising a place you have visited before?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time when you helped someone find their way.",
+      "points": [
+        "where you were",
+        "what the person was looking for",
+        "how you helped"
+      ],
+      "closing": "and explain how you knew what information was useful."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Finding your way",
+      "questions": [
+        "How can signs make transport hubs easier for first-time visitors?",
+        "What are the risks of depending entirely on digital maps?",
+        "How has everyday life connected with finding your way changed for people of different ages?"
+      ]
+    }
+  ]
+}

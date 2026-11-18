@@ -1,0 +1,47 @@
+{
+  "id": "speaking-084",
+  "skill": "speaking",
+  "title": "Speaking — Quiet places",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on quiet places.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Quiet places",
+      "questions": [
+        "Where do you go when you want some quiet?",
+        "Does your ideal study place have any background sound?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a quiet place you would like other people to know about.",
+      "points": [
+        "where it is",
+        "what it looks or sounds like",
+        "what you do there"
+      ],
+      "closing": "and explain how it helps you relax or concentrate."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Quiet places",
+      "questions": [
+        "How can cities protect quiet areas while attracting visitors?",
+        "Should busy public buildings have rooms where visitors can take a break from noise?",
+        "How has everyday life connected with quiet places changed for people of different ages?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-047",
+  "skill": "speaking",
+  "title": "Speaking — Eating out",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on eating out.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Eating out",
+      "questions": [
+        "How do you choose where to eat with friends?",
+        "When is a restaurant worth visiting again?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a place where the service made a meal memorable.",
+      "points": [
+        "where you went",
+        "who accompanied you",
+        "what the staff did"
+      ],
+      "closing": "and explain how the service affected the experience."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Eating out",
+      "questions": [
+        "Why can small restaurants offer service large chains find hard to copy?",
+        "How do online ratings affect restaurants that have only just opened?",
+        "What differences would you expect between a large city and a small town in relation to eating out?"
+      ]
+    }
+  ]
+}

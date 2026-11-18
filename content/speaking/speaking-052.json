@@ -1,0 +1,47 @@
+{
+  "id": "speaking-052",
+  "skill": "speaking",
+  "title": "Speaking — Markets",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on markets.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Markets",
+      "questions": [
+        "Do you visit street markets or indoor markets?",
+        "What type of goods do you associate with markets?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a market you think a visitor would enjoy.",
+      "points": [
+        "where it is",
+        "what is sold there",
+        "what the atmosphere is like"
+      ],
+      "closing": "and explain why you would take a visitor there."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Markets",
+      "questions": [
+        "What can markets offer local producers that large supermarkets cannot?",
+        "How should councils decide whether to preserve a historic market?",
+        "How has everyday life connected with markets changed for people of different ages?"
+      ]
+    }
+  ]
+}

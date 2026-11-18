@@ -1,0 +1,47 @@
+{
+  "id": "speaking-013",
+  "skill": "speaking",
+  "title": "Speaking — Music at home",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on music at home.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Music at home",
+      "questions": [
+        "What music do you usually listen to indoors?",
+        "Have your music preferences changed recently?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a piece of music you associate with a particular memory.",
+      "points": [
+        "what the music sounds like",
+        "where you first heard it",
+        "what memory it brings back"
+      ],
+      "closing": "and explain why the connection has lasted."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Music at home",
+      "questions": [
+        "Why do some songs become important to a whole generation?",
+        "Should public money help people attend local music performances?",
+        "What differences would you expect between a large city and a small town in relation to music at home?"
+      ]
+    }
+  ]
+}

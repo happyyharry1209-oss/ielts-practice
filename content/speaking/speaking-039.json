@@ -1,0 +1,47 @@
+{
+  "id": "speaking-039",
+  "skill": "speaking",
+  "title": "Speaking — Sharing news",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on sharing news.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Sharing news",
+      "questions": [
+        "How do you usually find out what has happened in your area?",
+        "Who do you talk to when you read interesting news?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a piece of local news that prompted you to take action.",
+      "points": [
+        "what happened",
+        "where you heard about it",
+        "what you did"
+      ],
+      "closing": "and explain why the story mattered to you."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Sharing news",
+      "questions": [
+        "What local stories deserve more attention from national media?",
+        "How can communities reduce the spread of unverified news?",
+        "What differences would you expect between a large city and a small town in relation to sharing news?"
+      ]
+    }
+  ]
+}

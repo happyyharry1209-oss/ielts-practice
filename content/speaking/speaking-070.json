@@ -1,0 +1,47 @@
+{
+  "id": "speaking-070",
+  "skill": "speaking",
+  "title": "Speaking — News about science",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on news about science.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "News about science",
+      "questions": [
+        "Where do you hear about new scientific findings?",
+        "Do you read explanations of how everyday things work?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a scientific explanation that helped you understand a familiar event.",
+      "points": [
+        "what the event was",
+        "where you found the explanation",
+        "which detail clarified it"
+      ],
+      "closing": "and explain why you found the explanation persuasive."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "News about science",
+      "questions": [
+        "How should journalists report new scientific findings with important uncertainties?",
+        "What can scientists do to reach audiences who seldom read about research?",
+        "How has everyday life connected with news about science changed for people of different ages?"
+      ]
+    }
+  ]
+}

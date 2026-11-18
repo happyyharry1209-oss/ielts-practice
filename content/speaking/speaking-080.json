@@ -1,0 +1,47 @@
+{
+  "id": "speaking-080",
+  "skill": "speaking",
+  "title": "Speaking — Making the most of a small space",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on making the most of a small space.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Hobbies",
+      "questions": [
+        "What do you enjoy doing when you have an hour to yourself?",
+        "Are your hobbies different from when you were younger?",
+        "Do your relatives share any of your interests?",
+        "Is there a hobby you would like to learn from someone?"
+      ]
+    },
+    {
+      "topic": "Making the most of a small space",
+      "questions": [
+        "Which part of your home do you find easiest to keep tidy?",
+        "What type of furniture is useful where you live?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a small space that was cleverly arranged.",
+      "points": [
+        "where you saw it",
+        "what it was used for",
+        "how it had been arranged"
+      ],
+      "closing": "and explain what idea you would borrow for a space of your own."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Making the most of a small space",
+      "questions": [
+        "How can housing designs respond to rising costs in large cities?",
+        "Are shared facilities a practical way to improve small apartments?",
+        "How has everyday life connected with making the most of a small space changed for people of different ages?"
+      ]
+    }
+  ]
+}

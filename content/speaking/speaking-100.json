@@ -1,0 +1,47 @@
+{
+  "id": "speaking-100",
+  "skill": "speaking",
+  "title": "Speaking — Buying local produce",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on buying local produce.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Buying local produce",
+      "questions": [
+        "Do you check where your food comes from?",
+        "What fresh food is easy to get near your home?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a food producer or seller whose work you learned about.",
+      "points": [
+        "what they produced or sold",
+        "where you met them or heard about their work",
+        "what you learned"
+      ],
+      "closing": "and explain why their work interested you."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Buying local produce",
+      "questions": [
+        "What can schools do to help students understand where food comes from?",
+        "How can local producers reach customers who have little time to shop?",
+        "How has everyday life connected with buying local produce changed for people of different ages?"
+      ]
+    }
+  ]
+}

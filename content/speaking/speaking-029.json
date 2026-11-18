@@ -1,0 +1,47 @@
+{
+  "id": "speaking-029",
+  "skill": "speaking",
+  "title": "Speaking — Handwritten notes",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on handwritten notes.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Weekends",
+      "questions": [
+        "What do you usually do on a Saturday morning?",
+        "Do you prefer busy or quiet weekends?",
+        "Who do you typically see at weekends?",
+        "What will you probably do next weekend?"
+      ]
+    },
+    {
+      "topic": "Handwritten notes",
+      "questions": [
+        "What do you still write by hand?",
+        "Do you keep handwritten notes for a long time?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a handwritten message that you were pleased to receive.",
+      "points": [
+        "who wrote it",
+        "what it said",
+        "when you received it"
+      ],
+      "closing": "and explain why you appreciated the personal touch."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Handwritten notes",
+      "questions": [
+        "Which skills might be lost if people seldom write by hand?",
+        "Why do some institutions still value handwritten records?",
+        "What differences would you expect between a large city and a small town in relation to handwritten notes?"
+      ]
+    }
+  ]
+}

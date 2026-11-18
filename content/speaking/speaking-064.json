@@ -1,0 +1,47 @@
+{
+  "id": "speaking-064",
+  "skill": "speaking",
+  "title": "Speaking — Planning a meal",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on planning a meal.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Planning a meal",
+      "questions": [
+        "What do you consider when choosing a meal for several people?",
+        "Do you plan meals before you shop?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a meal you helped arrange for a group.",
+      "points": [
+        "who was eating together",
+        "what decisions you had to make",
+        "what worked especially well"
+      ],
+      "closing": "and explain what you would do differently if you did it again."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Planning a meal",
+      "questions": [
+        "How can social meals help people from different backgrounds get to know one another?",
+        "Why has eating alone become more common in some places?",
+        "How has everyday life connected with planning a meal changed for people of different ages?"
+      ]
+    }
+  ]
+}

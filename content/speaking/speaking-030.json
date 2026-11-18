@@ -1,0 +1,47 @@
+{
+  "id": "speaking-030",
+  "skill": "speaking",
+  "title": "Speaking — Spending evenings",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on spending evenings.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Neighbourhood",
+      "questions": [
+        "What places are within walking distance of your home?",
+        "When are the streets near your home most lively?",
+        "Which part of the area would you show to a visitor?",
+        "How has your neighbourhood changed?"
+      ]
+    },
+    {
+      "topic": "Spending evenings",
+      "questions": [
+        "How do you normally spend your evenings?",
+        "Do you work better late in the day?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an evening when you made good use of a short amount of time.",
+      "points": [
+        "where you were",
+        "what you needed or wanted to do",
+        "how you managed your time"
+      ],
+      "closing": "and explain why this evening felt productive."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Spending evenings",
+      "questions": [
+        "Why do different businesses need to open at different hours?",
+        "How can cities support a varied evening economy without disrupting residents?",
+        "How has everyday life connected with spending evenings changed for people of different ages?"
+      ]
+    }
+  ]
+}

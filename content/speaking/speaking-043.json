@@ -1,0 +1,47 @@
+{
+  "id": "speaking-043",
+  "skill": "speaking",
+  "title": "Speaking — Drawing and design",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on drawing and design.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Daily routines",
+      "questions": [
+        "What do you usually do before leaving home?",
+        "At what time of day do you feel most alert?",
+        "Which part of your routine would you like to change?",
+        "Does your routine change during holidays?"
+      ]
+    },
+    {
+      "topic": "Drawing and design",
+      "questions": [
+        "Did you enjoy drawing when you were younger?",
+        "Where do you notice good design in daily life?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe something you designed for a practical purpose.",
+      "points": [
+        "what you designed",
+        "who would use it",
+        "how you developed the idea"
+      ],
+      "closing": "and explain why the design suited its purpose."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Drawing and design",
+      "questions": [
+        "What is the value of teaching design to students who are not artistic?",
+        "How do designers balance visual appeal with ease of use?",
+        "What differences would you expect between a large city and a small town in relation to drawing and design?"
+      ]
+    }
+  ]
+}

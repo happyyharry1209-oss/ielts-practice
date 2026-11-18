@@ -1,0 +1,47 @@
+{
+  "id": "speaking-083",
+  "skill": "speaking",
+  "title": "Speaking — Buying second-hand",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on buying second-hand.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Buying second-hand",
+      "questions": [
+        "Have you ever bought something second-hand?",
+        "What would you look for when choosing a used item?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a useful second-hand item you found or borrowed.",
+      "points": [
+        "what the item was",
+        "how you found it",
+        "how you checked its condition"
+      ],
+      "closing": "and explain what you gained by choosing it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Buying second-hand",
+      "questions": [
+        "What makes people trust a second-hand seller?",
+        "How can the purchase of used goods affect manufacturers?",
+        "What differences would you expect between a large city and a small town in relation to buying second-hand?"
+      ]
+    }
+  ]
+}

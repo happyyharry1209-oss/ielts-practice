@@ -1,0 +1,47 @@
+{
+  "id": "speaking-062",
+  "skill": "speaking",
+  "title": "Speaking — Helping out",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on helping out.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Helping out",
+      "questions": [
+        "Do you often help people with everyday tasks?",
+        "What small favour do you appreciate receiving?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time when your help made a practical difference.",
+      "points": [
+        "who needed help",
+        "how you found out",
+        "what you did"
+      ],
+      "closing": "and explain what you learned about offering help."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Helping out",
+      "questions": [
+        "Why do people sometimes hesitate to accept help from others?",
+        "How can organisations support volunteers who cannot commit to regular hours?",
+        "How has everyday life connected with helping out changed for people of different ages?"
+      ]
+    }
+  ]
+}

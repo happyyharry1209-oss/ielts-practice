@@ -1,0 +1,47 @@
+{
+  "id": "speaking-066",
+  "skill": "speaking",
+  "title": "Speaking — Visiting museums",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on visiting museums.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Neighbourhood",
+      "questions": [
+        "What places are within walking distance of your home?",
+        "When are the streets near your home most lively?",
+        "Which part of the area would you show to a visitor?",
+        "How has your neighbourhood changed?"
+      ]
+    },
+    {
+      "topic": "Visiting museums",
+      "questions": [
+        "What kind of exhibitions would you like to visit?",
+        "Do you prefer to explore a museum alone or with someone?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an exhibit that made you ask new questions.",
+      "points": [
+        "where you saw it",
+        "what it showed",
+        "how it was presented"
+      ],
+      "closing": "and explain what you wanted to find out after seeing it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Visiting museums",
+      "questions": [
+        "Should museums change their displays frequently or keep familiar exhibits?",
+        "How could museums serve people who cannot visit in person?",
+        "How has everyday life connected with visiting museums changed for people of different ages?"
+      ]
+    }
+  ]
+}

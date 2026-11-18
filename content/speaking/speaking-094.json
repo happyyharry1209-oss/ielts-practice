@@ -1,0 +1,47 @@
+{
+  "id": "speaking-094",
+  "skill": "speaking",
+  "title": "Speaking — Watching a place change",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on watching a place change.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Watching a place change",
+      "questions": [
+        "What signs tell you that a place is changing?",
+        "Do you think you notice changes in your neighbourhood quickly?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a place where you could see signs of both its past and its future.",
+      "points": [
+        "where it was",
+        "which older features remained",
+        "what new development you noticed"
+      ],
+      "closing": "and explain why the combination was interesting."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Watching a place change",
+      "questions": [
+        "How do developers decide which parts of an old building are worth keeping?",
+        "What can local communities do to make change benefit more residents?",
+        "How has everyday life connected with watching a place change changed for people of different ages?"
+      ]
+    }
+  ]
+}

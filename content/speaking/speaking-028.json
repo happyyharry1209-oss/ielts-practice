@@ -1,0 +1,47 @@
+{
+  "id": "speaking-028",
+  "skill": "speaking",
+  "title": "Speaking — Solving problems",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on solving problems.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Solving problems",
+      "questions": [
+        "When a small problem occurs, do you usually ask for help?",
+        "Do you enjoy trying several ways to solve a problem?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a problem you solved after an initial attempt failed.",
+      "points": [
+        "what the problem was",
+        "what you tried first",
+        "what finally worked"
+      ],
+      "closing": "and explain what you would do differently next time."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Solving problems",
+      "questions": [
+        "Why might organisations benefit from discussing their mistakes openly?",
+        "How can schools assess problem-solving without rewarding only one correct method?",
+        "How has everyday life connected with solving problems changed for people of different ages?"
+      ]
+    }
+  ]
+}

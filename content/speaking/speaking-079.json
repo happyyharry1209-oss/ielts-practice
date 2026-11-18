@@ -1,0 +1,47 @@
+{
+  "id": "speaking-079",
+  "skill": "speaking",
+  "title": "Speaking — Trying unfamiliar technology",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on trying unfamiliar technology.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Daily routines",
+      "questions": [
+        "What do you usually do before leaving home?",
+        "At what time of day do you feel most alert?",
+        "Which part of your routine would you like to change?",
+        "Does your routine change during holidays?"
+      ]
+    },
+    {
+      "topic": "Trying unfamiliar technology",
+      "questions": [
+        "Do you try new apps as soon as they appear?",
+        "Who helps you when you are using an unfamiliar device?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a device or app you initially found difficult but now use confidently.",
+      "points": [
+        "what it was",
+        "what caused difficulty",
+        "how you learned to use it"
+      ],
+      "closing": "and explain why you continued rather than giving up."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Trying unfamiliar technology",
+      "questions": [
+        "How should designers test whether a device is easy for first-time users?",
+        "Why do people sometimes refuse technology that could help them?",
+        "What differences would you expect between a large city and a small town in relation to trying unfamiliar technology?"
+      ]
+    }
+  ]
+}

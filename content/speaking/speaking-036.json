@@ -1,0 +1,47 @@
+{
+  "id": "speaking-036",
+  "skill": "speaking",
+  "title": "Speaking — Memorable places",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on memorable places.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Memorable places",
+      "questions": [
+        "Which part of your area is best for a quiet visit?",
+        "Do you go back to places you liked as a child?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a place that felt different when you visited it again.",
+      "points": [
+        "where it was",
+        "when you first went there",
+        "what you noticed on the later visit"
+      ],
+      "closing": "and explain how the visit changed what you remembered."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Memorable places",
+      "questions": [
+        "Why do residents and tourists notice different things about the same location?",
+        "How can towns preserve a sense of place while allowing development?",
+        "How has everyday life connected with memorable places changed for people of different ages?"
+      ]
+    }
+  ]
+}

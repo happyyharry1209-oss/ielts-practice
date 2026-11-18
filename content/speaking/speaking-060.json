@@ -1,0 +1,47 @@
+{
+  "id": "speaking-060",
+  "skill": "speaking",
+  "title": "Speaking — Collecting things",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on collecting things.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Mobile phones",
+      "questions": [
+        "What did you last use your phone for?",
+        "When do you prefer to put your phone away?",
+        "Which phone feature do you find especially useful?",
+        "Has your phone changed how you arrange to meet people?"
+      ]
+    },
+    {
+      "topic": "Collecting things",
+      "questions": [
+        "Have you ever collected objects as a hobby?",
+        "What kinds of things do people you know keep?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a collection that you found interesting.",
+      "points": [
+        "what was collected",
+        "who owned or displayed it",
+        "what made it unusual"
+      ],
+      "closing": "and explain what you found out by looking at it."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Collecting things",
+      "questions": [
+        "What does a collection reveal about the people who created it?",
+        "Should public collections give equal attention to everyday objects and rare items?",
+        "How has everyday life connected with collecting things changed for people of different ages?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-082",
+  "skill": "speaking",
+  "title": "Speaking — Achieving a deadline",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on achieving a deadline.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Achieving a deadline",
+      "questions": [
+        "How do you keep track of upcoming deadlines?",
+        "Do you work steadily or do more work close to a deadline?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an occasion when you managed to finish an important task on time.",
+      "points": [
+        "what you had to do",
+        "what caused time pressure",
+        "what helped you finish"
+      ],
+      "closing": "and explain how you would approach a similar task in future."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Achieving a deadline",
+      "questions": [
+        "When should an organisation grant extra time for tasks?",
+        "What problems can result from rewarding speed more than quality?",
+        "How has everyday life connected with achieving a deadline changed for people of different ages?"
+      ]
+    }
+  ]
+}

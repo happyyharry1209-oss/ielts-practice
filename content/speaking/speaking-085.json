@@ -1,0 +1,47 @@
+{
+  "id": "speaking-085",
+  "skill": "speaking",
+  "title": "Speaking — Explaining an idea",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on explaining an idea.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Explaining an idea",
+      "questions": [
+        "Do you like explaining something you know well?",
+        "How do you tell whether another person understands you?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time when you explained a difficult idea successfully.",
+      "points": [
+        "what the idea was",
+        "who needed to understand it",
+        "what example or method you used"
+      ],
+      "closing": "and explain why the explanation worked."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Explaining an idea",
+      "questions": [
+        "What makes public information on complex subjects clear and trustworthy?",
+        "How can teachers encourage students to ask for clarification?",
+        "What differences would you expect between a large city and a small town in relation to explaining an idea?"
+      ]
+    }
+  ]
+}

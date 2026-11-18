@@ -1,0 +1,47 @@
+{
+  "id": "speaking-050",
+  "skill": "speaking",
+  "title": "Speaking — Packing for trips",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on packing for trips.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Packing for trips",
+      "questions": [
+        "Do you usually pack well in advance?",
+        "What is one thing you often take on a short journey?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a trip on which something you brought proved useful.",
+      "points": [
+        "where you went",
+        "what you brought",
+        "when you needed it"
+      ],
+      "closing": "and explain what it taught you about preparing for trips."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Packing for trips",
+      "questions": [
+        "How have restrictions on luggage changed how people travel?",
+        "To what extent should travel companies give customers advice about what to bring?",
+        "How has everyday life connected with packing for trips changed for people of different ages?"
+      ]
+    }
+  ]
+}

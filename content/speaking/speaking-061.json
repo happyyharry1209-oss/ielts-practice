@@ -1,0 +1,47 @@
+{
+  "id": "speaking-061",
+  "skill": "speaking",
+  "title": "Speaking — Activities in water",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on activities in water.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Activities in water",
+      "questions": [
+        "Do you spend much time near rivers or the sea?",
+        "Did you learn to swim when you were younger?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a memorable activity you did near water.",
+      "points": [
+        "where it happened",
+        "what you did",
+        "who was with you"
+      ],
+      "closing": "and explain what made the setting important."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Activities in water",
+      "questions": [
+        "How should communities balance recreation and protection of rivers or coastlines?",
+        "What are the benefits of providing low-cost swimming lessons?",
+        "What differences would you expect between a large city and a small town in relation to activities in water?"
+      ]
+    }
+  ]
+}

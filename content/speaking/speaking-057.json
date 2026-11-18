@@ -1,0 +1,47 @@
+{
+  "id": "speaking-057",
+  "skill": "speaking",
+  "title": "Speaking — Sound in daily life",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on sound in daily life.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Meals",
+      "questions": [
+        "What is a typical breakfast for you?",
+        "When do you usually eat your main meal?",
+        "Which meal of the day do you most look forward to?",
+        "Do you enjoy eating with several other people?"
+      ]
+    },
+    {
+      "topic": "Sound in daily life",
+      "questions": [
+        "Which sounds remind you of your neighbourhood?",
+        "Do you prefer quiet when you are at home?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a sound that reminds you of a specific experience.",
+      "points": [
+        "what the sound was",
+        "when you first heard it",
+        "what you associate with it"
+      ],
+      "closing": "and explain why it stayed in your memory."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Sound in daily life",
+      "questions": [
+        "How can urban planners reduce harmful noise without making streets lifeless?",
+        "What types of noise are people willing to accept in shared places?",
+        "What differences would you expect between a large city and a small town in relation to sound in daily life?"
+      ]
+    }
+  ]
+}

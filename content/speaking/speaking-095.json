@@ -1,0 +1,47 @@
+{
+  "id": "speaking-095",
+  "skill": "speaking",
+  "title": "Speaking — Deciding what to buy",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on deciding what to buy.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Seasons",
+      "questions": [
+        "Which season do you most look forward to?",
+        "Does the time of year affect what you wear?",
+        "What do you like doing in cooler weather?",
+        "Has the weather in your area changed since you were a child?"
+      ]
+    },
+    {
+      "topic": "Deciding what to buy",
+      "questions": [
+        "What makes you trust a product recommendation?",
+        "Do you ever wait before making a purchase?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a time you changed your mind before buying something.",
+      "points": [
+        "what you had considered buying",
+        "what you discovered",
+        "what you decided to do instead"
+      ],
+      "closing": "and explain why you were pleased or disappointed with your decision."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Deciding what to buy",
+      "questions": [
+        "How can online reviews support sensible decisions without misleading shoppers?",
+        "What should shops be required to disclose about sponsored recommendations?",
+        "What differences would you expect between a large city and a small town in relation to deciding what to buy?"
+      ]
+    }
+  ]
+}

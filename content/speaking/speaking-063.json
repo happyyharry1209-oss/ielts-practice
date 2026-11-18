@@ -1,0 +1,47 @@
+{
+  "id": "speaking-063",
+  "skill": "speaking",
+  "title": "Speaking — Sports as a spectator",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on sports as a spectator.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Sports as a spectator",
+      "questions": [
+        "Do you watch matches in person or on a screen?",
+        "What makes a match interesting to you?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a sporting event whose atmosphere you remember.",
+      "points": [
+        "what was happening",
+        "where you watched it",
+        "how the spectators reacted"
+      ],
+      "closing": "and explain why its atmosphere was memorable."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Sports as a spectator",
+      "questions": [
+        "What benefits do local sports teams bring to their communities?",
+        "How has television coverage changed the way people support teams?",
+        "What differences would you expect between a large city and a small town in relation to sports as a spectator?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-003",
+  "skill": "speaking",
+  "title": "Speaking — Getting around",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on getting around.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Getting around",
+      "questions": [
+        "How do you usually get around your area?",
+        "When was the last time you took an unfamiliar route?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a journey when you found a better way to get somewhere.",
+      "points": [
+        "where you were going",
+        "how you discovered the new route",
+        "what made it better"
+      ],
+      "closing": "and explain whether you would take the same route again."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Getting around",
+      "questions": [
+        "What makes public transport attractive to people who own a car?",
+        "Which parts of a city benefit most from better pedestrian routes?",
+        "What differences would you expect between a large city and a small town in relation to getting around?"
+      ]
+    }
+  ]
+}

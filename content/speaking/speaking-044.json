@@ -1,0 +1,47 @@
+{
+  "id": "speaking-044",
+  "skill": "speaking",
+  "title": "Speaking — Family stories",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on family stories.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Hobbies",
+      "questions": [
+        "What do you enjoy doing when you have an hour to yourself?",
+        "Are your hobbies different from when you were younger?",
+        "Do your relatives share any of your interests?",
+        "Is there a hobby you would like to learn from someone?"
+      ]
+    },
+    {
+      "topic": "Family stories",
+      "questions": [
+        "Who usually tells stories about your family?",
+        "Do you prefer hearing stories or reading them?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a story about an older person's life that interested you.",
+      "points": [
+        "who told the story",
+        "what it was about",
+        "when you heard it"
+      ],
+      "closing": "and explain what it helped you understand about the past."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Family stories",
+      "questions": [
+        "What do personal stories contribute to how a country remembers its history?",
+        "How can communities record memories that are rarely represented in books?",
+        "How has everyday life connected with family stories changed for people of different ages?"
+      ]
+    }
+  ]
+}

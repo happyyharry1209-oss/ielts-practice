@@ -1,0 +1,47 @@
+{
+  "id": "speaking-038",
+  "skill": "speaking",
+  "title": "Speaking — Learning outdoors",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on learning outdoors.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Home",
+      "questions": [
+        "What do you like about the room you use most?",
+        "Is there a part of your home you rarely use?",
+        "How long have you lived in your current home?",
+        "What would you put in a room of your own?"
+      ]
+    },
+    {
+      "topic": "Learning outdoors",
+      "questions": [
+        "What have you learned from spending time outdoors?",
+        "Would you rather learn about nature through a visit or a book?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe something you discovered on a walk or another outdoor visit.",
+      "points": [
+        "where you were",
+        "what you noticed",
+        "how you found out more"
+      ],
+      "closing": "and explain why the discovery made you more curious."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Learning outdoors",
+      "questions": [
+        "How can outdoor lessons complement classroom teaching?",
+        "What makes natural areas accessible for people with limited mobility?",
+        "How has everyday life connected with learning outdoors changed for people of different ages?"
+      ]
+    }
+  ]
+}

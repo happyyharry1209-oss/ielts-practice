@@ -1,0 +1,47 @@
+{
+  "id": "speaking-073",
+  "skill": "speaking",
+  "title": "Speaking — Shared responsibilities",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on shared responsibilities.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Walking",
+      "questions": [
+        "When do you normally walk rather than take transport?",
+        "Which local route do you enjoy walking along?",
+        "Do you usually walk alone or with someone?",
+        "What would encourage you to walk more where you live?"
+      ]
+    },
+    {
+      "topic": "Shared responsibilities",
+      "questions": [
+        "What household jobs do you prefer to do yourself?",
+        "How do people where you live decide who does each task?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a responsibility you took on to help a group.",
+      "points": [
+        "what you were responsible for",
+        "why you offered",
+        "what results it produced"
+      ],
+      "closing": "and explain what made you willing to take it on."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Shared responsibilities",
+      "questions": [
+        "How can families share responsibilities fairly when members have different schedules?",
+        "What helps employees cooperate on work outside their usual job roles?",
+        "What differences would you expect between a large city and a small town in relation to shared responsibilities?"
+      ]
+    }
+  ]
+}

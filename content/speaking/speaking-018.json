@@ -1,0 +1,47 @@
+{
+  "id": "speaking-018",
+  "skill": "speaking",
+  "title": "Speaking — Learning practical skills",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on learning practical skills.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Neighbourhood",
+      "questions": [
+        "What places are within walking distance of your home?",
+        "When are the streets near your home most lively?",
+        "Which part of the area would you show to a visitor?",
+        "How has your neighbourhood changed?"
+      ]
+    },
+    {
+      "topic": "Learning practical skills",
+      "questions": [
+        "What practical skills are you confident using?",
+        "Who do you ask when you need to learn how something works?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a simple repair you learned to do yourself.",
+      "points": [
+        "what needed fixing",
+        "how you learned the method",
+        "what tools or materials you used"
+      ],
+      "closing": "and explain why learning it was worth the effort."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Learning practical skills",
+      "questions": [
+        "Which household skills should schools teach, if any?",
+        "How might better repair services affect what people buy?",
+        "How has everyday life connected with learning practical skills changed for people of different ages?"
+      ]
+    }
+  ]
+}

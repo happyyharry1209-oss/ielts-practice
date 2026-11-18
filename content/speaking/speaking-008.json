@@ -1,0 +1,47 @@
+{
+  "id": "speaking-008",
+  "skill": "speaking",
+  "title": "Speaking — Using parks",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on using parks.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Hobbies",
+      "questions": [
+        "What do you enjoy doing when you have an hour to yourself?",
+        "Are your hobbies different from when you were younger?",
+        "Do your relatives share any of your interests?",
+        "Is there a hobby you would like to learn from someone?"
+      ]
+    },
+    {
+      "topic": "Using parks",
+      "questions": [
+        "How often do you go to a park?",
+        "What facilities would you like in a park near home?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an outdoor space that was improved for local people.",
+      "points": [
+        "what the space used to be like",
+        "what changed",
+        "who uses it now"
+      ],
+      "closing": "and explain why the change mattered to you."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Using parks",
+      "questions": [
+        "How can cities provide green space in crowded areas?",
+        "Who should decide how public parks are designed?",
+        "How has everyday life connected with using parks changed for people of different ages?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "speaking-087",
+  "skill": "speaking",
+  "title": "Speaking — School memories",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on school memories.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "School memories",
+      "questions": [
+        "What is one thing you enjoyed about school apart from lessons?",
+        "Do you ever go back to a place connected with your school days?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a school activity that taught you something lasting.",
+      "points": [
+        "what the activity was",
+        "who took part",
+        "what you learned during it"
+      ],
+      "closing": "and explain how you have used that lesson since."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "School memories",
+      "questions": [
+        "What types of learning tend to remain useful long after school?",
+        "How should schools give all students the opportunity to join extracurricular activities?",
+        "What differences would you expect between a large city and a small town in relation to school memories?"
+      ]
+    }
+  ]
+}

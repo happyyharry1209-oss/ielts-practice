@@ -1,0 +1,47 @@
+{
+  "id": "speaking-078",
+  "skill": "speaking",
+  "title": "Speaking — Lending a hand at events",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on lending a hand at events.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Neighbourhood",
+      "questions": [
+        "What places are within walking distance of your home?",
+        "When are the streets near your home most lively?",
+        "Which part of the area would you show to a visitor?",
+        "How has your neighbourhood changed?"
+      ]
+    },
+    {
+      "topic": "Lending a hand at events",
+      "questions": [
+        "Have you ever helped to organise an event?",
+        "Which roles do you enjoy taking in group activities?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe an event that succeeded because many people helped.",
+      "points": [
+        "what the event was",
+        "how people divided the work",
+        "what unexpected problem arose"
+      ],
+      "closing": "and explain why their cooperation was important."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Lending a hand at events",
+      "questions": [
+        "How can event organisers recognise the work of volunteers?",
+        "What can make it difficult for small community groups to organise large events?",
+        "How has everyday life connected with lending a hand at events changed for people of different ages?"
+      ]
+    }
+  ]
+}

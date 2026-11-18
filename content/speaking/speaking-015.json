@@ -1,0 +1,47 @@
+{
+  "id": "speaking-015",
+  "skill": "speaking",
+  "title": "Speaking — Planning weekends",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on planning weekends.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "Planning weekends",
+      "questions": [
+        "Do you decide in advance what to do at weekends?",
+        "What would make a weekend feel worthwhile to you?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a short trip that worked out better than you expected.",
+      "points": [
+        "where you went",
+        "what you expected",
+        "what went particularly well"
+      ],
+      "closing": "and explain why the trip was memorable."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Planning weekends",
+      "questions": [
+        "What makes day trips important to local economies?",
+        "How has working from home changed when people take short breaks?",
+        "What differences would you expect between a large city and a small town in relation to planning weekends?"
+      ]
+    }
+  ]
+}

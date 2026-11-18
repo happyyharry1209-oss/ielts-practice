@@ -1,0 +1,47 @@
+{
+  "id": "speaking-031",
+  "skill": "speaking",
+  "title": "Speaking — Local transport",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on local transport.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Daily routines",
+      "questions": [
+        "What do you usually do before leaving home?",
+        "At what time of day do you feel most alert?",
+        "Which part of your routine would you like to change?",
+        "Does your routine change during holidays?"
+      ]
+    },
+    {
+      "topic": "Local transport",
+      "questions": [
+        "Which type of public transport is easiest to use where you live?",
+        "What makes you choose to walk instead?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a bus or train journey on which someone was helpful.",
+      "points": [
+        "where you were travelling",
+        "what difficulty you had",
+        "what the person did"
+      ],
+      "closing": "and explain how the help changed the journey."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Local transport",
+      "questions": [
+        "How should transport operators look after passengers during delays?",
+        "Why do some residents resist changes to a familiar bus route?",
+        "What differences would you expect between a large city and a small town in relation to local transport?"
+      ]
+    }
+  ]
+}

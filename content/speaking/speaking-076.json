@@ -1,0 +1,47 @@
+{
+  "id": "speaking-076",
+  "skill": "speaking",
+  "title": "Speaking — Lunchtime",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on lunchtime.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Lunchtime",
+      "questions": [
+        "What do you usually eat for lunch on a busy day?",
+        "Do you have much control over when you take a lunch break?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a lunch break that unexpectedly brightened your day.",
+      "points": [
+        "where you went",
+        "who you spent it with",
+        "what happened"
+      ],
+      "closing": "and explain why it improved the rest of your day."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Lunchtime",
+      "questions": [
+        "How can workplaces make breaks genuinely restorative?",
+        "Why is access to healthy and affordable food uneven across city centres?",
+        "How has everyday life connected with lunchtime changed for people of different ages?"
+      ]
+    }
+  ]
+}

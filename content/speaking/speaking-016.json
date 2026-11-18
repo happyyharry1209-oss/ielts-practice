@@ -1,0 +1,47 @@
+{
+  "id": "speaking-016",
+  "skill": "speaking",
+  "title": "Speaking — Memorable gifts",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on memorable gifts.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Friends",
+      "questions": [
+        "Where do you usually spend time with friends?",
+        "How do you keep in touch with friends you rarely see?",
+        "What kinds of activities do you normally do together?",
+        "Do you prefer meeting one friend or a group?"
+      ]
+    },
+    {
+      "topic": "Memorable gifts",
+      "questions": [
+        "When do people you know usually exchange gifts?",
+        "Are you good at choosing useful presents?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a gift that was particularly well chosen.",
+      "points": [
+        "what it was",
+        "who chose it",
+        "why it suited the person who received it"
+      ],
+      "closing": "and explain what this experience showed you about choosing gifts."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Memorable gifts",
+      "questions": [
+        "Why do gift-giving customs vary between families and societies?",
+        "Have online shops changed the way people think about giving presents?",
+        "How has everyday life connected with memorable gifts changed for people of different ages?"
+      ]
+    }
+  ]
+}

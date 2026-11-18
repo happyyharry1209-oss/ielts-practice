@@ -1,0 +1,47 @@
+{
+  "id": "speaking-099",
+  "skill": "speaking",
+  "title": "Speaking — The value of practice",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on the value of practice.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Work or study",
+      "questions": [
+        "What part of your work or study do you look forward to?",
+        "When do you usually find it easiest to focus?",
+        "What would make your workplace or classroom more comfortable?",
+        "Do you expect to do something different in future?"
+      ]
+    },
+    {
+      "topic": "The value of practice",
+      "questions": [
+        "Which activity have you improved at by practising regularly?",
+        "How do you choose what to practise next?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a skill where small improvements made a big difference over time.",
+      "points": [
+        "what the skill was",
+        "what your first difficulty was",
+        "how you measured improvement"
+      ],
+      "closing": "and explain why the improvement mattered to you."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "The value of practice",
+      "questions": [
+        "When is regular practice more useful than attending a course?",
+        "How can technology help learners notice improvements that are hard to measure?",
+        "What differences would you expect between a large city and a small town in relation to the value of practice?"
+      ]
+    }
+  ]
+}

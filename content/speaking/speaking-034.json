@@ -1,0 +1,47 @@
+{
+  "id": "speaking-034",
+  "skill": "speaking",
+  "title": "Speaking — Practising a hobby",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on practising a hobby.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Study habits",
+      "questions": [
+        "Where do you usually go if you need to study or read?",
+        "Do you prefer to learn in the morning or evening?",
+        "How do you keep track of what you have learned?",
+        "What helps you get back to studying after a break?"
+      ]
+    },
+    {
+      "topic": "Practising a hobby",
+      "questions": [
+        "What hobby would you like to spend more time on?",
+        "Do you normally practise alone or with other people?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a hobby you returned to after a long break.",
+      "points": [
+        "what you used to do",
+        "why you stopped",
+        "what brought you back to it"
+      ],
+      "closing": "and explain how your approach has changed."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Practising a hobby",
+      "questions": [
+        "Why do people abandon hobbies they previously enjoyed?",
+        "How can community organisations make hobbies affordable for beginners?",
+        "How has everyday life connected with practising a hobby changed for people of different ages?"
+      ]
+    }
+  ]
+}

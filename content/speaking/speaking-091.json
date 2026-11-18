@@ -1,0 +1,47 @@
+{
+  "id": "speaking-091",
+  "skill": "speaking",
+  "title": "Speaking — Keeping a promise",
+  "description": "Part 1 interview, a cue card and a Part 3 discussion on keeping a promise.",
+  "durationSec": 840,
+  "part1": [
+    {
+      "topic": "Daily routines",
+      "questions": [
+        "What do you usually do before leaving home?",
+        "At what time of day do you feel most alert?",
+        "Which part of your routine would you like to change?",
+        "Does your routine change during holidays?"
+      ]
+    },
+    {
+      "topic": "Keeping a promise",
+      "questions": [
+        "Do you prefer written reminders or telling someone when you have made a plan?",
+        "How do you decide whether you can commit to an arrangement?"
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "c1",
+      "topic": "Describe a promise you kept even when it became inconvenient.",
+      "points": [
+        "what you promised",
+        "who depended on you",
+        "what made it harder to keep"
+      ],
+      "closing": "and explain why you thought it was important to follow through."
+    }
+  ],
+  "part3": [
+    {
+      "topic": "Keeping a promise",
+      "questions": [
+        "How does reliability affect the way people share responsibilities?",
+        "When might breaking a commitment be more responsible than keeping it?",
+        "What differences would you expect between a large city and a small town in relation to keeping a promise?"
+      ]
+    }
+  ]
+}
