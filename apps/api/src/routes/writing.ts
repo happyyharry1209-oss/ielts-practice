@@ -17,6 +17,8 @@ const submitSchema = z.object({
 
 writingRoutes.use('*', requireAuth);
 
+writingRoutes.get('/status', (c) => c.json({ provider: env.writingAi?.provider ?? null }));
+
 writingRoutes.post('/submit', async (c) => {
   const userId = c.get('userId');
   const body = await parseBody(c, submitSchema);
@@ -40,7 +42,6 @@ writingRoutes.post('/submit', async (c) => {
     prompt += `\n\nPractice data (${unit}):\n${tableLines.join('\n')}`;
   }
   const { feedback, usage } = await scoreWriting(task.task, prompt, body.text, task.minWords);
-  const cost = (usage.tokensIn * 0.27 + usage.tokensOut * 1.1) / 1_000_000;
 
   const rows = await query<{ id: string; created_at: string }>(
     `insert into writing_submissions (user_id, content_id, task_id, text, word_count, ai_feedback, ai_band)
@@ -49,11 +50,13 @@ writingRoutes.post('/submit', async (c) => {
     [userId, body.contentId, body.taskId, body.text, feedback.wordCount, JSON.stringify(feedback), feedback.overall],
   );
 
-  await query(
-    `insert into ai_usage (user_id, endpoint, tokens_in, tokens_out, cost_usd)
-     values ($1, 'writing-score', $2, $3, $4)`,
-    [userId, usage.tokensIn, usage.tokensOut, cost],
-  );
+  if (usage) {
+    await query(
+      `insert into ai_usage (user_id, endpoint, tokens_in, tokens_out, cost_usd)
+       values ($1, 'writing-score', $2, $3, $4)`,
+      [userId, usage.tokensIn, usage.tokensOut, usage.estimatedCostUsd],
+    );
+  }
 
   return c.json(
     { submissionId: rows[0]!.id, createdAt: rows[0]!.created_at, feedback },

@@ -49,6 +49,11 @@ export default function WritingExam() {
     enabled: Boolean(testId),
   });
 
+  const { data: gradingStatus } = useQuery({
+    queryKey: ['writing', 'status'],
+    queryFn: () => api<{ provider: 'groq' | 'deepseek' | null }>('/api/writing/status'),
+  });
+  const submitLabel = t(gradingStatus?.provider === null ? 'writing.submitOffline' : 'writing.submit');
   const test = data?.test;
   const [taskIndex, setTaskIndex] = useState(0);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
@@ -142,7 +147,7 @@ export default function WritingExam() {
             onClick={() => void submit()}
             disabled={submitting || words < 30}
           >
-            {submitting ? t('writing.submitting') : t('writing.submit')}
+            {submitting ? t('writing.submitting') : submitLabel}
           </button>
         </div>
       </header>
@@ -175,7 +180,7 @@ export default function WritingExam() {
             <div className="mt-4 border-t border-line pt-4">
               <Markdown text={task.prompt} />
             </div>
-            {task.dataTable ? (
+            {task.dataTable && !task.imageUrl ? (
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full border-collapse text-sm text-ink">
                   <caption className="pb-2 text-left text-xs text-muted">
@@ -221,7 +226,12 @@ export default function WritingExam() {
 
           <div className="card p-5 text-xs leading-5 text-slate-500">
             <p className="font-semibold text-slate-700">{t('writing.feedback')}</p>
-            <p className="mt-1">{t('writing.aiDisclaimer')}</p>
+            <p className="mt-1">
+              {t(gradingStatus?.provider === null ? 'writing.offlineDisclaimer' : 'writing.aiDisclaimer')}
+            </p>
+            {gradingStatus?.provider === 'groq' ? (
+              <p className="mt-1">{t('writing.groqNotice')}</p>
+            ) : null}
           </div>
         </div>
 

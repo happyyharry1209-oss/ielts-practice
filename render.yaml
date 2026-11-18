@@ -38,6 +38,8 @@ services:
         sync: false
       - key: REGISTRATION_OPEN
         value: "true"
+      - key: GROQ_API_KEY
+        sync: false
       - key: DEEPSEEK_API_KEY
         sync: false
       - key: AI_HOURLY_LIMIT

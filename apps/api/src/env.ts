@@ -50,6 +50,24 @@ if (isProd && jwtSecret.startsWith('dev-only')) {
   throw new Error('JWT_SECRET must be set in production');
 }
 
+const groqApiKey = process.env.GROQ_API_KEY?.trim();
+const deepseekApiKey = process.env.DEEPSEEK_API_KEY?.trim();
+const writingAi = groqApiKey
+  ? {
+      provider: 'groq' as const,
+      apiKey: groqApiKey,
+      model: 'openai/gpt-oss-120b',
+      endpoint: 'https://api.groq.com/openai/v1/chat/completions',
+    }
+  : deepseekApiKey
+    ? {
+        provider: 'deepseek' as const,
+        apiKey: deepseekApiKey,
+        model: process.env.DEEPSEEK_MODEL ?? 'deepseek-chat',
+        endpoint: 'https://api.deepseek.com/chat/completions',
+      }
+    : null;
+
 const here = path.dirname(fileURLToPath(import.meta.url));
 
 /**
@@ -65,8 +83,7 @@ export const env = {
   databaseUrl: process.env.DATABASE_URL ?? defaultDatabaseUrl,
   jwtSecret,
   corsOrigins: parseOrigins(process.env.CORS_ORIGIN),
-  deepseekApiKey: process.env.DEEPSEEK_API_KEY ?? '',
-  deepseekModel: process.env.DEEPSEEK_MODEL ?? 'deepseek-chat',
+  writingAi,
   contentDir: process.env.CONTENT_DIR ?? '',
   autoMigrate: process.env.AUTO_MIGRATE !== 'false',
   /** Max AI scoring requests per user per hour. */

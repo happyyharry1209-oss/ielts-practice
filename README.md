@@ -154,10 +154,18 @@ npm test            # 19 tests: normalisation, word limits, TFNG shorthand, band
 
 Writing and Speaking are not auto-graded by a human-equivalent examiner. Writing gets either:
 
-1. **AI feedback** (DeepSeek) when `DEEPSEEK_API_KEY` is set — four criteria, band estimate,
-   sentence-level corrections and vocabulary upgrades; or
-2. a **rule-based estimate** (length, paragraphing, linking words) when no key is configured, clearly
-   labelled as offline.
+1. **AI feedback** uses Groq's `openai/gpt-oss-120b` when `GROQ_API_KEY` is set. It returns four
+   criterion scores, sentence corrections and vocabulary suggestions. Existing installations can
+   use DeepSeek by setting only `DEEPSEEK_API_KEY`.
+2. A **rule-based estimate** (length, paragraphing, linking words) is shown as Offline if there is no
+   AI key, the provider runs out of quota, or the request fails.
+
+For hosted use, create a key in the [Groq Console](https://console.groq.com/keys) under a Free-plan
+organisation and add `GROQ_API_KEY` to the Render API service's Environment settings. After
+redeploying, check that `/api/health` reports `"aiProvider": "groq"`. When AI is enabled, the
+task prompt (including any Task 1 data) and submitted essay are sent to the configured provider.
+Admin cost figures are estimates at list prices. Actual billing and free usage are reported
+by the provider.
 
 Both are labelled *estimated*, not official IELTS results.
 
@@ -172,7 +180,8 @@ Both are labelled *estimated*, not official IELTS results.
 | `CORS_ORIGIN` | yes in production | Comma-separated allowed browser origins |
 | `APP_URL` | in production | Public URL of the web app, used in email links |
 | `PORT` | no | API port (default 8787) |
-| `DEEPSEEK_API_KEY` | no | Enables real AI writing feedback |
+| `GROQ_API_KEY` | no | Enables Groq Writing feedback (takes priority over DeepSeek) |
+| `DEEPSEEK_API_KEY` | no | Optional alternative provider for existing deployments |
 | `AI_HOURLY_LIMIT` | no | AI requests per user per hour (default 20) |
 | `BREVO_API_KEY` | no | Email over HTTPS (free 300/day, verified sender only) — recommended |
 | `RESEND_API_KEY` | no | Alternative HTTPS email provider |
@@ -275,7 +284,7 @@ free host such as Render or Fly.io.
 1. Push this repo to GitHub.
 2. In Render: **New → Blueprint**, pick the repo (it reads `render.yaml`).
 3. Set `DATABASE_URL`, `CORS_ORIGIN` (your Pages origin), `APP_URL` (the full Pages URL, e.g.
-   `https://<user>.github.io/<repo>`) and optionally `DEEPSEEK_API_KEY` / `RESEND_API_KEY`.
+   `https://<user>.github.io/<repo>`) and optionally `GROQ_API_KEY` / `RESEND_API_KEY`.
 4. Deploy, then check `https://<service>.onrender.com/api/health`.
 
 Free Render services sleep after 15 minutes; the first request afterwards is slow.

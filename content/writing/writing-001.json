@@ -10,6 +10,15 @@
       "task": 1,
       "prompt": "The chart below shows the number of visits to three museums in a European city in 2000, 2010 and 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
       "imageUrl": "/writing/museum-visits.svg",
+      "dataTable": {
+        "unit": "millions of visits",
+        "columns": ["2000", "2010", "2020"],
+        "rows": [
+          { "label": "City Museum", "values": [1.2, 1.5, 0.9] },
+          { "label": "Art Gallery", "values": [0.8, 1.1, 1.4] },
+          { "label": "Science Centre", "values": [0.4, 0.9, 1.8] }
+        ]
+      },
       "minWords": 150,
       "suggestedMinutes": 20
     },
