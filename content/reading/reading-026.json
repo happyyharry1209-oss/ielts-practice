@@ -1,0 +1,81 @@
+{
+  "id": "reading-026",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Photographs of a Changing Square",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Photographs of a Changing Square",
+      "body": "**A** A local history group collected snapshots of a town square from family albums. Photographs without dates were compared with an old shop directory, which listed when each business occupied a property.\n\n**B** The directory was useful but sometimes slow to reflect a change. A sign might stay above an empty shop for months, so researchers also looked for building work visible in the photographs.\n\n**C** Each final caption gave a range of possible years when needed. The group invited contributions during the exhibition and used a removable label when new evidence meant a range needed to be revised.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Photographs without dates were compared with an old ______, which listed when each business occupied a property.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shop directory",
+          "wordLimit": 3,
+          "explanation": "Photographs without dates were compared with an old shop directory, which listed when each business occupied a property.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A sign might stay above an empty shop for months, so researchers also looked for ______ visible in the photographs.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "building work",
+          "wordLimit": 3,
+          "explanation": "A sign might stay above an empty shop for months, so researchers also looked for building work visible in the photographs.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The group invited contributions during the exhibition and used a removable ______ when new evidence meant a range needed to be revised.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "label",
+          "wordLimit": 3,
+          "explanation": "The group invited contributions during the exhibition and used a removable label when new evidence meant a range needed to be revised.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The group always assigned an exact year to each image.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Each final caption gave a range of possible years when needed. The group invited contributions during the exhibition and used a removable label when new evidence meant a range needed to be revised.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a reason signs were insufficient as evidence on their own?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The directory was useful but sometimes slow to reflect a change. A sign might stay above an empty shop for months, so researchers also looked for building work visible in the photographs.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

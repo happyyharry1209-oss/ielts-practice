@@ -1,0 +1,63 @@
+{
+  "id": "listening-069",
+  "skill": "listening",
+  "title": "Listening Drill — Ticket scanner comparison",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Ticket scanner comparison",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about ticket scanning. The progress report is due on Monday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the operator notes. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the portable scanner. Send your results to Eleanor first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that we cannot test during a live event. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-069/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Monday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Monday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "I'll start by checking the operator notes.",
+          "options": [
+            "old readings",
+            "route survey",
+            "collection log",
+            "operator notes"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "portable scanner",
+          "wordLimit": 3,
+          "explanation": "For the trial we will use the portable scanner."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Eleanor",
+          "wordLimit": 3,
+          "explanation": "Send your results to Eleanor first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

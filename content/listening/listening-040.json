@@ -1,0 +1,63 @@
+{
+  "id": "listening-040",
+  "skill": "listening",
+  "title": "Listening Drill — Market delivery plan",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Market delivery plan",
+      "transcript": "ORGANISER: A quick update about deliveries to the Saturday market. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns loading times.\n\nORGANISER: For now, go to the north ramp. If that route is closed when you arrive, use the service road instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Jules rather than the general enquiries desk. Before you leave, display your permit in the windscreen. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-040/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "loading times",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns loading times."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "north ramp",
+          "wordLimit": 3,
+          "explanation": "For now, go to the north ramp."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "If that route is closed when you arrive, use the service road instead.",
+          "options": [
+            "side passage",
+            "sports hall",
+            "service road",
+            "main lobby"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Jules",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Jules rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

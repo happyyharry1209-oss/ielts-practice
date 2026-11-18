@@ -1,0 +1,81 @@
+{
+  "id": "reading-063",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Repairing the Trail Map",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Repairing the Trail Map",
+      "body": "**A** A forest trail map printed years ago showed paths that had been absorbed into nearby farms. A team surveyed the current routes and compared its notes with the boundary register.\n\n**B** Revising the map meant removing several attractive but unofficial shortcuts. To avoid surprising regular walkers, the team put temporary signposts at the places where the new route diverged.\n\n**C** The reprint left space for a grid and a short web address. This allowed walkers to report a blocked path by giving a precise location even when they did not know its name.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A team surveyed the current routes and compared its notes with the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "boundary register",
+          "wordLimit": 3,
+          "explanation": "A team surveyed the current routes and compared its notes with the boundary register.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "To avoid surprising regular walkers, the team put temporary ______ at the places where the new route diverged.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "signposts",
+          "wordLimit": 3,
+          "explanation": "To avoid surprising regular walkers, the team put temporary signposts at the places where the new route diverged.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "This allowed walkers to report a blocked path by giving a precise ______ even when they did not know its name.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "location",
+          "wordLimit": 3,
+          "explanation": "This allowed walkers to report a blocked path by giving a precise location even when they did not know its name.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "All the unofficial shortcuts appeared on the reprinted map.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Revising the map meant removing several attractive but unofficial shortcuts. To avoid surprising regular walkers, the team put temporary signposts at the places where the new route diverged.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how walkers could describe where a future problem occurred?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The reprint left space for a grid and a short web address. This allowed walkers to report a blocked path by giving a precise location even when they did not know its name.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-015",
+  "skill": "listening",
+  "title": "Listening Drill — Rooftop garden",
+  "description": "Visitor briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Rooftop garden",
+      "transcript": "GUIDE: Welcome to our visit to the rooftop garden. Before we leave, make sure your name appears on the list I'm holding. If you can't see your name, speak to me privately rather than adding it yourself.\n\nGUIDE: Our meeting point is the east lift. The visit itself will last thirty minutes. You don't need to take anything heavy, but please bring a sunhat.\n\nGUIDE: We'll finish at the greenhouse. From there you can make your own way home. One last detail: the lift has limited capacity. If you're separated from the group, phone the number printed on your ticket rather than taking a shortcut.",
+      "audioUrl": "/audio/listening-015/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Our meeting point is the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "east lift",
+          "wordLimit": 3,
+          "explanation": "Our meeting point is the east lift."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "The visit itself will last ______ minutes.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "The visit itself will last thirty minutes.",
+          "options": [
+            "fifty",
+            "thirty",
+            "seventy",
+            "forty"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "You don't need to take anything heavy, but please bring a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sunhat",
+          "wordLimit": 3,
+          "explanation": "You don't need to take anything heavy, but please bring a sunhat."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "We'll finish at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "greenhouse",
+          "wordLimit": 3,
+          "explanation": "We'll finish at the greenhouse."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

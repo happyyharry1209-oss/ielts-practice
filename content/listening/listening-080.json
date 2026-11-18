@@ -1,0 +1,63 @@
+{
+  "id": "listening-080",
+  "skill": "listening",
+  "title": "Listening Drill — Lost event badge",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Lost event badge",
+      "transcript": "CUSTOMER: I need some help with an event badge. The main problem is the name faded. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the registration email. Then bring the item to the badge desk. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a new badge. wait until your name is called. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-080/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "The main problem is ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "The main problem is the name faded.",
+          "options": [
+            "a flicker",
+            "a jammed lock",
+            "the name faded",
+            "a torn label"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "registration email",
+          "wordLimit": 3,
+          "explanation": "First please send the registration email."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "badge desk",
+          "wordLimit": 3,
+          "explanation": "Then bring the item to the badge desk."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "new badge",
+          "wordLimit": 3,
+          "explanation": "Ask for a new badge."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

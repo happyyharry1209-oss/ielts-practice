@@ -1,0 +1,63 @@
+{
+  "id": "listening-051",
+  "skill": "listening",
+  "title": "Listening Drill — Street tree records",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Street tree records",
+      "transcript": "HOST: You work on building a street tree register. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with old photographs. At the time our biggest obstacle was missing addresses. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered repeated planting. It helped us improve tree identification. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll ask residents to check the draft map. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-051/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Ours started with ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "old photographs",
+          "wordLimit": 3,
+          "explanation": "Ours started with old photographs."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "At the time our biggest obstacle was missing addresses.",
+          "options": [
+            "vandalism",
+            "missing addresses",
+            "missing diagrams",
+            "tutor shortages"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "We discovered ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "repeated planting",
+          "wordLimit": 3,
+          "explanation": "We discovered repeated planting."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "tree identification",
+          "wordLimit": 3,
+          "explanation": "It helped us improve tree identification."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

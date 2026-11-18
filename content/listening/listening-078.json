@@ -1,0 +1,63 @@
+{
+  "id": "listening-078",
+  "skill": "listening",
+  "title": "Listening Drill — Library reader",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Library reader",
+      "transcript": "CUSTOMER: I need some help with an electronic reader. The main problem is the screen freezes. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the error message. Then bring the item to the library desk. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a loan extension. remember to show your user card. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-078/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "The main problem is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "the screen freezes",
+          "wordLimit": 3,
+          "explanation": "The main problem is the screen freezes."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "First please send the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "First please send the error message.",
+          "options": [
+            "error message",
+            "order number",
+            "registration email",
+            "packing list"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "library desk",
+          "wordLimit": 3,
+          "explanation": "Then bring the item to the library desk."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "loan extension",
+          "wordLimit": 3,
+          "explanation": "Ask for a loan extension."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

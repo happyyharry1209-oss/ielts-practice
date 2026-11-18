@@ -1,0 +1,81 @@
+{
+  "id": "reading-073",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Choosing What to Digitise",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Choosing What to Digitise",
+      "body": "**A** A library could scan only part of its manuscript collection. Staff placed documents with frequent requests high on the list so handling of the originals could be reduced.\n\n**B** The plan also identified fragile documents that could not be scanned safely on an ordinary flatbed. A camera stand would allow those books to remain partly closed.\n\n**C** Staff published a timetable of planned scanning dates. Anyone with an upcoming research visit could ask the archive to schedule a manuscript sooner.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Staff placed documents with frequent ______ high on the list so handling of the originals could be reduced.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "requests",
+          "wordLimit": 3,
+          "explanation": "Staff placed documents with frequent requests high on the list so handling of the originals could be reduced.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A ______ would allow those books to remain partly closed.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "camera stand",
+          "wordLimit": 3,
+          "explanation": "A camera stand would allow those books to remain partly closed.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Anyone with an upcoming ______ could ask the archive to schedule a manuscript sooner.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "research visit",
+          "wordLimit": 3,
+          "explanation": "Anyone with an upcoming research visit could ask the archive to schedule a manuscript sooner.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Frequently requested documents were given some priority.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A library could scan only part of its manuscript collection. Staff placed documents with frequent requests high on the list so handling of the originals could be reduced.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how users could request a change to the scanning timetable?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Staff published a timetable of planned scanning dates. Anyone with an upcoming research visit could ask the archive to schedule a manuscript sooner.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-044",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Moving Music Lessons Online",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Moving Music Lessons Online",
+      "body": "**A** A music school offered some one-to-one lessons by video. At first the teachers tried to play along with their pupils, but a slight delay meant that even accurate playing sounded out of time.\n\n**B** The teachers adapted by taking turns. They shared backing tracks in advance so pupils could practise to a steady accompaniment without needing the teacher to play during the call.\n\n**C** The school kept group rehearsals in person. It used online lessons mainly for technique and left ensemble skills to rehearsals where pupils could respond to each other immediately.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "At first the teachers tried to play along with their pupils, but a slight ______ meant that even accurate playing sounded out of time.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "delay",
+          "wordLimit": 3,
+          "explanation": "At first the teachers tried to play along with their pupils, but a slight delay meant that even accurate playing sounded out of time.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "They shared ______ in advance so pupils could practise to a steady accompaniment without needing the teacher to play during the call.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "backing tracks",
+          "wordLimit": 3,
+          "explanation": "They shared backing tracks in advance so pupils could practise to a steady accompaniment without needing the teacher to play during the call.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It used online lessons mainly for technique and left ______ to rehearsals where pupils could respond to each other immediately.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "ensemble skills",
+          "wordLimit": 3,
+          "explanation": "It used online lessons mainly for technique and left ensemble skills to rehearsals where pupils could respond to each other immediately.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Group rehearsals were moved online after the trial.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The school kept group rehearsals in person. It used online lessons mainly for technique and left ensemble skills to rehearsals where pupils could respond to each other immediately.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a way for pupils to practise with an accompaniment?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The teachers adapted by taking turns. They shared backing tracks in advance so pupils could practise to a steady accompaniment without needing the teacher to play during the call.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

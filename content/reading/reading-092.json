@@ -1,0 +1,81 @@
+{
+  "id": "reading-092",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Designing an Easy-to-read Timetable",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Designing an Easy-to-read Timetable",
+      "body": "**A** A community bus used a folded timetable with all routes printed on one sheet. A transport group watched people unfold the sheet and noted which panels they opened first.\n\n**B** The first redesign put the most-used route on the outside. It also placed the first and last departures in bold type so people in a hurry could find them easily.\n\n**C** Low-vision readers tested a second edition with fewer columns and wider line spacing. Weekend services remained on a separate panel to prevent weekday departures being mistaken for Sunday times.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A transport group watched people unfold the sheet and noted which ______ they opened first.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "panels",
+          "wordLimit": 3,
+          "explanation": "A transport group watched people unfold the sheet and noted which panels they opened first.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "It also placed the first and last departures in ______ so people in a hurry could find them easily.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "bold type",
+          "wordLimit": 3,
+          "explanation": "It also placed the first and last departures in bold type so people in a hurry could find them easily.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Weekend services remained on a separate ______ to prevent weekday departures being mistaken for Sunday times.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "panel",
+          "wordLimit": 3,
+          "explanation": "Weekend services remained on a separate panel to prevent weekday departures being mistaken for Sunday times.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Departure times were spaced farther apart in a later edition.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Low-vision readers tested a second edition with fewer columns and wider line spacing. Weekend services remained on a separate panel to prevent weekday departures being mistaken for Sunday times.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a detail deliberately emphasised for readers in a hurry?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The first redesign put the most-used route on the outside. It also placed the first and last departures in bold type so people in a hurry could find them easily.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

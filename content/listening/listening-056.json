@@ -1,0 +1,63 @@
+{
+  "id": "listening-056",
+  "skill": "listening",
+  "title": "Listening Drill — Art studio route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Art studio route",
+      "transcript": "VISITOR: I'm trying to get to the figure drawing studio. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the main entrance. From there, walk towards the indoor fountain. Stay on the same side until you can see the sign for the studio wing.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the central stairs today. A section is closed for repainting. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-056/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Start at the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "Start at the main entrance.",
+          "options": [
+            "north gate",
+            "west doors",
+            "main entrance",
+            "garden gate"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "indoor fountain",
+          "wordLimit": 3,
+          "explanation": "From there, walk towards the indoor fountain."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "studio wing",
+          "wordLimit": 3,
+          "explanation": "Stay on the same side until you can see the sign for the studio wing."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "central stairs",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the central stairs today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

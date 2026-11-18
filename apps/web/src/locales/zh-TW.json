@@ -109,7 +109,7 @@
     "skillWriting": "寫作",
     "skillSpeaking": "口說",
     "readingDesc": "單篇閱讀練習與完整模擬試卷。",
-    "listeningDesc": "4 個部分、40 題、約 30 分鐘。",
+    "listeningDesc": "短篇音訊練習與完整聽力模擬試卷。",
     "writingDesc": "練習 Task 1 和 Task 2，取得寫作回饋。",
     "speakingDesc": "Part 1–3 題目，可錄音回放。",
     "practiceNow": "立即練習",
@@ -133,6 +133,7 @@
     "noDataHint": "完成閱讀或聽力試卷後，紀錄會顯示在這裏。"
   },
   "practice": {
+    "tasks": "{{count}} 項任務",
     "title": "選擇試卷",
     "chooseTest": "可用試卷",
     "minutes": "{{count}} 分鐘",
@@ -211,6 +212,8 @@
     "scoreLine": "答對 {{correct}} / {{total}} 題"
   },
   "writing": {
+    "practiceData": "原創練習數據（{{unit}}）",
+    "category": "類別",
     "task1": "Task 1",
     "task2": "Task 2",
     "task": "Task {{number}}",

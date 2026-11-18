@@ -1,0 +1,81 @@
+{
+  "id": "reading-057",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Small Exhibit About Bread",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Small Exhibit About Bread",
+      "body": "**A** A food museum wanted to explain the difference between ingredients and methods. It placed three kinds of flour in sealed jars and used pictures to show later stages.\n\n**B** The exhibit originally contained a long timeline, but visitors mostly asked practical questions. An educator replaced part of it with an illustrated sequence showing how dough changes when left to rise.\n\n**C** On weekends a presenter brought an actual dough sample. For visitors who could not attend, the exhibit included a short video with the same explanation.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It placed three kinds of ______ in sealed jars and used pictures to show later stages.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "flour",
+          "wordLimit": 3,
+          "explanation": "It placed three kinds of flour in sealed jars and used pictures to show later stages.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "An educator replaced part of it with an illustrated ______ showing how dough changes when left to rise.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sequence",
+          "wordLimit": 3,
+          "explanation": "An educator replaced part of it with an illustrated sequence showing how dough changes when left to rise.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "For visitors who could not attend, the exhibit included a short ______ with the same explanation.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "video",
+          "wordLimit": 3,
+          "explanation": "For visitors who could not attend, the exhibit included a short video with the same explanation.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The exhibit included a substitute for a live demonstration.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "On weekends a presenter brought an actual dough sample. For visitors who could not attend, the exhibit included a short video with the same explanation.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why some of the timeline was removed?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The exhibit originally contained a long timeline, but visitors mostly asked practical questions. An educator replaced part of it with an illustrated sequence showing how dough changes when left to rise.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

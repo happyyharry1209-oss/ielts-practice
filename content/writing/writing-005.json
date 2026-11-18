@@ -1,0 +1,57 @@
+{
+  "id": "writing-005",
+  "skill": "writing",
+  "title": "Writing Practice — Community gardens",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows plots available to residents in three districts in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "plots",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "West End",
+            "values": [
+              42,
+              62,
+              84
+            ]
+          },
+          {
+            "label": "Parkside",
+            "values": [
+              65,
+              78,
+              80
+            ]
+          },
+          {
+            "label": "South Bank",
+            "values": [
+              18,
+              44,
+              77
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "In many cities there are long waiting lists for community garden plots. Why is demand high, and how could cities make more growing space available?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

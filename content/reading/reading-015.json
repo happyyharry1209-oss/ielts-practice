@@ -1,0 +1,81 @@
+{
+  "id": "reading-015",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Measuring Noise in a Library",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Measuring Noise in a Library",
+      "body": "**A** At Bexley Library, staff had several complaints about late-afternoon noise. They borrowed a sound meter and visited the same reading desk at half-hour intervals. They also noted whether the nearby group room was in use.\n\n**B** The readings revealed a brief peak each time the school bus arrived, but a separate disturbance lasted longer. The source of the second event was a door latch that struck its frame whenever someone entered.\n\n**C** The latch was adjusted first. Staff left the group room open because its noise could be reduced by closing a partition, and a new booking form simply asked groups to check that the partition was in place.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "They borrowed a ______ and visited the same reading desk at half-hour intervals.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sound meter",
+          "wordLimit": 3,
+          "explanation": "They borrowed a sound meter and visited the same reading desk at half-hour intervals.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The source of the second event was a ______ that struck its frame whenever someone entered.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "door latch",
+          "wordLimit": 3,
+          "explanation": "The source of the second event was a door latch that struck its frame whenever someone entered.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Staff left the group room open because its noise could be reduced by closing a partition, and a new ______ simply asked groups to check that the partition was in place.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "booking form",
+          "wordLimit": 3,
+          "explanation": "Staff left the group room open because its noise could be reduced by closing a partition, and a new booking form simply asked groups to check that the partition was in place.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The group room was closed permanently.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The latch was adjusted first. Staff left the group room open because its noise could be reduced by closing a partition, and a new booking form simply asked groups to check that the partition was in place.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the discovery of a mechanical source of noise?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The readings revealed a brief peak each time the school bus arrived, but a separate disturbance lasted longer. The source of the second event was a door latch that struck its frame whenever someone entered.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

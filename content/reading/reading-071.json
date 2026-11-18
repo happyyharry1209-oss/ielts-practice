@@ -1,0 +1,81 @@
+{
+  "id": "reading-071",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Weight of a Travelling Exhibition",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Weight of a Travelling Exhibition",
+      "body": "**A** A travelling exhibition had to fit into a small delivery van. Its organisers specified a maximum case weight so one person could move a display panel without assistance.\n\n**B** Prototypes used thinner boards, but light shone through them. Designers added a dark lining rather than making the boards heavier again.\n\n**C** The finished panels could be packed in any order because their latches were identical. The van driver still used a numbered loading plan to avoid wasting space.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its organisers specified a maximum ______ so one person could move a display panel without assistance.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "case weight",
+          "wordLimit": 3,
+          "explanation": "Its organisers specified a maximum case weight so one person could move a display panel without assistance.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Designers added a dark ______ rather than making the boards heavier again.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "lining",
+          "wordLimit": 3,
+          "explanation": "Designers added a dark lining rather than making the boards heavier again.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The finished panels could be packed in any order because their ______ were identical.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "latches",
+          "wordLimit": 3,
+          "explanation": "The finished panels could be packed in any order because their latches were identical.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The first lightweight boards let light pass through.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Prototypes used thinner boards, but light shone through them. Designers added a dark lining rather than making the boards heavier again.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the feature that allowed display panels to be packed interchangeably?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The finished panels could be packed in any order because their latches were identical. The van driver still used a numbered loading plan to avoid wasting space.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

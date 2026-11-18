@@ -1,0 +1,81 @@
+{
+  "id": "reading-047",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Making a Beach Guide Useful",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Making a Beach Guide Useful",
+      "body": "**A** A coastal town produced a beach guide with photos taken at high tide. People who arrived later asked why the water was so far from the lifeguard tower shown in the pictures.\n\n**B** Designers added photographs taken at different tides and used the tower as a reference point. They also included a scale bar to make distances easier to judge on a phone.\n\n**C** The guide gave the beach office's number but avoided promising staffed hours for every day. It linked to a board which volunteers updated when conditions changed.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "People who arrived later asked why the water was so far from the ______ shown in the pictures.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "lifeguard tower",
+          "wordLimit": 3,
+          "explanation": "People who arrived later asked why the water was so far from the lifeguard tower shown in the pictures.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "They also included a ______ to make distances easier to judge on a phone.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "scale bar",
+          "wordLimit": 3,
+          "explanation": "They also included a scale bar to make distances easier to judge on a phone.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It linked to a board which volunteers updated when ______ changed.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "conditions",
+          "wordLimit": 3,
+          "explanation": "It linked to a board which volunteers updated when conditions changed.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The guide contained photographs of the same beach at more than one tide level.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Designers added photographs taken at different tides and used the tower as a reference point. They also included a scale bar to make distances easier to judge on a phone.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why the guide used a source that could be updated quickly?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The guide gave the beach office's number but avoided promising staffed hours for every day. It linked to a board which volunteers updated when conditions changed.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

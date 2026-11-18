@@ -1,0 +1,81 @@
+{
+  "id": "reading-060",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Saving Water at a Flower Stall",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Saving Water at a Flower Stall",
+      "body": "**A** At a busy flower stall, stems had to stay in buckets of clean water. The seller recorded how often the buckets were emptied and noted why a full change was needed.\n\n**B** Some buckets fouled quickly as small leaves decayed underwater. The seller removed the lowest leaves and used a separate rinse bowl for the first clean of each new delivery.\n\n**C** The supply lasted longer without lowering flower quality. The seller still cleaned every bucket when closing, since water left overnight had a less predictable condition.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The seller recorded how often the buckets were emptied and noted why a ______ was needed.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "full change",
+          "wordLimit": 3,
+          "explanation": "The seller recorded how often the buckets were emptied and noted why a full change was needed.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The seller removed the lowest leaves and used a separate ______ for the first clean of each new delivery.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rinse bowl",
+          "wordLimit": 3,
+          "explanation": "The seller removed the lowest leaves and used a separate rinse bowl for the first clean of each new delivery.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The seller still cleaned every bucket when closing, since water left overnight had a less predictable ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "condition",
+          "wordLimit": 3,
+          "explanation": "The seller still cleaned every bucket when closing, since water left overnight had a less predictable condition.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Buckets were left uncleaned at the end of each day.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The supply lasted longer without lowering flower quality. The seller still cleaned every bucket when closing, since water left overnight had a less predictable condition.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the treatment applied to the leaves before display?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Some buckets fouled quickly as small leaves decayed underwater. The seller removed the lowest leaves and used a separate rinse bowl for the first clean of each new delivery.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

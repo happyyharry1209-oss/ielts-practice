@@ -1,0 +1,63 @@
+{
+  "id": "listening-007",
+  "skill": "listening",
+  "title": "Listening Drill — Bike maintenance",
+  "description": "Booking dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Bike maintenance",
+      "transcript": "CALLER: Hello. I'd like to book a bike maintenance class. I saw an older notice saying that bookings opened on Saturday morning. Is that still right?\n\nADVISER: That notice is out of date. Bookings open on Sunday this time. If you collect your booking pack in person, go to the repair shed. The reception desk in the main building won't have the packs.\n\nCALLER: How much is the booking? I can pay online if that saves time.\n\nADVISER: The total is fifteen pounds. Pay once you've checked the date. Then contact Noah if you haven't received confirmation within two working days.\n\nCALLER: Thanks. Is there anything else I should know before I arrive?\n\nADVISER: One practical detail: the course covers conventional brakes only.",
+      "audioUrl": "/audio/listening-007/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "Bookings open on ______ this time.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Sunday",
+          "wordLimit": 3,
+          "explanation": "Bookings open on Sunday this time."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "If you collect your booking pack in person, go to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "repair shed",
+          "wordLimit": 3,
+          "explanation": "If you collect your booking pack in person, go to the repair shed."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "The total is ______ pounds.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "The total is fifteen pounds.",
+          "options": [
+            "twenty-five",
+            "fifteen",
+            "thirty-five",
+            "fourteen"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Then contact ______ if you haven't received confirmation within two working days.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Noah",
+          "wordLimit": 3,
+          "explanation": "Then contact Noah if you haven't received confirmation within two working days."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

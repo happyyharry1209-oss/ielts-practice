@@ -1,0 +1,66 @@
+{
+  "id": "listening-087",
+  "skill": "listening",
+  "title": "Listening Drill — Hanging a test sign",
+  "description": "Practical demonstration. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Hanging a test sign",
+      "transcript": "INSTRUCTOR: This demonstration is about hanging a temporary sign. Watch the whole process once before trying it yourself. If you start while I'm still talking, you may miss the order of the steps.\n\nINSTRUCTOR: Get the paper templates ready. Begin by checking the hook. When everything is in position, wait four minutes. It may look as though nothing is happening at first.\n\nINSTRUCTOR: Look for an even gap before moving on. keep the doorway clear. Leave yourself time to clear the work area so the next group can start promptly.",
+      "audioUrl": "/audio/listening-087/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Get the ______ ready.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "paper templates",
+          "wordLimit": 3,
+          "explanation": "Get the paper templates ready."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "Begin by checking the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Begin by checking the hook.",
+          "options": [
+            "level base",
+            "hook",
+            "mixing bowl",
+            "label"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "When everything is in position, wait ______ minutes.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "four",
+          "wordLimit": 3,
+          "explanation": "When everything is in position, wait four minutes.",
+          "acceptableAnswers": [
+            "4"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Look for ______ before moving on.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "an even gap",
+          "wordLimit": 3,
+          "explanation": "Look for an even gap before moving on."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

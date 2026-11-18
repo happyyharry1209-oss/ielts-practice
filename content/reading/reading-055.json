@@ -1,0 +1,81 @@
+{
+  "id": "reading-055",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Testing a Digital Recipe Card",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Testing a Digital Recipe Card",
+      "body": "**A** A cooking class replaced paper recipe sheets with shared tablets. Students could enlarge the text, but found it difficult to touch the screen while wearing gloves.\n\n**B** The designer added large next and back controls. In the next trial a clean partner could move between steps while the cook kept both hands on the work surface.\n\n**C** Some students still preferred paper. The class paired the digital instructions with a printable shopping list and let participants decide which format to use at home.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Students could enlarge the text, but found it difficult to touch the screen while wearing ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "gloves",
+          "wordLimit": 3,
+          "explanation": "Students could enlarge the text, but found it difficult to touch the screen while wearing gloves.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "In the next trial a clean partner could move between steps while the cook kept both hands on the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "work surface",
+          "wordLimit": 3,
+          "explanation": "In the next trial a clean partner could move between steps while the cook kept both hands on the work surface.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The class paired the digital instructions with a printable ______ and let participants decide which format to use at home.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shopping list",
+          "wordLimit": 3,
+          "explanation": "The class paired the digital instructions with a printable shopping list and let participants decide which format to use at home.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Students were required to use the tablet format at home.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Some students still preferred paper. The class paired the digital instructions with a printable shopping list and let participants decide which format to use at home.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a physical difficulty with the first design?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "A",
+          "explanation": "A cooking class replaced paper recipe sheets with shared tablets. Students could enlarge the text, but found it difficult to touch the screen while wearing gloves.",
+          "location": "Paragraph A"
+        }
+      ]
+    }
+  ]
+}

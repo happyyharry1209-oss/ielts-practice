@@ -1,0 +1,81 @@
+{
+  "id": "reading-081",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Drawing Patterns on Fabric",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Drawing Patterns on Fabric",
+      "body": "**A** A craft tutor asked learners to draw a repeated design by hand. Small errors close to the first edge became much larger as the pattern crossed the fabric.\n\n**B** The class drew a light guide grid before attempting a second version. Most students chose a fixed starting corner rather than trying to align the pattern by eye.\n\n**C** Both versions were displayed in the corridor. Captions asked visitors to look for the first misalignment instead of simply deciding which fabric they liked best.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Small errors close to the first ______ became much larger as the pattern crossed the fabric.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "edge",
+          "wordLimit": 3,
+          "explanation": "Small errors close to the first edge became much larger as the pattern crossed the fabric.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Most students chose a fixed starting corner rather than trying to align the pattern by ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "eye",
+          "wordLimit": 3,
+          "explanation": "Most students chose a fixed starting corner rather than trying to align the pattern by eye.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Captions asked visitors to look for the first ______ instead of simply deciding which fabric they liked best.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "misalignment",
+          "wordLimit": 3,
+          "explanation": "Captions asked visitors to look for the first misalignment instead of simply deciding which fabric they liked best.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The second version used a visible guide while it was being drawn.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The class drew a light guide grid before attempting a second version. Most students chose a fixed starting corner rather than trying to align the pattern by eye.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions what viewers were asked to locate in the display?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Both versions were displayed in the corridor. Captions asked visitors to look for the first misalignment instead of simply deciding which fabric they liked best.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

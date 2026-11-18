@@ -1,0 +1,81 @@
+{
+  "id": "reading-040",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Trial in a College Dining Hall",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Trial in a College Dining Hall",
+      "body": "**A** A college asked students to put food leftovers in a separate container. This made it possible to measure plate waste without counting disposable packaging from takeaway meals as food.\n\n**B** The figures were reported by week instead of day. This reduced the effect of irregular deliveries or a popular dish, and the team recorded the total number of meals served to compare weeks of different sizes.\n\n**C** When serving staff lowered the default portion and offered free extras, the amount thrown away fell. The college postponed a decision about the menu until it knew whether the new portion sizes would remain popular.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "This made it possible to measure ______ without counting disposable packaging from takeaway meals as food.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "plate waste",
+          "wordLimit": 3,
+          "explanation": "This made it possible to measure plate waste without counting disposable packaging from takeaway meals as food.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "This reduced the effect of irregular deliveries or a popular dish, and the team recorded the total number of ______ to compare weeks of different sizes.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "meals served",
+          "wordLimit": 3,
+          "explanation": "This reduced the effect of irregular deliveries or a popular dish, and the team recorded the total number of meals served to compare weeks of different sizes.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The college postponed a decision about the ______ until it knew whether the new portion sizes would remain popular.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "menu",
+          "wordLimit": 3,
+          "explanation": "The college postponed a decision about the menu until it knew whether the new portion sizes would remain popular.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The number of meals served was recorded when comparing weeks.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The figures were reported by week instead of day. This reduced the effect of irregular deliveries or a popular dish, and the team recorded the total number of meals served to compare weeks of different sizes.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a choice the college decided not to make immediately?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "When serving staff lowered the default portion and offered free extras, the amount thrown away fell. The college postponed a decision about the menu until it knew whether the new portion sizes would remain popular.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

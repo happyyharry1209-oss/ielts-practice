@@ -1,0 +1,81 @@
+{
+  "id": "reading-066",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Improving a Community Translation Service",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Improving a Community Translation Service",
+      "body": "**A** A public advice service allowed visitors to ask for an interpreter. Front-desk staff initially recorded each request using a single language field, even when visitors spoke two languages.\n\n**B** A worker added fields for first preference and acceptable alternative. The change helped during urgent appointments, when an interpreter for the second language might arrive sooner.\n\n**C** Some visitors also asked for written material in a different language from the conversation. The service began treating that preference as separate and updated its appointment form accordingly.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Front-desk staff initially recorded each request using a single ______, even when visitors spoke two languages.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "language field",
+          "wordLimit": 3,
+          "explanation": "Front-desk staff initially recorded each request using a single language field, even when visitors spoke two languages.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The change helped during urgent appointments, when an interpreter for the second language might arrive ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sooner",
+          "wordLimit": 3,
+          "explanation": "The change helped during urgent appointments, when an interpreter for the second language might arrive sooner.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The service began treating that preference as separate and updated its ______ accordingly.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "appointment form",
+          "wordLimit": 3,
+          "explanation": "The service began treating that preference as separate and updated its appointment form accordingly.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Spoken and written preferences were eventually recorded separately.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Some visitors also asked for written material in a different language from the conversation. The service began treating that preference as separate and updated its appointment form accordingly.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why a second spoken language could be useful?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "A worker added fields for first preference and acceptable alternative. The change helped during urgent appointments, when an interpreter for the second language might arrive sooner.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

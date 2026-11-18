@@ -1,0 +1,81 @@
+{
+  "id": "reading-019",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Paper Ticket Archive",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Paper Ticket Archive",
+      "body": "**A** A cinema received a shoebox of old ticket stubs with no dates. An archivist examined the names and a serial number on each ticket, then matched several with programmes from the same period.\n\n**B** The serial numbers were useful within a single roll but restarted whenever staff replaced it. The archivist learned to treat them as local evidence of order rather than a calendar for the whole collection.\n\n**C** One set of stubs had a handwritten note on the back. The note referred to a matinee that the printed programmes omitted, so the archive created a new record and marked its date as uncertain.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "An archivist examined the names and a ______ on each ticket, then matched several with programmes from the same period.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "serial number",
+          "wordLimit": 3,
+          "explanation": "An archivist examined the names and a serial number on each ticket, then matched several with programmes from the same period.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The archivist learned to treat them as local evidence of order rather than a ______ for the whole collection.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "calendar",
+          "wordLimit": 3,
+          "explanation": "The archivist learned to treat them as local evidence of order rather than a calendar for the whole collection.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The note referred to a ______ that the printed programmes omitted, so the archive created a new record and marked its date as uncertain.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "matinee",
+          "wordLimit": 3,
+          "explanation": "The note referred to a matinee that the printed programmes omitted, so the archive created a new record and marked its date as uncertain.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Each roll continued the numbering used on the previous roll.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The serial numbers were useful within a single roll but restarted whenever staff replaced it. The archivist learned to treat them as local evidence of order rather than a calendar for the whole collection.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an event recorded outside the printed programmes?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "One set of stubs had a handwritten note on the back. The note referred to a matinee that the printed programmes omitted, so the archive created a new record and marked its date as uncertain.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

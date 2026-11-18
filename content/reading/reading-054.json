@@ -1,0 +1,81 @@
+{
+  "id": "reading-054",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A New Use for Station Lockers",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A New Use for Station Lockers",
+      "body": "**A** A station offered empty luggage lockers to volunteers collecting clothes for a shelter. Donors were given a code to use only at agreed times so luggage customers could still use the majority of lockers.\n\n**B** The organisers first collected donations weekly. When bags filled the largest compartments, they added a second collection and gave donors a maximum bag size.\n\n**C** The trial exposed a transport issue. Volunteers needed a trolley to take items to a hired van, so the station reserved a small loading space close to the exit.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Donors were given a ______ to use only at agreed times so luggage customers could still use the majority of lockers.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "code",
+          "wordLimit": 3,
+          "explanation": "Donors were given a code to use only at agreed times so luggage customers could still use the majority of lockers.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "When bags filled the largest compartments, they added a second collection and gave donors a maximum ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "bag size",
+          "wordLimit": 3,
+          "explanation": "When bags filled the largest compartments, they added a second collection and gave donors a maximum bag size.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Volunteers needed a trolley to take items to a hired van, so the station reserved a small ______ close to the exit.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "loading space",
+          "wordLimit": 3,
+          "explanation": "Volunteers needed a trolley to take items to a hired van, so the station reserved a small loading space close to the exit.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The shelter received exclusive use of all the station lockers.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A station offered empty luggage lockers to volunteers collecting clothes for a shelter. Donors were given a code to use only at agreed times so luggage customers could still use the majority of lockers.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a restriction introduced after the lockers filled up?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The organisers first collected donations weekly. When bags filled the largest compartments, they added a second collection and gave donors a maximum bag size.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

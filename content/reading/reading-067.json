@@ -1,0 +1,81 @@
+{
+  "id": "reading-067",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Finding Space for Outdoor Exhibits",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Finding Space for Outdoor Exhibits",
+      "body": "**A** A sculpture group considered three public sites for outdoor exhibits. It measured how much space would remain for pedestrians once each piece had a protective base.\n\n**B** The group ruled out a narrow site even though it had high foot traffic. That site had no room for a person to stop and read a caption without interrupting others.\n\n**C** It then put lightweight copies at two sites. Notes on how long people stopped helped the team choose a final location within the larger square.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It measured how much space would remain for pedestrians once each piece had a protective ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "base",
+          "wordLimit": 3,
+          "explanation": "It measured how much space would remain for pedestrians once each piece had a protective base.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "That site had no room for a person to stop and read a ______ without interrupting others.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "caption",
+          "wordLimit": 3,
+          "explanation": "That site had no room for a person to stop and read a caption without interrupting others.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Notes on how long people stopped helped the team choose a final location within the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "larger square",
+          "wordLimit": 3,
+          "explanation": "Notes on how long people stopped helped the team choose a final location within the larger square.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The site with high foot traffic was chosen simply because it was busy.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The group ruled out a narrow site even though it had high foot traffic. That site had no room for a person to stop and read a caption without interrupting others.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a trial with copies before the final choice?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "It then put lightweight copies at two sites. Notes on how long people stopped helped the team choose a final location within the larger square.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-031",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Checking the Park's Opening Hours",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Checking the Park's Opening Hours",
+      "body": "**A** A volunteer group compared three possible times to open a small park. Members collected information about early users by leaving a survey card at nearby cafés, since the park gates were still closed when those users walked past.\n\n**B** The opening time was brought forward on weekdays only. At the same time, the caretaker changed the start time of his inspection to ensure that he could check paths before users arrived.\n\n**C** Later, a school asked for occasional earlier access at weekends. The caretaker refused to issue permanent keys but offered to unlock the side gate for booked visits during the trial.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Members collected information about early users by leaving a ______ at nearby cafés, since the park gates were still closed when those users walked past.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "survey card",
+          "wordLimit": 3,
+          "explanation": "Members collected information about early users by leaving a survey card at nearby cafés, since the park gates were still closed when those users walked past.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "At the same time, the caretaker changed the start time of his ______ to ensure that he could check paths before users arrived.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "inspection",
+          "wordLimit": 3,
+          "explanation": "At the same time, the caretaker changed the start time of his inspection to ensure that he could check paths before users arrived.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The caretaker refused to issue permanent keys but offered to unlock the side gate for ______ during the trial.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "booked visits",
+          "wordLimit": 3,
+          "explanation": "The caretaker refused to issue permanent keys but offered to unlock the side gate for booked visits during the trial.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The public weekend schedule was brought forward as well.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The opening time was brought forward on weekdays only. At the same time, the caretaker changed the start time of his inspection to ensure that he could check paths before users arrived.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how occasional weekend access was arranged?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Later, a school asked for occasional earlier access at weekends. The caretaker refused to issue permanent keys but offered to unlock the side gate for booked visits during the trial.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-024",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Trial of Night Deliveries",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Trial of Night Deliveries",
+      "body": "**A** A bakery tested late deliveries to avoid congestion in the morning. Its manager asked the drivers to record both journey time and unloading time, because faster roads might save little if staff could not receive the goods.\n\n**B** The first delivery arrived quickly, but the rear gate was locked. On the next night the manager installed a temporary key box and noted which driver had been given its code.\n\n**C** New neighbours then complained about the metal platform. The team put rubber mats under the platform edges and asked a shop worker to listen outside during the next unloading.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its manager asked the drivers to record both journey time and ______, because faster roads might save little if staff could not receive the goods.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "unloading time",
+          "wordLimit": 3,
+          "explanation": "Its manager asked the drivers to record both journey time and unloading time, because faster roads might save little if staff could not receive the goods.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "On the next night the manager installed a temporary ______ and noted which driver had been given its code.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "key box",
+          "wordLimit": 3,
+          "explanation": "On the next night the manager installed a temporary key box and noted which driver had been given its code.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The team put ______ under the platform edges and asked a shop worker to listen outside during the next unloading.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rubber mats",
+          "wordLimit": 3,
+          "explanation": "The team put rubber mats under the platform edges and asked a shop worker to listen outside during the next unloading.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Unloading time was ignored in the trial.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A bakery tested late deliveries to avoid congestion in the morning. Its manager asked the drivers to record both journey time and unloading time, because faster roads might save little if staff could not receive the goods.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a change made after complaints from neighbours?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "New neighbours then complained about the metal platform. The team put rubber mats under the platform edges and asked a shop worker to listen outside during the next unloading.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

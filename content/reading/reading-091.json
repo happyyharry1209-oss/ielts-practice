@@ -1,0 +1,80 @@
+{
+  "id": "reading-091",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Study of Coffee Cup Returns",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Study of Coffee Cup Returns",
+      "body": "**A** A campus café tested a deposit for reusable cups. The team tracked which cups were sent back immediately and which were returned to the other branch on a later day.\n\n**B** Returns fell during a week when one branch had fewer staff. Its deposit desk closed early and students carrying cups could not get a refund before their bus left.\n\n**C** After the trial, the café allowed returns at the ordinary counter. Staff could scan a symbol printed on the cup to confirm that it belonged to the deposit scheme.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The team tracked which cups were sent back immediately and which were returned to the ______ on a later day.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "other branch",
+          "wordLimit": 3,
+          "explanation": "The team tracked which cups were sent back immediately and which were returned to the other branch on a later day.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Its deposit desk closed early and students carrying cups could not get a ______ before their bus left.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "refund",
+          "wordLimit": 3,
+          "explanation": "Its deposit desk closed early and students carrying cups could not get a refund before their bus left.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Staff could scan a ______ printed on the cup to confirm that it belonged to the deposit scheme.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "symbol",
+          "wordLimit": 3,
+          "explanation": "Staff could scan a symbol printed on the cup to confirm that it belonged to the deposit scheme.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The deposit was higher than the cost of a small coffee.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the reason a temporary fall in returns was observed?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Returns fell during a week when one branch had fewer staff. Its deposit desk closed early and students carrying cups could not get a refund before their bus left.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

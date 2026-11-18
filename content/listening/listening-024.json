@@ -1,0 +1,63 @@
+{
+  "id": "listening-024",
+  "skill": "listening",
+  "title": "Listening Drill — Speech variation project",
+  "description": "Student and tutor dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Speech variation project",
+      "transcript": "STUDENT: I've started the project on speech in different age groups. I was going to use a questionnaire, but testing it with one person made me realise that the questions were too broad.\n\nTUTOR: In that case, try voice recording first. But watch out for background noise. That can affect what you notice and what you end up writing down.\n\nSTUDENT: Would it help if I kept a daily log? I don't want to discover the problem only after I've handed everything in.\n\nTUTOR: A better safeguard here is microphone checks. Bring the sample clip to our next meeting, so we can check whether the speech is clear. There is no need to prepare the final presentation yet.",
+      "audioUrl": "/audio/listening-024/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "In that case, try ______ first.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "voice recording",
+          "wordLimit": 3,
+          "explanation": "In that case, try voice recording first."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "But watch out for ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "But watch out for background noise.",
+          "options": [
+            "missing entries",
+            "boundary errors",
+            "background noise",
+            "group pressure"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "A better safeguard here is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "microphone checks",
+          "wordLimit": 3,
+          "explanation": "A better safeguard here is microphone checks."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Bring the ______ to our next meeting, so we can check whether the speech is clear.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sample clip",
+          "wordLimit": 3,
+          "explanation": "Bring the sample clip to our next meeting, so we can check whether the speech is clear."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

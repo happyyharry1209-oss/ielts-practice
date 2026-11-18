@@ -1,0 +1,81 @@
+{
+  "id": "reading-074",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Monitoring Moss on a Roof",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Monitoring Moss on a Roof",
+      "body": "**A** A class followed the spread of moss on a roof model built on the ground. Each week students placed the same transparent grid over the surface to measure coverage.\n\n**B** The moss first spread near the gutter, where the longest period of dampness had been recorded. The students could see that constant shade alone was not enough to predict coverage.\n\n**C** After rainfall became less frequent, students continued taking pictures. They noticed that colour changed well before area, so their final report distinguished appearance from actual spread.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Each week students placed the same transparent ______ over the surface to measure coverage.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "grid",
+          "wordLimit": 3,
+          "explanation": "Each week students placed the same transparent grid over the surface to measure coverage.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The moss first spread near the gutter, where the longest period of ______ had been recorded.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "dampness",
+          "wordLimit": 3,
+          "explanation": "The moss first spread near the gutter, where the longest period of dampness had been recorded.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "They noticed that colour changed well before area, so their final report distinguished ______ from actual spread.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "appearance",
+          "wordLimit": 3,
+          "explanation": "They noticed that colour changed well before area, so their final report distinguished appearance from actual spread.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The experiment used real houses across the neighbourhood.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A class followed the spread of moss on a roof model built on the ground. Each week students placed the same transparent grid over the surface to measure coverage.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a distinction made after a dry spell?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "After rainfall became less frequent, students continued taking pictures. They noticed that colour changed well before area, so their final report distinguished appearance from actual spread.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "reading-080",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Studying Visits to an Aquarium",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Studying Visits to an Aquarium",
+      "body": "**A** An aquarium recorded how long people stopped in front of curved viewing windows. It marked where visitors stood but removed small children from the height comparison because the groups were too small.\n\n**B** At one exhibit, adults could easily see the tank but wheelchair users had a more restricted view. Changing the handrail helped without lowering the glass.\n\n**C** The staff plan to repeat the study on afternoons when the building is busy. Queue length and visitors' ability to move past other groups may also matter.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It marked where visitors stood but removed small children from the ______ because the groups were too small.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "height comparison",
+          "wordLimit": 3,
+          "explanation": "It marked where visitors stood but removed small children from the height comparison because the groups were too small.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Changing the ______ helped without lowering the glass.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "handrail",
+          "wordLimit": 3,
+          "explanation": "Changing the handrail helped without lowering the glass.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Queue length and visitors' ability to ______ other groups may also matter.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "move past",
+          "wordLimit": 3,
+          "explanation": "Queue length and visitors' ability to move past other groups may also matter.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The team repeated the survey on a bank holiday.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions one change that improved a restricted view?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "At one exhibit, adults could easily see the tank but wheelchair users had a more restricted view. Changing the handrail helped without lowering the glass.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

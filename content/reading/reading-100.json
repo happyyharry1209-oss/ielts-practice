@@ -1,0 +1,81 @@
+{
+  "id": "reading-100",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A New Label for Community Gardens",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A New Label for Community Gardens",
+      "body": "**A** A garden network made signs showing which beds were open for communal harvest. At first they used colour only, which was difficult to interpret when several signs had faded.\n\n**B** Volunteers added an open-hand symbol and an explanation in two languages. They positioned signs next to the relevant beds, rather than making visitors match a code to a map.\n\n**C** The updated signs included a space for the expected harvest date. A pencil could be used on that area, making it easier to mark a change after bad weather.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "At first they used colour only, which was difficult to interpret when several signs had ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "faded",
+          "wordLimit": 3,
+          "explanation": "At first they used colour only, which was difficult to interpret when several signs had faded.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "They positioned signs next to the relevant ______, rather than making visitors match a code to a map.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "beds",
+          "wordLimit": 3,
+          "explanation": "They positioned signs next to the relevant beds, rather than making visitors match a code to a map.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A pencil could be used on that area, making it easier to mark a change after ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "bad weather",
+          "wordLimit": 3,
+          "explanation": "A pencil could be used on that area, making it easier to mark a change after bad weather.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Signs in two languages were included after the first version.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Volunteers added an open-hand symbol and an explanation in two languages. They positioned signs next to the relevant beds, rather than making visitors match a code to a map.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why one area of a sign could be changed easily?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The updated signs included a space for the expected harvest date. A pencil could be used on that area, making it easier to mark a change after bad weather.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

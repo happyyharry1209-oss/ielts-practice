@@ -1,0 +1,66 @@
+{
+  "id": "listening-084",
+  "skill": "listening",
+  "title": "Listening Drill — Checking a rain gauge",
+  "description": "Practical demonstration. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Checking a rain gauge",
+      "transcript": "INSTRUCTOR: This demonstration is about checking a rain gauge. Watch the whole process once before trying it yourself. If you start while I'm still talking, you may miss the order of the steps.\n\nINSTRUCTOR: Get the measuring jug ready. Begin by checking the level base. When everything is in position, wait three minutes. It may look as though nothing is happening at first.\n\nINSTRUCTOR: Look for a steady reading before moving on. don't tighten the bolts while measuring. Leave yourself time to clear the work area so the next group can start promptly.",
+      "audioUrl": "/audio/listening-084/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Get the ______ ready.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "measuring jug",
+          "wordLimit": 3,
+          "explanation": "Get the measuring jug ready."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "Begin by checking the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "Begin by checking the level base.",
+          "options": [
+            "drainage hole",
+            "paper guide",
+            "level base",
+            "hanger"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "When everything is in position, wait ______ minutes.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "three",
+          "wordLimit": 3,
+          "explanation": "When everything is in position, wait three minutes.",
+          "acceptableAnswers": [
+            "3"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Look for ______ before moving on.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "a steady reading",
+          "wordLimit": 3,
+          "explanation": "Look for a steady reading before moving on."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

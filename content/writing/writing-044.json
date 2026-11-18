@@ -1,0 +1,57 @@
+{
+  "id": "writing-044",
+  "skill": "writing",
+  "title": "Writing Practice — Mobile ticketing",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows journeys paid for by mobile phone on three bus networks in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Market buses",
+            "values": [
+              6,
+              35,
+              61
+            ]
+          },
+          {
+            "label": "County link",
+            "values": [
+              3,
+              17,
+              44
+            ]
+          },
+          {
+            "label": "Campus shuttle",
+            "values": [
+              13,
+              48,
+              76
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Public transport providers should continue accepting cash after most passengers have switched to digital payment.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

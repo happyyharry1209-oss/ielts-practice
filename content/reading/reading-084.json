@@ -1,0 +1,81 @@
+{
+  "id": "reading-084",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Measuring the Size of a Pottery Bowl",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Measuring the Size of a Pottery Bowl",
+      "body": "**A** A pottery class made bowls from the same clay and measured their widths before and after firing. Each bowl was marked at the widest point so a later reading would use the same position.\n\n**B** Some bowls shrank more than others. The teacher checked whether walls of different thickness had dried evenly before the students put them into the kiln.\n\n**C** The final display compared a fired bowl with a paper circle tracing its original outline. This made the amount of shrinkage visible even without a printed figure.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Each bowl was marked at the widest ______ so a later reading would use the same position.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "point",
+          "wordLimit": 3,
+          "explanation": "Each bowl was marked at the widest point so a later reading would use the same position.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The teacher checked whether walls of different ______ had dried evenly before the students put them into the kiln.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "thickness",
+          "wordLimit": 3,
+          "explanation": "The teacher checked whether walls of different thickness had dried evenly before the students put them into the kiln.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "This made the amount of ______ visible even without a printed figure.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shrinkage",
+          "wordLimit": 3,
+          "explanation": "This made the amount of shrinkage visible even without a printed figure.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The widest point was identified again for the second measurement.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A pottery class made bowls from the same clay and measured their widths before and after firing. Each bowl was marked at the widest point so a later reading would use the same position.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a way of showing the size change without numbers?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The final display compared a fired bowl with a paper circle tracing its original outline. This made the amount of shrinkage visible even without a printed figure.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-070",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Spacing Trees Along a New Avenue",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Spacing Trees Along a New Avenue",
+      "body": "**A** A design class drew proposed trees at regular intervals along a new avenue. Its first map did not show a series of utility covers that maintenance workers needed to lift.\n\n**B** Once the missing features were added, the class placed trees according to usable spaces. At two points the plans had an unusually wide gap, which also gave a clear view when crossing the road.\n\n**C** A final model used circles for the expected width of mature branches. It allowed the class to see where shade might reach across two parking bays instead of staying on the pavement.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its first map did not show a series of ______ that maintenance workers needed to lift.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "utility covers",
+          "wordLimit": 3,
+          "explanation": "Its first map did not show a series of utility covers that maintenance workers needed to lift.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "At two points the plans had an unusually wide gap, which also gave a clear ______ when crossing the road.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "view",
+          "wordLimit": 3,
+          "explanation": "At two points the plans had an unusually wide gap, which also gave a clear view when crossing the road.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It allowed the class to see where shade might reach across two ______ instead of staying on the pavement.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "parking bays",
+          "wordLimit": 3,
+          "explanation": "It allowed the class to see where shade might reach across two parking bays instead of staying on the pavement.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The completed tree plan had exactly equal spaces along the entire avenue.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Once the missing features were added, the class placed trees according to usable spaces. At two points the plans had an unusually wide gap, which also gave a clear view when crossing the road.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a way of visualising the spread of mature branches?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "A final model used circles for the expected width of mature branches. It allowed the class to see where shade might reach across two parking bays instead of staying on the pavement.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-050",
+  "skill": "listening",
+  "title": "Listening Drill — Training volunteer readers",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Training volunteer readers",
+      "transcript": "HOST: You work on training volunteer readers. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with a pilot class. At the time our biggest obstacle was tutor shortages. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered different goals. It helped us improve session planning. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll invite a fresh group of volunteers. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-050/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Ours started with ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "Ours started with a pilot class.",
+          "options": [
+            "a pilot class",
+            "a cupboard",
+            "an audit",
+            "a donation"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "tutor shortages",
+          "wordLimit": 3,
+          "explanation": "At the time our biggest obstacle was tutor shortages."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "We discovered ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "different goals",
+          "wordLimit": 3,
+          "explanation": "We discovered different goals."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "session planning",
+          "wordLimit": 3,
+          "explanation": "It helped us improve session planning."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

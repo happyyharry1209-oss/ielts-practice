@@ -1,0 +1,63 @@
+{
+  "id": "listening-059",
+  "skill": "listening",
+  "title": "Listening Drill — Botanical library route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Botanical library route",
+      "transcript": "VISITOR: I'm trying to get to the botanical library. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the garden gate. From there, walk towards the glasshouse. Stay on the same side until you can see the sign for the reference room.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the gravel beds today. The gardeners have left their tools there. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-059/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Start at the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Start at the garden gate.",
+          "options": [
+            "stage door",
+            "garden gate",
+            "public entrance",
+            "east gate"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "glasshouse",
+          "wordLimit": 3,
+          "explanation": "From there, walk towards the glasshouse."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "reference room",
+          "wordLimit": 3,
+          "explanation": "Stay on the same side until you can see the sign for the reference room."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "gravel beds",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the gravel beds today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

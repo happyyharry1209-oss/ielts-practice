@@ -1,0 +1,57 @@
+{
+  "id": "writing-086",
+  "skill": "writing",
+  "title": "Writing Practice — International student clubs",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows members of international student societies at three universities in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "members",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Hallam",
+            "values": [
+              220,
+              255,
+              315
+            ]
+          },
+          {
+            "label": "Redbrook",
+            "values": [
+              144,
+              198,
+              241
+            ]
+          },
+          {
+            "label": "Ash Hill",
+            "values": [
+              270,
+              258,
+              289
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Universities should organise activities that mix local and international students rather than supporting separate social clubs.\n\nTo what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

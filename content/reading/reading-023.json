@@ -1,0 +1,80 @@
+{
+  "id": "reading-023",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Workshop Sign-in Sheet",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Workshop Sign-in Sheet",
+      "body": "**A** A repair club used an attendance sheet which recorded only names. Its organiser added a place to write what each person had brought, hoping to learn which spare parts were likely to be needed.\n\n**B** The new sheet showed that some problems were seasonal. Loose bicycle fittings were common in spring, while people asked about heaters in autumn. The club ordered only small quantities at first to avoid wasting money.\n\n**C** At the end of the year, an organiser counted how many visitors returned after a repair. She did not treat a return visit as proof of success because some people came back with the same fault.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its organiser added a place to write what each person had brought, hoping to learn which ______ were likely to be needed.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "spare parts",
+          "wordLimit": 3,
+          "explanation": "Its organiser added a place to write what each person had brought, hoping to learn which spare parts were likely to be needed.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The club ordered only ______ at first to avoid wasting money.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "small quantities",
+          "wordLimit": 3,
+          "explanation": "The club ordered only small quantities at first to avoid wasting money.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "She did not treat a return visit as proof of success because some people came back with the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "same fault",
+          "wordLimit": 3,
+          "explanation": "She did not treat a return visit as proof of success because some people came back with the same fault.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The project measured how much money every visitor saved.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the club avoided buying too much stock?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The new sheet showed that some problems were seasonal. Loose bicycle fittings were common in spring, while people asked about heaters in autumn. The club ordered only small quantities at first to avoid wasting money.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

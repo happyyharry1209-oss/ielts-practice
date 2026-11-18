@@ -1,0 +1,81 @@
+{
+  "id": "reading-089",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Comparing Watering Records in a Nursery",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Comparing Watering Records in a Nursery",
+      "body": "**A** Two nursery teams kept separate reports on seedling trays. One team measured water in cups, while the other wrote down the number of minutes a sprinkler ran.\n\n**B** Because the two records could not be directly compared, a supervisor put identical cups under the sprinkler to estimate the amount supplied per minute.\n\n**C** On windy days some cups filled faster than others. The supervisor retained that difference in the results and advised the team to collect several readings rather than relying on a single cup.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "One team measured water in cups, while the other wrote down the number of ______ a sprinkler ran.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "minutes",
+          "wordLimit": 3,
+          "explanation": "One team measured water in cups, while the other wrote down the number of minutes a sprinkler ran.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Because the two records could not be directly compared, a supervisor put identical cups under the sprinkler to estimate the amount supplied per ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "minute",
+          "wordLimit": 3,
+          "explanation": "Because the two records could not be directly compared, a supervisor put identical cups under the sprinkler to estimate the amount supplied per minute.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The supervisor retained that difference in the results and advised the team to collect several readings rather than relying on a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "single cup",
+          "wordLimit": 3,
+          "explanation": "The supervisor retained that difference in the results and advised the team to collect several readings rather than relying on a single cup.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The supervisor recommended that every reading come from one cup only.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "On windy days some cups filled faster than others. The supervisor retained that difference in the results and advised the team to collect several readings rather than relying on a single cup.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how different units were made easier to compare?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Because the two records could not be directly compared, a supervisor put identical cups under the sprinkler to estimate the amount supplied per minute.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "listening-014",
+  "skill": "listening",
+  "title": "Listening Drill — Campus sculpture trail",
+  "description": "Visitor briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Campus sculpture trail",
+      "transcript": "GUIDE: Welcome to our visit to the campus sculpture trail. Before we leave, make sure your name appears on the list I'm holding. If you can't see your name, speak to me privately rather than adding it yourself.\n\nGUIDE: Our meeting point is the clock tower. The visit itself will last forty minutes. You don't need to take anything heavy, but please bring a camera.\n\nGUIDE: We'll finish at the art building. From there you can make your own way home. One last detail: please stay off the planted areas. If you're separated from the group, phone the number printed on your ticket rather than taking a shortcut.",
+      "audioUrl": "/audio/listening-014/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Our meeting point is the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "Our meeting point is the clock tower.",
+          "options": [
+            "clock tower",
+            "stone bridge",
+            "ticket hall",
+            "lower gate"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "The visit itself will last ______ minutes.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "forty",
+          "wordLimit": 3,
+          "explanation": "The visit itself will last forty minutes.",
+          "acceptableAnswers": [
+            "40"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "You don't need to take anything heavy, but please bring a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "camera",
+          "wordLimit": 3,
+          "explanation": "You don't need to take anything heavy, but please bring a camera."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "We'll finish at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "art building",
+          "wordLimit": 3,
+          "explanation": "We'll finish at the art building."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-069",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Learning from a Damaged Mural",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Learning from a Damaged Mural",
+      "body": "**A** A conservator found patches of pale colour on an outdoor mural. Instead of guessing whether sun or rain caused them, she recorded their shape on a transparent sheet.\n\n**B** The patches matched positions where drips ran from a projecting ledge. To test this link, she observed the wall after light rain and compared the wet areas with her sheet.\n\n**C** The conservator advised fitting a narrow gutter before retouching the paint. Repairing the image without controlling the drips might have produced another round of damage.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Instead of guessing whether sun or rain caused them, she recorded their shape on a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "transparent sheet",
+          "wordLimit": 3,
+          "explanation": "Instead of guessing whether sun or rain caused them, she recorded their shape on a transparent sheet.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "To test this link, she observed the wall after light ______ and compared the wet areas with her sheet.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rain",
+          "wordLimit": 3,
+          "explanation": "To test this link, she observed the wall after light rain and compared the wet areas with her sheet.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Repairing the image without controlling the drips might have produced another round of ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "damage",
+          "wordLimit": 3,
+          "explanation": "Repairing the image without controlling the drips might have produced another round of damage.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The conservator recommended retouching the paint before working on drainage.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The conservator advised fitting a narrow gutter before retouching the paint. Repairing the image without controlling the drips might have produced another round of damage.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the suspected cause was checked?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The patches matched positions where drips ran from a projecting ledge. To test this link, she observed the wall after light rain and compared the wet areas with her sheet.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

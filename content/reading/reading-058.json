@@ -1,0 +1,81 @@
+{
+  "id": "reading-058",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Keeping a Foreshore Path Open",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Keeping a Foreshore Path Open",
+      "body": "**A** A council tested a narrow path along the shore where sections were sometimes covered by the tide. Before starting repairs, it marked sections that already had an alternative inland route.\n\n**B** At the lowest spot, adding a small raised deck looked promising but made it harder for maintenance staff to remove driftwood. The plan was changed to include a removable panel.\n\n**C** The final map showed when the route might be closed and where to turn back. It did not give a guaranteed opening time because storm conditions could change water levels unexpectedly.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Before starting repairs, it marked sections that already had an alternative ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "inland route",
+          "wordLimit": 3,
+          "explanation": "Before starting repairs, it marked sections that already had an alternative inland route.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "At the lowest spot, adding a small raised deck looked promising but made it harder for maintenance staff to remove ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "driftwood",
+          "wordLimit": 3,
+          "explanation": "At the lowest spot, adding a small raised deck looked promising but made it harder for maintenance staff to remove driftwood.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It did not give a guaranteed opening time because ______ could change water levels unexpectedly.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "storm conditions",
+          "wordLimit": 3,
+          "explanation": "It did not give a guaranteed opening time because storm conditions could change water levels unexpectedly.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The published map gave a guaranteed opening time.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The final map showed when the route might be closed and where to turn back. It did not give a guaranteed opening time because storm conditions could change water levels unexpectedly.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a problem that changed the design of the deck?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "At the lowest spot, adding a small raised deck looked promising but made it harder for maintenance staff to remove driftwood. The plan was changed to include a removable panel.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

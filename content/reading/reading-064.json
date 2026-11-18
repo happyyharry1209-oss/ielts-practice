@@ -1,0 +1,81 @@
+{
+  "id": "reading-064",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Smarter Lost Property List",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Smarter Lost Property List",
+      "body": "**A** At a sports hall, lost items were placed on a table with the date they were found. Most visitors remembered the colour or size of an item but not the date of their last visit.\n\n**B** Staff introduced a form organised by type. They kept one feature of each item hidden from the public list so the person claiming it had to provide a description.\n\n**C** After a trial, staff photographed large items only. This made the list easier to browse, while smaller objects could still be identified by asking about their contents.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Most visitors remembered the colour or size of an item but not the date of their ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "last visit",
+          "wordLimit": 3,
+          "explanation": "Most visitors remembered the colour or size of an item but not the date of their last visit.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "They kept one feature of each item hidden from the public list so the person claiming it had to provide a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "description",
+          "wordLimit": 3,
+          "explanation": "They kept one feature of each item hidden from the public list so the person claiming it had to provide a description.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "This made the list easier to browse, while smaller objects could still be identified by asking about their ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "contents",
+          "wordLimit": 3,
+          "explanation": "This made the list easier to browse, while smaller objects could still be identified by asking about their contents.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The public list revealed every identifying feature of each object.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Staff introduced a form organised by type. They kept one feature of each item hidden from the public list so the person claiming it had to provide a description.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions which items were photographed after the trial?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "After a trial, staff photographed large items only. This made the list easier to browse, while smaller objects could still be identified by asking about their contents.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

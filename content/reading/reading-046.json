@@ -1,0 +1,81 @@
+{
+  "id": "reading-046",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Notes from a Small Weather Station",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Notes from a Small Weather Station",
+      "body": "**A** A school mounted two temperature sensors in its grounds. To find out whether exposure mattered, one sensor was installed beside a wall and the other in an open wooden screen.\n\n**B** The wall sensor reported the highest temperature just after lunch. On cloudy afternoons the results were closer, suggesting that the wall affected readings mainly when there was direct sunlight.\n\n**C** Rather than delete the unexpectedly high readings, the students marked them as a separate series. They compared both plots when discussing the importance of sensor placement.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "To find out whether exposure mattered, one sensor was installed beside a wall and the other in an open ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "wooden screen",
+          "wordLimit": 3,
+          "explanation": "To find out whether exposure mattered, one sensor was installed beside a wall and the other in an open wooden screen.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "On cloudy afternoons the results were closer, suggesting that the wall affected readings mainly when there was direct ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sunlight",
+          "wordLimit": 3,
+          "explanation": "On cloudy afternoons the results were closer, suggesting that the wall affected readings mainly when there was direct sunlight.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "They compared both plots when discussing the importance of ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sensor placement",
+          "wordLimit": 3,
+          "explanation": "They compared both plots when discussing the importance of sensor placement.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Students removed the high readings from their records.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Rather than delete the unexpectedly high readings, the students marked them as a separate series. They compared both plots when discussing the importance of sensor placement.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the condition under which measurements differed more?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The wall sensor reported the highest temperature just after lunch. On cloudy afternoons the results were closer, suggesting that the wall affected readings mainly when there was direct sunlight.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

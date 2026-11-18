@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import type { Question, QuestionType } from '@ielts/shared';
+import { Markdown } from '../components/Markdown';
 import { QuestionInput } from '../components/QuestionInput';
 import { PageHeader, Spinner } from '../components/ui';
 import type { ContentManifest } from '@ielts/shared';
@@ -36,6 +37,7 @@ interface AttemptDetail {
     band: number | null;
   };
   items: AttemptItem[];
+  transcripts?: { id: string; title: string; transcript: string }[];
 }
 
 export default function Result() {
@@ -81,23 +83,25 @@ export default function Result() {
         }
       />
 
-      <section className="grid border-y border-line md:grid-cols-[0.9fr_1.1fr]">
-        <div className="border-b border-line py-7 md:border-b-0 md:border-r md:pr-8">
-          <p className="eyebrow">{t('results.band')}</p>
-          <div className="mt-3 flex items-baseline gap-3 whitespace-nowrap">
-            <p
-              className={cn(
-                'font-serif text-7xl font-medium leading-[0.9] tracking-[-0.05em]',
-                bandColor(attempt.band),
-              )}
-            >
-              {attempt.band != null ? attempt.band.toFixed(1) : '—'}
-            </p>
-            <span className="shrink-0 font-sans text-lg font-normal text-slate-400">/ 9</span>
+      <section className={cn('grid border-y border-line', attempt.band != null && 'md:grid-cols-[0.9fr_1.1fr]')}>
+        {attempt.band != null ? (
+          <div className="border-b border-line py-7 md:border-b-0 md:border-r md:pr-8">
+            <p className="eyebrow">{t('results.band')}</p>
+            <div className="mt-3 flex items-baseline gap-3 whitespace-nowrap">
+              <p
+                className={cn(
+                  'font-serif text-7xl font-medium leading-[0.9] tracking-[-0.05em]',
+                  bandColor(attempt.band),
+                )}
+              >
+                {attempt.band.toFixed(1)}
+              </p>
+              <span className="shrink-0 font-sans text-lg font-normal text-slate-400">/ 9</span>
+            </div>
+            <p className="mt-3 max-w-md text-xs leading-5 text-slate-500">{t('results.disclaimer')}</p>
           </div>
-          <p className="mt-3 max-w-md text-xs leading-5 text-slate-500">{t('results.disclaimer')}</p>
-        </div>
-        <div className="grid grid-cols-2 md:pl-8">
+        ) : null}
+        <div className={cn('grid grid-cols-2', attempt.band != null && 'md:pl-8')}>
           <div className="py-7 md:pr-6">
             <p className="eyebrow">{t('results.correct')}</p>
             <p className="mt-2 font-serif text-4xl font-medium text-ink">
@@ -123,6 +127,20 @@ export default function Result() {
           </div>
         </div>
       </section>
+
+      {data.transcripts?.length ? (
+        <details className="card mt-6 p-4 sm:p-5">
+          <summary className="cursor-pointer font-semibold text-ink">{t('exam.showTranscript')}</summary>
+          <div className="mt-4 space-y-5 border-t border-line pt-4">
+            {data.transcripts.map(({ id, title, transcript }) => (
+              <section key={id}>
+                <h2 className="mb-2 text-lg font-semibold text-ink">{title}</h2>
+                <Markdown text={transcript} />
+              </section>
+            ))}
+          </div>
+        </details>
+      ) : null}
 
       <h2 className="mb-4 mt-10 border-b border-ink pb-3 font-serif text-2xl font-semibold text-ink">
         {t('results.review')}

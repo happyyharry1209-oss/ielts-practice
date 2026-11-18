@@ -1,0 +1,81 @@
+{
+  "id": "reading-079",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Recovering a Lost Footpath",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Recovering a Lost Footpath",
+      "body": "**A** A village wanted to reopen a path shown on old maps. To find the route, volunteers compared a map with aerial photographs showing long strips of uncultivated land.\n\n**B** A farmer confirmed that one strip had once been walked but explained why the path had moved well before the map was printed. This made oral evidence useful alongside the images.\n\n**C** The new path skirted an active field. At the entrance, signs explained the difference between the historic route and the current route, so walkers would not cross crops.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "To find the route, volunteers compared a map with ______ showing long strips of uncultivated land.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "aerial photographs",
+          "wordLimit": 3,
+          "explanation": "To find the route, volunteers compared a map with aerial photographs showing long strips of uncultivated land.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "This made ______ useful alongside the images.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "oral evidence",
+          "wordLimit": 3,
+          "explanation": "This made oral evidence useful alongside the images.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "At the entrance, signs explained the difference between the historic route and the ______, so walkers would not cross crops.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "current route",
+          "wordLimit": 3,
+          "explanation": "At the entrance, signs explained the difference between the historic route and the current route, so walkers would not cross crops.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The reopened path followed the historical alignment at every point.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The new path skirted an active field. At the entrance, signs explained the difference between the historic route and the current route, so walkers would not cross crops.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how a local account helped interpret a map?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "A farmer confirmed that one strip had once been walked but explained why the path had moved well before the map was printed. This made oral evidence useful alongside the images.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

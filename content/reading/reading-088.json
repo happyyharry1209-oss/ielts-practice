@@ -1,0 +1,80 @@
+{
+  "id": "reading-088",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Using Chalk to Mark a Garden Layout",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Using Chalk to Mark a Garden Layout",
+      "body": "**A** A gardener created a full-size plan by drawing proposed paths in chalk. Local users walked along the lines and suggested wider turns for wheelbarrows.\n\n**B** The gardener left the lines in place over a weekend. Notes collected afterwards identified a place where two groups often tried to enter a gate from different directions.\n\n**C** After adjusting the plan, the garden added a movable planter. It could be pushed away to make space for larger deliveries while keeping permanent walls in the same place.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Local users walked along the lines and suggested wider turns for ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "wheelbarrows",
+          "wordLimit": 3,
+          "explanation": "Local users walked along the lines and suggested wider turns for wheelbarrows.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Notes collected afterwards identified a place where two groups often tried to enter a ______ from different directions.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "gate",
+          "wordLimit": 3,
+          "explanation": "Notes collected afterwards identified a place where two groups often tried to enter a gate from different directions.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It could be pushed away to make space for larger ______ while keeping permanent walls in the same place.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "deliveries",
+          "wordLimit": 3,
+          "explanation": "It could be pushed away to make space for larger deliveries while keeping permanent walls in the same place.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The garden introduced an entry fee once the paths were finished.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a flexible feature that could be repositioned?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "After adjusting the plan, the garden added a movable planter. It could be pushed away to make space for larger deliveries while keeping permanent walls in the same place.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-022",
+  "skill": "listening",
+  "title": "Listening Drill — Cafeteria queue study",
+  "description": "Student and tutor dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Cafeteria queue study",
+      "transcript": "STUDENT: I've started the project on waiting times in the cafeteria. I was going to use a questionnaire, but testing it with one person made me realise that the questions were too broad.\n\nTUTOR: In that case, try observation first. But watch out for lunch rush. That can affect what you notice and what you end up writing down.\n\nSTUDENT: Would it help if I kept a daily log? I don't want to discover the problem only after I've handed everything in.\n\nTUTOR: A better safeguard here is fixed intervals. Bring the timetable to our next meeting, so we can compare busy and quiet periods. There is no need to prepare the final presentation yet.",
+      "audioUrl": "/audio/listening-022/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "In that case, try ______ first.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "observation",
+          "wordLimit": 3,
+          "explanation": "In that case, try observation first."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "But watch out for ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "lunch rush",
+          "wordLimit": 3,
+          "explanation": "But watch out for lunch rush."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "A better safeguard here is ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "A better safeguard here is fixed intervals.",
+          "options": [
+            "fixed intervals",
+            "paired observers",
+            "microphone checks",
+            "weekly reminders"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Bring the ______ to our next meeting, so we can compare busy and quiet periods.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "timetable",
+          "wordLimit": 3,
+          "explanation": "Bring the timetable to our next meeting, so we can compare busy and quiet periods."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

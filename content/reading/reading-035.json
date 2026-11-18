@@ -1,0 +1,80 @@
+{
+  "id": "reading-035",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Moving a Weekly Market Indoors",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Moving a Weekly Market Indoors",
+      "body": "**A** During winter, a market moved into a former bus garage. Visitors entered through one doorway and left through another to reduce congestion beside the busiest stalls.\n\n**B** The new flow worked until both queues met beside a column. Organisers marked a separate waiting area and shifted a table so visitors could still walk around people paying for food.\n\n**C** At the end of the first month, traders held a short meeting. They suggested placing a map outside the entrance so regular customers could find their former sellers in the new building.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Visitors entered through one doorway and left through another to reduce congestion beside the busiest ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "stalls",
+          "wordLimit": 3,
+          "explanation": "Visitors entered through one doorway and left through another to reduce congestion beside the busiest stalls.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Organisers marked a separate ______ and shifted a table so visitors could still walk around people paying for food.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "waiting area",
+          "wordLimit": 3,
+          "explanation": "Organisers marked a separate waiting area and shifted a table so visitors could still walk around people paying for food.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "They suggested placing a ______ outside the entrance so regular customers could find their former sellers in the new building.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "map",
+          "wordLimit": 3,
+          "explanation": "They suggested placing a map outside the entrance so regular customers could find their former sellers in the new building.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Outside signs were installed before the first market took place.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions where the new layout initially caused a bottleneck?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The new flow worked until both queues met beside a column. Organisers marked a separate waiting area and shifted a table so visitors could still walk around people paying for food.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-097",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Weighing Parcels at a Small Shop",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Weighing Parcels at a Small Shop",
+      "body": "**A** A shop introduced a parcel scale beside the tills. Customers who brought a box without its final packaging sometimes received a weight estimate lower than the finished item.\n\n**B** Staff placed scrap paper and tape beside the scales so customers could close the parcel before measuring it. A line on the counter indicated the maximum size the shop could accept.\n\n**C** The first week was slower because staff explained the new process repeatedly. Later a short sign above the scale told customers where to write the reference number.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Customers who brought a box without its final packaging sometimes received a ______ lower than the finished item.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "weight estimate",
+          "wordLimit": 3,
+          "explanation": "Customers who brought a box without its final packaging sometimes received a weight estimate lower than the finished item.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A line on the counter indicated the maximum ______ the shop could accept.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "size",
+          "wordLimit": 3,
+          "explanation": "A line on the counter indicated the maximum size the shop could accept.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Later a short sign above the scale told customers where to write the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "reference number",
+          "wordLimit": 3,
+          "explanation": "Later a short sign above the scale told customers where to write the reference number.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "A finished parcel could be weighed at the shop.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "Staff placed scrap paper and tape beside the scales so customers could close the parcel before measuring it. A line on the counter indicated the maximum size the shop could accept.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a difficulty that occurred while customers learnt the new process?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The first week was slower because staff explained the new process repeatedly. Later a short sign above the scale told customers where to write the reference number.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-079",
+  "skill": "listening",
+  "title": "Listening Drill — Course headphones",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Course headphones",
+      "transcript": "CUSTOMER: I need some help with a pair of course headphones. The main problem is poor sound. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the order number. Then bring the item to the technical desk. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a replacement cable. keep the original cable. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-079/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "The main problem is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "poor sound",
+          "wordLimit": 3,
+          "explanation": "The main problem is poor sound."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "order number",
+          "wordLimit": 3,
+          "explanation": "First please send the order number."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Then bring the item to the technical desk.",
+          "options": [
+            "badge desk",
+            "technical desk",
+            "costume office",
+            "returns counter"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "replacement cable",
+          "wordLimit": 3,
+          "explanation": "Ask for a replacement cable."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

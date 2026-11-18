@@ -1,0 +1,63 @@
+{
+  "id": "listening-077",
+  "skill": "listening",
+  "title": "Listening Drill — Loan bicycle",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Loan bicycle",
+      "transcript": "CUSTOMER: I need some help with a bicycle from the loan scheme. The main problem is loose pedals. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the hire receipt. Then bring the item to the repair workshop. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a backup bicycle. please walk it to the workshop. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-077/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "The main problem is ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "The main problem is loose pedals.",
+          "options": [
+            "the screen freezes",
+            "poor sound",
+            "the name faded",
+            "loose pedals"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "hire receipt",
+          "wordLimit": 3,
+          "explanation": "First please send the hire receipt."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "repair workshop",
+          "wordLimit": 3,
+          "explanation": "Then bring the item to the repair workshop."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "backup bicycle",
+          "wordLimit": 3,
+          "explanation": "Ask for a backup bicycle."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

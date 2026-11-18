@@ -1,0 +1,81 @@
+{
+  "id": "reading-065",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Comparing Two Riverbanks",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Comparing Two Riverbanks",
+      "body": "**A** A school group recorded vegetation on both sides of a narrow river. Each group set a tape at the same height above the water so the two lines represented comparable levels.\n\n**B** The shadier side had fewer flowers in spring but retained damp ground for longer during dry weeks. The group therefore counted leaves as well as blossoms to compare plant growth.\n\n**C** In summer, it repeated the survey after the grass had been cut. Several differences disappeared, showing that maintenance as well as exposure could influence the comparison.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Each group set a tape at the same ______ above the water so the two lines represented comparable levels.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "height",
+          "wordLimit": 3,
+          "explanation": "Each group set a tape at the same height above the water so the two lines represented comparable levels.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The group therefore counted leaves as well as ______ to compare plant growth.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "blossoms",
+          "wordLimit": 3,
+          "explanation": "The group therefore counted leaves as well as blossoms to compare plant growth.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Several differences disappeared, showing that ______ as well as exposure could influence the comparison.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "maintenance",
+          "wordLimit": 3,
+          "explanation": "Several differences disappeared, showing that maintenance as well as exposure could influence the comparison.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Only flowers were counted on the shady bank.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The shadier side had fewer flowers in spring but retained damp ground for longer during dry weeks. The group therefore counted leaves as well as blossoms to compare plant growth.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how maintenance affected the later comparison?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "In summer, it repeated the survey after the grass had been cut. Several differences disappeared, showing that maintenance as well as exposure could influence the comparison.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

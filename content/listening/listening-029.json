@@ -1,0 +1,63 @@
+{
+  "id": "listening-029",
+  "skill": "listening",
+  "title": "Listening Drill — City swifts",
+  "description": "Short academic talk. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "City swifts",
+      "transcript": "PRESENTER: Today I'm describing a small study of swifts nesting in town centres. I want you to listen for how the researchers measured change, because the result is easy to overstate.\n\nPRESENTER: Their work took place on two streets with similar buildings. Instead of relying on what local people remembered, they recorded nest visits. They noticed earlier returns. That observation would have been missed if the team had visited only at the end.\n\nPRESENTER: The largest limitation was construction noise. The report is therefore a starting point. In a follow-up, the team would add quieter streets. A wider study could show whether the original pattern holds.",
+      "audioUrl": "/audio/listening-029/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Instead of relying on what local people remembered, they recorded ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "Instead of relying on what local people remembered, they recorded nest visits.",
+          "options": [
+            "flower visits",
+            "feeding calls",
+            "water levels",
+            "nest visits"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "They noticed ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "earlier returns",
+          "wordLimit": 3,
+          "explanation": "They noticed earlier returns."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "The largest limitation was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "construction noise",
+          "wordLimit": 3,
+          "explanation": "The largest limitation was construction noise."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "In a follow-up, the team would add ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "quieter streets",
+          "wordLimit": 3,
+          "explanation": "In a follow-up, the team would add quieter streets."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

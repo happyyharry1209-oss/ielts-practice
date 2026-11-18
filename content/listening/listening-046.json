@@ -1,0 +1,63 @@
+{
+  "id": "listening-046",
+  "skill": "listening",
+  "title": "Listening Drill — Lecture series change",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Lecture series change",
+      "transcript": "ORGANISER: A quick update about the guest lecture series. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns entry requirements.\n\nORGANISER: For now, go to the central staircase. If that route is closed when you arrive, use the east lift instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Ellie rather than the general enquiries desk. Before you leave, bring some form of identification. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-046/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "entry requirements",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns entry requirements."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "central staircase",
+          "wordLimit": 3,
+          "explanation": "For now, go to the central staircase."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "If that route is closed when you arrive, use the east lift instead.",
+          "options": [
+            "east lift",
+            "service road",
+            "side passage",
+            "sports hall"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Ellie",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Ellie rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

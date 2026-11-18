@@ -1,0 +1,63 @@
+{
+  "id": "listening-061",
+  "skill": "listening",
+  "title": "Listening Drill — City hall hearing route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "City hall hearing route",
+      "transcript": "VISITOR: I'm trying to get to the council hearing. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the public entrance. From there, walk towards the information board. Stay on the same side until you can see the sign for the assembly room.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the main staircase today. Only staff can use it this week. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-061/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "public entrance",
+          "wordLimit": 3,
+          "explanation": "Start at the public entrance."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "information board",
+          "wordLimit": 3,
+          "explanation": "From there, walk towards the information board."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "Stay on the same side until you can see the sign for the assembly room.",
+          "options": [
+            "athletics track",
+            "learning centre",
+            "rowing club",
+            "assembly room"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "main staircase",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the main staircase today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

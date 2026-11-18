@@ -1,0 +1,80 @@
+{
+  "id": "reading-077",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Why One Lily Pond Stayed Clear",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Why One Lily Pond Stayed Clear",
+      "body": "**A** A garden recorded water colour in two ponds after a hot spell. The clearer pond was shaded by an open trellis and had fewer plants growing beneath the surface.\n\n**B** The gardener placed equal water samples in identical jars and moved one jar to shade. This small trial could test the effect of light, though it did not reproduce the original ponds.\n\n**C** The report proposed another trial before any plants were removed. It would record water temperature and dissolved nutrients on each sampling day.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The clearer pond was shaded by an open ______ and had fewer plants growing beneath the surface.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "trellis",
+          "wordLimit": 3,
+          "explanation": "The clearer pond was shaded by an open trellis and had fewer plants growing beneath the surface.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "This small trial could test the effect of ______, though it did not reproduce the original ponds.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "light",
+          "wordLimit": 3,
+          "explanation": "This small trial could test the effect of light, though it did not reproduce the original ponds.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It would record water temperature and dissolved nutrients on each ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sampling day",
+          "wordLimit": 3,
+          "explanation": "It would record water temperature and dissolved nutrients on each sampling day.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The clearer pond was the older of the two ponds.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions what the small comparison could isolate?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The gardener placed equal water samples in identical jars and moved one jar to shade. This small trial could test the effect of light, though it did not reproduce the original ponds.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

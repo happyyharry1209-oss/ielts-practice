@@ -1,0 +1,81 @@
+{
+  "id": "reading-083",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — An Experiment with Painted Signs",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "An Experiment with Painted Signs",
+      "body": "**A** A shopkeeper tested painted signs in two colours. To stop position affecting the result, signs were exchanged between the two windows every morning.\n\n**B** The signs with darker lettering were noticed more often at a distance. In both positions, however, letters disappeared behind reflections when the sun was low.\n\n**C** A printer proposed a matt finish and larger spaces between words. The shopkeeper tried the finish first to measure the effect of a single change.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "To stop position affecting the result, signs were exchanged between the two ______ every morning.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "windows",
+          "wordLimit": 3,
+          "explanation": "To stop position affecting the result, signs were exchanged between the two windows every morning.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "In both positions, however, letters disappeared behind ______ when the sun was low.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "reflections",
+          "wordLimit": 3,
+          "explanation": "In both positions, however, letters disappeared behind reflections when the sun was low.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The shopkeeper tried the finish first to measure the effect of a single ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "change",
+          "wordLimit": 3,
+          "explanation": "The shopkeeper tried the finish first to measure the effect of a single change.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The signs were regularly switched from one location to the other.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A shopkeeper tested painted signs in two colours. To stop position affecting the result, signs were exchanged between the two windows every morning.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why two suggested improvements were not tried at the same time?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "A printer proposed a matt finish and larger spaces between words. The shopkeeper tried the finish first to measure the effect of a single change.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

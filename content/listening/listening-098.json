@@ -1,0 +1,67 @@
+{
+  "id": "listening-098",
+  "skill": "listening",
+  "title": "Listening Drill — Bus noise check",
+  "description": "Fieldwork briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Bus noise check",
+      "transcript": "LEADER: Let me explain how we'll collect data about bus noise by the main road. Each pair will have the same instructions. That matters because another group needs to be able to repeat what you've done.\n\nLEADER: Start with the first stop. Record the first reading at three. The quantity we're comparing is sound level. Use the sound meter marked with blue tape.\n\nLEADER: At the end, note any unusually loud vehicles. If you miss a reading, mark it as missing. Don't fill in a number by copying the nearest result.",
+      "audioUrl": "/audio/listening-098/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Start with the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "Start with the first stop.",
+          "options": [
+            "first stop",
+            "main gate",
+            "wooden bench",
+            "lower reach"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "Record the first reading at ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "three",
+          "wordLimit": 3,
+          "explanation": "Record the first reading at three.",
+          "acceptableAnswers": [
+            "3",
+            "3:00"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "The quantity we're comparing is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sound level",
+          "wordLimit": 3,
+          "explanation": "The quantity we're comparing is sound level."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Use the ______ marked with blue tape.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sound meter",
+          "wordLimit": 3,
+          "explanation": "Use the sound meter marked with blue tape."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

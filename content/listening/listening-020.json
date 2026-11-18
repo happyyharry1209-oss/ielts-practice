@@ -1,0 +1,63 @@
+{
+  "id": "listening-020",
+  "skill": "listening",
+  "title": "Listening Drill — Student travel survey",
+  "description": "Student and tutor dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Student travel survey",
+      "transcript": "STUDENT: I've started the project on student journeys. I was going to use a questionnaire, but testing it with one person made me realise that the questions were too broad.\n\nTUTOR: In that case, try interviews first. But watch out for selection bias. That can affect what you notice and what you end up writing down.\n\nSTUDENT: Would it help if I kept a daily log? I don't want to discover the problem only after I've handed everything in.\n\nTUTOR: A better safeguard here is random sampling. Bring the question sheet to our next meeting, so we can check which terms need defining. There is no need to prepare the final presentation yet.",
+      "audioUrl": "/audio/listening-020/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "In that case, try ______ first.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "In that case, try interviews first.",
+          "options": [
+            "content analysis",
+            "observation",
+            "interviews",
+            "shadowing"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "But watch out for ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "selection bias",
+          "wordLimit": 3,
+          "explanation": "But watch out for selection bias."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "A better safeguard here is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "random sampling",
+          "wordLimit": 3,
+          "explanation": "A better safeguard here is random sampling."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Bring the ______ to our next meeting, so we can check which terms need defining.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "question sheet",
+          "wordLimit": 3,
+          "explanation": "Bring the question sheet to our next meeting, so we can check which terms need defining."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

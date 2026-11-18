@@ -1,0 +1,81 @@
+{
+  "id": "reading-018",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Labels at the City Market",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Labels at the City Market",
+      "body": "**A** At a city market, a survey found that shoppers often asked sellers whether prices referred to one item or a whole bag. The market team created a common layout which put the unit price on the same line as the item name.\n\n**B** The layout worked well for fruit and vegetables but caused difficulty at a second-hand stall. Its volunteer seller often negotiated prices, so she used a blank space for the final amount instead of printing it in advance.\n\n**C** After a month, traders were asked whether the new sign altered their sales. The most consistent change was not sales but shorter queues, possibly because fewer people needed to ask the same question before paying.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The market team created a common layout which put the ______ on the same line as the item name.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "unit price",
+          "wordLimit": 3,
+          "explanation": "The market team created a common layout which put the unit price on the same line as the item name.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Its volunteer seller often negotiated prices, so she used a ______ for the final amount instead of printing it in advance.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "blank space",
+          "wordLimit": 3,
+          "explanation": "Its volunteer seller often negotiated prices, so she used a blank space for the final amount instead of printing it in advance.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The most consistent change was not sales but ______, possibly because fewer people needed to ask the same question before paying.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shorter queues",
+          "wordLimit": 3,
+          "explanation": "The most consistent change was not sales but shorter queues, possibly because fewer people needed to ask the same question before paying.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Shoppers were surveyed before the common sign layout was introduced.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "At a city market, a survey found that shoppers often asked sellers whether prices referred to one item or a whole bag. The market team created a common layout which put the unit price on the same line as the item name.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how a stall adapted the design to its way of selling?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The layout worked well for fruit and vegetables but caused difficulty at a second-hand stall. Its volunteer seller often negotiated prices, so she used a blank space for the final amount instead of printing it in advance.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

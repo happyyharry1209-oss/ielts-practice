@@ -1,0 +1,63 @@
+{
+  "id": "listening-067",
+  "skill": "listening",
+  "title": "Listening Drill — Path signage trial",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Path signage trial",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about temporary signs. The progress report is due on Wednesday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the route survey. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the yellow sign. Send your results to Alice first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that some readers will approach from behind. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-067/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Wednesday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Wednesday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "route survey",
+          "wordLimit": 3,
+          "explanation": "I'll start by checking the route survey."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "For the trial we will use the yellow sign.",
+          "options": [
+            "morning route",
+            "yellow sign",
+            "small carton",
+            "seed table"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Alice",
+          "wordLimit": 3,
+          "explanation": "Send your results to Alice first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-045",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Calendar for Roof Maintenance",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Calendar for Roof Maintenance",
+      "body": "**A** Several leaks at a college began in places covered by leaves. The property team checked the drainage channels every autumn but realised that nearby trees shed at different times.\n\n**B** The team assigned each building a maintenance week according to local records. Buildings with trees directly above their roofs had an additional inspection after the first storm of the season.\n\n**C** Caretakers also recorded whether each visit produced any repair work. After two years, the college lengthened checks at busy sites and reduced repeat visits at buildings rarely affected.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The property team checked the ______ every autumn but realised that nearby trees shed at different times.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "drainage channels",
+          "wordLimit": 3,
+          "explanation": "The property team checked the drainage channels every autumn but realised that nearby trees shed at different times.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Buildings with trees directly above their roofs had an additional ______ after the first storm of the season.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "inspection",
+          "wordLimit": 3,
+          "explanation": "Buildings with trees directly above their roofs had an additional inspection after the first storm of the season.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "After two years, the college lengthened checks at busy sites and reduced ______ at buildings rarely affected.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "repeat visits",
+          "wordLimit": 3,
+          "explanation": "After two years, the college lengthened checks at busy sites and reduced repeat visits at buildings rarely affected.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "All buildings received an identical schedule.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The team assigned each building a maintenance week according to local records. Buildings with trees directly above their roofs had an additional inspection after the first storm of the season.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the frequency of checks was revised using records?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Caretakers also recorded whether each visit produced any repair work. After two years, the college lengthened checks at busy sites and reduced repeat visits at buildings rarely affected.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

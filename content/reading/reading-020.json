@@ -1,0 +1,81 @@
+{
+  "id": "reading-020",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Designing a Quiet Workshop",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Designing a Quiet Workshop",
+      "body": "**A** An adult education centre wanted to offer woodworking and language classes in adjoining rooms. A caretaker measured sound on both sides of the walls while another person moved the saw bench around the workshop.\n\n**B** The wall facing the classroom was thick, but a hollow door transferred the highest-pitched sounds. The caretaker tested temporary edge seals before asking the centre to replace anything expensive.\n\n**C** Sound levels fell enough to run most classes at the same time. Sessions involving the largest machines were still held during breaks, when the language classroom was empty.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A caretaker measured sound on both sides of the walls while another person moved the ______ around the workshop.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "saw bench",
+          "wordLimit": 3,
+          "explanation": "A caretaker measured sound on both sides of the walls while another person moved the saw bench around the workshop.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The caretaker tested temporary ______ before asking the centre to replace anything expensive.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "edge seals",
+          "wordLimit": 3,
+          "explanation": "The caretaker tested temporary edge seals before asking the centre to replace anything expensive.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Sessions involving the largest machines were still held during ______, when the language classroom was empty.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "breaks",
+          "wordLimit": 3,
+          "explanation": "Sessions involving the largest machines were still held during breaks, when the language classroom was empty.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The centre tested a temporary change before replacing the door.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The wall facing the classroom was thick, but a hollow door transferred the highest-pitched sounds. The caretaker tested temporary edge seals before asking the centre to replace anything expensive.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a limit that remained after the changes?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Sound levels fell enough to run most classes at the same time. Sessions involving the largest machines were still held during breaks, when the language classroom was empty.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

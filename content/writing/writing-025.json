@@ -1,0 +1,57 @@
+{
+  "id": "writing-025",
+  "skill": "writing",
+  "title": "Writing Practice — Food waste",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows average avoidable weekly food waste per household in three towns in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "kilograms",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Olderidge",
+            "values": [
+              3.2,
+              2.9,
+              2.1
+            ]
+          },
+          {
+            "label": "Dunleigh",
+            "values": [
+              2.6,
+              2.4,
+              2.2
+            ]
+          },
+          {
+            "label": "Marston",
+            "values": [
+              3.8,
+              3.6,
+              3
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Large quantities of edible food are thrown away at home. Why does this happen, and what can households and shops do about it?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

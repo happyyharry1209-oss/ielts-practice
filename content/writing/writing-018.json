@@ -1,0 +1,57 @@
+{
+  "id": "writing-018",
+  "skill": "writing",
+  "title": "Writing Practice — Arts subjects",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows students taking at least one arts subject at three schools in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Crown",
+            "values": [
+              38,
+              32,
+              29
+            ]
+          },
+          {
+            "label": "Cedar",
+            "values": [
+              31,
+              39,
+              44
+            ]
+          },
+          {
+            "label": "Grove",
+            "values": [
+              45,
+              42,
+              39
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some educators want every pupil to study art or music, while others prefer to let pupils choose all their optional subjects.\n\nDiscuss both views and give your own opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

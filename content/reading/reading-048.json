@@ -1,0 +1,81 @@
+{
+  "id": "reading-048",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Collection of Oral Histories",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Collection of Oral Histories",
+      "body": "**A** An archive recorded residents describing a demolished factory. Interviewers invited speakers to bring a photograph, which often prompted them to describe a particular shift or machine in detail.\n\n**B** The archive found that some accounts disagreed about dates. Its editor kept the differences and attached relevant pay records so a reader could compare interview claims with surviving documents.\n\n**C** Names were included only with permission. People reluctant to be identified could review a short transcript and ask the team to remove any identifying details before publication.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Interviewers invited speakers to bring a ______, which often prompted them to describe a particular shift or machine in detail.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "photograph",
+          "wordLimit": 3,
+          "explanation": "Interviewers invited speakers to bring a photograph, which often prompted them to describe a particular shift or machine in detail.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Its editor kept the differences and attached relevant ______ so a reader could compare interview claims with surviving documents.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "pay records",
+          "wordLimit": 3,
+          "explanation": "Its editor kept the differences and attached relevant pay records so a reader could compare interview claims with surviving documents.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "People reluctant to be identified could review a short transcript and ask the team to remove any ______ before publication.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "identifying details",
+          "wordLimit": 3,
+          "explanation": "People reluctant to be identified could review a short transcript and ask the team to remove any identifying details before publication.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Every participant was named in the published collection.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Names were included only with permission. People reluctant to be identified could review a short transcript and ask the team to remove any identifying details before publication.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a source that helped users assess conflicting accounts?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The archive found that some accounts disagreed about dates. Its editor kept the differences and attached relevant pay records so a reader could compare interview claims with surviving documents.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

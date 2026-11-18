@@ -1,0 +1,63 @@
+{
+  "id": "listening-070",
+  "skill": "listening",
+  "title": "Listening Drill — Choir archive trial",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Choir archive trial",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about digital choir recordings. The progress report is due on Thursday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the recording notes. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the opening track. Send your results to Lucas first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that a few labels may be incorrect. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-070/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Thursday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Thursday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "recording notes",
+          "wordLimit": 3,
+          "explanation": "I'll start by checking the recording notes."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "For the trial we will use the opening track.",
+          "options": [
+            "opening track",
+            "yellow sign",
+            "small shelf",
+            "portable scanner"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Lucas",
+          "wordLimit": 3,
+          "explanation": "Send your results to Lucas first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

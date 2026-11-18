@@ -1,0 +1,81 @@
+{
+  "id": "reading-068",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Tracking Unused Seats at a Concert",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Tracking Unused Seats at a Concert",
+      "body": "**A** A concert hall released tickets several weeks in advance. On some evenings many reservations were unclaimed, so the manager recorded the number of unused seats after the doors closed.\n\n**B** The hall tested a reminder offering an easy way to cancel. People who returned their booking early received no payment but allowed staff to contact the short waiting list.\n\n**C** After the trial, a small group still arrived without tickets. Staff chose to retain a few seats for them rather than giving every vacant place to online reservations.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "On some evenings many reservations were unclaimed, so the manager recorded the number of unused seats after the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "doors closed",
+          "wordLimit": 3,
+          "explanation": "On some evenings many reservations were unclaimed, so the manager recorded the number of unused seats after the doors closed.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "People who returned their booking early received no payment but allowed staff to contact the short ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "waiting list",
+          "wordLimit": 3,
+          "explanation": "People who returned their booking early received no payment but allowed staff to contact the short waiting list.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Staff chose to retain a few seats for them rather than giving every vacant place to online ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "reservations",
+          "wordLimit": 3,
+          "explanation": "Staff chose to retain a few seats for them rather than giving every vacant place to online reservations.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Every available seat was allocated only through online reservations after the trial.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "After the trial, a small group still arrived without tickets. Staff chose to retain a few seats for them rather than giving every vacant place to online reservations.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a way for ticket holders to release seats before the concert?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The hall tested a reminder offering an easy way to cancel. People who returned their booking early received no payment but allowed staff to contact the short waiting list.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

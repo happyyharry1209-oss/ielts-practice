@@ -1,0 +1,81 @@
+{
+  "id": "reading-034",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Picking a Wall Colour for Wayfinding",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Picking a Wall Colour for Wayfinding",
+      "body": "**A** A centre used wall colours to help people find meeting rooms. Some visitors confused two corridors that looked different on the plan but nearly identical under the same lighting. The team asked them to describe how they chose their route.\n\n**B** The designers tried another colour and added a simple symbol to signs at each turn. The symbol could be recognised from a distance, including by people who could not distinguish the original colours.\n\n**C** In a later test, a receptionist deliberately gave a verbal instruction without mentioning colour. Most people still followed it because they could identify the correct route by its symbol alone.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Some visitors confused two corridors that looked different on the plan but nearly identical under the same ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "lighting",
+          "wordLimit": 3,
+          "explanation": "Some visitors confused two corridors that looked different on the plan but nearly identical under the same lighting.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The designers tried another colour and added a simple ______ to signs at each turn.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "symbol",
+          "wordLimit": 3,
+          "explanation": "The designers tried another colour and added a simple symbol to signs at each turn.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Most people still followed it because they could identify the correct route by its ______ alone.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "symbol",
+          "wordLimit": 3,
+          "explanation": "Most people still followed it because they could identify the correct route by its symbol alone.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The final design used both a colour and a symbol.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The designers tried another colour and added a simple symbol to signs at each turn. The symbol could be recognised from a distance, including by people who could not distinguish the original colours.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a test that omitted colour from the spoken directions?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "In a later test, a receptionist deliberately gave a verbal instruction without mentioning colour. Most people still followed it because they could identify the correct route by its symbol alone.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

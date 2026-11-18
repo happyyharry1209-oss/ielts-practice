@@ -1,0 +1,81 @@
+{
+  "id": "reading-052",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — How an Old Staircase Was Worn",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "How an Old Staircase Was Worn",
+      "body": "**A** A house museum wondered why the edges of several stair treads were worn more deeply than the centres. Staff measured each tread and compared the results with old photographs of the room.\n\n**B** The photographs showed a handrail on the outer side and a cupboard blocking part of the lower flight. A narrow walking line would have concentrated footsteps on one side for decades.\n\n**C** The team preserved the wear instead of replacing the treads. New visitors used a second staircase, while the original route could be seen from the landing.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Staff measured each ______ and compared the results with old photographs of the room.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "tread",
+          "wordLimit": 3,
+          "explanation": "Staff measured each tread and compared the results with old photographs of the room.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A narrow ______ would have concentrated footsteps on one side for decades.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "walking line",
+          "wordLimit": 3,
+          "explanation": "A narrow walking line would have concentrated footsteps on one side for decades.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "New visitors used a second staircase, while the original route could be seen from the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "landing",
+          "wordLimit": 3,
+          "explanation": "New visitors used a second staircase, while the original route could be seen from the landing.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The museum replaced all the visibly worn treads.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The team preserved the wear instead of replacing the treads. New visitors used a second staircase, while the original route could be seen from the landing.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a likely explanation for the uneven pattern of wear?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The photographs showed a handrail on the outer side and a cupboard blocking part of the lower flight. A narrow walking line would have concentrated footsteps on one side for decades.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-088",
+  "skill": "listening",
+  "title": "Listening Drill — Growing cress",
+  "description": "Practical demonstration. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Growing cress",
+      "transcript": "INSTRUCTOR: This demonstration is about setting up a cress trial. Watch the whole process once before trying it yourself. If you start while I'm still talking, you may miss the order of the steps.\n\nINSTRUCTOR: Get the cotton pads ready. Begin by checking the drainage hole. When everything is in position, wait six minutes. It may look as though nothing is happening at first.\n\nINSTRUCTOR: Look for even moisture before moving on. wipe away any water on the bench. Leave yourself time to clear the work area so the next group can start promptly.",
+      "audioUrl": "/audio/listening-088/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Get the ______ ready.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "cotton pads",
+          "wordLimit": 3,
+          "explanation": "Get the cotton pads ready."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "Begin by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "drainage hole",
+          "wordLimit": 3,
+          "explanation": "Begin by checking the drainage hole."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "When everything is in position, wait ______ minutes.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "When everything is in position, wait six minutes.",
+          "options": [
+            "ten",
+            "two",
+            "six",
+            "four"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Look for ______ before moving on.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "even moisture",
+          "wordLimit": 3,
+          "explanation": "Look for even moisture before moving on."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

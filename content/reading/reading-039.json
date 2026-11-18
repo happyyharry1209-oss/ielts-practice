@@ -1,0 +1,81 @@
+{
+  "id": "reading-039",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Finding Suitable Public Noticeboards",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Finding Suitable Public Noticeboards",
+      "body": "**A** A small town chose sites for public noticeboards after speaking to groups that announced events. The expected cost of a board mattered, but the council also counted the number of people walking past each possible site.\n\n**B** One location beside the post office was busy at lunchtime, but cyclists could not stop without blocking a narrow cycle lane. Organisers moved the board to a wall beside a wider pavement.\n\n**C** After installation, members of the library removed notices with past dates once a week. People could post for free as long as each item listed the event date, which made the checking manageable.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The expected cost of a board mattered, but the council also counted the number of people walking past each ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "possible site",
+          "wordLimit": 3,
+          "explanation": "The expected cost of a board mattered, but the council also counted the number of people walking past each possible site.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "One location beside the post office was busy at lunchtime, but cyclists could not stop without blocking a narrow ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "cycle lane",
+          "wordLimit": 3,
+          "explanation": "One location beside the post office was busy at lunchtime, but cyclists could not stop without blocking a narrow cycle lane.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "People could post for free as long as each item listed the ______, which made the checking manageable.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "event date",
+          "wordLimit": 3,
+          "explanation": "People could post for free as long as each item listed the event date, which made the checking manageable.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The noticeboard remained in the original spot beside the post office.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "One location beside the post office was busy at lunchtime, but cyclists could not stop without blocking a narrow cycle lane. Organisers moved the board to a wall beside a wider pavement.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a condition imposed to make administration easier?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "After installation, members of the library removed notices with past dates once a week. People could post for free as long as each item listed the event date, which made the checking manageable.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

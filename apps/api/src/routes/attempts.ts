@@ -62,16 +62,17 @@ attemptRoutes.post('/:id/submit', async (c) => {
   if (attempt.submitted_at) throw new HttpError(409, 'This attempt has already been submitted');
 
   const test = findTest(attempt.skill as 'reading' | 'listening', attempt.content_id);
-  if (!test) throw new HttpError(410, 'The test content is no longer available');
+  if (!test || (test.skill !== 'reading' && test.skill !== 'listening')) {
+    throw new HttpError(410, 'The test content is no longer available');
+  }
 
   const questions = questionsOf(test);
   const responses = body.responses as Record<string, AnswerValue>;
   const graded = gradeQuestions(questions, responses);
   const variant: ReadingVariant = test.skill === 'reading' ? test.variant : 'academic';
-  const band =
-    test.skill === 'reading' || test.skill === 'listening'
-      ? rawToBand(test.skill, graded.correct, graded.total || 40, variant)
-      : 0;
+  const band = test.shortPractice
+    ? null
+    : rawToBand(test.skill, graded.correct, graded.total || 40, variant);
 
   const byId = new Map<string, Question>(questions.map((q) => [q.id, q]));
   const detailed = graded.items.map((item) => {
@@ -269,5 +270,8 @@ attemptRoutes.get('/:id', async (c) => {
     })
     .sort((a, b) => a.number - b.number);
 
-  return c.json({ attempt, items });
+  const transcripts = attempt.submitted_at && test?.skill === 'listening'
+    ? test.sections.flatMap(({ id, title, transcript }) => transcript ? [{ id, title, transcript }] : [])
+    : [];
+  return c.json({ attempt, items, transcripts });
 });

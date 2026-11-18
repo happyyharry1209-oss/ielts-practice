@@ -1,0 +1,63 @@
+{
+  "id": "listening-072",
+  "skill": "listening",
+  "title": "Listening Drill — Recycled packaging pilot",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Recycled packaging pilot",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about recycled packaging. The progress report is due on Friday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the returns register. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the small carton. Send your results to Hugo first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that a wet parcel needs to be recorded separately. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-072/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Friday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Friday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "I'll start by checking the returns register.",
+          "options": [
+            "operator notes",
+            "recording notes",
+            "returns register",
+            "driver reports"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "small carton",
+          "wordLimit": 3,
+          "explanation": "For the trial we will use the small carton."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Hugo",
+          "wordLimit": 3,
+          "explanation": "Send your results to Hugo first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

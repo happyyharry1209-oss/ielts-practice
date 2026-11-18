@@ -1,0 +1,63 @@
+{
+  "id": "listening-062",
+  "skill": "listening",
+  "title": "Listening Drill — Sports first aid route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Sports first aid route",
+      "transcript": "VISITOR: I'm trying to get to the training pitch. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the east gate. From there, walk towards the scoreboard. Stay on the same side until you can see the sign for the athletics track.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the grass courts today. Teams are warming up there. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-062/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Start at the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "Start at the east gate.",
+          "options": [
+            "east gate",
+            "main entrance",
+            "north gate",
+            "west doors"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "scoreboard",
+          "wordLimit": 3,
+          "explanation": "From there, walk towards the scoreboard."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "athletics track",
+          "wordLimit": 3,
+          "explanation": "Stay on the same side until you can see the sign for the athletics track."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "grass courts",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the grass courts today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-062",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Recording a Night Market",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Recording a Night Market",
+      "body": "**A** A photographer made images for a project about a night market. The brief asked for the work of setting up stalls as well as images taken after the crowds arrived.\n\n**B** The first set showed bright signs but little of the people behind them. The photographer arrived earlier and asked permission to work closer to the stall holders.\n\n**C** The eventual exhibition paired the images with short interviews. Each participant reviewed their own caption, and some asked for a different description of their work.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The brief asked for the work of setting up stalls as well as images taken after the ______ arrived.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "crowds",
+          "wordLimit": 3,
+          "explanation": "The brief asked for the work of setting up stalls as well as images taken after the crowds arrived.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The photographer arrived earlier and asked permission to work closer to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "stall holders",
+          "wordLimit": 3,
+          "explanation": "The photographer arrived earlier and asked permission to work closer to the stall holders.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Each participant reviewed their own ______, and some asked for a different description of their work.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "caption",
+          "wordLimit": 3,
+          "explanation": "Each participant reviewed their own caption, and some asked for a different description of their work.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Participants could comment on their captions before the exhibition.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The eventual exhibition paired the images with short interviews. Each participant reviewed their own caption, and some asked for a different description of their work.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why the photographer changed their working distance?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The first set showed bright signs but little of the people behind them. The photographer arrived earlier and asked permission to work closer to the stall holders.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

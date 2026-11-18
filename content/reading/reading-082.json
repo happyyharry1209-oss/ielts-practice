@@ -1,0 +1,80 @@
+{
+  "id": "reading-082",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Planning for Snow on a Footbridge",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Planning for Snow on a Footbridge",
+      "body": "**A** A council reviewed a bridge where pedestrians reported slippery decking. The first reports named the bridge but did not say whether the problem occurred in a shaded section.\n\n**B** The council asked a caretaker to note conditions at both ends on early mornings. Frost remained longer near a nearby wall, even after the sun reached the other end.\n\n**C** The caretaker began clearing the slower section first. The council also tested whether a textured surface could improve grip without making the boards hard to clean.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The first reports named the bridge but did not say whether the problem occurred in a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shaded section",
+          "wordLimit": 3,
+          "explanation": "The first reports named the bridge but did not say whether the problem occurred in a shaded section.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Frost remained longer near a nearby wall, even after the ______ reached the other end.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sun",
+          "wordLimit": 3,
+          "explanation": "Frost remained longer near a nearby wall, even after the sun reached the other end.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The council also tested whether a textured ______ could improve grip without making the boards hard to clean.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "surface",
+          "wordLimit": 3,
+          "explanation": "The council also tested whether a textured surface could improve grip without making the boards hard to clean.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The bridge had been closed for a previous winter.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the findings that helped decide the order of clearing?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The council asked a caretaker to note conditions at both ends on early mornings. Frost remained longer near a nearby wall, even after the sun reached the other end.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

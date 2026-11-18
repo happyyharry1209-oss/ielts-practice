@@ -1,0 +1,81 @@
+{
+  "id": "reading-061",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — How a School Chose a Uniform Supplier",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "How a School Chose a Uniform Supplier",
+      "body": "**A** A school compared two possible uniform suppliers by asking families about price, comfort and replacement costs. It wanted to learn what families paid across a whole year.\n\n**B** The cheapest shirt needed replacing more frequently in a small washing trial. One reason was that the collar lost its shape quickly, even when the shirt was dried without heat.\n\n**C** The school selected a supplier offering two fabrics in the same colour. Families could buy a lighter fabric for summer without requiring the school to adopt a second uniform design.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A school compared two possible uniform suppliers by asking families about price, comfort and ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "replacement costs",
+          "wordLimit": 3,
+          "explanation": "A school compared two possible uniform suppliers by asking families about price, comfort and replacement costs.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "One reason was that the ______ lost its shape quickly, even when the shirt was dried without heat.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "collar",
+          "wordLimit": 3,
+          "explanation": "One reason was that the collar lost its shape quickly, even when the shirt was dried without heat.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Families could buy a lighter fabric for summer without requiring the school to adopt a second ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "uniform design",
+          "wordLimit": 3,
+          "explanation": "Families could buy a lighter fabric for summer without requiring the school to adopt a second uniform design.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The initial purchase price was the only cost considered.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A school compared two possible uniform suppliers by asking families about price, comfort and replacement costs. It wanted to learn what families paid across a whole year.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a defect seen after several washes?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The cheapest shirt needed replacing more frequently in a small washing trial. One reason was that the collar lost its shape quickly, even when the shirt was dried without heat.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

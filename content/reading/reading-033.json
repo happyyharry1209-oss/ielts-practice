@@ -1,0 +1,81 @@
+{
+  "id": "reading-033",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Counting Boats on a Canal",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Counting Boats on a Canal",
+      "body": "**A** An environmental group wanted to know how often boats passed a narrow canal junction. It placed an observer by a footbridge, where vessels approaching from either direction were visible with no special equipment.\n\n**B** The first count included boats that turned back before reaching the junction. For the second count, observers drew a clear boundary on their maps and recorded a boat only after it crossed that line.\n\n**C** A weekend event affected the final results. The group kept its figures but labelled them separately, because they came from a day when a festival brought extra visitors to the canal.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It placed an observer by a ______, where vessels approaching from either direction were visible with no special equipment.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "footbridge",
+          "wordLimit": 3,
+          "explanation": "It placed an observer by a footbridge, where vessels approaching from either direction were visible with no special equipment.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "For the second count, observers drew a clear ______ on their maps and recorded a boat only after it crossed that line.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "boundary",
+          "wordLimit": 3,
+          "explanation": "For the second count, observers drew a clear boundary on their maps and recorded a boat only after it crossed that line.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The group kept its figures but labelled them separately, because they came from a day when a ______ brought extra visitors to the canal.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "festival",
+          "wordLimit": 3,
+          "explanation": "The group kept its figures but labelled them separately, because they came from a day when a festival brought extra visitors to the canal.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The festival figures were discarded.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A weekend event affected the final results. The group kept its figures but labelled them separately, because they came from a day when a festival brought extra visitors to the canal.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a change to the rule for what should be counted?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The first count included boats that turned back before reaching the junction. For the second count, observers drew a clear boundary on their maps and recorded a boat only after it crossed that line.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-037",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Soup made from Surplus Vegetables",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Soup made from Surplus Vegetables",
+      "body": "**A** A community kitchen received a different mix of vegetables each day. To avoid promising an ingredient it might not receive, the cook printed a menu board that could be edited shortly before the kitchen opened.\n\n**B** The soup recipe specified a target thickness instead of a fixed amount of water. A volunteer measured each batch in the same jug and added liquid only when the mixture was too thick to pour.\n\n**C** The kitchen tracked leftovers. When it saw that large portions were often unfinished, it offered a smaller bowl with the option of a refill, so diners could decide how much to eat.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "To avoid promising an ingredient it might not receive, the cook printed a ______ that could be edited shortly before the kitchen opened.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "menu board",
+          "wordLimit": 3,
+          "explanation": "To avoid promising an ingredient it might not receive, the cook printed a menu board that could be edited shortly before the kitchen opened.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A volunteer measured each batch in the same ______ and added liquid only when the mixture was too thick to pour.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "jug",
+          "wordLimit": 3,
+          "explanation": "A volunteer measured each batch in the same jug and added liquid only when the mixture was too thick to pour.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "When it saw that large portions were often unfinished, it offered a ______ with the option of a refill, so diners could decide how much to eat.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "smaller bowl",
+          "wordLimit": 3,
+          "explanation": "When it saw that large portions were often unfinished, it offered a smaller bowl with the option of a refill, so diners could decide how much to eat.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "A fixed quantity of water was used every day.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The soup recipe specified a target thickness instead of a fixed amount of water. A volunteer measured each batch in the same jug and added liquid only when the mixture was too thick to pour.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a change that followed the monitoring of leftovers?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The kitchen tracked leftovers. When it saw that large portions were often unfinished, it offered a smaller bowl with the option of a refill, so diners could decide how much to eat.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

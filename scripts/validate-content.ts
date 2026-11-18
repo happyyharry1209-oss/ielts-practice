@@ -1,11 +1,12 @@
 import { existsSync } from 'node:fs';
-import { readdir, readFile } from 'node:fs/promises';
+import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import type { AnyTest } from '../packages/shared/src/index';
 import { validateTest } from '../packages/shared/src/index';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const CONTENT = path.join(ROOT, 'content');
+const PUBLIC = path.join(ROOT, 'apps/web/public');
 const SKILLS = ['reading', 'listening', 'writing', 'speaking'] as const;
 
 async function main() {
@@ -34,6 +35,18 @@ async function main() {
       }
       testCount += 1;
       const result = validateTest(test);
+      if (test.skill === 'listening') {
+        for (const section of test.sections) {
+          if (!section.audioUrl?.startsWith('/audio/')) continue;
+          const filePath = path.resolve(PUBLIC, section.audioUrl.slice(1));
+          const isInPublic = filePath.startsWith(PUBLIC + path.sep);
+          const audioFile = isInPublic ? await stat(filePath).catch(() => null) : null;
+          if (!audioFile?.isFile() || audioFile.size === 0) {
+            console.error(`✖ [error] ${test.id}/${section.id}: missing audio asset ${section.audioUrl}`);
+            errorCount += 1;
+          }
+        }
+      }
       if (result.errors.length === 0 && result.warnings.length === 0) {
         console.log(`✔ ${skill}/${file} (${test.id})`);
       }

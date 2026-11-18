@@ -1,0 +1,81 @@
+{
+  "id": "reading-016",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Sheds for Street Tools",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Sheds for Street Tools",
+      "body": "**A** A street maintenance team wanted fewer trips to its depot. It put cleaning tools in small locked sheds and gave each crew leader a key card. The sheds were placed close to work sites, with permission from property owners.\n\n**B** At first the sheds saved time only on streets with level access. Staff could not roll heavy bins down the side lanes where the other sheds had been placed. The team moved two of the sheds uphill.\n\n**C** At the end of the trial, the team continued using an ordinary vehicle for some jobs. The smaller sheds were most useful for routine checks, which required a predictable set of tools and could be shared with other crews.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It put cleaning tools in small locked sheds and gave each crew leader a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "key card",
+          "wordLimit": 3,
+          "explanation": "It put cleaning tools in small locked sheds and gave each crew leader a key card.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Staff could not roll heavy bins down the ______ where the other sheds had been placed.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "side lanes",
+          "wordLimit": 3,
+          "explanation": "Staff could not roll heavy bins down the side lanes where the other sheds had been placed.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The smaller sheds were most useful for ______, which required a predictable set of tools and could be shared with other crews.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "routine checks",
+          "wordLimit": 3,
+          "explanation": "The smaller sheds were most useful for routine checks, which required a predictable set of tools and could be shared with other crews.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "All duties were transferred to the sheds.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "At the end of the trial, the team continued using an ordinary vehicle for some jobs. The smaller sheds were most useful for routine checks, which required a predictable set of tools and could be shared with other crews.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why some of the first locations worked poorly?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "At first the sheds saved time only on streets with level access. Staff could not roll heavy bins down the side lanes where the other sheds had been placed. The team moved two of the sheds uphill.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

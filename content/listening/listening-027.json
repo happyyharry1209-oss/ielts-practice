@@ -1,0 +1,63 @@
+{
+  "id": "listening-027",
+  "skill": "listening",
+  "title": "Listening Drill — Reading habits project",
+  "description": "Student and tutor dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Reading habits project",
+      "transcript": "STUDENT: I've started the project on where people choose to read. I was going to use a questionnaire, but testing it with one person made me realise that the questions were too broad.\n\nTUTOR: In that case, try small groups first. But watch out for group pressure. That can affect what you notice and what you end up writing down.\n\nSTUDENT: Would it help if I kept a daily log? I don't want to discover the problem only after I've handed everything in.\n\nTUTOR: A better safeguard here is private responses. Bring the draft prompts to our next meeting, so we can see which prompts might lead people. There is no need to prepare the final presentation yet.",
+      "audioUrl": "/audio/listening-027/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "In that case, try ______ first.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "small groups",
+          "wordLimit": 3,
+          "explanation": "In that case, try small groups first."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "But watch out for ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "But watch out for group pressure.",
+          "options": [
+            "duplicate stories",
+            "group pressure",
+            "lunch rush",
+            "observer bias"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "A better safeguard here is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "private responses",
+          "wordLimit": 3,
+          "explanation": "A better safeguard here is private responses."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Bring the ______ to our next meeting, so we can see which prompts might lead people.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "draft prompts",
+          "wordLimit": 3,
+          "explanation": "Bring the draft prompts to our next meeting, so we can see which prompts might lead people."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

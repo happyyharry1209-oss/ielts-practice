@@ -1,0 +1,81 @@
+{
+  "id": "reading-012",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Shade on the School Run",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Shade on the School Run",
+      "body": "**A** On warm afternoons, children queued beside a south-facing wall at Linden School. A parent group drew shadow maps at three times of day to distinguish places with no shade from places where shade appeared after dismissal.\n\n**B** The school first moved the waiting area rather than buying equipment. Volunteers compared the photographs and found that the line could fit under a covered walkway without blocking the crossing. This gave the school an immediate trial site.\n\n**C** The trial helped at the main gate, but it displaced some parents to a narrow pavement. Teachers asked the council to install a bench opposite the gate so people waiting for older siblings would have a safe place to sit.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A parent group drew ______ at three times of day to distinguish places with no shade from places where shade appeared after dismissal.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shadow maps",
+          "wordLimit": 3,
+          "explanation": "A parent group drew shadow maps at three times of day to distinguish places with no shade from places where shade appeared after dismissal.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Volunteers compared the photographs and found that the line could fit under a ______ without blocking the crossing.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "covered walkway",
+          "wordLimit": 3,
+          "explanation": "Volunteers compared the photographs and found that the line could fit under a covered walkway without blocking the crossing.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Teachers asked the council to install a ______ opposite the gate so people waiting for older siblings would have a safe place to sit.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "bench",
+          "wordLimit": 3,
+          "explanation": "Teachers asked the council to install a bench opposite the gate so people waiting for older siblings would have a safe place to sit.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The trial moved the waiting area before new equipment was bought.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The school first moved the waiting area rather than buying equipment. Volunteers compared the photographs and found that the line could fit under a covered walkway without blocking the crossing. This gave the school an immediate trial site.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an improvement requested after the trial?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial helped at the main gate, but it displaced some parents to a narrow pavement. Teachers asked the council to install a bench opposite the gate so people waiting for older siblings would have a safe place to sit.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

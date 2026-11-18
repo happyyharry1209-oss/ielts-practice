@@ -1,0 +1,81 @@
+{
+  "id": "reading-090",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Viewing a Dress without Touching It",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Viewing a Dress without Touching It",
+      "body": "**A** A museum wanted visitors to see the lining of a fragile dress. The conservator could not leave it unfolded for long, so she took a detailed photograph before it was mounted.\n\n**B** The photograph showed colour and fabric but could not reveal how the folds opened. A student made a small replica to demonstrate the movement with robust material.\n\n**C** The label distinguished features copied from the original from features simplified for handling. The replica could be removed from its stand for a guided session.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The conservator could not leave it unfolded for long, so she took a detailed ______ before it was mounted.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "photograph",
+          "wordLimit": 3,
+          "explanation": "The conservator could not leave it unfolded for long, so she took a detailed photograph before it was mounted.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A student made a small ______ to demonstrate the movement with robust material.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "replica",
+          "wordLimit": 3,
+          "explanation": "A student made a small replica to demonstrate the movement with robust material.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The replica could be removed from its ______ for a guided session.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "stand",
+          "wordLimit": 3,
+          "explanation": "The replica could be removed from its stand for a guided session.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The replica used material suitable for handling.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The photograph showed colour and fabric but could not reveal how the folds opened. A student made a small replica to demonstrate the movement with robust material.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions information acknowledging that the replica was not an exact copy?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The label distinguished features copied from the original from features simplified for handling. The replica could be removed from its stand for a guided session.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

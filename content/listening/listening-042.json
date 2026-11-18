@@ -1,0 +1,63 @@
+{
+  "id": "listening-042",
+  "skill": "listening",
+  "title": "Listening Drill — Swimming gala brief",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Swimming gala brief",
+      "transcript": "ORGANISER: A quick update about the swimming gala. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns team registration.\n\nORGANISER: For now, go to the pool entrance. If that route is closed when you arrive, use the sports hall instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Tara rather than the general enquiries desk. Before you leave, check your lane number on the board. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-042/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "team registration",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns team registration."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "For now, go to the pool entrance.",
+          "options": [
+            "pool entrance",
+            "rear entrance",
+            "park arch",
+            "farm gate"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sports hall",
+          "wordLimit": 3,
+          "explanation": "If that route is closed when you arrive, use the sports hall instead."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Tara",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Tara rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

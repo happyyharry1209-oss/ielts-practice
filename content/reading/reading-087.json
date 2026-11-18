@@ -1,0 +1,81 @@
+{
+  "id": "reading-087",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Changing the Doors of a Station Shelter",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Changing the Doors of a Station Shelter",
+      "body": "**A** A station shelter admitted wind through two openings facing each other. An observer used paper tags on the frame to see where air moved fastest.\n\n**B** The team added a transparent panel at an angle beside one door. Because people could look through it, the panel kept the route visible while blocking a direct draught.\n\n**C** The shelter was tested during two cold mornings. On the second day a worker stood outside to count boarding passengers, checking whether the change affected their movement.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "An observer used ______ on the frame to see where air moved fastest.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "paper tags",
+          "wordLimit": 3,
+          "explanation": "An observer used paper tags on the frame to see where air moved fastest.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Because people could look through it, the panel kept the route ______ while blocking a direct draught.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "visible",
+          "wordLimit": 3,
+          "explanation": "Because people could look through it, the panel kept the route visible while blocking a direct draught.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "On the second day a worker stood outside to count ______, checking whether the change affected their movement.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "boarding passengers",
+          "wordLimit": 3,
+          "explanation": "On the second day a worker stood outside to count boarding passengers, checking whether the change affected their movement.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The added panel was opaque.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The team added a transparent panel at an angle beside one door. Because people could look through it, the panel kept the route visible while blocking a direct draught.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an additional measurement made during the later trial?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The shelter was tested during two cold mornings. On the second day a worker stood outside to count boarding passengers, checking whether the change affected their movement.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

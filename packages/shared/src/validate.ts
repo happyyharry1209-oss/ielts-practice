@@ -183,6 +183,21 @@ export function validateTest(test: AnyTest): ValidationResult {
       if (![1, 2].includes(task.task)) issues.push({ level: 'error', path: `${base}/${task.id}`, message: 'task must be 1 or 2' });
       if (!task.prompt?.trim()) issues.push({ level: 'error', path: `${base}/${task.id}`, message: 'task has no prompt' });
       if (!task.minWords || task.minWords < 50) issues.push({ level: 'error', path: `${base}/${task.id}`, message: 'minWords looks wrong' });
+      if (task.dataTable) {
+        const { unit, columns, rows } = task.dataTable;
+        const validTable =
+          task.task === 1 && typeof unit === 'string' && unit.trim() &&
+          Array.isArray(columns) && columns.length > 0 && new Set(columns).size === columns.length &&
+          columns.every((column) => typeof column === 'string' && column.trim()) &&
+          Array.isArray(rows) && rows.length > 0 && new Set(rows.map((row) => row?.label)).size === rows.length &&
+          rows.every((row) =>
+            typeof row?.label === 'string' && row.label.trim() && Array.isArray(row.values) &&
+            row.values.length === columns.length && row.values.every(Number.isFinite),
+          );
+        if (!validTable) {
+          issues.push({ level: 'error', path: `${base}/${task.id}/dataTable`, message: 'invalid Task 1 data table' });
+        }
+      }
     }
   } else if (test.skill === 'speaking') {
     if (test.part1.length === 0) issues.push({ level: 'error', path: base, message: 'speaking test has no part 1 topics' });

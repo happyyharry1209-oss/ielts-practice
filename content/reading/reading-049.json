@@ -1,0 +1,81 @@
+{
+  "id": "reading-049",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Sails Made from Discarded Fabric",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Sails Made from Discarded Fabric",
+      "body": "**A** A design class received leftover fabric from a sewing business. Students cut equal strips and hung weights from them to compare tensile strength before building small model sails.\n\n**B** The strongest strip was not necessarily the best choice. Some cloth resisted tearing yet stretched enough to lose its shape once tied to the model frame.\n\n**C** The finished models were tested with a fan at a fixed distance. Students reported only the performance of their own models because the experiment did not represent outdoor wind.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Students cut equal strips and hung weights from them to compare ______ before building small model sails.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "tensile strength",
+          "wordLimit": 3,
+          "explanation": "Students cut equal strips and hung weights from them to compare tensile strength before building small model sails.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Some cloth resisted tearing yet stretched enough to lose its ______ once tied to the model frame.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shape",
+          "wordLimit": 3,
+          "explanation": "Some cloth resisted tearing yet stretched enough to lose its shape once tied to the model frame.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Students reported only the performance of their own models because the experiment did not represent ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "outdoor wind",
+          "wordLimit": 3,
+          "explanation": "Students reported only the performance of their own models because the experiment did not represent outdoor wind.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The students tested full-size sails outdoors.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The finished models were tested with a fan at a fixed distance. Students reported only the performance of their own models because the experiment did not represent outdoor wind.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why strength alone did not determine the choice of material?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The strongest strip was not necessarily the best choice. Some cloth resisted tearing yet stretched enough to lose its shape once tied to the model frame.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-056",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Checking the Depth of a Stream",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Checking the Depth of a Stream",
+      "body": "**A** A class compared water depth at three parts of a stream. One pupil chose the deepest point at each site, while another used the same position relative to a marker post.\n\n**B** The results were hard to compare because the two approaches answered different questions. The class agreed to use a fixed measuring position and record the deepest point separately.\n\n**C** A later group repeated the readings after a storm. It measured from the same markers and noted where gravel had moved, since erosion could expose more of a measuring rod.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "One pupil chose the deepest point at each site, while another used the same position relative to a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "marker post",
+          "wordLimit": 3,
+          "explanation": "One pupil chose the deepest point at each site, while another used the same position relative to a marker post.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The class agreed to use a fixed ______ and record the deepest point separately.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "measuring position",
+          "wordLimit": 3,
+          "explanation": "The class agreed to use a fixed measuring position and record the deepest point separately.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It measured from the same markers and noted where gravel had moved, since erosion could expose more of a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "measuring rod",
+          "wordLimit": 3,
+          "explanation": "It measured from the same markers and noted where gravel had moved, since erosion could expose more of a measuring rod.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The class decided to distinguish a fixed reading from a maximum reading.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The results were hard to compare because the two approaches answered different questions. The class agreed to use a fixed measuring position and record the deepest point separately.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions what made the original readings difficult to compare?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The results were hard to compare because the two approaches answered different questions. The class agreed to use a fixed measuring position and record the deepest point separately.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

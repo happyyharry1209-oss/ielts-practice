@@ -1,0 +1,81 @@
+{
+  "id": "reading-036",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Guide for Low-cost Home Repairs",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Guide for Low-cost Home Repairs",
+      "body": "**A** A housing group drafted instructions for simple repairs. Its first version used technical names which many readers could not match to the parts they saw at home.\n\n**B** The editors replaced several names with drawings and tested the guide with volunteers. At each step the volunteers had to say which object they would pick up, allowing the editors to identify instructions with two possible meanings.\n\n**C** The finished leaflet included a table listing where to ask for help. A copy was stored at the reception desk so staff could update phone numbers without redesigning the entire leaflet.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its first version used technical names which many readers could not match to the ______ they saw at home.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "parts",
+          "wordLimit": 3,
+          "explanation": "Its first version used technical names which many readers could not match to the parts they saw at home.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "At each step the volunteers had to say which object they would pick up, allowing the editors to identify instructions with two ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "possible meanings",
+          "wordLimit": 3,
+          "explanation": "At each step the volunteers had to say which object they would pick up, allowing the editors to identify instructions with two possible meanings.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A copy was stored at the ______ so staff could update phone numbers without redesigning the entire leaflet.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "reception desk",
+          "wordLimit": 3,
+          "explanation": "A copy was stored at the reception desk so staff could update phone numbers without redesigning the entire leaflet.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The editors tested how readers interpreted the instructions.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The editors replaced several names with drawings and tested the guide with volunteers. At each step the volunteers had to say which object they would pick up, allowing the editors to identify instructions with two possible meanings.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the printed information could be kept current?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The finished leaflet included a table listing where to ask for help. A copy was stored at the reception desk so staff could update phone numbers without redesigning the entire leaflet.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

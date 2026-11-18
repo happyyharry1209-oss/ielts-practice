@@ -1,0 +1,63 @@
+{
+  "id": "listening-032",
+  "skill": "listening",
+  "title": "Listening Drill — Slow streets",
+  "description": "Short academic talk. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Slow streets",
+      "transcript": "PRESENTER: Today I'm describing a small study of traffic on residential roads. I want you to listen for how the researchers measured change, because the result is easy to overstate.\n\nPRESENTER: Their work took place in a housing district with recently changed signs. Instead of relying on what local people remembered, they recorded vehicle speeds. They noticed fewer peaks. That observation would have been missed if the team had visited only at the end.\n\nPRESENTER: The largest limitation was diverted traffic. The report is therefore a starting point. In a follow-up, the team would add neighbouring roads. A wider study could show whether the original pattern holds.",
+      "audioUrl": "/audio/listening-032/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Instead of relying on what local people remembered, they recorded ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "Instead of relying on what local people remembered, they recorded vehicle speeds.",
+          "options": [
+            "nest visits",
+            "plant cover",
+            "vehicle speeds",
+            "sound levels"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "They noticed ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "fewer peaks",
+          "wordLimit": 3,
+          "explanation": "They noticed fewer peaks."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "The largest limitation was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "diverted traffic",
+          "wordLimit": 3,
+          "explanation": "The largest limitation was diverted traffic."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "In a follow-up, the team would add ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "neighbouring roads",
+          "wordLimit": 3,
+          "explanation": "In a follow-up, the team would add neighbouring roads."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

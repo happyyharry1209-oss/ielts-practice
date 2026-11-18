@@ -1,0 +1,81 @@
+{
+  "id": "reading-038",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Clock in the Station Hall",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Clock in the Station Hall",
+      "body": "**A** A transport museum accepted a station clock that had stopped working. Photographs showed it had originally been painted green, but the restorer first examined the mechanism rather than repainting the casing.\n\n**B** The clock was missing a piece that could be reproduced from an inventory drawing. The drawing showed no scale, so the restorer used the matching screws on the surviving frame to infer the missing dimensions.\n\n**C** The museum left one section unpainted to show where later repairs had taken place. A small diagram beside the clock gave dates for the visible alterations when records were available.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Photographs showed it had originally been painted green, but the restorer first examined the ______ rather than repainting the casing.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "mechanism",
+          "wordLimit": 3,
+          "explanation": "Photographs showed it had originally been painted green, but the restorer first examined the mechanism rather than repainting the casing.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The drawing showed no scale, so the restorer used the matching ______ on the surviving frame to infer the missing dimensions.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "screws",
+          "wordLimit": 3,
+          "explanation": "The drawing showed no scale, so the restorer used the matching screws on the surviving frame to infer the missing dimensions.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A small ______ beside the clock gave dates for the visible alterations when records were available.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "diagram",
+          "wordLimit": 3,
+          "explanation": "A small diagram beside the clock gave dates for the visible alterations when records were available.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The restorer used an inventory drawing with a printed scale.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The clock was missing a piece that could be reproduced from an inventory drawing. The drawing showed no scale, so the restorer used the matching screws on the surviving frame to infer the missing dimensions.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why part of the case was left unpainted?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The museum left one section unpainted to show where later repairs had taken place. A small diagram beside the clock gave dates for the visible alterations when records were available.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

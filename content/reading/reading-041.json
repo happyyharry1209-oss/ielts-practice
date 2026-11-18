@@ -1,0 +1,81 @@
+{
+  "id": "reading-041",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — An Inventory for a Community Theatre",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "An Inventory for a Community Theatre",
+      "body": "**A** A volunteer theatre had costumes in two rooms and a small storage shed. To avoid buying duplicates, designers were asked to check a shared inventory before ordering something for a new production.\n\n**B** Colour and size mattered more than the costumes' former roles. The group re-labelled boxes by those details and recorded whether each garment needed a repair before it could be lent.\n\n**C** Some very delicate garments stayed in a locked cabinet. Volunteers could still see their photographs online, but each member had to ask the wardrobe manager before taking an original out of the building.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "To avoid buying duplicates, designers were asked to check a ______ before ordering something for a new production.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shared inventory",
+          "wordLimit": 3,
+          "explanation": "To avoid buying duplicates, designers were asked to check a shared inventory before ordering something for a new production.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The group re-labelled boxes by those details and recorded whether each garment needed a ______ before it could be lent.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "repair",
+          "wordLimit": 3,
+          "explanation": "The group re-labelled boxes by those details and recorded whether each garment needed a repair before it could be lent.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Volunteers could still see their photographs online, but each member had to ask the ______ before taking an original out of the building.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "wardrobe manager",
+          "wordLimit": 3,
+          "explanation": "Volunteers could still see their photographs online, but each member had to ask the wardrobe manager before taking an original out of the building.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The inventory was organised mainly by former stage roles.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Colour and size mattered more than the costumes' former roles. The group re-labelled boxes by those details and recorded whether each garment needed a repair before it could be lent.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an exception made for fragile stock?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Some very delicate garments stayed in a locked cabinet. Volunteers could still see their photographs online, but each member had to ask the wardrobe manager before taking an original out of the building.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

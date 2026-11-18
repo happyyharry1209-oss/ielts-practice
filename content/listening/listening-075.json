@@ -1,0 +1,63 @@
+{
+  "id": "listening-075",
+  "skill": "listening",
+  "title": "Listening Drill — Locker key",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Locker key",
+      "transcript": "CUSTOMER: I need some help with a missing locker key. The main problem is a jammed lock. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the booking email. Then bring the item to the sports desk. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a temporary locker. leave your belongings where they are for now. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-075/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "The main problem is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "a jammed lock",
+          "wordLimit": 3,
+          "explanation": "The main problem is a jammed lock."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "First please send the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "First please send the booking email.",
+          "options": [
+            "tracking number",
+            "booking email",
+            "hire receipt",
+            "error message"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sports desk",
+          "wordLimit": 3,
+          "explanation": "Then bring the item to the sports desk."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "temporary locker",
+          "wordLimit": 3,
+          "explanation": "Ask for a temporary locker."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-051",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Edge of a Pond",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Edge of a Pond",
+      "body": "**A** Volunteers counted young frogs around a pond to see whether a newly planted bank provided shelter. Their records distinguished frogs on the bank from animals among the floating leaves.\n\n**B** On dry mornings the planted bank had few frogs, despite looking like good habitat. Counts rose after rain, so observers added a column to their sheet for recent rainfall.\n\n**C** Rather than concluding that the bank was unsuccessful, the group waited for another season. It planned to compare the same dates with a nearby unplanted pond whose shore had not been altered.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Their records distinguished frogs on the bank from animals among the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "floating leaves",
+          "wordLimit": 3,
+          "explanation": "Their records distinguished frogs on the bank from animals among the floating leaves.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Counts rose after rain, so observers added a column to their sheet for ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "recent rainfall",
+          "wordLimit": 3,
+          "explanation": "Counts rose after rain, so observers added a column to their sheet for recent rainfall.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It planned to compare the same dates with a nearby ______ whose shore had not been altered.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "unplanted pond",
+          "wordLimit": 3,
+          "explanation": "It planned to compare the same dates with a nearby unplanted pond whose shore had not been altered.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "A second pond was used for comparison in the first season.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Rather than concluding that the bank was unsuccessful, the group waited for another season. It planned to compare the same dates with a nearby unplanted pond whose shore had not been altered.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a new variable recorded after a pattern was noticed?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "On dry mornings the planted bank had few frogs, despite looking like good habitat. Counts rose after rain, so observers added a column to their sheet for recent rainfall.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

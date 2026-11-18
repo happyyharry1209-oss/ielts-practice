@@ -1,0 +1,81 @@
+{
+  "id": "reading-022",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Museum in One Room",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Museum in One Room",
+      "body": "**A** A village museum wanted to show more objects without enlarging its single gallery. Its volunteers tried rotating displays, so a small number of items could be shown at a time and replaced during quiet weeks.\n\n**B** Many visitors were happy to see different objects, but regular groups asked which items would be on view next month. Volunteers published a schedule to make group visits easier to plan.\n\n**C** A separate handling box was left on the lower shelf for visitors who wanted to touch a copy of an original. It was designed so the activity could continue even when there was no guide in the room.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its volunteers tried ______, so a small number of items could be shown at a time and replaced during quiet weeks.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rotating displays",
+          "wordLimit": 3,
+          "explanation": "Its volunteers tried rotating displays, so a small number of items could be shown at a time and replaced during quiet weeks.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Volunteers published a ______ to make group visits easier to plan.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "schedule",
+          "wordLimit": 3,
+          "explanation": "Volunteers published a schedule to make group visits easier to plan.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A separate ______ was left on the lower shelf for visitors who wanted to touch a copy of an original.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "handling box",
+          "wordLimit": 3,
+          "explanation": "A separate handling box was left on the lower shelf for visitors who wanted to touch a copy of an original.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Only guided groups could use the handling box.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A separate handling box was left on the lower shelf for visitors who wanted to touch a copy of an original. It was designed so the activity could continue even when there was no guide in the room.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a response to people planning a future visit?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Many visitors were happy to see different objects, but regular groups asked which items would be on view next month. Volunteers published a schedule to make group visits easier to plan.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

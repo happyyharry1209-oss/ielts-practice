@@ -1,0 +1,81 @@
+{
+  "id": "reading-085",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Tracking Litter after a Street Festival",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Tracking Litter after a Street Festival",
+      "body": "**A** A volunteer team wanted to compare litter before and after a festival. Members cleared each survey strip on the morning before the event so old rubbish would not be counted with new items.\n\n**B** Food wrappers were more common near places offering seating. The most distant area had mostly receipts, which were light enough to blow away from stalls.\n\n**C** The team recommended moving two bins and adding signs near tables. It also proposed repeating the count after rain to see whether weather affected where paper collected.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Members cleared each ______ on the morning before the event so old rubbish would not be counted with new items.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "survey strip",
+          "wordLimit": 3,
+          "explanation": "Members cleared each survey strip on the morning before the event so old rubbish would not be counted with new items.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The most distant area had mostly ______, which were light enough to blow away from stalls.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "receipts",
+          "wordLimit": 3,
+          "explanation": "The most distant area had mostly receipts, which were light enough to blow away from stalls.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It also proposed repeating the count after ______ to see whether weather affected where paper collected.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rain",
+          "wordLimit": 3,
+          "explanation": "It also proposed repeating the count after rain to see whether weather affected where paper collected.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "An earlier clean-up was used to distinguish new litter from old litter.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A volunteer team wanted to compare litter before and after a festival. Members cleared each survey strip on the morning before the event so old rubbish would not be counted with new items.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a proposal about checking whether weather altered the pattern?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The team recommended moving two bins and adding signs near tables. It also proposed repeating the count after rain to see whether weather affected where paper collected.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

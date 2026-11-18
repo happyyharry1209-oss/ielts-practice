@@ -1,0 +1,63 @@
+{
+  "id": "listening-074",
+  "skill": "listening",
+  "title": "Listening Drill — Borrowed projector",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Borrowed projector",
+      "transcript": "CUSTOMER: I need some help with a borrowed projector. The main problem is a flicker. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the serial number. Then bring the item to the media desk. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a replacement. don't try to open the casing. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-074/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "The main problem is ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "The main problem is a flicker.",
+          "options": [
+            "a flicker",
+            "a jammed lock",
+            "a torn label",
+            "loose pedals"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "serial number",
+          "wordLimit": 3,
+          "explanation": "First please send the serial number."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "media desk",
+          "wordLimit": 3,
+          "explanation": "Then bring the item to the media desk."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "replacement",
+          "wordLimit": 3,
+          "explanation": "Ask for a replacement."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-028",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Greenhouse with Two Doors",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Greenhouse with Two Doors",
+      "body": "**A** A volunteer group noticed that seedlings nearest the greenhouse door grew more slowly. Members first checked light levels and looked for damage from insects, but neither result explained the pattern.\n\n**B** Next they placed simple strips of paper near the two doors. The strips showed a strong draught whenever both doors were open, even on days when the air outside the greenhouse felt still.\n\n**C** To reduce the effect, the group asked visitors to close one door before opening the other. It moved a storage rack so that people carrying heavy trays could follow the new route comfortably.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Members first checked light levels and looked for damage from ______, but neither result explained the pattern.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "insects",
+          "wordLimit": 3,
+          "explanation": "Members first checked light levels and looked for damage from insects, but neither result explained the pattern.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The strips showed a strong ______ whenever both doors were open, even on days when the air outside the greenhouse felt still.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "draught",
+          "wordLimit": 3,
+          "explanation": "The strips showed a strong draught whenever both doors were open, even on days when the air outside the greenhouse felt still.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It moved a ______ so that people carrying heavy trays could follow the new route comfortably.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "storage rack",
+          "wordLimit": 3,
+          "explanation": "It moved a storage rack so that people carrying heavy trays could follow the new route comfortably.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The group identified insects as the cause of the slow growth.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A volunteer group noticed that seedlings nearest the greenhouse door grew more slowly. Members first checked light levels and looked for damage from insects, but neither result explained the pattern.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an adjustment that made a new procedure easier to follow?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "To reduce the effect, the group asked visitors to close one door before opening the other. It moved a storage rack so that people carrying heavy trays could follow the new route comfortably.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

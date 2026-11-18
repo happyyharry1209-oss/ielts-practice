@@ -1,0 +1,81 @@
+{
+  "id": "reading-050",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Separating Cargo and Passenger Traffic",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Separating Cargo and Passenger Traffic",
+      "body": "**A** A port manager noticed that foot passengers often crossed the route used by delivery vehicles. Staff used hand-held counters to identify the busiest periods rather than relying on the ferry timetable.\n\n**B** A temporary line of barriers redirected people away from the loading area. However, it added extra walking for some passengers and staff found that the length mattered more when people carried heavy bags.\n\n**C** The manager adjusted the route and opened a more direct passage during quiet periods. Each opening still required a member of staff to check the vehicle lane first.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Staff used hand-held counters to identify the ______ rather than relying on the ferry timetable.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "busiest periods",
+          "wordLimit": 3,
+          "explanation": "Staff used hand-held counters to identify the busiest periods rather than relying on the ferry timetable.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "However, it added extra walking for some passengers and staff found that the length mattered more when people carried ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "heavy bags",
+          "wordLimit": 3,
+          "explanation": "However, it added extra walking for some passengers and staff found that the length mattered more when people carried heavy bags.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Each opening still required a member of staff to check the ______ first.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "vehicle lane",
+          "wordLimit": 3,
+          "explanation": "Each opening still required a member of staff to check the vehicle lane first.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The more direct passage could open without a safety check.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The manager adjusted the route and opened a more direct passage during quiet periods. Each opening still required a member of staff to check the vehicle lane first.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions which passengers were particularly affected by the longer route?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "A temporary line of barriers redirected people away from the loading area. However, it added extra walking for some passengers and staff found that the length mattered more when people carried heavy bags.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

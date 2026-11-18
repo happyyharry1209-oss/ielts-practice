@@ -1,0 +1,63 @@
+{
+  "id": "listening-068",
+  "skill": "listening",
+  "title": "Listening Drill — Community fridge survey",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Community fridge survey",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about a community fridge. The progress report is due on Thursday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the collection log. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the small shelf. Send your results to Adam first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that we have to record which days the fridge is open. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-068/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "The progress report is due on Thursday.",
+          "options": [
+            "Friday",
+            "Tuesday",
+            "Thursday",
+            "Wednesday"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "collection log",
+          "wordLimit": 3,
+          "explanation": "I'll start by checking the collection log."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "small shelf",
+          "wordLimit": 3,
+          "explanation": "For the trial we will use the small shelf."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Adam",
+          "wordLimit": 3,
+          "explanation": "Send your results to Adam first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

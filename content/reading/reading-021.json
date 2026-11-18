@@ -1,0 +1,81 @@
+{
+  "id": "reading-021",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Water for the Courtyard Trees",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Water for the Courtyard Trees",
+      "body": "**A** A small business park asked its gardener to reduce water use during summer. The gardener recorded the soil condition beneath each tree using a long probe, rather than judging by the colour of the surface.\n\n**B** Most trees needed less frequent watering than expected. However, the ground by a busy walkway had become compacted, so water drained sideways before reaching the roots. A narrow strip of that soil was loosened.\n\n**C** The gardener also moved the watering times to the early morning. If rain was forecast, an assistant checked the weather station and skipped the scheduled session when conditions made it unnecessary.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The gardener recorded the soil condition beneath each tree using a long ______, rather than judging by the colour of the surface.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "probe",
+          "wordLimit": 3,
+          "explanation": "The gardener recorded the soil condition beneath each tree using a long probe, rather than judging by the colour of the surface.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "However, the ground by a busy walkway had become compacted, so water drained sideways before reaching the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "roots",
+          "wordLimit": 3,
+          "explanation": "However, the ground by a busy walkway had become compacted, so water drained sideways before reaching the roots.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "If rain was forecast, an assistant checked the ______ and skipped the scheduled session when conditions made it unnecessary.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "weather station",
+          "wordLimit": 3,
+          "explanation": "If rain was forecast, an assistant checked the weather station and skipped the scheduled session when conditions made it unnecessary.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "All trees were found to need water more frequently than expected.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Most trees needed less frequent watering than expected. However, the ground by a busy walkway had become compacted, so water drained sideways before reaching the roots. A narrow strip of that soil was loosened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a tool used to decide whether to cancel a watering session?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The gardener also moved the watering times to the early morning. If rain was forecast, an assistant checked the weather station and skipped the scheduled session when conditions made it unnecessary.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

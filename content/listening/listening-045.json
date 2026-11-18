@@ -1,0 +1,63 @@
+{
+  "id": "listening-045",
+  "skill": "listening",
+  "title": "Listening Drill — Garden show update",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Garden show update",
+      "transcript": "ORGANISER: A quick update about the garden show. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns parking arrangements.\n\nORGANISER: For now, go to the farm gate. If that route is closed when you arrive, use the village road instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to James rather than the general enquiries desk. Before you leave, keep your ticket for re-entry. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-045/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "parking arrangements",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns parking arrangements."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "For now, go to the farm gate.",
+          "options": [
+            "west door",
+            "north ramp",
+            "box office",
+            "farm gate"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "village road",
+          "wordLimit": 3,
+          "explanation": "If that route is closed when you arrive, use the village road instead."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "James",
+          "wordLimit": 3,
+          "explanation": "Questions should go to James rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

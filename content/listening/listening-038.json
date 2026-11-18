@@ -1,0 +1,63 @@
+{
+  "id": "listening-038",
+  "skill": "listening",
+  "title": "Listening Drill — Book fair relocation",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Book fair relocation",
+      "transcript": "ORGANISER: A quick update about the weekend book fair. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns the venue.\n\nORGANISER: For now, go to the side gate. If that route is closed when you arrive, use the river path instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Kim rather than the general enquiries desk. Before you leave, check the stall list on the noticeboard. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-038/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "The most important change concerns the venue.",
+          "options": [
+            "the venue",
+            "arrival time",
+            "loading times",
+            "the order"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "side gate",
+          "wordLimit": 3,
+          "explanation": "For now, go to the side gate."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "river path",
+          "wordLimit": 3,
+          "explanation": "If that route is closed when you arrive, use the river path instead."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Kim",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Kim rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

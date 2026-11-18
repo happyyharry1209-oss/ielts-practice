@@ -1,0 +1,66 @@
+{
+  "id": "listening-011",
+  "skill": "listening",
+  "title": "Listening Drill — Reservoir walk",
+  "description": "Visitor briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Reservoir walk",
+      "transcript": "GUIDE: Welcome to our visit to the old reservoir. Before we leave, make sure your name appears on the list I'm holding. If you can't see your name, speak to me privately rather than adding it yourself.\n\nGUIDE: Our meeting point is the stone bridge. The visit itself will last eighty minutes. You don't need to take anything heavy, but please bring a water bottle.\n\nGUIDE: We'll finish at the viewing platform. From there you can make your own way home. One last detail: the footpath is narrow in places. If you're separated from the group, phone the number printed on your ticket rather than taking a shortcut.",
+      "audioUrl": "/audio/listening-011/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Our meeting point is the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Our meeting point is the stone bridge.",
+          "options": [
+            "east lift",
+            "stone bridge",
+            "ferry terminal",
+            "security cabin"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "The visit itself will last ______ minutes.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "eighty",
+          "wordLimit": 3,
+          "explanation": "The visit itself will last eighty minutes.",
+          "acceptableAnswers": [
+            "80"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "You don't need to take anything heavy, but please bring a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "water bottle",
+          "wordLimit": 3,
+          "explanation": "You don't need to take anything heavy, but please bring a water bottle."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "We'll finish at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "viewing platform",
+          "wordLimit": 3,
+          "explanation": "We'll finish at the viewing platform."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

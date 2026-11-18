@@ -1,0 +1,63 @@
+{
+  "id": "listening-073",
+  "skill": "listening",
+  "title": "Listening Drill — Plant exchange project",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Plant exchange project",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about a plant exchange. The progress report is due on Tuesday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the sign-up sheet. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the seed table. Send your results to Tess first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that walk-in visitors may have different needs. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-073/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Tuesday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Tuesday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sign-up sheet",
+          "wordLimit": 3,
+          "explanation": "I'll start by checking the sign-up sheet."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "For the trial we will use the seed table.",
+          "options": [
+            "opening track",
+            "morning route",
+            "small carton",
+            "seed table"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Tess",
+          "wordLimit": 3,
+          "explanation": "Send your results to Tess first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

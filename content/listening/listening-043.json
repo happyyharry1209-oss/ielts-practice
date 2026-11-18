@@ -1,0 +1,63 @@
+{
+  "id": "listening-043",
+  "skill": "listening",
+  "title": "Listening Drill — Community film night",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Community film night",
+      "transcript": "ORGANISER: A quick update about community film night. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns seat allocation.\n\nORGANISER: For now, go to the rear entrance. If that route is closed when you arrive, use the main lobby instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Simon rather than the general enquiries desk. Before you leave, keep the aisles clear. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-043/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "seat allocation",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns seat allocation."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "rear entrance",
+          "wordLimit": 3,
+          "explanation": "For now, go to the rear entrance."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "If that route is closed when you arrive, use the main lobby instead.",
+          "options": [
+            "railway bridge",
+            "main lobby",
+            "village road",
+            "east lift"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Simon",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Simon rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

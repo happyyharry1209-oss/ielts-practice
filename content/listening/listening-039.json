@@ -1,0 +1,63 @@
+{
+  "id": "listening-039",
+  "skill": "listening",
+  "title": "Listening Drill — School concert access",
+  "description": "Public announcement. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "School concert access",
+      "transcript": "ORGANISER: A quick update about the school concert. Some of you have printed the original programme, so please take a moment to change your notes. The most important change concerns arrival time.\n\nORGANISER: For now, go to the west door. If that route is closed when you arrive, use the covered walk instead. It takes a few minutes longer, so allow enough time.\n\nORGANISER: Questions should go to Ruth rather than the general enquiries desk. Before you leave, put your phone on silent. We will post a further update only if another part of the plan changes.",
+      "audioUrl": "/audio/listening-039/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The most important change concerns ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "arrival time",
+          "wordLimit": 3,
+          "explanation": "The most important change concerns arrival time."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "For now, go to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "For now, go to the west door.",
+          "options": [
+            "north ramp",
+            "west door",
+            "box office",
+            "pool entrance"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "If that route is closed when you arrive, use the ______ instead.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "covered walk",
+          "wordLimit": 3,
+          "explanation": "If that route is closed when you arrive, use the covered walk instead."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Questions should go to ______ rather than the general enquiries desk.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Ruth",
+          "wordLimit": 3,
+          "explanation": "Questions should go to Ruth rather than the general enquiries desk."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

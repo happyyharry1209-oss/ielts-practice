@@ -1,0 +1,63 @@
+{
+  "id": "listening-099",
+  "skill": "listening",
+  "title": "Listening Drill — School garden trial",
+  "description": "Fieldwork briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "School garden trial",
+      "transcript": "LEADER: Let me explain how we'll collect data about growth in the school garden. Each pair will have the same instructions. That matters because another group needs to be able to repeat what you've done.\n\nLEADER: Start with the bean plot. Record the first reading at two. The quantity we're comparing is stem length. Use the ruler marked with blue tape.\n\nLEADER: At the end, repeat one measure to check your result. If you miss a reading, mark it as missing. Don't fill in a number by copying the nearest result.",
+      "audioUrl": "/audio/listening-099/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start with the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "bean plot",
+          "wordLimit": 3,
+          "explanation": "Start with the bean plot."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "Record the first reading at ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Record the first reading at two.",
+          "options": [
+            "ten",
+            "two",
+            "eight",
+            "eleven"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "The quantity we're comparing is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "stem length",
+          "wordLimit": 3,
+          "explanation": "The quantity we're comparing is stem length."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Use the ______ marked with blue tape.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "ruler",
+          "wordLimit": 3,
+          "explanation": "Use the ruler marked with blue tape."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

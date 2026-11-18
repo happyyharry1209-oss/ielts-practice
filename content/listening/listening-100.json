@@ -1,0 +1,67 @@
+{
+  "id": "listening-100",
+  "skill": "listening",
+  "title": "Listening Drill — Stone texture study",
+  "description": "Fieldwork briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Stone texture study",
+      "transcript": "LEADER: Let me explain how we'll collect data about how paving wears. Each pair will have the same instructions. That matters because another group needs to be able to repeat what you've done.\n\nLEADER: Start with the corner slab. Record the first reading at four. The quantity we're comparing is groove depth. Use the depth gauge marked with blue tape.\n\nLEADER: At the end, leave the pavement as you found it. If you miss a reading, mark it as missing. Don't fill in a number by copying the nearest result.",
+      "audioUrl": "/audio/listening-100/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start with the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "corner slab",
+          "wordLimit": 3,
+          "explanation": "Start with the corner slab."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "Record the first reading at ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "four",
+          "wordLimit": 3,
+          "explanation": "Record the first reading at four.",
+          "acceptableAnswers": [
+            "4",
+            "4:00"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "The quantity we're comparing is ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "The quantity we're comparing is groove depth.",
+          "options": [
+            "flow speed",
+            "food weight",
+            "groove depth",
+            "item count"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Use the ______ marked with blue tape.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "depth gauge",
+          "wordLimit": 3,
+          "explanation": "Use the depth gauge marked with blue tape."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

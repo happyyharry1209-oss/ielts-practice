@@ -1,0 +1,63 @@
+{
+  "id": "listening-060",
+  "skill": "listening",
+  "title": "Listening Drill — Orchestra rehearsal route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Orchestra rehearsal route",
+      "transcript": "VISITOR: I'm trying to get to the orchestra rehearsal. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the stage door. From there, walk towards the costume rack. Stay on the same side until you can see the sign for the rehearsal room.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the loading bay today. A delivery truck is about to arrive. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-060/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "stage door",
+          "wordLimit": 3,
+          "explanation": "Start at the stage door."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "From there, walk towards the costume rack.",
+          "options": [
+            "information board",
+            "scoreboard",
+            "costume rack",
+            "coffee kiosk"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "rehearsal room",
+          "wordLimit": 3,
+          "explanation": "Stay on the same side until you can see the sign for the rehearsal room."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "loading bay",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the loading bay today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

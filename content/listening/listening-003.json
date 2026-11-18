@@ -1,0 +1,66 @@
+{
+  "id": "listening-003",
+  "skill": "listening",
+  "title": "Listening Drill — Kayak induction",
+  "description": "Booking dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Kayak induction",
+      "transcript": "CALLER: Hello. I'd like to book a kayak induction. I saw an older notice saying that bookings opened on Tuesday morning. Is that still right?\n\nADVISER: That notice is out of date. Bookings open on Wednesday this time. If you collect your booking pack in person, go to the boathouse. The reception desk in the main building won't have the packs.\n\nCALLER: How much is the booking? I can pay online if that saves time.\n\nADVISER: The total is thirty pounds. Pay once you've checked the date. Then contact Oscar if you haven't received confirmation within two working days.\n\nCALLER: Thanks. Is there anything else I should know before I arrive?\n\nADVISER: One practical detail: changing rooms open half an hour early.",
+      "audioUrl": "/audio/listening-003/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "Bookings open on ______ this time.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Wednesday",
+          "wordLimit": 3,
+          "explanation": "Bookings open on Wednesday this time."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "If you collect your booking pack in person, go to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "If you collect your booking pack in person, go to the boathouse.",
+          "options": [
+            "farm shop",
+            "boathouse",
+            "stage door",
+            "station kiosk"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "form-completion",
+          "prompt": "The total is ______ pounds.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "thirty",
+          "wordLimit": 3,
+          "explanation": "The total is thirty pounds.",
+          "acceptableAnswers": [
+            "30"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Then contact ______ if you haven't received confirmation within two working days.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Oscar",
+          "wordLimit": 3,
+          "explanation": "Then contact Oscar if you haven't received confirmation within two working days."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

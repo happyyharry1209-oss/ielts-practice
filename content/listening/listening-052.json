@@ -1,0 +1,63 @@
+{
+  "id": "listening-052",
+  "skill": "listening",
+  "title": "Listening Drill — Canal wildlife records",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Canal wildlife records",
+      "transcript": "HOST: You work on recording wildlife on a canal. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with an open day. At the time our biggest obstacle was poor access. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered dawn activity. It helped us improve visit timing. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll try a quieter stretch of the canal. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-052/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Ours started with ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "an open day",
+          "wordLimit": 3,
+          "explanation": "Ours started with an open day."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "poor access",
+          "wordLimit": 3,
+          "explanation": "At the time our biggest obstacle was poor access."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "We discovered ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "We discovered dawn activity.",
+          "options": [
+            "hidden marks",
+            "different goals",
+            "dawn activity",
+            "repeated planting"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "visit timing",
+          "wordLimit": 3,
+          "explanation": "It helped us improve visit timing."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

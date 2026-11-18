@@ -1,0 +1,80 @@
+{
+  "id": "reading-014",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Benches Along a Steep Route",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Benches Along a Steep Route",
+      "body": "**A** The path to a hillside clinic looked short on a map, but the slope made it tiring. Researchers walked the route with older residents, who pointed out that the difficult stretch began before the steepest part.\n\n**B** The design team initially spaced benches equally. It then moved one bench to the edge of a level landing, where users could slow down and sit without obstructing people coming downhill.\n\n**C** In a second trial, the team asked visitors how far they would walk without resting. It also counted how often each bench was used, separating use by waiting patients from use by people taking a rest break.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Researchers walked the route with ______, who pointed out that the difficult stretch began before the steepest part.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "older residents",
+          "wordLimit": 3,
+          "explanation": "Researchers walked the route with older residents, who pointed out that the difficult stretch began before the steepest part.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "It then moved one bench to the edge of a ______, where users could slow down and sit without obstructing people coming downhill.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "level landing",
+          "wordLimit": 3,
+          "explanation": "It then moved one bench to the edge of a level landing, where users could slow down and sit without obstructing people coming downhill.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It also counted how often each bench was used, separating use by waiting patients from use by people taking a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rest break",
+          "wordLimit": 3,
+          "explanation": "It also counted how often each bench was used, separating use by waiting patients from use by people taking a rest break.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The clinic paid for the new benches from donations.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why an evenly spaced layout was revised?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The design team initially spaced benches equally. It then moved one bench to the edge of a level landing, where users could slow down and sit without obstructing people coming downhill.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

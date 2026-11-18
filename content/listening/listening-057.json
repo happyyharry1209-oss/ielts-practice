@@ -1,0 +1,63 @@
+{
+  "id": "listening-057",
+  "skill": "listening",
+  "title": "Listening Drill — Campus clinic route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Campus clinic route",
+      "transcript": "VISITOR: I'm trying to get to the campus clinic. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the north gate. From there, walk towards the bike shelter. Stay on the same side until you can see the sign for the clinic corridor.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the central lawn today. The ground is soft after the rain. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-057/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "north gate",
+          "wordLimit": 3,
+          "explanation": "Start at the north gate."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "From there, walk towards the bike shelter.",
+          "options": [
+            "service desk",
+            "glasshouse",
+            "costume rack",
+            "bike shelter"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "clinic corridor",
+          "wordLimit": 3,
+          "explanation": "Stay on the same side until you can see the sign for the clinic corridor."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "central lawn",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the central lawn today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

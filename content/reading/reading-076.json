@@ -1,0 +1,81 @@
+{
+  "id": "reading-076",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Camera for Recording Clay Models",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Camera for Recording Clay Models",
+      "body": "**A** A studio wanted pictures of unfinished sculptures so students could see how their ideas changed. It fixed the camera to a short stand to keep the viewing angle constant.\n\n**B** Photographs taken after dark had a different colour from daylight images. The instructor put a grey reference card next to each model so colours could be compared later.\n\n**C** Students chose which images to include in their portfolios. They could also write a short note explaining why they had removed or added part of a model.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "It fixed the ______ to a short stand to keep the viewing angle constant.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "camera",
+          "wordLimit": 3,
+          "explanation": "It fixed the camera to a short stand to keep the viewing angle constant.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The instructor put a grey ______ next to each model so colours could be compared later.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "reference card",
+          "wordLimit": 3,
+          "explanation": "The instructor put a grey reference card next to each model so colours could be compared later.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "They could also write a short ______ explaining why they had removed or added part of a model.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "note",
+          "wordLimit": 3,
+          "explanation": "They could also write a short note explaining why they had removed or added part of a model.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The studio attempted to keep the viewing angle consistent.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A studio wanted pictures of unfinished sculptures so students could see how their ideas changed. It fixed the camera to a short stand to keep the viewing angle constant.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the purpose of adding an object beside the models?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Photographs taken after dark had a different colour from daylight images. The instructor put a grey reference card next to each model so colours could be compared later.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

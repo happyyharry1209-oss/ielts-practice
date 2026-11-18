@@ -1,0 +1,63 @@
+{
+  "id": "listening-047",
+  "skill": "listening",
+  "title": "Listening Drill — Neighbourhood tool library",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Neighbourhood tool library",
+      "transcript": "HOST: You work on a tool lending scheme. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with a cupboard. At the time our biggest obstacle was insurance costs. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered seasonal demand. It helped us improve stock planning. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll interview people who haven't used the scheme. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-047/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Ours started with ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Ours started with a cupboard.",
+          "options": [
+            "old photographs",
+            "a cupboard",
+            "an open day",
+            "school drawings"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "insurance costs",
+          "wordLimit": 3,
+          "explanation": "At the time our biggest obstacle was insurance costs."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "We discovered ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "seasonal demand",
+          "wordLimit": 3,
+          "explanation": "We discovered seasonal demand."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "stock planning",
+          "wordLimit": 3,
+          "explanation": "It helped us improve stock planning."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

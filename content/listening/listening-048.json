@@ -1,0 +1,63 @@
+{
+  "id": "listening-048",
+  "skill": "listening",
+  "title": "Listening Drill — Signs at a park",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Signs at a park",
+      "transcript": "HOST: You work on signs in a public park. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with an audit. At the time our biggest obstacle was vandalism. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered colour preferences. It helped us improve route finding. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll test a new set of signs before winter. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-048/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Ours started with ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "an audit",
+          "wordLimit": 3,
+          "explanation": "Ours started with an audit."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "At the time our biggest obstacle was vandalism.",
+          "options": [
+            "poor access",
+            "wall damage",
+            "vandalism",
+            "washing costs"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "We discovered ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "colour preferences",
+          "wordLimit": 3,
+          "explanation": "We discovered colour preferences."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "route finding",
+          "wordLimit": 3,
+          "explanation": "It helped us improve route finding."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

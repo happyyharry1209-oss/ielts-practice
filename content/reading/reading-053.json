@@ -1,0 +1,81 @@
+{
+  "id": "reading-053",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Choosing a Route for an Outdoor Lesson",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Choosing a Route for an Outdoor Lesson",
+      "body": "**A** An outdoor class used a short circular route to study plants. The first trial showed that local species were easy to find but descriptions could not be heard over the nearby main road.\n\n**B** The teacher chose a quieter path and moved several activities to stopping points where the group could stand in a semicircle. Pupils were still asked to identify plants on both sides of the path.\n\n**C** Teachers gave later classes a route card with suggested timings. An optional stop by a stream could be skipped if time was short, enabling groups to return for lunch.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The first trial showed that local species were easy to find but descriptions could not be heard over the nearby ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "main road",
+          "wordLimit": 3,
+          "explanation": "The first trial showed that local species were easy to find but descriptions could not be heard over the nearby main road.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The teacher chose a quieter path and moved several activities to stopping points where the group could stand in a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "semicircle",
+          "wordLimit": 3,
+          "explanation": "The teacher chose a quieter path and moved several activities to stopping points where the group could stand in a semicircle.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "An optional stop by a ______ could be skipped if time was short, enabling groups to return for lunch.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "stream",
+          "wordLimit": 3,
+          "explanation": "An optional stop by a stream could be skipped if time was short, enabling groups to return for lunch.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Every stop on the final route was compulsory.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Teachers gave later classes a route card with suggested timings. An optional stop by a stream could be skipped if time was short, enabling groups to return for lunch.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a layout that helped the whole group hear the teacher?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The teacher chose a quieter path and moved several activities to stopping points where the group could stand in a semicircle. Pupils were still asked to identify plants on both sides of the path.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

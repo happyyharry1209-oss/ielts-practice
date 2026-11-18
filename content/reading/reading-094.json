@@ -1,0 +1,81 @@
+{
+  "id": "reading-094",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Studying the Use of a Covered Bridge",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Studying the Use of a Covered Bridge",
+      "body": "**A** Students counted people crossing a bridge on wet and dry days. They distinguished people passing through from those who stayed under the cover to wait for the rain to clear.\n\n**B** The bridge became crowded in sudden showers despite carrying little traffic on some rainy days. The length of the queue depended partly on how quickly the rain had begun.\n\n**C** The students suggested drawing two walking lanes through the shelter. They planned to see whether the markings would change where waiting people stand.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "They distinguished people passing through from those who stayed under the ______ to wait for the rain to clear.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "cover",
+          "wordLimit": 3,
+          "explanation": "They distinguished people passing through from those who stayed under the cover to wait for the rain to clear.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The length of the queue depended partly on how quickly the ______ had begun.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "rain",
+          "wordLimit": 3,
+          "explanation": "The length of the queue depended partly on how quickly the rain had begun.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "They planned to see whether the markings would change where waiting people ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "stand",
+          "wordLimit": 3,
+          "explanation": "They planned to see whether the markings would change where waiting people stand.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Queue length was influenced by how suddenly rain began.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The bridge became crowded in sudden showers despite carrying little traffic on some rainy days. The length of the queue depended partly on how quickly the rain had begun.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions one improvement that had yet to be tested?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The students suggested drawing two walking lanes through the shelter. They planned to see whether the markings would change where waiting people stand.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

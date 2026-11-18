@@ -67,6 +67,8 @@ export interface ReadingTest {
   title: string;
   description?: string;
   durationSec: number;
+  /** Short drills report raw scores without an IELTS band estimate. */
+  shortPractice?: boolean;
   passages: ReadingPassage[];
 }
 
@@ -87,6 +89,8 @@ export interface ListeningTest {
   durationSec: number;
   /** Extra time after the audio ends (real test: 10 minutes to transfer answers). */
   transferSec?: number;
+  /** Short drills report raw scores without an IELTS band estimate. */
+  shortPractice?: boolean;
   sections: ListeningSection[];
 }
 
@@ -96,6 +100,12 @@ export interface WritingTask {
   prompt: string;
   /** Optional chart/diagram image for Task 1. */
   imageUrl?: string;
+  /** Optional original practice data for an Academic Task 1 report. */
+  dataTable?: {
+    unit: string;
+    columns: string[];
+    rows: { label: string; values: number[] }[];
+  };
   minWords: number;
   suggestedMinutes: number;
   /** Sample band 8/9 answer, hidden until the candidate submits. */

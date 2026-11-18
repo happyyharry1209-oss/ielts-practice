@@ -30,7 +30,16 @@ writingRoutes.post('/submit', async (c) => {
     throw new HttpError(429, `AI scoring limit reached (${env.aiHourlyLimit}/hour). Try again later.`);
   }
 
-  const { feedback, usage } = await scoreWriting(task.task, task.prompt, body.text, task.minWords);
+  let prompt = task.prompt;
+  if (task.dataTable) {
+    const { unit, columns, rows } = task.dataTable;
+    const tableLines = [
+      ['Category', ...columns].join(' | '),
+      ...rows.map(({ label, values }) => [label, ...values].join(' | ')),
+    ];
+    prompt += `\n\nPractice data (${unit}):\n${tableLines.join('\n')}`;
+  }
+  const { feedback, usage } = await scoreWriting(task.task, prompt, body.text, task.minWords);
   const cost = (usage.tokensIn * 0.27 + usage.tokensOut * 1.1) / 1_000_000;
 
   const rows = await query<{ id: string; created_at: string }>(

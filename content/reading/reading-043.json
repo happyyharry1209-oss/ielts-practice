@@ -1,0 +1,81 @@
+{
+  "id": "reading-043",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Changing Hours of a Street Fountain",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Changing Hours of a Street Fountain",
+      "body": "**A** A shopping street's fountain was expensive to keep running all day. Before shortening its operating hours, the town placed observers nearby to see when people stopped rather than simply walked past.\n\n**B** The busiest hour was earlier on hot days. The same observers also noticed that the sound masked nearby traffic noise, which was particularly noticeable after office workers left.\n\n**C** The town introduced a flexible schedule. On the quietest days, it timed the fountain to switch off just after the last bus departure, rather than running until a fixed late hour.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Before shortening its operating hours, the town placed ______ nearby to see when people stopped rather than simply walked past.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "observers",
+          "wordLimit": 3,
+          "explanation": "Before shortening its operating hours, the town placed observers nearby to see when people stopped rather than simply walked past.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The same observers also noticed that the sound masked nearby ______, which was particularly noticeable after office workers left.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "traffic noise",
+          "wordLimit": 3,
+          "explanation": "The same observers also noticed that the sound masked nearby traffic noise, which was particularly noticeable after office workers left.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "On the quietest days, it timed the fountain to switch off just after the last ______, rather than running until a fixed late hour.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "bus departure",
+          "wordLimit": 3,
+          "explanation": "On the quietest days, it timed the fountain to switch off just after the last bus departure, rather than running until a fixed late hour.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The fountain was operated for the same hours every day under the new schedule.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The town introduced a flexible schedule. On the quietest days, it timed the fountain to switch off just after the last bus departure, rather than running until a fixed late hour.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an unexpected benefit noticed during the observations?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The busiest hour was earlier on hot days. The same observers also noticed that the sound masked nearby traffic noise, which was particularly noticeable after office workers left.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

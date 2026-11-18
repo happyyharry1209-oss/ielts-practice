@@ -1,0 +1,57 @@
+{
+  "id": "writing-072",
+  "skill": "writing",
+  "title": "Writing Practice — Bike-share memberships",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows active members of three bicycle hire schemes in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "members",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Central Cycle",
+            "values": [
+              1600,
+              2450,
+              3600
+            ]
+          },
+          {
+            "label": "Wheel Link",
+            "values": [
+              730,
+              1540,
+              2470
+            ]
+          },
+          {
+            "label": "Coast Bikes",
+            "values": [
+              590,
+              880,
+              1640
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Cities can provide bicycle hire schemes themselves or allow private companies to operate them. Discuss both approaches and give your opinion.\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

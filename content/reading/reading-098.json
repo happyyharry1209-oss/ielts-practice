@@ -1,0 +1,81 @@
+{
+  "id": "reading-098",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Keeping a Garden Journal",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Keeping a Garden Journal",
+      "body": "**A** A school recorded when flowers opened in its garden. The pupils first wrote the date of the first bloom without noting whether other plants of the same type were flowering.\n\n**B** In the following year they added a field for the number of plants in bloom. This helped distinguish a single early flower from a general change across the whole garden.\n\n**C** Entries also included a small drawing or photograph. This allowed another class to check a plant identification if a note used a less familiar local name.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The pupils first wrote the ______ of the first bloom without noting whether other plants of the same type were flowering.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "date",
+          "wordLimit": 3,
+          "explanation": "The pupils first wrote the date of the first bloom without noting whether other plants of the same type were flowering.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "This helped distinguish a single early flower from a ______ across the whole garden.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "general change",
+          "wordLimit": 3,
+          "explanation": "This helped distinguish a single early flower from a general change across the whole garden.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "This allowed another class to check a ______ if a note used a less familiar local name.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "plant identification",
+          "wordLimit": 3,
+          "explanation": "This allowed another class to check a plant identification if a note used a less familiar local name.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The pupils recorded counts in their original diary entries.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A school recorded when flowers opened in its garden. The pupils first wrote the date of the first bloom without noting whether other plants of the same type were flowering.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions what visual evidence was used for?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Entries also included a small drawing or photograph. This allowed another class to check a plant identification if a note used a less familiar local name.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

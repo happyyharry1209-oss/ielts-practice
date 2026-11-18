@@ -1,0 +1,81 @@
+{
+  "id": "reading-029",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Return of the Bottle Crate",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Return of the Bottle Crate",
+      "body": "**A** A shop supplied drinks in reusable bottles but found that the bottles often came back one at a time. The manager tried lending small crates so customers could keep empties together between visits.\n\n**B** Staff expected a higher return rate immediately. Instead, the first sign of a change was that empty bottles were less often damaged because they no longer rolled loose inside shopping bags.\n\n**C** The crates could be returned to a different shop when the two stores shared a delivery route. A coloured sticker on each crate made this possible without having to record the customer's name.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The manager tried lending small ______ so customers could keep empties together between visits.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "crates",
+          "wordLimit": 3,
+          "explanation": "The manager tried lending small crates so customers could keep empties together between visits.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Instead, the first sign of a change was that empty bottles were less often damaged because they no longer rolled loose inside ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "shopping bags",
+          "wordLimit": 3,
+          "explanation": "Instead, the first sign of a change was that empty bottles were less often damaged because they no longer rolled loose inside shopping bags.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A coloured ______ on each crate made this possible without having to record the customer's name.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sticker",
+          "wordLimit": 3,
+          "explanation": "A coloured sticker on each crate made this possible without having to record the customer's name.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The bottles returned in the trial were more frequently damaged.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "Staff expected a higher return rate immediately. Instead, the first sign of a change was that empty bottles were less often damaged because they no longer rolled loose inside shopping bags.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how customers could return a crate elsewhere?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The crates could be returned to a different shop when the two stores shared a delivery route. A coloured sticker on each crate made this possible without having to record the customer's name.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

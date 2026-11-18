@@ -1,0 +1,81 @@
+{
+  "id": "reading-059",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — What Made the Community Café Quieter",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "What Made the Community Café Quieter",
+      "body": "**A** A community café thought its busiest table was also its noisiest. Volunteers measured sound near several tables and marked which surfaces were close to large windows.\n\n**B** The largest improvement came from adding soft panels above tables against the back wall. The panels changed the echo without requiring fewer customers or a different opening schedule.\n\n**C** The café also moved a chair away from the door. That change affected only one table but reduced complaints because customers no longer had to move each time someone entered.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Volunteers measured sound near several tables and marked which surfaces were close to large ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "windows",
+          "wordLimit": 3,
+          "explanation": "Volunteers measured sound near several tables and marked which surfaces were close to large windows.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The panels changed the ______ without requiring fewer customers or a different opening schedule.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "echo",
+          "wordLimit": 3,
+          "explanation": "The panels changed the echo without requiring fewer customers or a different opening schedule.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "That change affected only one table but reduced ______ because customers no longer had to move each time someone entered.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "complaints",
+          "wordLimit": 3,
+          "explanation": "That change affected only one table but reduced complaints because customers no longer had to move each time someone entered.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The café reduced the number of customers to lower sound levels.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The largest improvement came from adding soft panels above tables against the back wall. The panels changed the echo without requiring fewer customers or a different opening schedule.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a benefit caused by repositioning one item of furniture?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The café also moved a chair away from the door. That change affected only one table but reduced complaints because customers no longer had to move each time someone entered.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

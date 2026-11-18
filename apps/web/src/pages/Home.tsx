@@ -15,6 +15,8 @@ interface StatsResponse {
     id: string;
     skill: string;
     band: number | null;
+    raw_score: number | null;
+    total: number | null;
     submitted_at: string;
     mode: string;
     title: string;
@@ -136,7 +138,13 @@ export default function Home() {
                           {attempt.mode === 'mock' ? t('exam.mockMode') : t('exam.practiceMode')}
                         </p>
                       </div>
-                      {attempt.band != null ? <span className={cn('font-serif text-2xl', bandColor(attempt.band))}>{attempt.band.toFixed(1)}</span> : null}
+                      {attempt.band != null ? (
+                      <span className={cn('font-serif text-2xl', bandColor(attempt.band))}>{attempt.band.toFixed(1)}</span>
+                    ) : attempt.raw_score != null && attempt.total != null ? (
+                      <span className="shrink-0 text-sm font-semibold tabular-nums text-ink">
+                        {attempt.raw_score} / {attempt.total}
+                      </span>
+                    ) : null}
                       <ArrowRight aria-hidden="true" size={16} className="shrink-0 text-muted" />
                     </Link>
                   </li>

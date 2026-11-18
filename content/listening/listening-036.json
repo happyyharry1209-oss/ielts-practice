@@ -1,0 +1,63 @@
+{
+  "id": "listening-036",
+  "skill": "listening",
+  "title": "Listening Drill — Shell growth",
+  "description": "Short academic talk. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Shell growth",
+      "transcript": "PRESENTER: Today I'm describing a small study of shell growth in small coastal snails. I want you to listen for how the researchers measured change, because the result is easy to overstate.\n\nPRESENTER: Their work took place on opposite sides of a sheltered rock pool. Instead of relying on what local people remembered, they recorded shell width. They noticed slower growth. That observation would have been missed if the team had visited only at the end.\n\nPRESENTER: The largest limitation was short observations. The report is therefore a starting point. In a follow-up, the team would add winter monitoring. A wider study could show whether the original pattern holds.",
+      "audioUrl": "/audio/listening-036/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Instead of relying on what local people remembered, they recorded ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "shell width",
+          "wordLimit": 3,
+          "explanation": "Instead of relying on what local people remembered, they recorded shell width."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "They noticed ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "They noticed slower growth.",
+          "options": [
+            "afternoon peaks",
+            "later arrivals",
+            "slower growth",
+            "slower refilling"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "The largest limitation was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "short observations",
+          "wordLimit": 3,
+          "explanation": "The largest limitation was short observations."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "In a follow-up, the team would add ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "winter monitoring",
+          "wordLimit": 3,
+          "explanation": "In a follow-up, the team would add winter monitoring."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

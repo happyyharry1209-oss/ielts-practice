@@ -1,0 +1,81 @@
+{
+  "id": "reading-099",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Opening a Second Door at a Library",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Opening a Second Door at a Library",
+      "body": "**A** A town library tested opening a second door at closing time. Its manager was interested in how visitors passed the returns desk when both doors were available.\n\n**B** The exit queue shortened, but more people passed the desk without seeing where to return books. Staff put a second sign where both lines of visitors could see it.\n\n**C** The library kept the experiment limited to weekdays. A Saturday assistant asked to repeat the trial when families usually brought more items per visit.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Its manager was interested in how visitors passed the ______ when both doors were available.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "returns desk",
+          "wordLimit": 3,
+          "explanation": "Its manager was interested in how visitors passed the returns desk when both doors were available.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Staff put a second ______ where both lines of visitors could see it.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "sign",
+          "wordLimit": 3,
+          "explanation": "Staff put a second sign where both lines of visitors could see it.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A Saturday assistant asked to repeat the trial when families usually brought more ______ per visit.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "items",
+          "wordLimit": 3,
+          "explanation": "A Saturday assistant asked to repeat the trial when families usually brought more items per visit.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Increasing the number of exits completely solved the book returns issue.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The exit queue shortened, but more people passed the desk without seeing where to return books. Staff put a second sign where both lines of visitors could see it.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions an explanation of why a different day might give different results?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The library kept the experiment limited to weekdays. A Saturday assistant asked to repeat the trial when families usually brought more items per visit.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "listening-031",
+  "skill": "listening",
+  "title": "Listening Drill — Library acoustics",
+  "description": "Short academic talk. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Library acoustics",
+      "transcript": "PRESENTER: Today I'm describing a small study of noise in shared study spaces. I want you to listen for how the researchers measured change, because the result is easy to overstate.\n\nPRESENTER: Their work took place in two branches of a library. Instead of relying on what local people remembered, they recorded sound levels. They noticed quieter mornings. That observation would have been missed if the team had visited only at the end.\n\nPRESENTER: The largest limitation was exam season. The report is therefore a starting point. In a follow-up, the team would add holiday weeks. A wider study could show whether the original pattern holds.",
+      "audioUrl": "/audio/listening-031/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Instead of relying on what local people remembered, they recorded ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "sound levels",
+          "wordLimit": 3,
+          "explanation": "Instead of relying on what local people remembered, they recorded sound levels."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "They noticed ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "quieter mornings",
+          "wordLimit": 3,
+          "explanation": "They noticed quieter mornings."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "The largest limitation was ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "The largest limitation was exam season.",
+          "options": [
+            "blocked gutters",
+            "exam season",
+            "short observations",
+            "lamp position"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "In a follow-up, the team would add ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "holiday weeks",
+          "wordLimit": 3,
+          "explanation": "In a follow-up, the team would add holiday weeks."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

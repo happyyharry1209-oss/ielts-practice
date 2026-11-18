@@ -1,0 +1,63 @@
+{
+  "id": "listening-082",
+  "skill": "listening",
+  "title": "Listening Drill — Tablet stand return",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Tablet stand return",
+      "transcript": "CUSTOMER: I need some help with a tablet stand. The main problem is a loose hinge. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the item code. Then bring the item to the returns counter. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a repair estimate. fold the stand before carrying it. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-082/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "The main problem is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "a loose hinge",
+          "wordLimit": 3,
+          "explanation": "The main problem is a loose hinge."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "item code",
+          "wordLimit": 3,
+          "explanation": "First please send the item code."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "Then bring the item to the returns counter.",
+          "options": [
+            "returns counter",
+            "parcel counter",
+            "repair workshop",
+            "library desk"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "repair estimate",
+          "wordLimit": 3,
+          "explanation": "Ask for a repair estimate."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

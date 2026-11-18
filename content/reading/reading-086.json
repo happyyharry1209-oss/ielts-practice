@@ -1,0 +1,80 @@
+{
+  "id": "reading-086",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Local Catalogue for Repair Parts",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Local Catalogue for Repair Parts",
+      "body": "**A** A group catalogued spare parts bought for common repairs. At first the catalogue listed products by seller, but volunteers wanted to find a part by size even when its seller was unknown.\n\n**B** Labelled compartments helped, although pieces that looked similar still became mixed. Volunteers attached a small ruler to the box so new members could compare items immediately.\n\n**C** The finished catalogue gave examples of compatible models. A separate field marked when a part had an uncertain fit, which helped the team avoid promising a repair prematurely.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "At first the catalogue listed products by seller, but volunteers wanted to find a part by ______ even when its seller was unknown.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "size",
+          "wordLimit": 3,
+          "explanation": "At first the catalogue listed products by seller, but volunteers wanted to find a part by size even when its seller was unknown.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Volunteers attached a small ______ to the box so new members could compare items immediately.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "ruler",
+          "wordLimit": 3,
+          "explanation": "Volunteers attached a small ruler to the box so new members could compare items immediately.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A separate field marked when a part had an uncertain ______, which helped the team avoid promising a repair prematurely.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "fit",
+          "wordLimit": 3,
+          "explanation": "A separate field marked when a part had an uncertain fit, which helped the team avoid promising a repair prematurely.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The catalogue charged people to see the list.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions equipment made available to compare parts at the box?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Labelled compartments helped, although pieces that looked similar still became mixed. Volunteers attached a small ruler to the box so new members could compare items immediately.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

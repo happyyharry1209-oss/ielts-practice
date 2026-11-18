@@ -1,0 +1,63 @@
+{
+  "id": "listening-066",
+  "skill": "listening",
+  "title": "Listening Drill — School water audit",
+  "description": "Project planning dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "School water audit",
+      "transcript": "COORDINATOR: Thanks for joining this planning meeting about school water use. The progress report is due on Tuesday. We need to agree what can be ready before then.\n\nMEMBER: I'll start by checking the old readings. That should tell us whether the previous team has already solved part of the problem.\n\nCOORDINATOR: Good. For the trial we will use the main meter. Send your results to Joel first, not to the whole group. I don't want unconfirmed figures copied into the report.\n\nMEMBER: Understood. We should also remember that the kitchen is closed next week. I'll make a note of that in the schedule.",
+      "audioUrl": "/audio/listening-066/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "The progress report is due on ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Tuesday",
+          "wordLimit": 3,
+          "explanation": "The progress report is due on Tuesday."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "I'll start by checking the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "I'll start by checking the old readings.",
+          "options": [
+            "old readings",
+            "recording notes",
+            "driver reports",
+            "returns register"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "For the trial we will use the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "main meter",
+          "wordLimit": 3,
+          "explanation": "For the trial we will use the main meter."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Send your results to ______ first, not to the whole group.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "Joel",
+          "wordLimit": 3,
+          "explanation": "Send your results to Joel first, not to the whole group."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

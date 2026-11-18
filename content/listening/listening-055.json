@@ -1,0 +1,63 @@
+{
+  "id": "listening-055",
+  "skill": "listening",
+  "title": "Listening Drill — Restoring a cinema",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Restoring a cinema",
+      "transcript": "HOST: You work on restoring a small cinema. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with a volunteer group. At the time our biggest obstacle was roof leaks. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered original fittings. It helped us improve interior plans. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll make an inventory of the remaining equipment. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-055/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Ours started with ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "a volunteer group",
+          "wordLimit": 3,
+          "explanation": "Ours started with a volunteer group."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "roof leaks",
+          "wordLimit": 3,
+          "explanation": "At the time our biggest obstacle was roof leaks."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "We discovered ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "We discovered original fittings.",
+          "options": [
+            "dawn activity",
+            "original fittings",
+            "shared themes",
+            "high returns"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "interior plans",
+          "wordLimit": 3,
+          "explanation": "It helped us improve interior plans."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

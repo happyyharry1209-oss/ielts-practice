@@ -1,0 +1,81 @@
+{
+  "id": "reading-027",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — An Afternoon Bus Trial",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "An Afternoon Bus Trial",
+      "body": "**A** At a community centre, a volunteer recorded passengers who waited more than twenty minutes. The main problem occurred just after a popular exercise class, when the usual bus left before several passengers reached the stop.\n\n**B** The operator delayed one service by four minutes for a month. To make the timetable fair, staff recorded effects at earlier stops and did not count late journeys caused by a road closure.\n\n**C** The trial helped most passengers at the centre. A few people at the town station missed a connecting bus, so the operator scheduled a separate meeting with those passengers before keeping the change.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The main problem occurred just after a popular ______, when the usual bus left before several passengers reached the stop.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "exercise class",
+          "wordLimit": 3,
+          "explanation": "The main problem occurred just after a popular exercise class, when the usual bus left before several passengers reached the stop.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "To make the timetable fair, staff recorded effects at earlier stops and did not count late journeys caused by a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "road closure",
+          "wordLimit": 3,
+          "explanation": "To make the timetable fair, staff recorded effects at earlier stops and did not count late journeys caused by a road closure.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "A few people at the town station missed a connecting bus, so the operator scheduled a separate ______ with those passengers before keeping the change.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "meeting",
+          "wordLimit": 3,
+          "explanation": "A few people at the town station missed a connecting bus, so the operator scheduled a separate meeting with those passengers before keeping the change.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Passengers at earlier stops were considered during the trial.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The operator delayed one service by four minutes for a month. To make the timetable fair, staff recorded effects at earlier stops and did not count late journeys caused by a road closure.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a possible disadvantage found after the change?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The trial helped most passengers at the centre. A few people at the town station missed a connecting bus, so the operator scheduled a separate meeting with those passengers before keeping the change.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

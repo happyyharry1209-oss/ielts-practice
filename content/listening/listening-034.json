@@ -1,0 +1,63 @@
+{
+  "id": "listening-034",
+  "skill": "listening",
+  "title": "Listening Drill — Evening bats",
+  "description": "Short academic talk. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Evening bats",
+      "transcript": "PRESENTER: Today I'm describing a small study of bat activity near footpaths. I want you to listen for how the researchers measured change, because the result is easy to overstate.\n\nPRESENTER: Their work took place along a route that runs beside a river. Instead of relying on what local people remembered, they recorded feeding calls. They noticed later arrivals. That observation would have been missed if the team had visited only at the end.\n\nPRESENTER: The largest limitation was uneven lighting. The report is therefore a starting point. In a follow-up, the team would add unlit paths. A wider study could show whether the original pattern holds.",
+      "audioUrl": "/audio/listening-034/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Instead of relying on what local people remembered, they recorded ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "feeding calls",
+          "wordLimit": 3,
+          "explanation": "Instead of relying on what local people remembered, they recorded feeding calls."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "They noticed ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "later arrivals",
+          "wordLimit": 3,
+          "explanation": "They noticed later arrivals."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "The largest limitation was ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "The largest limitation was uneven lighting.",
+          "options": [
+            "uneven lighting",
+            "exam season",
+            "diverted traffic",
+            "rainy weather"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "In a follow-up, the team would add ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "unlit paths",
+          "wordLimit": 3,
+          "explanation": "In a follow-up, the team would add unlit paths."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

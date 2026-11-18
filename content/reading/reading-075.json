@@ -1,0 +1,80 @@
+{
+  "id": "reading-075",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Packing Fruit for a Long Journey",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Packing Fruit for a Long Journey",
+      "body": "**A** A distributor noticed that pears were bruised most often near the corners of large trays. Workers added a thin divider to prevent the fruit from rolling into those spaces.\n\n**B** The dividers reduced bruising but made the trays slower to fill. The supervisor tested whether smaller trays could obtain similar results without an extra assembly step.\n\n**C** The evaluation included a cost for handling damaged fruit. It also noted that loose pears usually left customers with more control over portion size.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Workers added a thin ______ to prevent the fruit from rolling into those spaces.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "divider",
+          "wordLimit": 3,
+          "explanation": "Workers added a thin divider to prevent the fruit from rolling into those spaces.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The supervisor tested whether ______ could obtain similar results without an extra assembly step.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "smaller trays",
+          "wordLimit": 3,
+          "explanation": "The supervisor tested whether smaller trays could obtain similar results without an extra assembly step.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It also noted that loose pears usually left customers with more control over ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "portion size",
+          "wordLimit": 3,
+          "explanation": "It also noted that loose pears usually left customers with more control over portion size.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The shipment travelled by rail for part of the journey.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions one disadvantage caused by the initial solution?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The dividers reduced bruising but made the trays slower to fill. The supervisor tested whether smaller trays could obtain similar results without an extra assembly step.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

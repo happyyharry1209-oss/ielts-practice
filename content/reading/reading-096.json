@@ -1,0 +1,80 @@
+{
+  "id": "reading-096",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Workshop for Repairing Laptop Sleeves",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Workshop for Repairing Laptop Sleeves",
+      "body": "**A** A reuse group offered to repair fabric laptop sleeves. Volunteers separated cases with torn seams from cases with cracked padding because they required different materials.\n\n**B** Torn seams were often repaired quickly, but some sleeves had been made with very little extra cloth. To avoid making them too narrow, the volunteers added a strip of binding.\n\n**C** People were asked to bring their laptops only when the sleeve had an unusual shape. In other cases a cardboard template was enough to test whether it still fitted.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Volunteers separated cases with torn seams from cases with cracked ______ because they required different materials.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "padding",
+          "wordLimit": 3,
+          "explanation": "Volunteers separated cases with torn seams from cases with cracked padding because they required different materials.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "To avoid making them too narrow, the volunteers added a strip of ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "binding",
+          "wordLimit": 3,
+          "explanation": "To avoid making them too narrow, the volunteers added a strip of binding.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "In other cases a cardboard ______ was enough to test whether it still fitted.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "template",
+          "wordLimit": 3,
+          "explanation": "In other cases a cardboard template was enough to test whether it still fitted.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Original manufacturers provided all materials used in the workshop.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how a repair avoided reducing the usable width?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "Torn seams were often repaired quickly, but some sleeves had been made with very little extra cloth. To avoid making them too narrow, the volunteers added a strip of binding.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

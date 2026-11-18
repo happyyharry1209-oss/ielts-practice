@@ -1,0 +1,81 @@
+{
+  "id": "reading-030",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Microphone in the Meeting Room",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Microphone in the Meeting Room",
+      "body": "**A** A neighbourhood forum wanted recordings that people could understand at home. The first microphone captured the chair clearly but barely recorded people sitting next to the entrance. Raising its volume also recorded passing buses.\n\n**B** The forum compared two different table positions during a short practice meeting. Placing the microphone in the centre helped by reducing the distance to speakers who had previously been quiet on the recording.\n\n**C** The group added a simple rule. People were asked to give their names before speaking, which helped the person preparing the minutes identify the speakers when voices sounded similar.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "The first microphone captured the chair clearly but barely recorded people sitting next to the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "entrance",
+          "wordLimit": 3,
+          "explanation": "The first microphone captured the chair clearly but barely recorded people sitting next to the entrance.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Placing the microphone in the ______ helped by reducing the distance to speakers who had previously been quiet on the recording.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "centre",
+          "wordLimit": 3,
+          "explanation": "Placing the microphone in the centre helped by reducing the distance to speakers who had previously been quiet on the recording.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "People were asked to give their names before speaking, which helped the person preparing the ______ identify the speakers when voices sounded similar.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "minutes",
+          "wordLimit": 3,
+          "explanation": "People were asked to give their names before speaking, which helped the person preparing the minutes identify the speakers when voices sounded similar.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Comparing locations led to a position closer to quiet speakers.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "The forum compared two different table positions during a short practice meeting. Placing the microphone in the centre helped by reducing the distance to speakers who had previously been quiet on the recording.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a rule that helped identify speakers?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The group added a simple rule. People were asked to give their names before speaking, which helped the person preparing the minutes identify the speakers when voices sounded similar.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-095",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — How a Stone Wall Was Rebuilt",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "How a Stone Wall Was Rebuilt",
+      "body": "**A** A park needed to repair a low wall built from irregular stones. Workers numbered the loose faces with chalk before any stones were carried to the cutting area.\n\n**B** The largest stones were not always useful at the base. Some had narrow contact surfaces, so the team selected flatter stones to keep pressure spread across a wider area.\n\n**C** A small section was left unfinished for a workshop. Visitors could compare the trial arrangement with a photograph of the wall before repair.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Workers numbered the loose faces with ______ before any stones were carried to the cutting area.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "chalk",
+          "wordLimit": 3,
+          "explanation": "Workers numbered the loose faces with chalk before any stones were carried to the cutting area.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Some had narrow contact surfaces, so the team selected flatter stones to keep ______ spread across a wider area.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "pressure",
+          "wordLimit": 3,
+          "explanation": "Some had narrow contact surfaces, so the team selected flatter stones to keep pressure spread across a wider area.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Visitors could compare the trial arrangement with a ______ of the wall before repair.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "photograph",
+          "wordLimit": 3,
+          "explanation": "Visitors could compare the trial arrangement with a photograph of the wall before repair.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Visitors were asked to rebuild the full length of the wall in one day.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A small section was left unfinished for a workshop. Visitors could compare the trial arrangement with a photograph of the wall before repair.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why a stone's shape mattered more than its size in some positions?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The largest stones were not always useful at the base. Some had narrow contact surfaces, so the team selected flatter stones to keep pressure spread across a wider area.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

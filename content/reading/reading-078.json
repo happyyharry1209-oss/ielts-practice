@@ -1,0 +1,81 @@
+{
+  "id": "reading-078",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Sorting a Set of Textile Swatches",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Sorting a Set of Textile Swatches",
+      "body": "**A** A costume archive inherited fabric samples attached to cards. Some labels referred to colours now changed by age, so the archivist recorded both the original description and the current appearance.\n\n**B** For related scraps, the weave sometimes gave better evidence than colour. A magnifier helped the archivist see whether threads crossed in the same pattern.\n\n**C** Loose samples were wrapped separately rather than glued to new cards. Their numbers were copied to an index that could be searched by material or date.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Some labels referred to colours now changed by age, so the archivist recorded both the ______ and the current appearance.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "original description",
+          "wordLimit": 3,
+          "explanation": "Some labels referred to colours now changed by age, so the archivist recorded both the original description and the current appearance.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "A ______ helped the archivist see whether threads crossed in the same pattern.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "magnifier",
+          "wordLimit": 3,
+          "explanation": "A magnifier helped the archivist see whether threads crossed in the same pattern.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Their numbers were copied to an index that could be searched by ______ or date.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "material",
+          "wordLimit": 3,
+          "explanation": "Their numbers were copied to an index that could be searched by material or date.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The archivist replaced the original colour descriptions with newer ones.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "A costume archive inherited fabric samples attached to cards. Some labels referred to colours now changed by age, so the archivist recorded both the original description and the current appearance.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a tool used to inspect how the threads crossed?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "For related scraps, the weave sometimes gave better evidence than colour. A magnifier helped the archivist see whether threads crossed in the same pattern.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

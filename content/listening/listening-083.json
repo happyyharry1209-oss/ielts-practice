@@ -1,0 +1,66 @@
+{
+  "id": "listening-083",
+  "skill": "listening",
+  "title": "Listening Drill — Mounting a photograph",
+  "description": "Practical demonstration. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Mounting a photograph",
+      "transcript": "INSTRUCTOR: This demonstration is about mounting a photograph for display. Watch the whole process once before trying it yourself. If you start while I'm still talking, you may miss the order of the steps.\n\nINSTRUCTOR: Get the photo corners ready. Begin by checking the backing board. When everything is in position, wait five minutes. It may look as though nothing is happening at first.\n\nINSTRUCTOR: Look for level edges before moving on. don't put glue directly on the image. Leave yourself time to clear the work area so the next group can start promptly.",
+      "audioUrl": "/audio/listening-083/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Get the ______ ready.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "Get the photo corners ready.",
+          "options": [
+            "paper templates",
+            "photo corners",
+            "cotton pads",
+            "scrap paper"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "Begin by checking the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "backing board",
+          "wordLimit": 3,
+          "explanation": "Begin by checking the backing board."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "When everything is in position, wait ______ minutes.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "five",
+          "wordLimit": 3,
+          "explanation": "When everything is in position, wait five minutes.",
+          "acceptableAnswers": [
+            "5"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Look for ______ before moving on.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "level edges",
+          "wordLimit": 3,
+          "explanation": "Look for level edges before moving on."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "writing-061",
+  "skill": "writing",
+  "title": "Writing Practice — Home deliveries",
+  "description": "Academic Task 1: data report. Task 2: essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The table shows supermarket purchases delivered to homes in three towns in 2015, 2020 and 2025.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "dataTable": {
+        "unit": "percent of purchases",
+        "columns": [
+          "2015",
+          "2020",
+          "2025"
+        ],
+        "rows": [
+          {
+            "label": "Lynford",
+            "values": [
+              8,
+              19,
+              25
+            ]
+          },
+          {
+            "label": "Merton",
+            "values": [
+              6,
+              17,
+              29
+            ]
+          },
+          {
+            "label": "Jackson Vale",
+            "values": [
+              13,
+              23,
+              22
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Online grocery delivery is becoming popular even in areas with many supermarkets. Why is this happening, and could it cause problems?\n\nGive reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

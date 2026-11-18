@@ -175,6 +175,41 @@ export default function WritingExam() {
             <div className="mt-4 border-t border-line pt-4">
               <Markdown text={task.prompt} />
             </div>
+            {task.dataTable ? (
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full border-collapse text-sm text-ink">
+                  <caption className="pb-2 text-left text-xs text-muted">
+                    {t('writing.practiceData', { unit: task.dataTable.unit })}
+                  </caption>
+                  <thead className="bg-paper">
+                    <tr>
+                      <th scope="col" className="border border-line px-2 py-2 text-left">
+                        {t('writing.category')}
+                      </th>
+                      {task.dataTable.columns.map((heading) => (
+                        <th key={heading} scope="col" className="border border-line px-2 py-2 text-right">
+                          {heading}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {task.dataTable.rows.map((row) => (
+                      <tr key={row.label}>
+                        <th scope="row" className="border border-line px-2 py-2 text-left font-medium">
+                          {row.label}
+                        </th>
+                        {row.values.map((value, index) => (
+                          <td key={index} className="border border-line px-2 py-2 text-right tabular-nums">
+                            {value}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
             {task.imageUrl ? (
               <img
                 src={assetUrl(task.imageUrl)}

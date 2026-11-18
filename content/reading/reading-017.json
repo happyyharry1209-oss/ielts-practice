@@ -1,0 +1,81 @@
+{
+  "id": "reading-017",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — A Map of Indoor Heat",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "A Map of Indoor Heat",
+      "body": "**A** The tenants of a block of flats suspected that the top floor was always hottest. Volunteers used temperature loggers in living rooms and placed each device away from direct sunlight so that the readings could be compared.\n\n**B** The indoor temperatures rose and fell at different times. On clear days a west-facing room remained warm late into the night, while a much smaller south-facing room cooled quickly once its windows were opened.\n\n**C** The resulting chart identified two problems rather than one. The housing office prioritised shading for rooms with afternoon sun and checked whether ventilation could be improved in staircases and flats facing enclosed courtyards.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Volunteers used ______ in living rooms and placed each device away from direct sunlight so that the readings could be compared.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "temperature loggers",
+          "wordLimit": 3,
+          "explanation": "Volunteers used temperature loggers in living rooms and placed each device away from direct sunlight so that the readings could be compared.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "On clear days a west-facing room remained warm late into the night, while a much smaller south-facing room cooled quickly once its ______ were opened.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "windows",
+          "wordLimit": 3,
+          "explanation": "On clear days a west-facing room remained warm late into the night, while a much smaller south-facing room cooled quickly once its windows were opened.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The housing office prioritised shading for rooms with afternoon sun and checked whether ______ could be improved in staircases and flats facing enclosed courtyards.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "ventilation",
+          "wordLimit": 3,
+          "explanation": "The housing office prioritised shading for rooms with afternoon sun and checked whether ventilation could be improved in staircases and flats facing enclosed courtyards.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Every device was placed in direct sunlight.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The tenants of a block of flats suspected that the top floor was always hottest. Volunteers used temperature loggers in living rooms and placed each device away from direct sunlight so that the readings could be compared.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions two measures proposed in response to the findings?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The resulting chart identified two problems rather than one. The housing office prioritised shading for rooms with afternoon sun and checked whether ventilation could be improved in staircases and flats facing enclosed courtyards.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "reading-042",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Comparing Family Cycling Routes",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Comparing Family Cycling Routes",
+      "body": "**A** A cycling group compared two routes connecting a housing estate to a station. Early reports focused on journey times; later reports included where adults with children felt safe at junctions.\n\n**B** The faster route crossed a wide road with no middle island. Riders using the longer route usually waited at a raised crossing, where cars reached the junction more slowly.\n\n**C** The group recommended improving the fast route, but its public leaflet gave families both options. It added gradient information after readers mentioned difficulty climbing a short hill.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Early reports focused on journey times; later reports included where adults with children felt safe at ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "junctions",
+          "wordLimit": 3,
+          "explanation": "Early reports focused on journey times; later reports included where adults with children felt safe at junctions.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Riders using the longer route usually waited at a ______, where cars reached the junction more slowly.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "raised crossing",
+          "wordLimit": 3,
+          "explanation": "Riders using the longer route usually waited at a raised crossing, where cars reached the junction more slowly.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "It added ______ after readers mentioned difficulty climbing a short hill.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "gradient information",
+          "wordLimit": 3,
+          "explanation": "It added gradient information after readers mentioned difficulty climbing a short hill.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The investigation considered more than travel time.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "TRUE",
+          "explanation": "A cycling group compared two routes connecting a housing estate to a station. Early reports focused on journey times; later reports included where adults with children felt safe at junctions.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a detail added after feedback on the leaflet?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The group recommended improving the fast route, but its public leaflet gave families both options. It added gradient information after readers mentioned difficulty climbing a short hill.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

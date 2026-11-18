@@ -1,0 +1,63 @@
+{
+  "id": "listening-018",
+  "skill": "listening",
+  "title": "Listening Drill — Archives open day",
+  "description": "Visitor briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Archives open day",
+      "transcript": "GUIDE: Welcome to our visit to the city archives. Before we leave, make sure your name appears on the list I'm holding. If you can't see your name, speak to me privately rather than adding it yourself.\n\nGUIDE: Our meeting point is the reading room. The visit itself will last forty-five minutes. You don't need to take anything heavy, but please bring a pencil.\n\nGUIDE: We'll finish at the exhibition gallery. From there you can make your own way home. One last detail: pens are not permitted near originals. If you're separated from the group, phone the number printed on your ticket rather than taking a shortcut.",
+      "audioUrl": "/audio/listening-018/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Our meeting point is the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "reading room",
+          "wordLimit": 3,
+          "explanation": "Our meeting point is the reading room."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "The visit itself will last ______ minutes.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "A",
+          "explanation": "The visit itself will last forty-five minutes.",
+          "options": [
+            "forty-five",
+            "fifty",
+            "seventy",
+            "thirty"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "You don't need to take anything heavy, but please bring a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "pencil",
+          "wordLimit": 3,
+          "explanation": "You don't need to take anything heavy, but please bring a pencil."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "We'll finish at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "exhibition gallery",
+          "wordLimit": 3,
+          "explanation": "We'll finish at the exhibition gallery."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

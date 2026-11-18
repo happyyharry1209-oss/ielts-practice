@@ -1,0 +1,63 @@
+{
+  "id": "listening-023",
+  "skill": "listening",
+  "title": "Listening Drill — Museum labels project",
+  "description": "Student and tutor dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Museum labels project",
+      "transcript": "STUDENT: I've started the project on how visitors use museum labels. I was going to use a questionnaire, but testing it with one person made me realise that the questions were too broad.\n\nTUTOR: In that case, try shadowing first. But watch out for observer bias. That can affect what you notice and what you end up writing down.\n\nSTUDENT: Would it help if I kept a daily log? I don't want to discover the problem only after I've handed everything in.\n\nTUTOR: A better safeguard here is paired observers. Bring the route map to our next meeting, so we can plan where each person will stand. There is no need to prepare the final presentation yet.",
+      "audioUrl": "/audio/listening-023/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "In that case, try ______ first.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "B",
+          "explanation": "In that case, try shadowing first.",
+          "options": [
+            "voice recording",
+            "shadowing",
+            "spending diaries",
+            "plot sampling"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "But watch out for ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "observer bias",
+          "wordLimit": 3,
+          "explanation": "But watch out for observer bias."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "A better safeguard here is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "paired observers",
+          "wordLimit": 3,
+          "explanation": "A better safeguard here is paired observers."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "Bring the ______ to our next meeting, so we can plan where each person will stand.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "route map",
+          "wordLimit": 3,
+          "explanation": "Bring the route map to our next meeting, so we can plan where each person will stand."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

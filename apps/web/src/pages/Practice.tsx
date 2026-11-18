@@ -71,7 +71,10 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
     <div>
       <div className="flex items-center gap-4">
         <span className={cn('skill-icon', current.accent)}><current.Icon aria-hidden="true" size={21} /></span>
-        <h1 className="page-title">{t(skillLabel(skill))}</h1>
+        <div>
+          <h1 className="page-title">{t(skillLabel(skill))}</h1>
+          {manifest.data ? <p className="mt-1 text-sm text-muted">{t('practice.testCount', { count: tests.length })}</p> : null}
+        </div>
       </div>
       <nav aria-label={t('home.chooseSkill')} className="mb-7 mt-5 grid grid-cols-4 gap-1 border-b border-line">
         {SKILLS.map(({ key }) => (
@@ -152,7 +155,7 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
                       {test.description ? <p className="mt-1.5 text-sm leading-6 text-muted">{test.description}</p> : null}
                       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
                         <span className="inline-flex items-center gap-1.5"><Clock3 aria-hidden="true" size={14} />{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
-                        <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t('practice.questions', { count: test.questionCount })}</span>
+                        <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t(skill === 'writing' ? 'practice.tasks' : 'practice.questions', { count: test.questionCount })}</span>
                         {done ? <span className="inline-flex items-center gap-1.5 text-emerald-700"><Check aria-hidden="true" size={14} />{best != null ? `${t('practice.best')} ${best.toFixed(1)}` : t('practice.done')}</span> : null}
                       </div>
                     </div>

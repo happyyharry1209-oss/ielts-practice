@@ -1,0 +1,81 @@
+{
+  "id": "reading-025",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Keeping Track of Shared Bicycles",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Keeping Track of Shared Bicycles",
+      "body": "**A** A college lending scheme started with a handwritten list of bicycles. Borrowers described faults in their own words, so the adviser had to check several terms that might mean the same problem with the brakes.\n\n**B** To make reports easier to sort, the adviser introduced three broad categories and kept a comment box for anything those categories did not cover. Borrowers could also leave the bicycle number.\n\n**C** The change helped the technician see repeated faults. Bikes with frequent reports were inspected before each loan even if they had recently had a service. The intention was to detect intermittent problems.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Borrowers described faults in their own words, so the adviser had to check several terms that might mean the same problem with the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "brakes",
+          "wordLimit": 3,
+          "explanation": "Borrowers described faults in their own words, so the adviser had to check several terms that might mean the same problem with the brakes.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "To make reports easier to sort, the adviser introduced three broad categories and kept a ______ for anything those categories did not cover.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "comment box",
+          "wordLimit": 3,
+          "explanation": "To make reports easier to sort, the adviser introduced three broad categories and kept a comment box for anything those categories did not cover.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Bikes with frequent reports were inspected before each loan even if they had recently had a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "service",
+          "wordLimit": 3,
+          "explanation": "Bikes with frequent reports were inspected before each loan even if they had recently had a service.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The new form removed the option to write extra comments.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "To make reports easier to sort, the adviser introduced three broad categories and kept a comment box for anything those categories did not cover. Borrowers could also leave the bicycle number.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions why some bicycles received more frequent inspection?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The change helped the technician see repeated faults. Bikes with frequent reports were inspected before each loan even if they had recently had a service. The intention was to detect intermittent problems.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

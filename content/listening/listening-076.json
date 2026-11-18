@@ -1,0 +1,63 @@
+{
+  "id": "listening-076",
+  "skill": "listening",
+  "title": "Listening Drill — Parcel collection",
+  "description": "Customer service dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Parcel collection",
+      "transcript": "CUSTOMER: I need some help with a parcel I collected. The main problem is a torn label. I thought I could solve it myself, but the instructions don't cover what I've seen.\n\nADVISER: We can look into it. First please send the tracking number. Then bring the item to the parcel counter. If you go to the original collection point they will send you back here.\n\nCUSTOMER: What happens if you can't sort it out while I'm there?\n\nADVISER: Ask for a written receipt. don't discard the original packaging. Keep the confirmation until the issue has been closed.",
+      "audioUrl": "/audio/listening-076/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "form-completion",
+          "prompt": "The main problem is ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "a torn label",
+          "wordLimit": 3,
+          "explanation": "The main problem is a torn label."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "form-completion",
+          "prompt": "First please send the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "tracking number",
+          "wordLimit": 3,
+          "explanation": "First please send the tracking number."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "Then bring the item to the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "Then bring the item to the parcel counter.",
+          "options": [
+            "repair workshop",
+            "library desk",
+            "parcel counter",
+            "technical desk"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "form-completion",
+          "prompt": "Ask for a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "written receipt",
+          "wordLimit": 3,
+          "explanation": "Ask for a written receipt."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

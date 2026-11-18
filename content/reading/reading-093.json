@@ -1,0 +1,80 @@
+{
+  "id": "reading-093",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Storing Winter Sports Equipment",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Storing Winter Sports Equipment",
+      "body": "**A** A school stored skis on their sides in a narrow room. Students often hit the wall when taking out longer pairs, so a teacher marked the handling space required for the longest skis.\n\n**B** The first trial mounted the skis vertically, leaving more floor space. However, younger students could not reach the upper clips without a stool.\n\n**C** A revised rack supported the skis from below and moved the clips to waist height. The room still needed a clear walkway so a pair could be carried to the door.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "Students often hit the wall when taking out longer pairs, so a teacher marked the ______ required for the longest skis.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "handling space",
+          "wordLimit": 3,
+          "explanation": "Students often hit the wall when taking out longer pairs, so a teacher marked the handling space required for the longest skis.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "However, younger students could not reach the ______ without a stool.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "upper clips",
+          "wordLimit": 3,
+          "explanation": "However, younger students could not reach the upper clips without a stool.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The room still needed a clear ______ so a pair could be carried to the door.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "walkway",
+          "wordLimit": 3,
+          "explanation": "The room still needed a clear walkway so a pair could be carried to the door.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The storage room was kept at a constant temperature.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions the limitation of the first vertical arrangement?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "B",
+          "explanation": "The first trial mounted the skis vertically, leaving more floor space. However, younger students could not reach the upper clips without a stool.",
+          "location": "Paragraph B"
+        }
+      ]
+    }
+  ]
+}

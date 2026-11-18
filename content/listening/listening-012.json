@@ -1,0 +1,63 @@
+{
+  "id": "listening-012",
+  "skill": "listening",
+  "title": "Listening Drill — Tram depot",
+  "description": "Visitor briefing. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Tram depot",
+      "transcript": "GUIDE: Welcome to our visit to the tram depot. Before we leave, make sure your name appears on the list I'm holding. If you can't see your name, speak to me privately rather than adding it yourself.\n\nGUIDE: Our meeting point is the ticket hall. The visit itself will last fifty minutes. You don't need to take anything heavy, but please bring a notebook.\n\nGUIDE: We'll finish at the repair shed. From there you can make your own way home. One last detail: some trams are still in service. If you're separated from the group, phone the number printed on your ticket rather than taking a shortcut.",
+      "audioUrl": "/audio/listening-012/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Our meeting point is the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "ticket hall",
+          "wordLimit": 3,
+          "explanation": "Our meeting point is the ticket hall."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple-choice",
+          "prompt": "The visit itself will last ______ minutes.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "The visit itself will last fifty minutes.",
+          "options": [
+            "ninety",
+            "sixty",
+            "fifty",
+            "forty-five"
+          ]
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "You don't need to take anything heavy, but please bring a ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "notebook",
+          "wordLimit": 3,
+          "explanation": "You don't need to take anything heavy, but please bring a notebook."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "We'll finish at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "repair shed",
+          "wordLimit": 3,
+          "explanation": "We'll finish at the repair shed."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

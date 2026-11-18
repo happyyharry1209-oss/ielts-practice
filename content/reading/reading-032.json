@@ -1,0 +1,81 @@
+{
+  "id": "reading-032",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Protecting Records from a Leak",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Protecting Records from a Leak",
+      "body": "**A** An archive kept a floor plan listing the pipes above its store. When a leak appeared near a wall, staff checked which pipe ran above the spot before moving all of the nearby boxes to safety.\n\n**B** The pipe was sound and the actual source was water entering around a skylight. Staff inspected the roof after the next rain and found a gap beside a metal trim, where the seal had lifted.\n\n**C** Most boxes stayed dry. For the damp documents, one volunteer numbered the folders and recorded their order before taking them out of the damaged boxes. That record helped the team put the collection back together.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "An archive kept a ______ listing the pipes above its store.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "floor plan",
+          "wordLimit": 3,
+          "explanation": "An archive kept a floor plan listing the pipes above its store.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Staff inspected the roof after the next rain and found a gap beside a ______, where the seal had lifted.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "metal trim",
+          "wordLimit": 3,
+          "explanation": "Staff inspected the roof after the next rain and found a gap beside a metal trim, where the seal had lifted.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "For the damp documents, one volunteer numbered the folders and recorded their order before taking them out of the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "damaged boxes",
+          "wordLimit": 3,
+          "explanation": "For the damp documents, one volunteer numbered the folders and recorded their order before taking them out of the damaged boxes.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The first pipe inspected was the source of the leak.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The pipe was sound and the actual source was water entering around a skylight. Staff inspected the roof after the next rain and found a gap beside a metal trim, where the seal had lifted.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions how the collection order was preserved during recovery?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Most boxes stayed dry. For the damp documents, one volunteer numbered the folders and recorded their order before taking them out of the damaged boxes. That record helped the team put the collection back together.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

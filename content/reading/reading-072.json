@@ -1,0 +1,80 @@
+{
+  "id": "reading-072",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — Testing Sounds in a Stone Hall",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "Testing Sounds in a Stone Hall",
+      "body": "**A** A music group clapped in several places in a stone hall and recorded the time before the echo died away. The longest echo was heard near the entrance.\n\n**B** Temporary curtains reduced echo near the walls but made little difference in the middle. The group next moved its chairs closer together to improve the sound reaching listeners.\n\n**C** The last test used a small audience. Their winter coats absorbed sound, so the musicians noted the season when describing the results.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "A music group clapped in several places in a stone hall and recorded the time before the ______ died away.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "echo",
+          "wordLimit": 3,
+          "explanation": "A music group clapped in several places in a stone hall and recorded the time before the echo died away.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "The group next moved its ______ closer together to improve the sound reaching listeners.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "chairs",
+          "wordLimit": 3,
+          "explanation": "The group next moved its chairs closer together to improve the sound reaching listeners.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "Their winter coats absorbed sound, so the musicians noted the ______ when describing the results.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "season",
+          "wordLimit": 3,
+          "explanation": "Their winter coats absorbed sound, so the musicians noted the season when describing the results.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "The hall originally served as a courthouse.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "NOT GIVEN",
+          "explanation": "The passage does not state this information."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a factor associated with the audience that could affect the results?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "The last test used a small audience. Their winter coats absorbed sound, so the musicians noted the season when describing the results.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}

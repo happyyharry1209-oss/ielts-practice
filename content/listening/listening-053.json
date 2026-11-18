@@ -1,0 +1,63 @@
+{
+  "id": "listening-053",
+  "skill": "listening",
+  "title": "Listening Drill — Community mural",
+  "description": "Interview. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Community mural",
+      "transcript": "HOST: You work on planning a community mural. What got your team started? People often think projects like yours begin with a large grant.\n\nGUEST: Ours started with school drawings. At the time our biggest obstacle was wall damage. We had to change the plan before we could make proper progress.\n\nHOST: What surprised you once you started getting results?\n\nGUEST: We discovered shared themes. It helped us improve the design. That wasn't a goal we had written into the original proposal.\n\nHOST: And what happens next?\n\nGUEST: We'll show the revised plan to neighbours. Then we'll decide whether to expand.",
+      "audioUrl": "/audio/listening-053/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple-choice",
+          "prompt": "Ours started with ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "D",
+          "explanation": "Ours started with school drawings.",
+          "options": [
+            "a pilot class",
+            "old photographs",
+            "an open day",
+            "school drawings"
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "At the time our biggest obstacle was ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "wall damage",
+          "wordLimit": 3,
+          "explanation": "At the time our biggest obstacle was wall damage."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "note-completion",
+          "prompt": "We discovered ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "shared themes",
+          "wordLimit": 3,
+          "explanation": "We discovered shared themes."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "It helped us improve ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "the design",
+          "wordLimit": 3,
+          "explanation": "It helped us improve the design."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

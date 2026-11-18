@@ -1,0 +1,63 @@
+{
+  "id": "listening-064",
+  "skill": "listening",
+  "title": "Listening Drill — Boat shed route",
+  "description": "Directions dialogue. One recording, four questions. Synthetic audio.",
+  "durationSec": 300,
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Boat shed route",
+      "transcript": "VISITOR: I'm trying to get to the rowing session. My map shows two possible routes. Which one would you recommend?\n\nASSISTANT: Start at the riverside gate. From there, walk towards the ticket booth. Stay on the same side until you can see the sign for the rowing club.\n\nVISITOR: Can I go through the middle? It looks a lot shorter on the map.\n\nASSISTANT: I'd avoid the launch ramp today. The surface is wet and slippery. If you're meeting a group, wait by the sign so they can spot you.",
+      "audioUrl": "/audio/listening-064/section1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "note-completion",
+          "prompt": "Start at the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "riverside gate",
+          "wordLimit": 3,
+          "explanation": "Start at the riverside gate."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "note-completion",
+          "prompt": "From there, walk towards the ______.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "ticket booth",
+          "wordLimit": 3,
+          "explanation": "From there, walk towards the ticket booth."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "multiple-choice",
+          "prompt": "Stay on the same side until you can see the sign for the ______.",
+          "instructions": "Choose the option that completes the note.",
+          "answer": "C",
+          "explanation": "Stay on the same side until you can see the sign for the rowing club.",
+          "options": [
+            "food court",
+            "reference room",
+            "rowing club",
+            "rehearsal room"
+          ]
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "note-completion",
+          "prompt": "I'd avoid the ______ today.",
+          "instructions": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER.",
+          "answer": "launch ramp",
+          "wordLimit": 3,
+          "explanation": "I'd avoid the launch ramp today."
+        }
+      ]
+    }
+  ],
+  "shortPractice": true
+}

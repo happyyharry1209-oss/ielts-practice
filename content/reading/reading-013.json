@@ -1,0 +1,81 @@
+{
+  "id": "reading-013",
+  "skill": "reading",
+  "variant": "academic",
+  "shortPractice": true,
+  "title": "Reading Drill — The Seed Swap Ledger",
+  "description": "One short passage, five questions. Recommended time: 8 minutes.",
+  "durationSec": 480,
+  "passages": [
+    {
+      "id": "p1",
+      "title": "The Seed Swap Ledger",
+      "body": "**A** At a seed exchange in Elm Grove, organisers sorted envelopes by plant name. When they discovered that two people used the same name for different varieties, they added a source label describing who had supplied each batch.\n\n**B** The next change was a simple reservation system. Gardeners could take common seeds freely, but the group kept a waiting list for rare varieties. This left time to divide a small supply fairly.\n\n**C** Several newcomers brought empty envelopes to the event because they wanted to participate without taking anything. The group put a box near the entrance and later reused the envelopes as dividers for the ledger.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "sentence-completion",
+          "prompt": "When they discovered that two people used the same name for different varieties, they added a ______ describing who had supplied each batch.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "source label",
+          "wordLimit": 3,
+          "explanation": "When they discovered that two people used the same name for different varieties, they added a source label describing who had supplied each batch.",
+          "location": "Paragraph A"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "sentence-completion",
+          "prompt": "Gardeners could take common seeds freely, but the group kept a ______ for rare varieties.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "waiting list",
+          "wordLimit": 3,
+          "explanation": "Gardeners could take common seeds freely, but the group kept a waiting list for rare varieties.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence-completion",
+          "prompt": "The group put a box near the entrance and later reused the envelopes as ______ for the ledger.",
+          "instructions": "Write NO MORE THAN THREE WORDS from the passage.",
+          "answer": "dividers",
+          "wordLimit": 3,
+          "explanation": "The group put a box near the entrance and later reused the envelopes as dividers for the ledger.",
+          "location": "Paragraph C"
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true-false-not-given",
+          "prompt": "Rare varieties were given out without a reservation system.",
+          "instructions": "Does this statement agree with the information in the passage?",
+          "options": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "answer": "FALSE",
+          "explanation": "The next change was a simple reservation system. Gardeners could take common seeds freely, but the group kept a waiting list for rare varieties. This left time to divide a small supply fairly.",
+          "location": "Paragraph B"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching-information",
+          "prompt": "Which paragraph mentions a use found for something contributed by newcomers?",
+          "instructions": "Choose the correct paragraph.",
+          "options": [
+            "Paragraph A",
+            "Paragraph B",
+            "Paragraph C"
+          ],
+          "answer": "C",
+          "explanation": "Several newcomers brought empty envelopes to the event because they wanted to participate without taking anything. The group put a box near the entrance and later reused the envelopes as dividers for the ledger.",
+          "location": "Paragraph C"
+        }
+      ]
+    }
+  ]
+}
