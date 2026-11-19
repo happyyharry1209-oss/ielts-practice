@@ -107,6 +107,11 @@ create table if not exists mock_exams (
 
 create index if not exists mock_exams_user_idx on mock_exams (user_id, created_at desc);
 
+alter table writing_submissions add column if not exists mock_id uuid references mock_exams(id) on delete cascade;
+alter table speaking_recordings add column if not exists mock_id uuid references mock_exams(id) on delete cascade;
+create unique index if not exists writing_submissions_mock_task_idx on writing_submissions (mock_id, task_id);
+create index if not exists speaking_recordings_mock_idx on speaking_recordings (mock_id, part);
+
 -- Questions the user answered correctly after review, so they stop showing up.
 create table if not exists review_mastered (
   user_id uuid not null references users(id) on delete cascade,

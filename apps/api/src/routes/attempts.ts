@@ -5,6 +5,7 @@ import type { AnswerValue, Question, ReadingVariant } from '@ielts/shared';
 import { findTest, getContent, questionsOf } from '../content';
 import { query, queryOne, withTransaction } from '../db';
 import { HttpError, parseBody, requireAuth } from '../http';
+import { readMockScores } from '../mockScores';
 
 export const attemptRoutes = new Hono();
 
@@ -203,8 +204,13 @@ attemptRoutes.get('/stats', async (c) => {
     [userId],
   );
 
+  const mockScores = await readMockScores(userId);
+  const bestMockBand = mockScores.reduce<number | null>((best, { overall }) =>
+    overall == null ? best : Math.max(best ?? overall, overall), null);
+
   return c.json({
     perSkill,
+    bestMockBand,
     byContent,
     activity: { weekAttempts: activity?.week ?? 0, activeDays30: activity?.days30 ?? 0 },
     recent: recent.map((r) => ({

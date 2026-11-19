@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import type { SpeakingHistoryItem } from '@ielts/shared';
 import { api, getToken } from '../lib/api';
-import { claimLegacyRecordings, listRecordings, syncSpeakingRecording } from '../lib/recordings';
+import { claimLegacyRecordings, isRecordingSynced, listRecordings, syncSpeakingRecording } from '../lib/recordings';
 import type { SavedRecording } from '../lib/recordings';
 import { bandColor, formatClock, formatDateTime } from '../lib/utils';
 import { SpeakingFeedbackPanel, SpeakingFeedbackView } from './SpeakingFeedbackPanel';
@@ -46,13 +46,14 @@ export function SpeakingHistory({ userId }: { userId: string }) {
       queryClient.invalidateQueries({ queryKey: ['speaking-history', userId] }),
       queryClient.invalidateQueries({ queryKey: ['local-speaking-recordings', userId] }),
       queryClient.invalidateQueries({ queryKey: ['admin', 'overview'] }),
+      queryClient.invalidateQueries({ queryKey: ['stats', userId] }),
     ]);
   };
   const sync = useMutation({
     mutationFn: async (importLegacy: boolean) => {
       const token = getToken();
       if (importLegacy) await claimLegacyRecordings(userId);
-      const pending = (await listRecordings()).filter((recording) => recording.userId === userId && !recording.synced);
+      const pending = (await listRecordings()).filter((recording) => recording.userId === userId && !isRecordingSynced(recording));
       let failed = false;
       for (let index = 0; index < pending.length && token === getToken(); index += 5) {
         const batch = await Promise.allSettled(pending.slice(index, index + 5).map((recording) => syncSpeakingRecording(recording, token)));
@@ -63,7 +64,7 @@ export function SpeakingHistory({ userId }: { userId: string }) {
     onSettled: refreshHistory,
   });
   const { mutate: syncRecordings, isIdle } = sync;
-  const pending = local.data?.recordings.filter((recording) => !recording.synced) ?? [];
+  const pending = local.data?.recordings.filter((recording) => !isRecordingSynced(recording)) ?? [];
   useEffect(() => {
     if (pending.length && isIdle) syncRecordings(false);
   }, [pending.length, isIdle, syncRecordings]);

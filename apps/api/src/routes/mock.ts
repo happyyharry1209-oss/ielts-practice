@@ -6,6 +6,7 @@ import { questionsOf, toPublicTest } from '../content';
 import { query, queryOne } from '../db';
 import { HttpError, parseBody, requireAuth } from '../http';
 import { drawMockPapers, type MockPapers } from '../mockPapers';
+import { readMockScores } from '../mockScores';
 
 export const mockRoutes = new Hono();
 
@@ -36,14 +37,16 @@ function summary(row: SummaryRow): MockSummary {
   return { id: row.id, current, createdAt: new Date(row.created_at).toISOString(), deadline };
 }
 
-function view(row: MockRow): MockSession {
+async function view(row: MockRow, userId: string): Promise<MockSession> {
   const info = summary(row);
   const test = info.current && info.deadline ? row.papers[info.current] : null;
   // Model answers and objective answer keys stay on the server during the exam.
   const publicTest = test?.skill === 'writing'
     ? { ...test, tasks: test.tasks.map(({ modelAnswer: _sample, ...task }) => task) }
     : test && toPublicTest(test);
-  return { ...info, test: publicTest, results: info.current ? null : row.results };
+  if (info.current) return { ...info, test: publicTest, results: null };
+  const [scores] = await readMockScores(userId, row.id);
+  return { ...info, test: publicTest, results: row.results, scores };
 }
 
 function requireId(value: string): string {
@@ -75,12 +78,13 @@ mockRoutes.post('/', async (c) => {
     'insert into mock_exams (user_id, papers) values ($1, $2) returning *',
     [userId, JSON.stringify(drawMockPapers())],
   );
-  return c.json({ session: view(row!) }, 201);
+  return c.json({ session: await view(row!, userId) }, 201);
 });
 
 mockRoutes.get('/:id', async (c) => {
-  const row = await getMock(requireId(c.req.param('id')), c.get('userId'));
-  return c.json({ session: view(row) });
+  const userId = c.get('userId');
+  const row = await getMock(requireId(c.req.param('id')), userId);
+  return c.json({ session: await view(row, userId) });
 });
 
 mockRoutes.post('/:id/start', async (c) => {
@@ -93,8 +97,7 @@ mockRoutes.post('/:id/start', async (c) => {
      where id = $1 and user_id = $2 and step = $3 returning *`,
     [id, userId, step],
   );
-  if (row) return c.json({ session: view(row) });
-  return c.json({ session: view(await getMock(id, userId)) });
+  return c.json({ session: await view(row ?? await getMock(id, userId), userId) });
 });
 
 mockRoutes.post('/:id/submit', async (c) => {
@@ -103,7 +106,7 @@ mockRoutes.post('/:id/submit', async (c) => {
   const input = await parseBody(c, submitSchema);
   const row = await getMock(id, userId);
   const step = MOCK_ORDER.indexOf(input.skill);
-  if (row.step > step) return c.json({ session: view(row) });
+  if (row.step > step) return c.json({ session: await view(row, userId) });
   if (row.step !== step || !row.section_started_at) throw new HttpError(409, 'mock-section-not-active');
 
   const test = row.papers[input.skill];
@@ -137,5 +140,5 @@ mockRoutes.post('/:id/submit', async (c) => {
      where id = $1 and user_id = $2 and step = $3 returning *`,
     [id, userId, step, JSON.stringify(row.results)],
   );
-  return c.json({ session: view(updated ?? await getMock(id, userId)) });
+  return c.json({ session: await view(updated ?? await getMock(id, userId), userId) });
 });

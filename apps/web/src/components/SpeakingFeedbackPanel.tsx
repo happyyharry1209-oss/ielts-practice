@@ -19,7 +19,7 @@ function feedbackError(error: unknown) {
 }
 
 export function SpeakingFeedbackPanel({ recording }: { recording: SavedRecording }) {
-  const { id, blob, contentId, part, promptIndex, userId } = recording;
+  const { id, blob, contentId, part, promptIndex, userId, mockId } = recording;
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const review = useMutation({
@@ -27,6 +27,7 @@ export function SpeakingFeedbackPanel({ recording }: { recording: SavedRecording
       const form = new FormData();
       form.set('audio', blob, 'answer');
       form.set('clientId', id);
+      if (mockId) form.set('mockId', mockId);
       form.set('contentId', contentId);
       form.set('part', String(part));
       form.set('promptIndex', String(promptIndex));
@@ -39,6 +40,10 @@ export function SpeakingFeedbackPanel({ recording }: { recording: SavedRecording
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: ['speaking-history', userId] });
       void queryClient.invalidateQueries({ queryKey: ['admin', 'overview'] });
+      if (mockId) {
+        void queryClient.invalidateQueries({ queryKey: ['mock-session', userId, mockId] });
+        void queryClient.invalidateQueries({ queryKey: ['stats', userId] });
+      }
     },
   });
   if (promptIndex === undefined) return null;

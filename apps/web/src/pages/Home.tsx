@@ -10,6 +10,7 @@ import { SKILLS, skillLabel } from '../lib/skills';
 import { bandColor, cn, formatDateTime } from '../lib/utils';
 
 interface StatsResponse {
+  bestMockBand: number | null;
   perSkill: { skill: string; attempts: number; best_band: number | null }[];
   activity: { weekAttempts: number; activeDays30: number };
   recent: {
@@ -44,10 +45,7 @@ export default function Home() {
     if (entry.ai_band == null) return best;
     return best == null ? entry.ai_band : Math.max(best, entry.ai_band);
   }, null);
-  const bestBand = data?.perSkill.reduce<number | null>((best, entry) => {
-    if (entry.best_band == null) return best;
-    return best == null ? entry.best_band : Math.max(best, entry.best_band);
-  }, null);
+  const bestMockBand = data?.bestMockBand;
 
   return (
     <div className="space-y-10">
@@ -102,13 +100,17 @@ export default function Home() {
           <h2 id="progress-title" className="font-serif text-[27px] font-semibold">{t('home.progress')}</h2>
           {data ? (
             <>
-              <p className="mt-5 text-sm text-[#c4d0d9]">{t('home.bestBand')}</p>
-              <div className="mt-1 flex items-baseline gap-2">
-                <span className="font-serif text-6xl font-medium leading-none">{bestBand?.toFixed(1) ?? '—'}</span>
-                {bestBand != null ? <span className="text-sm text-[#c4d0d9]">/ 9</span> : null}
-              </div>
-              <p className="mt-2 text-xs leading-5 text-[#c4d0d9]">{t('home.bestBandHint')}</p>
-              <dl className="mt-6 space-y-4 border-t border-white/20 pt-5 text-sm">
+              {bestMockBand != null ? (
+                <div className="mt-5 border-b border-white/20 pb-5">
+                  <p className="text-sm text-[#c4d0d9]">{t('home.bestMockBand')}</p>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="font-serif text-6xl font-medium leading-none">{bestMockBand.toFixed(1)}</span>
+                    <span className="text-sm text-[#c4d0d9]">/ 9</span>
+                  </div>
+                  <p className="mt-2 text-xs leading-5 text-[#c4d0d9]">{t('home.bestMockBandHint')}</p>
+                </div>
+              ) : null}
+              <dl className="mt-5 space-y-4 text-sm">
                 <div className="flex justify-between gap-3"><dt>{t('home.weekAttempts')}</dt><dd className="font-semibold tabular-nums">{data.activity.weekAttempts}</dd></div>
                 <div className="flex justify-between gap-3"><dt>{t('home.activeDays')}</dt><dd className="font-semibold tabular-nums">{data.activity.activeDays30}</dd></div>
                 <div className="flex justify-between gap-3"><dt>{t('home.attempts')}</dt><dd className="font-semibold tabular-nums">{data.perSkill.reduce((sum, entry) => sum + entry.attempts, 0)}</dd></div>

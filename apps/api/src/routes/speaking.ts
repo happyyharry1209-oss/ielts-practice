@@ -7,12 +7,14 @@ import { findTest } from '../content';
 import { query, queryOne } from '../db';
 import { env } from '../env';
 import { checkRateLimit, HttpError, parseBody, requireAuth } from '../http';
+import { getMockPaper } from '../mockScores';
 import { reviewSpeaking } from '../speakingAi';
 
 export const speakingRoutes = new Hono();
 
 const recordingSchema = z.object({
   clientId: z.string().uuid().optional(),
+  mockId: z.string().uuid().optional(),
   contentId: z.string().min(1).max(120),
   part: z.number().int().min(1).max(3),
   promptIndex: z.number().int().min(0).max(99_999).optional(),
@@ -31,6 +33,7 @@ speakingRoutes.get('/status', (c) => c.json({
 
 const feedbackSchema = z.object({
   clientId: z.string().uuid().optional(),
+  mockId: z.string().uuid().optional(),
   contentId: z.string().min(1).max(120),
   part: z.enum(['1', '2', '3']).transform((value) => Number(value) as 1 | 2 | 3),
   promptIndex: z.string().regex(/^\d{1,5}$/).transform(Number),
@@ -58,6 +61,7 @@ speakingRoutes.post(
     const form = await c.req.formData().catch(() => null);
     const selection = feedbackSchema.safeParse({
       clientId: form?.get('clientId') ?? undefined,
+      mockId: form?.get('mockId') ?? undefined,
       contentId: form?.get('contentId'),
       part: form?.get('part'),
       promptIndex: form?.get('promptIndex'),
@@ -68,8 +72,11 @@ speakingRoutes.post(
     }
     if (audio.size > MAX_SPEAKING_AUDIO_BYTES) throw new HttpError(413, 'speaking-too-large');
 
-    const { clientId, contentId, part, promptIndex } = selection.data;
-    const test = findTest('speaking', contentId);
+    const { clientId, mockId, contentId, part, promptIndex } = selection.data;
+    if (mockId && !clientId) throw new HttpError(400, 'speaking-recording-mismatch');
+    const userId = c.get('userId');
+    const mock = mockId ? await getMockPaper(userId, mockId, 'speaking', contentId) : null;
+    const test = mock?.paper ?? findTest('speaking', contentId);
     if (test?.skill !== 'speaking') throw new HttpError(404, 'Speaking test not found');
     const card = part === 2 ? test.part2[promptIndex] : undefined;
     const prompt = part === 2
@@ -77,18 +84,27 @@ speakingRoutes.post(
       : (part === 1 ? test.part1 : test.part3).flatMap((topic) => topic.questions)[promptIndex];
     if (!prompt) throw new HttpError(404, 'Speaking prompt not found');
 
-    const userId = c.get('userId');
     if (clientId) {
       const saved = await queryOne<{
-        content_id: string; part: number; prompt_index: number | null; feedback: SpeakingFeedback | null;
+        content_id: string; part: number; prompt_index: number | null; mock_id: string | null; feedback: SpeakingFeedback | null;
       }>(
-        'select content_id, part, prompt_index, ai_feedback as feedback from speaking_recordings where user_id = $1 and client_id = $2',
+        'select content_id, part, prompt_index, mock_id, ai_feedback as feedback from speaking_recordings where user_id = $1 and client_id = $2',
         [userId, clientId],
       );
-      if (saved && (saved.content_id !== contentId || saved.part !== part || saved.prompt_index !== promptIndex)) {
+      if (saved && (saved.content_id !== contentId || saved.part !== part || saved.prompt_index !== promptIndex ||
+          (mockId && saved.mock_id && saved.mock_id !== mockId))) {
         throw new HttpError(409, 'speaking-recording-mismatch');
       }
-      if (saved?.feedback) return c.json({ feedback: saved.feedback });
+      if (saved?.feedback) {
+        if (mockId && !saved.mock_id) {
+          const updated = await queryOne(
+            'update speaking_recordings set mock_id = $3 where user_id = $1 and client_id = $2 and (mock_id is null or mock_id = $3) returning id',
+            [userId, clientId, mockId],
+          );
+          if (!updated) throw new HttpError(409, 'speaking-recording-mismatch');
+        }
+        return c.json({ feedback: saved.feedback });
+      }
     }
 
     const filename = await audioFilename(audio);
@@ -101,16 +117,18 @@ speakingRoutes.post(
          insert into ai_usage (user_id, endpoint, tokens_in, tokens_out, cost_usd)
          values ($1, 'speaking-feedback', $2, $3, $4)
        )
-       insert into speaking_recordings (user_id, client_id, content_id, part, prompt_index, prompt, ai_feedback)
-       values ($1, $5, $6, $7, $8, $9, $10)
+       insert into speaking_recordings (user_id, client_id, content_id, part, prompt_index, prompt, ai_feedback, mock_id)
+       values ($1, $5, $6, $7, $8, $9, $10, $11)
        on conflict (user_id, client_id) do update
-         set ai_feedback = coalesce(speaking_recordings.ai_feedback, excluded.ai_feedback)
+         set ai_feedback = coalesce(speaking_recordings.ai_feedback, excluded.ai_feedback),
+             mock_id = coalesce(speaking_recordings.mock_id, excluded.mock_id)
          where speaking_recordings.content_id = excluded.content_id
            and speaking_recordings.part = excluded.part
            and speaking_recordings.prompt_index = excluded.prompt_index
+           and (speaking_recordings.mock_id is null or excluded.mock_id is null or speaking_recordings.mock_id = excluded.mock_id)
        returning ai_feedback as feedback`,
       [userId, usage.tokensIn, usage.tokensOut, usage.estimatedCostUsd,
-        clientId ?? null, contentId, part, promptIndex, card?.topic ?? prompt, JSON.stringify(feedback)],
+        clientId ?? null, contentId, part, promptIndex, card?.topic ?? prompt, JSON.stringify(feedback), mockId ?? null],
     );
     if (!saved) throw new HttpError(409, 'speaking-recording-mismatch');
     return c.json({ feedback: saved.feedback });
@@ -123,22 +141,29 @@ speakingRoutes.post(
  */
 speakingRoutes.post('/recordings', async (c) => {
   const body = await parseBody(c, recordingSchema);
-  const saved = await queryOne<{ id: string; created_at: string; client_id: string | null }>(
-    `insert into speaking_recordings (user_id, client_id, content_id, part, prompt_index, prompt, duration_sec, created_at)
-     values ($1, $2, $3, $4, $5, $6, $7, coalesce($8::timestamptz, now()))
+  const userId = c.get('userId');
+  if (body.mockId) {
+    if (!body.clientId) throw new HttpError(400, 'speaking-recording-mismatch');
+    await getMockPaper(userId, body.mockId, 'speaking', body.contentId, true);
+  }
+  const saved = await queryOne<{ id: string; created_at: string; client_id: string | null; mock_id: string | null }>(
+    `insert into speaking_recordings (user_id, client_id, content_id, part, prompt_index, prompt, duration_sec, created_at, mock_id)
+     values ($1, $2, $3, $4, $5, $6, $7, coalesce($8::timestamptz, now()), $9)
      on conflict (user_id, client_id) do update
        set duration_sec = coalesce(speaking_recordings.duration_sec, excluded.duration_sec),
+           mock_id = coalesce(speaking_recordings.mock_id, excluded.mock_id),
            created_at = case when speaking_recordings.duration_sec is null then excluded.created_at
                              else speaking_recordings.created_at end
        where speaking_recordings.content_id = excluded.content_id
          and speaking_recordings.part = excluded.part
          and speaking_recordings.prompt_index is not distinct from excluded.prompt_index
-     returning id, client_id, created_at`,
-    [c.get('userId'), body.clientId ?? null, body.contentId, body.part, body.promptIndex ?? null,
-      body.prompt ?? null, body.durationSec ?? null, body.createdAt ?? null],
+         and (speaking_recordings.mock_id is null or excluded.mock_id is null or speaking_recordings.mock_id = excluded.mock_id)
+     returning id, client_id, created_at, mock_id`,
+    [userId, body.clientId ?? null, body.contentId, body.part, body.promptIndex ?? null,
+      body.prompt ?? null, body.durationSec ?? null, body.createdAt ?? null, body.mockId ?? null],
   );
   if (!saved) throw new HttpError(409, 'speaking-recording-mismatch');
-  return c.json({ id: saved.id, clientId: saved.client_id, createdAt: saved.created_at }, 201);
+  return c.json({ id: saved.id, clientId: saved.client_id, createdAt: saved.created_at, mockId: saved.mock_id }, 201);
 });
 
 speakingRoutes.get('/recordings', async (c) => {

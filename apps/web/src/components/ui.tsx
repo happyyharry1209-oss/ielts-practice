@@ -9,13 +9,15 @@ export function PageHeader({
   title,
   subtitle,
   actions,
+  divider = true,
 }: {
   title: string;
   subtitle?: string;
   actions?: ReactNode;
+  divider?: boolean;
 }) {
   return (
-    <div className="mb-7 flex flex-col gap-4 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
+    <div className={cn('mb-7 flex flex-col gap-4 pb-6 sm:flex-row sm:items-end sm:justify-between', divider && 'border-b border-line')}>
       <div>
         <h1 className="page-title">
           {title}

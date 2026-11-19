@@ -1,29 +1,43 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { MockObjectiveResult, MockResults, MockWritingResult, WritingFeedback } from '@ielts/shared';
+import type { MockObjectiveResult, MockResults, MockScores, MockWritingResult, WritingFeedback } from '@ielts/shared';
 import { SavedItem } from '../pages/SpeakingExam';
-import { api } from '../lib/api';
+import { api, getToken } from '../lib/api';
 import { useAuth } from '../lib/auth';
-import { deleteRecording, listRecordings } from '../lib/recordings';
+import { deleteRecording, isRecordingSynced, listRecordings, syncSpeakingRecording } from '../lib/recordings';
 import { skillLabel } from '../lib/skills';
+import { bandColor } from '../lib/utils';
 import { SpeakingFeedbackPanel } from './SpeakingFeedbackPanel';
 import { WritingPaperEstimate } from './WritingPaperEstimate';
 
-export function MockResultsView({ id, results }: { id: string; results: MockResults }) {
+export function MockResultsView({ id, results, scores }: { id: string; results: MockResults; scores?: MockScores }) {
   const { t } = useTranslation();
   const { user } = useAuth();
   const { writing } = results;
+  const queryClient = useQueryClient();
+  const refreshScores = () => {
+    void queryClient.invalidateQueries({ queryKey: ['mock-session', user?.id, id] });
+    void queryClient.invalidateQueries({ queryKey: ['stats', user?.id] });
+  };
   const recordings = useQuery({
     queryKey: ['mock-recordings', user?.id, id],
-    queryFn: async () => (await listRecordings()).filter((rec) => rec.mockId === id && rec.userId === user?.id),
+    queryFn: async () => {
+      const token = getToken();
+      const saved = (await listRecordings()).filter((rec) => rec.mockId === id && rec.userId === user?.id);
+      const pending = saved.filter((recording) => !isRecordingSynced(recording));
+      if (pending.length) {
+        void Promise.allSettled(pending.map((recording) => syncSpeakingRecording(recording, token))).then((synced) => {
+          if (synced.some(({ status }) => status === 'fulfilled')) refreshScores();
+        });
+      }
+      return saved;
+    },
   });
   const feedbackStatus = useQuery({
     queryKey: ['speaking', 'feedback-status'],
     queryFn: () => api<{ provider: 'groq' | null }>('/api/speaking/status'),
     enabled: Boolean(recordings.data?.length),
   });
-  const queryClient = useQueryClient();
   const remove = useMutation({
     mutationFn: deleteRecording,
     onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['mock-recordings', user?.id, id] }),
@@ -31,14 +45,27 @@ export function MockResultsView({ id, results }: { id: string; results: MockResu
 
   return (
     <div className="space-y-4">
+      {scores?.overall != null ? (
+        <section className="card border-t-2 border-t-brand-600 p-5" aria-label={t('mock.overallBand')}>
+          <h2 className="font-serif text-2xl font-semibold text-ink">{t('mock.overallBand')}</h2>
+          <p className={`mt-1 font-serif text-4xl font-medium ${bandColor(scores.overall)}`}>Band {scores.overall.toFixed(1)}</p>
+        </section>
+      ) : <p className="text-sm text-muted">{t('mock.overallPending')}</p>}
       <div className="grid gap-4 sm:grid-cols-2">
         {(['listening', 'reading'] as const).map((skill) => (
           results[skill] ? <ObjectiveResult key={skill} skill={skill} result={results[skill]} /> : null
         ))}
       </div>
-      {writing ? <WritingResults key={id} writing={writing} /> : null}
+      {writing ? <WritingResults key={id} mockId={id} writing={writing}
+        feedback={scores?.writingFeedback} onReview={refreshScores} /> : null}
       <section className="card space-y-3 p-5">
         <h2 className="font-serif text-2xl font-semibold text-ink">{t(skillLabel('speaking'))}</h2>
+        {scores?.speaking != null ? (
+          <>
+            <p className={`font-semibold ${bandColor(scores.speaking)}`}>{t('mock.estimatedBand', { band: scores.speaking.toFixed(1) })}</p>
+            <p className="text-sm text-muted">{t('speaking.feedback.scope')}</p>
+          </>
+        ) : null}
         <p className="text-sm text-muted">{t('mock.recordingNotice')}</p>
         {!recordings.isLoading && !recordings.data?.length ? <p className="text-sm text-muted">{t('speaking.savedEmpty')}</p> : null}
         {recordings.data?.map((recording) => (
@@ -87,36 +114,42 @@ function ObjectiveResult({ skill, result }: { skill: 'listening' | 'reading'; re
   );
 }
 
-function WritingResults({ writing }: { writing: MockWritingResult }) {
+function WritingResults({ mockId, writing, feedback = {}, onReview }: {
+  mockId: string;
+  writing: MockWritingResult;
+  feedback?: MockScores['writingFeedback'];
+  onReview: () => void;
+}) {
   const { t } = useTranslation();
-  const [feedback, setFeedback] = useState<Partial<Record<1 | 2, WritingFeedback>>>({});
 
   return (
     <section className="card space-y-3 p-5">
       <h2 className="font-serif text-2xl font-semibold text-ink">{t(skillLabel('writing'))}</h2>
       <WritingPaperEstimate task1={feedback[1]} task2={feedback[2]} />
       {writing.tasks.map((task) => (
-        <WritingResult key={task.id} contentId={writing.contentId} task={task}
-          onReview={(result) => setFeedback((previous) => ({ ...previous, [task.task]: result }))} />
+        <WritingResult key={task.id} mockId={mockId} contentId={writing.contentId} task={task}
+          savedFeedback={feedback[task.task]} onReview={onReview} />
       ))}
     </section>
   );
 }
 
-function WritingResult({ contentId, task, onReview }: {
+function WritingResult({ mockId, contentId, task, savedFeedback, onReview }: {
+  mockId: string;
   contentId: string;
   task: MockWritingResult['tasks'][number];
-  onReview: (feedback: WritingFeedback) => void;
+  savedFeedback?: WritingFeedback;
+  onReview: () => void;
 }) {
   const { t } = useTranslation();
   const review = useMutation({
     mutationFn: () => api<{ feedback: WritingFeedback }>('/api/writing/submit', {
       method: 'POST',
-      json: { contentId, taskId: task.id, text: task.text },
+      json: { mockId, contentId, taskId: task.id, text: task.text },
     }),
-    onSuccess: ({ feedback }) => onReview(feedback),
+    onSuccess: onReview,
   });
-  const feedback = review.data?.feedback;
+  const feedback = savedFeedback ?? review.data?.feedback;
   return (
     <details className="rounded-sm border border-line p-3 text-sm">
       <summary className="cursor-pointer font-semibold text-ink">{t(`writing.task${task.task}`)}</summary>
@@ -134,11 +167,12 @@ function WritingResult({ contentId, task, onReview }: {
                 {feedback.improvements.map((tip) => <li key={tip}>{tip}</li>)}
               </ul>
             </>
-          ) : (
+          ) : null}
+          {feedback?.source !== 'ai' ? (
             <button type="button" className="btn-secondary" disabled={review.isPending} onClick={() => review.mutate()}>
               {t(review.isPending ? 'writing.submitting' : 'mock.writingReview')}
             </button>
-          )}
+          ) : null}
           {review.isError ? <p role="alert" className="text-rose-600">{t('mock.error')}</p> : null}
         </div>
       ) : null}

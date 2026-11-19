@@ -105,7 +105,7 @@ export default function MockRunner() {
               </>
             ) : <p className="text-sm text-muted">{t('mock.resultsNotice')}</p>}
           </div>
-          {session.results ? <MockResultsView id={session.id} results={session.results} /> : null}
+          {session.results ? <MockResultsView id={session.id} results={session.results} scores={session.scores} /> : null}
         </>
       )}
     </main>

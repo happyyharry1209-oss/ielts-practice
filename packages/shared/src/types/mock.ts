@@ -1,5 +1,6 @@
 import type { ItemResult } from '../scoring/grade';
 import type { AnyTest, Skill } from './content';
+import type { WritingFeedback } from './writing';
 
 export const MOCK_ORDER = ['listening', 'reading', 'writing', 'speaking'] as const satisfies readonly Skill[];
 
@@ -29,6 +30,14 @@ export interface MockResults {
   writing?: MockWritingResult;
 }
 
+export interface MockScores {
+  overall: number | null;
+  writing: number | null;
+  speaking: number | null;
+  speakingParts: (1 | 2 | 3)[];
+  writingFeedback: Partial<Record<1 | 2, WritingFeedback>>;
+}
+
 export interface MockSummary {
   id: string;
   current: Skill | null;
@@ -39,6 +48,7 @@ export interface MockSummary {
 export interface MockSession extends MockSummary {
   test: AnyTest | null;
   results: MockResults | null;
+  scores?: MockScores;
 }
 
 export interface MockSubmission {

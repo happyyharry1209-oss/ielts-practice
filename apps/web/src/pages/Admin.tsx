@@ -119,7 +119,7 @@ export default function Admin() {
 
   return (
     <div>
-      <PageHeader title={t('admin.title')} subtitle={t('admin.overview')} />
+      <PageHeader title={t('admin.title')} subtitle={t('admin.overview')} divider={false} />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <Stat label={t('admin.totalUsers')} value={counts?.users ?? '—'} hint={`${counts?.admins ?? 0} admin`} />

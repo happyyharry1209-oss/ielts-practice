@@ -7,6 +7,7 @@ export interface SavedRecording {
   id: string;
   userId?: string;
   synced?: boolean;
+  syncedMockId?: string;
   contentId: string;
   part: 1 | 2 | 3;
   mockId?: string;
@@ -84,10 +85,11 @@ export async function claimLegacyRecordings(userId: string): Promise<void> {
 
 export async function syncSpeakingRecording(recording: SavedRecording, token: string | null): Promise<void> {
   if (!recording.userId || !token || token !== getToken()) throw new Error('Signed-in account changed');
-  const { clientId } = await api<{ clientId: string }>('/api/speaking/recordings', {
+  const { clientId, mockId } = await api<{ clientId: string; mockId?: string | null }>('/api/speaking/recordings', {
     method: 'POST',
     json: {
       clientId: recording.id,
+      mockId: recording.mockId,
       contentId: recording.contentId,
       part: recording.part,
       promptIndex: recording.promptIndex,
@@ -106,7 +108,9 @@ export async function syncSpeakingRecording(recording: SavedRecording, token: st
       const request = store.get(recording.id);
       request.onsuccess = () => {
         const saved: SavedRecording | undefined = request.result;
-        if (saved && saved.userId === recording.userId) store.put({ ...saved, synced: true });
+        if (saved && saved.userId === recording.userId) {
+          store.put({ ...saved, synced: true, syncedMockId: mockId ?? saved.syncedMockId });
+        }
       };
       tx.oncomplete = () => resolve();
       tx.onabort = () => reject(tx.error);
@@ -114,6 +118,10 @@ export async function syncSpeakingRecording(recording: SavedRecording, token: st
   } finally {
     db.close();
   }
+}
+
+export function isRecordingSynced(recording: SavedRecording): boolean {
+  return Boolean(recording.synced && (!recording.mockId || recording.syncedMockId === recording.mockId));
 }
 
 export async function deleteRecording(id: string): Promise<void> {
