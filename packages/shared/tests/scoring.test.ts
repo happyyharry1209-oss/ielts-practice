@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Question } from '../src/types/content';
 import { gradeQuestion, gradeQuestions } from '../src/scoring/grade';
-import { rawToBand, overallBand, roundToHalf } from '../src/scoring/bands';
+import { rawToBand, overallBand, roundToHalf, writingPaperBand } from '../src/scoring/bands';
 import { countWords, normalizeText, setEquals } from '../src/scoring/normalize';
 
 function q(overrides: Partial<Question>): Question {
@@ -14,6 +14,26 @@ function q(overrides: Partial<Question>): Question {
     ...overrides,
   };
 }
+
+describe('writingPaperBand', () => {
+  const result = (bands: number[], source: 'ai' | 'heuristic' = 'ai') => ({
+    source, criteria: bands.map((band) => ({ band })),
+  });
+
+  it('weights Task 2 twice and rounds only the combined estimate', () => {
+    const task1 = result([5.5, 5.5, 5.5, 6.5]);
+    const task2 = result([6.5, 6.5, 6.5, 6.5]);
+    expect(writingPaperBand(task1, task2)).toBe(6.5);
+    expect(writingPaperBand(task2, task1)).toBe(6);
+    expect(writingPaperBand(result([6, 6, 6, 6]), result([6, 6, 6.5, 6.5]))).toBe(6);
+  });
+
+  it('requires two AI-graded tasks', () => {
+    const task1 = result([6, 6, 6, 6]);
+    expect(writingPaperBand(task1)).toBeNull();
+    expect(writingPaperBand(task1, result([6, 6, 6, 6], 'heuristic'))).toBeNull();
+  });
+});
 
 describe('normalizeText', () => {
   it('ignores case, extra spaces and edge punctuation', () => {

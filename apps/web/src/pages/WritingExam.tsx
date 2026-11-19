@@ -2,36 +2,16 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams, useSearchParams } from 'react-router-dom';
-import type { WritingTest } from '@ielts/shared';
+import type { WritingFeedback, WritingTest } from '@ielts/shared';
 import { ExamBackLink, ExamLoadState, TimerPill } from '../components/ExamShell';
 import { Markdown } from '../components/Markdown';
 import { WritingVisual } from '../components/WritingVisual';
+import { WritingPaperEstimate } from '../components/WritingPaperEstimate';
 import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { useExamTimer } from '../lib/useExam';
 import type { MockStage } from '../lib/mock';
 import { bandColor, cn, formatClock, assetUrl } from '../lib/utils';
-
-interface Criterion {
-  key: string;
-  label: string;
-  band: number;
-  comment: string;
-}
-
-interface Feedback {
-  source: 'ai' | 'heuristic';
-  estimated: boolean;
-  overall: number;
-  criteria: Criterion[];
-  summary: string;
-  strengths: string[];
-  improvements: string[];
-  errors: { sentence: string; issue: string; suggestion: string }[];
-  vocabulary: { original: string; better: string; why: string }[];
-  wordCount: number;
-  notes?: string;
-}
 
 function countWords(text: string): number {
   const trimmed = text.trim();
@@ -71,7 +51,7 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
   const storageId = mock ? `mock.${mock.id}` : test?.id;
   const [taskIndex, setTaskIndex] = useState(0);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
-  const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [feedbackByTask, setFeedbackByTask] = useState<Partial<Record<1 | 2, WritingFeedback>>>({});
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showSample, setShowSample] = useState(false);
@@ -80,6 +60,7 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
 
   const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting && !timedDone, mock?.deadline);
   const task = test?.tasks[taskIndex];
+  const feedback = task ? feedbackByTask[task.task] : undefined;
 
   const draft = useMemo(() => {
     if (!storageId || !task) return '';
@@ -107,8 +88,8 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
   }, [draft, storageId, task]);
 
   useEffect(() => {
-    setFeedback(null);
     setShowSample(false);
+    setError(null);
   }, [taskIndex]);
 
   const words = countWords(draft);
@@ -131,12 +112,12 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
         await mock.finish({ drafts: answers });
         return;
       }
-      const response = await api<{ feedback: Feedback }>('/api/writing/submit', {
+      const response = await api<{ feedback: WritingFeedback }>('/api/writing/submit', {
         method: 'POST',
         json: { contentId: test.id, taskId: task.id, text: draft },
       });
       void queryClient.invalidateQueries({ queryKey: ['stats'] });
-      setFeedback(response.feedback);
+      setFeedbackByTask((previous) => ({ ...previous, [task.task]: response.feedback }));
     } catch (err) {
       setError(errorMessage(err));
     } finally {
@@ -304,14 +285,17 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
 
         <div className="space-y-4">
           {timedDone ? <p className="card p-4 text-sm" role="status">{t('writing.timedReview')}</p> : null}
+          <WritingPaperEstimate task1={feedbackByTask[1]} task2={feedbackByTask[2]} />
           <div className="card border-t-2 border-t-brand-600 p-4 sm:p-5">
             <textarea
               value={draft}
-              onChange={(event) =>
-                setDrafts((previous) => ({ ...previous, [task.id]: event.target.value }))
-              }
+              onChange={(event) => {
+                const text = event.target.value;
+                setDrafts((previous) => ({ ...previous, [task.id]: text }));
+                if (feedback) setFeedbackByTask((previous) => ({ ...previous, [task.task]: undefined }));
+              }}
               placeholder={t('writing.startTyping')}
-              readOnly={timedDone || Boolean(mock && (timer.expired || submitting))}
+              readOnly={timedDone || submitting || Boolean(mock && timer.expired)}
               maxLength={30_000}
               className="min-h-[420px] w-full resize-y rounded-sm border border-line bg-surface p-4 font-serif text-[16px] leading-7 text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
               spellCheck
@@ -331,10 +315,10 @@ function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                    {t('writing.overallBand')}
+                    {t(feedback.source === 'ai' ? 'writing.taskAiBand' : 'writing.taskOfflineBand', { number: task.task })}
                   </p>
                   <p className={`font-serif text-4xl font-medium ${bandColor(feedback.overall)}`}>
-                    {feedback.overall.toFixed(1)}
+                    Band {feedback.overall.toFixed(1)}
                   </p>
                   <p className="mt-1 text-xs text-slate-400">
                     {feedback.source === 'ai' ? t('writing.aiDisclaimer') : t('writing.offlineDisclaimer')}

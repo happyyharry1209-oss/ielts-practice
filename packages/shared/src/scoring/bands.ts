@@ -1,4 +1,5 @@
 import type { ReadingVariant, Skill } from '../types/content';
+import type { WritingFeedback } from '../types/writing';
 
 type BandTable = Array<[minRaw: number, band: number]>;
 
@@ -46,7 +47,7 @@ export function rawToBand(
 }
 
 /**
- * Writing/Speaking overall band: mean of the four criteria, rounded to the
+ * Mean of the supplied criteria, rounded to the
  * nearest half band (IELTS rounds .25 up to .5, .75 up to the next whole).
  */
 export function overallBand(criteria: number[]): number {
@@ -81,4 +82,15 @@ export function writingOverall(scores: WritingScores): number {
     scores.lexical,
     scores.grammar,
   ]);
+}
+
+type WritingBandResult = { source: WritingFeedback['source']; criteria: readonly { band: number }[] };
+
+/** Practice-paper estimate, using the criterion scores before task-level rounding. */
+export function writingPaperBand(task1?: WritingBandResult, task2?: WritingBandResult): number | null {
+  if (task1?.source !== 'ai' || task2?.source !== 'ai' ||
+      task1.criteria.length !== 4 || task2.criteria.length !== 4) return null;
+  const first = task1.criteria.map(({ band }) => band);
+  const second = task2.criteria.map(({ band }) => band);
+  return overallBand([...first, ...second, ...second]);
 }

@@ -19,7 +19,10 @@ const recordingSchema = z.object({
 
 speakingRoutes.use('*', requireAuth);
 
-speakingRoutes.get('/status', (c) => c.json({ provider: env.groq?.provider ?? null }));
+speakingRoutes.get('/status', (c) => c.json({
+  provider: env.groq?.provider ?? null,
+  transcriptBandEstimate: Boolean(env.groq),
+}));
 
 const feedbackSchema = z.object({
   contentId: z.string().min(1).max(120),

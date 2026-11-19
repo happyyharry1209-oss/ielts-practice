@@ -3,6 +3,7 @@ import { MAX_SPEAKING_AUDIO_BYTES } from '@ielts/shared';
 import type { SpeakingFeedback } from '@ielts/shared';
 import { useTranslation } from 'react-i18next';
 import { ApiError, api } from '../lib/api';
+import { bandColor } from '../lib/utils';
 
 function feedbackError(error: unknown) {
   if (!(error instanceof ApiError)) return 'providerError';
@@ -46,11 +47,22 @@ export function SpeakingFeedbackPanel({ audio, contentId, part, promptIndex }: {
       ) : feedback ? (
         <div className="space-y-4" aria-live="polite">
           <h3 className="font-serif text-xl font-semibold text-ink">{t('speaking.feedback.title')}</h3>
+          {Number.isFinite(feedback.band) ? (
+            <div className="rounded-sm border border-line bg-surface px-4 py-3">
+              <p className="text-sm font-semibold text-ink">{t('speaking.feedback.bandLabel')}</p>
+              <p className={`font-serif text-4xl font-medium ${bandColor(feedback.band)}`}>Band {feedback.band.toFixed(1)}</p>
+            </div>
+          ) : null}
           <p className="text-sm text-slate-600">{t('speaking.feedback.scope')}</p>
           <dl className="space-y-3">
             {(['coherence', 'lexical', 'grammar'] as const).map((criterion) => (
               <div key={criterion}>
-                <dt className="font-semibold text-ink">{t(`speaking.feedback.${criterion}`)}</dt>
+                <dt className="flex flex-wrap items-baseline justify-between gap-2 font-semibold text-ink">
+                  {t(`speaking.feedback.${criterion}`)}
+                  {feedback.criteriaBands?.[criterion] != null ? (
+                    <span className={bandColor(feedback.criteriaBands[criterion])}>{feedback.criteriaBands[criterion].toFixed(1)}</span>
+                  ) : null}
+                </dt>
                 <dd className="mt-1 leading-relaxed text-slate-700">{feedback[criterion]}</dd>
               </div>
             ))}

@@ -1,11 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import type { MockObjectiveResult, MockResults, MockWritingResult } from '@ielts/shared';
+import type { MockObjectiveResult, MockResults, MockWritingResult, WritingFeedback } from '@ielts/shared';
 import { SavedItem } from '../pages/SpeakingExam';
 import { api } from '../lib/api';
 import { deleteRecording, listRecordings } from '../lib/recordings';
 import { skillLabel } from '../lib/skills';
 import { SpeakingFeedbackPanel } from './SpeakingFeedbackPanel';
+import { WritingPaperEstimate } from './WritingPaperEstimate';
 
 export function MockResultsView({ id, results }: { id: string; results: MockResults }) {
   const { t } = useTranslation();
@@ -32,14 +34,7 @@ export function MockResultsView({ id, results }: { id: string; results: MockResu
           results[skill] ? <ObjectiveResult key={skill} skill={skill} result={results[skill]} /> : null
         ))}
       </div>
-      {writing ? (
-        <section className="card space-y-3 p-5">
-          <h2 className="font-serif text-2xl font-semibold text-ink">{t(skillLabel('writing'))}</h2>
-          {writing.tasks.map((task) => (
-            <WritingResult key={task.id} contentId={writing.contentId} task={task} />
-          ))}
-        </section>
-      ) : null}
+      {writing ? <WritingResults key={id} writing={writing} /> : null}
       <section className="card space-y-3 p-5">
         <h2 className="font-serif text-2xl font-semibold text-ink">{t(skillLabel('speaking'))}</h2>
         <p className="text-sm text-muted">{t('mock.recordingNotice')}</p>
@@ -94,19 +89,34 @@ function ObjectiveResult({ skill, result }: { skill: 'listening' | 'reading'; re
   );
 }
 
-function WritingResult({ contentId, task }: { contentId: string; task: MockWritingResult['tasks'][number] }) {
+function WritingResults({ writing }: { writing: MockWritingResult }) {
+  const { t } = useTranslation();
+  const [feedback, setFeedback] = useState<Partial<Record<1 | 2, WritingFeedback>>>({});
+
+  return (
+    <section className="card space-y-3 p-5">
+      <h2 className="font-serif text-2xl font-semibold text-ink">{t(skillLabel('writing'))}</h2>
+      <WritingPaperEstimate task1={feedback[1]} task2={feedback[2]} />
+      {writing.tasks.map((task) => (
+        <WritingResult key={task.id} contentId={writing.contentId} task={task}
+          onReview={(result) => setFeedback((previous) => ({ ...previous, [task.task]: result }))} />
+      ))}
+    </section>
+  );
+}
+
+function WritingResult({ contentId, task, onReview }: {
+  contentId: string;
+  task: MockWritingResult['tasks'][number];
+  onReview: (feedback: WritingFeedback) => void;
+}) {
   const { t } = useTranslation();
   const review = useMutation({
-    mutationFn: () => api<{ feedback: {
-      source: 'ai' | 'heuristic';
-      overall: number;
-      summary: string;
-      criteria: { label: string; band: number; comment: string }[];
-      improvements: string[];
-    } }>('/api/writing/submit', {
+    mutationFn: () => api<{ feedback: WritingFeedback }>('/api/writing/submit', {
       method: 'POST',
       json: { contentId, taskId: task.id, text: task.text },
     }),
+    onSuccess: ({ feedback }) => onReview(feedback),
   });
   const feedback = review.data?.feedback;
   return (
