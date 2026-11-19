@@ -13,19 +13,20 @@ import { api, errorMessage } from '../lib/api';
 import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
 import type { SavedRecording } from '../lib/recordings';
 import { useExamTimer, useRecorder } from '../lib/useExam';
+import type { MicrophoneInput } from '../lib/useExam';
 import type { MockStage } from '../lib/mock';
 import { cn, formatClock } from '../lib/utils';
 
 type Part = 1 | 2 | 3;
 type Phase = 'idle' | 'prep' | 'speak' | 'done';
 
-export default function SpeakingExam({ mock, microphoneId }: { mock?: MockStage<SpeakingTest>; microphoneId?: string } = {}) {
+export default function SpeakingExam({ mock, microphone }: { mock?: MockStage<SpeakingTest>; microphone?: MicrophoneInput } = {}) {
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
-  return <SpeakingPaper key={mock?.id ?? `${testId}:${params.get('mode')}`} mock={mock} testId={testId} microphoneId={microphoneId} />;
+  return <SpeakingPaper key={mock?.id ?? `${testId}:${params.get('mode')}`} mock={mock} testId={testId} microphone={microphone} />;
 }
 
-function SpeakingPaper({ mock, testId, microphoneId }: { mock?: MockStage<SpeakingTest>; testId?: string; microphoneId?: string }) {
+function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<SpeakingTest>; testId?: string; microphone?: MicrophoneInput }) {
   const { t } = useTranslation();
   const isFullMock = Boolean(mock);
   const [params] = useSearchParams();
@@ -53,7 +54,7 @@ function SpeakingPaper({ mock, testId, microphoneId }: { mock?: MockStage<Speaki
   const [finishRequested, setFinishRequested] = useState(false);
   const [finishing, setFinishing] = useState(false);
   const [finishError, setFinishError] = useState<string | null>(null);
-  const [checkedMic, setCheckedMic] = useState<string | null>(microphoneId ?? null);
+  const [checkedMic, setCheckedMic] = useState<MicrophoneInput | null>(microphone ?? null);
   const [checkAgain, setCheckAgain] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
   const running = isFullMock || startedAt !== null;
@@ -302,8 +303,8 @@ function SpeakingPaper({ mock, testId, microphoneId }: { mock?: MockStage<Speaki
           </button>
         ) : null}
         {checkAgain && !finished ? (
-          <MicrophoneCheck initialDevice={checkedMic ?? ''} onReady={(deviceId) => {
-            setCheckedMic(deviceId);
+          <MicrophoneCheck initialInput={checkedMic} onReady={(input) => {
+            setCheckedMic(input);
             setCheckAgain(false);
           }} />
         ) : null}

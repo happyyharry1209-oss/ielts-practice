@@ -10,6 +10,7 @@ import { LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
 import { skillLabel } from '../lib/skills';
+import type { MicrophoneInput } from '../lib/useExam';
 import { cn } from '../lib/utils';
 import ListeningExam from './ListeningExam';
 import ReadingExam from './ReadingExam';
@@ -20,7 +21,7 @@ export default function MockRunner() {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const { user } = useAuth();
-  const [checkedMic, setCheckedMic] = useState<{ sessionId: string; deviceId: string }>();
+  const [checkedMic, setCheckedMic] = useState<{ sessionId: string; input: MicrophoneInput }>();
   const queryClient = useQueryClient();
   const queryKey = ['mock-session', user?.id, id];
   const path = `/api/mock/${id}`;
@@ -65,7 +66,7 @@ export default function MockRunner() {
       case 'reading': return <ReadingExam key={key} mock={{ ...stage, test }} />;
       case 'writing': return <WritingExam key={key} mock={{ ...stage, test }} />;
       case 'speaking': return <SpeakingExam key={key} mock={{ ...stage, test }}
-        microphoneId={checkedMic?.sessionId === session.id ? checkedMic.deviceId : undefined} />;
+        microphone={checkedMic?.sessionId === session.id ? checkedMic.input : undefined} />;
     }
   }
 
@@ -96,7 +97,7 @@ export default function MockRunner() {
                 </p>
                 <p className="mb-4 text-sm text-muted">{t('mock.timerNotice')}</p>
                 {current === 'speaking' && checkedMic?.sessionId !== session.id ? (
-                  <MicrophoneCheck key={session.id} onReady={(deviceId) => setCheckedMic({ sessionId: session.id, deviceId })} />
+                  <MicrophoneCheck key={session.id} onReady={(input) => setCheckedMic({ sessionId: session.id, input })} />
                 ) : <button type="button" className="btn-primary" onClick={() => start.mutate(current)} disabled={start.isPending}>
                   {t(start.isPending ? 'common.loading' : 'mock.startSection')}
                 </button>}

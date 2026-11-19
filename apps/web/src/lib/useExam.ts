@@ -121,6 +121,11 @@ export function useExamTimer(
 
 type RecorderError = 'micUnsupported' | 'micDenied' | 'micNotFound' | 'micUnavailable' | 'micNoClip';
 
+export interface MicrophoneInput {
+  deviceId: string;
+  processing: 'direct' | 'browser';
+}
+
 export interface RecorderState {
   supported: boolean;
   recording: boolean;
@@ -132,7 +137,7 @@ export interface RecorderState {
   url: string | null;
   /** Latest finished recording, for persistence. */
   blob: Blob | null;
-  start: (deviceId?: string) => Promise<boolean>;
+  start: (input?: MicrophoneInput) => Promise<boolean>;
   stop: () => void;
   clear: () => void;
 }
@@ -171,7 +176,7 @@ export function useRecorder(): RecorderState {
     active.stop();
   }, []);
 
-  const start = useCallback(async (deviceId?: string) => {
+  const start = useCallback(async (input?: MicrophoneInput) => {
     if (!supported) {
       setError('micUnsupported');
       return false;
@@ -183,9 +188,16 @@ export function useRecorder(): RecorderState {
     startingRef.current = true;
     let stream: MediaStream | undefined;
     try {
-      stream = await navigator.mediaDevices.getUserMedia({
-        audio: deviceId ? { deviceId: { exact: deviceId } } : true,
-      });
+      const audio: MediaTrackConstraints = {};
+      if (input?.deviceId) audio.deviceId = { exact: input.deviceId };
+      // Speaking records one person locally. Browser call filters can discard
+      // quiet speech, so request direct input unless the user selects them.
+      if (input?.processing !== 'browser') {
+        audio.echoCancellation = false;
+        audio.noiseSuppression = false;
+        audio.autoGainControl = false;
+      }
+      stream = await navigator.mediaDevices.getUserMedia({ audio });
       if (requestVersion.current !== version) {
         stream.getTracks().forEach((track) => track.stop());
         return false;
@@ -220,7 +232,7 @@ export function useRecorder(): RecorderState {
       recorder.start();
       recorderRef.current = recorder;
       const track = stream.getAudioTracks()[0];
-      setInput({ id: track?.getSettings().deviceId ?? deviceId ?? '', label: track?.label ?? '' });
+      setInput({ id: track?.getSettings().deviceId || input?.deviceId || '', label: track?.label ?? '' });
       setStream(stream);
       setState('recording');
       return true;

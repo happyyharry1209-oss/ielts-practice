@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useRecorder } from '../lib/useExam';
+import type { MicrophoneInput } from '../lib/useExam';
 
 type Signal = 'pending' | 'detected' | 'quiet' | 'silent' | 'listen';
 
@@ -22,16 +23,18 @@ async function measureClip(blob: Blob): Promise<Signal> {
   return strongest;
 }
 
-export function MicrophoneCheck({ onReady, initialDevice = '' }: {
-  onReady: (deviceId: string) => void;
-  initialDevice?: string;
+export function MicrophoneCheck({ onReady, initialInput }: {
+  onReady: (input: MicrophoneInput) => void;
+  initialInput?: MicrophoneInput | null;
 }) {
   const { t } = useTranslation();
   const recorder = useRecorder();
   const [signal, setSignal] = useState<Signal>('pending');
   const [devices, setDevices] = useState<MediaDeviceInfo[]>([]);
-  const [deviceId, setDeviceId] = useState(initialDevice);
+  const [deviceId, setDeviceId] = useState(initialInput?.deviceId ?? '');
+  const [processing, setProcessing] = useState<MicrophoneInput['processing']>(initialInput?.processing ?? 'direct');
   const [level, setLevel] = useState<number | null>(null);
+  const [inputMuted, setInputMuted] = useState(false);
   const meterContext = useRef<AudioContext | null>(null);
   const { recording, stop, blob, stream } = recorder;
 
@@ -61,19 +64,44 @@ export function MicrophoneCheck({ onReady, initialDevice = '' }: {
     } catch {
       return;
     }
-    const analyser = context.createAnalyser();
-    const samples = new Float32Array(analyser.fftSize);
-    source.connect(analyser);
+    // Measure the two channels separately so opposite signals cannot cancel
+    // each other out in a mono meter.
+    const splitter = context.createChannelSplitter(2);
+    const meters = [0, 1].map((index) => {
+      const analyser = context.createAnalyser();
+      splitter.connect(analyser, index);
+      return { analyser, samples: new Float32Array(analyser.fftSize) };
+    });
+    source.connect(splitter);
     const timer = window.setInterval(() => {
       if (context.state !== 'running') return;
-      analyser.getFloatTimeDomainData(samples);
       let peak = 0;
-      for (const sample of samples) peak = Math.max(peak, Math.abs(sample));
+      for (const { analyser, samples } of meters) {
+        analyser.getFloatTimeDomainData(samples);
+        for (const sample of samples) peak = Math.max(peak, Math.abs(sample));
+      }
       setLevel(Math.round(Math.min(1, Math.sqrt(peak) * 1.8) * 100));
     }, 80);
     return () => {
       window.clearInterval(timer);
       source.disconnect();
+      splitter.disconnect();
+    };
+  }, [stream]);
+
+  useEffect(() => {
+    const track = stream?.getAudioTracks()[0];
+    if (!track) {
+      setInputMuted(false);
+      return;
+    }
+    const update = () => setInputMuted(track.muted);
+    update();
+    track.addEventListener('mute', update);
+    track.addEventListener('unmute', update);
+    return () => {
+      track.removeEventListener('mute', update);
+      track.removeEventListener('unmute', update);
     };
   }, [stream]);
 
@@ -115,7 +143,7 @@ export function MicrophoneCheck({ onReady, initialDevice = '' }: {
     } catch {
       // Clip playback is still available if the browser has no live meter.
     }
-    void recorder.start(deviceId).then((started) => {
+    void recorder.start({ deviceId, processing }).then((started) => {
       if (!started) releaseMeter();
     });
   }
@@ -141,10 +169,22 @@ export function MicrophoneCheck({ onReady, initialDevice = '' }: {
           </option>)}
         </select>
       </label>
+      <label className="block text-sm font-semibold text-ink">
+        {t('speaking.micProcessing')}
+        <select className="input mt-1" value={processing} disabled={recorder.busy} onChange={(event) => {
+          setProcessing(event.target.value === 'browser' ? 'browser' : 'direct');
+          setSignal('pending');
+          recorder.clear();
+        }}>
+          <option value="direct">{t('speaking.micDirect')}</option>
+          <option value="browser">{t('speaking.micBrowser')}</option>
+        </select>
+      </label>
       <div aria-live="polite" className="space-y-2 text-sm">
         {recorder.error || !recorder.supported ? <p className="text-rose-600">{t(`speaking.${recorder.error ?? 'micUnsupported'}`)}</p> : null}
         {recorder.input?.label ? <p className="text-muted">{t('speaking.micUsing', { name: recorder.input.label })}</p> : null}
         {recorder.recording ? <p>{t('speaking.micChecking')}</p> : null}
+        {inputMuted ? <p className="text-rose-600">{t('speaking.micTrackMuted')}</p> : null}
         {signal !== 'pending' && recorder.url ? <p className={signal === 'silent' ? 'text-rose-600' : 'text-muted'}>
           {t(`speaking.signal-${signal}`)}
         </p> : null}
@@ -163,7 +203,7 @@ export function MicrophoneCheck({ onReady, initialDevice = '' }: {
         )}
         {confirmable ? (
           <button type="button" className="btn-primary"
-            onClick={() => onReady(recorder.input?.id || deviceId)}>{t('speaking.micConfirm')}</button>
+            onClick={() => onReady({ deviceId: recorder.input?.id || deviceId, processing })}>{t('speaking.micConfirm')}</button>
         ) : null}
       </div>
     </section>
