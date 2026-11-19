@@ -119,16 +119,20 @@ export function useExamTimer(
   return { elapsed, remaining, expired };
 }
 
+type RecorderError = 'micUnsupported' | 'micDenied' | 'micNotFound' | 'micUnavailable' | 'micNoClip';
+
 export interface RecorderState {
   supported: boolean;
   recording: boolean;
   waitingForMic: boolean;
   busy: boolean;
-  error: string | null;
+  error: RecorderError | null;
+  stream: MediaStream | null;
+  input: { id: string; label: string } | null;
   url: string | null;
   /** Latest finished recording, for persistence. */
   blob: Blob | null;
-  start: () => Promise<boolean>;
+  start: (deviceId?: string) => Promise<boolean>;
   stop: () => void;
   clear: () => void;
 }
@@ -136,7 +140,9 @@ export interface RecorderState {
 /** Thin MediaRecorder wrapper with codec detection for Safari. */
 export function useRecorder(): RecorderState {
   const [state, setState] = useState<'idle' | 'starting' | 'recording' | 'finishing'>('idle');
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<RecorderError | null>(null);
+  const [stream, setStream] = useState<MediaStream | null>(null);
+  const [input, setInput] = useState<RecorderState['input']>(null);
   const [url, setUrl] = useState<string | null>(null);
   const [blob, setBlob] = useState<Blob | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
@@ -155,6 +161,7 @@ export function useRecorder(): RecorderState {
     setUrl(null);
     setBlob(null);
     setError(null);
+    setInput(null);
   }, []);
 
   const stop = useCallback(() => {
@@ -162,12 +169,11 @@ export function useRecorder(): RecorderState {
     if (!active || active.state === 'inactive') return;
     setState('finishing');
     active.stop();
-    active.stream.getTracks().forEach((track) => track.stop());
   }, []);
 
-  const start = useCallback(async () => {
+  const start = useCallback(async (deviceId?: string) => {
     if (!supported) {
-      setError('unsupported');
+      setError('micUnsupported');
       return false;
     }
     if (startingRef.current || recorderRef.current) return false;
@@ -177,7 +183,9 @@ export function useRecorder(): RecorderState {
     startingRef.current = true;
     let stream: MediaStream | undefined;
     try {
-      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: deviceId ? { deviceId: { exact: deviceId } } : true,
+      });
       if (requestVersion.current !== version) {
         stream.getTracks().forEach((track) => track.stop());
         return false;
@@ -194,22 +202,34 @@ export function useRecorder(): RecorderState {
         recorder.stream.getTracks().forEach((track) => track.stop());
         if (recorderRef.current !== recorder) return;
         recorderRef.current = null;
+        setStream(null);
         setState('idle');
-        if (!chunks.length) return;
+        if (!chunks.length) {
+          setError((current) => current ?? 'micNoClip');
+          return;
+        }
         const finished = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
         const objectUrl = URL.createObjectURL(finished);
         urlRef.current = objectUrl;
         setBlob(finished);
         setUrl(objectUrl);
       };
+      recorder.onerror = () => {
+        if (recorderRef.current === recorder) setError('micUnavailable');
+      };
       recorder.start();
       recorderRef.current = recorder;
+      const track = stream.getAudioTracks()[0];
+      setInput({ id: track?.getSettings().deviceId ?? deviceId ?? '', label: track?.label ?? '' });
+      setStream(stream);
       setState('recording');
       return true;
-    } catch {
+    } catch (cause) {
       stream?.getTracks().forEach((track) => track.stop());
       if (requestVersion.current === version) {
-        setError('denied');
+        const name = cause instanceof Error ? cause.name : '';
+        setError(name === 'NotAllowedError' || name === 'SecurityError' ? 'micDenied'
+          : name === 'NotFoundError' || name === 'OverconstrainedError' ? 'micNotFound' : 'micUnavailable');
         setState('idle');
       }
       return false;
@@ -230,5 +250,5 @@ export function useRecorder(): RecorderState {
     };
   }, []);
 
-  return { supported, recording: state === 'recording', waitingForMic: state === 'starting', busy: state !== 'idle', error, url, blob, start, stop, clear };
+  return { supported, recording: state === 'recording', waitingForMic: state === 'starting', busy: state !== 'idle', error, stream, input, url, blob, start, stop, clear };
 }

@@ -20,7 +20,7 @@ export default function MockRunner() {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const { user } = useAuth();
-  const [checkedMicFor, setCheckedMicFor] = useState<string>();
+  const [checkedMic, setCheckedMic] = useState<{ sessionId: string; deviceId: string }>();
   const queryClient = useQueryClient();
   const queryKey = ['mock-session', user?.id, id];
   const path = `/api/mock/${id}`;
@@ -64,7 +64,8 @@ export default function MockRunner() {
       case 'listening': return <ListeningExam key={key} mock={{ ...stage, test }} />;
       case 'reading': return <ReadingExam key={key} mock={{ ...stage, test }} />;
       case 'writing': return <WritingExam key={key} mock={{ ...stage, test }} />;
-      case 'speaking': return <SpeakingExam key={key} mock={{ ...stage, test }} />;
+      case 'speaking': return <SpeakingExam key={key} mock={{ ...stage, test }}
+        microphoneId={checkedMic?.sessionId === session.id ? checkedMic.deviceId : undefined} />;
     }
   }
 
@@ -94,8 +95,8 @@ export default function MockRunner() {
                   {t('practice.minutes', { count: MOCK_DURATION[current] / 60 })} · {t(`mock.${current}Format`)}
                 </p>
                 <p className="mb-4 text-sm text-muted">{t('mock.timerNotice')}</p>
-                {current === 'speaking' && checkedMicFor !== session.id ? (
-                  <MicrophoneCheck key={session.id} onReady={() => setCheckedMicFor(session.id)} />
+                {current === 'speaking' && checkedMic?.sessionId !== session.id ? (
+                  <MicrophoneCheck key={session.id} onReady={(deviceId) => setCheckedMic({ sessionId: session.id, deviceId })} />
                 ) : <button type="button" className="btn-primary" onClick={() => start.mutate(current)} disabled={start.isPending}>
                   {t(start.isPending ? 'common.loading' : 'mock.startSection')}
                 </button>}

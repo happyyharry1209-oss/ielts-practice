@@ -19,13 +19,13 @@ import { cn, formatClock } from '../lib/utils';
 type Part = 1 | 2 | 3;
 type Phase = 'idle' | 'prep' | 'speak' | 'done';
 
-export default function SpeakingExam({ mock }: { mock?: MockStage<SpeakingTest> } = {}) {
+export default function SpeakingExam({ mock, microphoneId }: { mock?: MockStage<SpeakingTest>; microphoneId?: string } = {}) {
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
-  return <SpeakingPaper key={mock?.id ?? `${testId}:${params.get('mode')}`} mock={mock} testId={testId} />;
+  return <SpeakingPaper key={mock?.id ?? `${testId}:${params.get('mode')}`} mock={mock} testId={testId} microphoneId={microphoneId} />;
 }
 
-function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testId?: string }) {
+function SpeakingPaper({ mock, testId, microphoneId }: { mock?: MockStage<SpeakingTest>; testId?: string; microphoneId?: string }) {
   const { t } = useTranslation();
   const isFullMock = Boolean(mock);
   const [params] = useSearchParams();
@@ -53,7 +53,8 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
   const [finishRequested, setFinishRequested] = useState(false);
   const [finishing, setFinishing] = useState(false);
   const [finishError, setFinishError] = useState<string | null>(null);
-  const [checkedMic, setCheckedMic] = useState(false);
+  const [checkedMic, setCheckedMic] = useState<string | null>(microphoneId ?? null);
+  const [checkAgain, setCheckAgain] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
   const running = isFullMock || startedAt !== null;
   const [finished, setFinished] = useState(false);
@@ -113,12 +114,12 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
   const current = list[index];
 
   async function startRecording() {
-    if (finished || finishRequested || finishing || (mode === 'mock' && timer.remaining === 0)) return;
+    if (checkAgain || finished || finishRequested || finishing || (mode === 'mock' && timer.remaining === 0)) return;
     if (part === 2) {
       setSeconds(0);
       setPhase('speak');
     }
-    if (await recorder.start()) {
+    if (await recorder.start(checkedMic ?? undefined)) {
       startedAtRef.current = Date.now();
     } else if (part === 2) {
       setPhase('done');
@@ -211,7 +212,7 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
         <div className="bg-ink text-paper"><div className="mx-auto max-w-4xl px-4 py-3"><ExamBackLink skill="speaking" /></div></div>
         <main className="mx-auto max-w-4xl space-y-4 px-4 py-6">
           <h1 className="page-title">{test.title}</h1>
-          {!checkedMic ? <MicrophoneCheck onReady={() => setCheckedMic(true)} /> : (
+          {checkedMic === null ? <MicrophoneCheck onReady={setCheckedMic} /> : (
             <button type="button" className="btn-primary" onClick={() => setStartedAt(Date.now())}>{t('mock.startSection')}</button>
           )}
           {saved.length > 0 ? <section className="space-y-2">
@@ -232,12 +233,7 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
     />
   ) : null;
 
-  const recorderError =
-    recorder.error === 'denied'
-      ? t('speaking.micDenied')
-      : recorder.error === 'unsupported'
-        ? t('speaking.micUnsupported')
-        : null;
+  const recorderError = recorder.error ? t(`speaking.${recorder.error}`) : null;
 
   return (
     <div className="exam-surface min-h-screen">
@@ -299,6 +295,18 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
       </header>
 
       <main className="mx-auto max-w-4xl space-y-5 px-4 py-6 lg:py-8">
+        {!finished ? (
+          <button type="button" className="btn-secondary" disabled={recorder.busy || phase === 'prep' || finishRequested || finishing}
+            onClick={() => setCheckAgain((previous) => !previous)} aria-expanded={checkAgain}>
+            {t(checkAgain ? 'common.cancel' : 'speaking.micChange')}
+          </button>
+        ) : null}
+        {checkAgain && !finished ? (
+          <MicrophoneCheck initialDevice={checkedMic ?? ''} onReady={(deviceId) => {
+            setCheckedMic(deviceId);
+            setCheckAgain(false);
+          }} />
+        ) : null}
         {finished ? <p role="status" className="card p-4 text-sm">{t('exam.timedFinished')}</p> : null}
         {finishError ? <p role="alert" className="text-sm text-rose-600">{finishError}</p> : null}
         {part === 2 ? (
@@ -350,7 +358,7 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
                   <button
                     type="button"
                     className="btn-primary"
-                    disabled={finished}
+                    disabled={finished || checkAgain}
                     onClick={() => {
                       setPhase('prep');
                       setSeconds(0);
@@ -442,7 +450,7 @@ function SpeakingPaper({ mock, testId }: { mock?: MockStage<SpeakingTest>; testI
                   <button
                     type="button"
                     className="btn-primary"
-                    disabled={finished || recorder.busy || !current}
+                    disabled={finished || checkAgain || recorder.busy || !current}
                     onClick={() => void startRecording()}
                   >
                     <Mic className="h-4 w-4" /> {t('speaking.startRecording')}
