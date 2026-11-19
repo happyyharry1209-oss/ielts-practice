@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Download, Mic, Square, Trash2 } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
@@ -9,8 +9,9 @@ import { ExamBackLink, ExamLoadState, TimerPill } from '../components/ExamShell'
 import { SpeakingFeedbackPanel } from '../components/SpeakingFeedbackPanel';
 import { MicrophoneCheck } from '../components/MicrophoneCheck';
 import { Badge } from '../components/ui';
-import { api, errorMessage } from '../lib/api';
-import { deleteRecording, listRecordings, saveRecording } from '../lib/recordings';
+import { api, errorMessage, getToken } from '../lib/api';
+import { useAuth } from '../lib/auth';
+import { deleteRecording, listRecordings, saveRecording, syncSpeakingRecording } from '../lib/recordings';
 import type { SavedRecording } from '../lib/recordings';
 import { useExamTimer, useRecorder } from '../lib/useExam';
 import type { MicrophoneInput } from '../lib/useExam';
@@ -28,6 +29,8 @@ export default function SpeakingExam({ mock, microphone }: { mock?: MockStage<Sp
 
 function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<SpeakingTest>; testId?: string; microphone?: MicrophoneInput }) {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const queryClient = useQueryClient();
   const isFullMock = Boolean(mock);
   const [params] = useSearchParams();
   const mode = mock || params.get('mode') === 'mock' ? 'mock' : 'practice';
@@ -51,6 +54,8 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
   const [notes, setNotes] = useState('');
   const recorder = useRecorder();
   const [saved, setSaved] = useState<SavedRecording[]>([]);
+  const [answer, setAnswer] = useState<SavedRecording | null>(null);
+  const [saveError, setSaveError] = useState(false);
   const [finishRequested, setFinishRequested] = useState(false);
   const [finishing, setFinishing] = useState(false);
   const [finishError, setFinishError] = useState<string | null>(null);
@@ -69,11 +74,13 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
   const refreshSaved = useCallback(async () => {
     if (mock?.id) return;
     try {
-      setSaved((await listRecordings()).filter((recording) => !recording.mockId && recording.contentId === testId));
+      setSaved((await listRecordings()).filter((recording) =>
+        !recording.mockId && recording.contentId === testId && recording.userId === user?.id,
+      ));
     } catch {
       /* IndexedDB can be unavailable in private mode */
     }
-  }, [mock?.id, testId]);
+  }, [mock?.id, testId, user?.id]);
 
   useEffect(() => {
     void refreshSaved();
@@ -140,10 +147,6 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
     } else if (part === 2 && phase === 'speak' && seconds >= 120) {
       recorder.stop();
       setPhase('done');
-      if (!mock) void api('/api/speaking/recordings', {
-        method: 'POST',
-        json: { contentId: test.id, part: 2, prompt: card.topic, durationSec: 120 },
-      }).catch(() => undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, seconds]);
@@ -162,18 +165,33 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
         ? (card?.topic ?? 'Part 2')
         : `${current?.topic ?? ''}: ${current?.question ?? ''}`;
 
-    savingRef.current = saveRecording({
+    const recording: SavedRecording = {
+      id: crypto.randomUUID(),
+      userId: user?.id,
       contentId: test.id,
       part,
       mockId: mock?.id,
       promptIndex: part === 2 ? cardIndex : index,
       topic,
       durationSec,
+      createdAt: Date.now(),
       mimeType: recorder.blob.type || 'audio/webm',
       blob: recorder.blob,
-    })
-      .then(() => refreshSaved())
-      .catch(() => undefined);
+    };
+    const token = getToken();
+    setAnswer(recording);
+    setSaveError(false);
+    savingRef.current = saveRecording(recording).then(async () => {
+      void queryClient.invalidateQueries({ queryKey: ['local-speaking-recordings', user?.id] });
+      await refreshSaved();
+    }).catch(() => setSaveError(true));
+
+    void savingRef.current.then(() => syncSpeakingRecording(recording, token)).then(() => {
+      void queryClient.invalidateQueries({ queryKey: ['speaking-history', user?.id] });
+      void queryClient.invalidateQueries({ queryKey: ['admin', 'overview'] });
+    }).catch(() => {
+      // The local recording can retry when Home opens.
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recorder.blob]);
 
@@ -225,13 +243,13 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
     );
   }
 
-  const feedbackPanel = !mock && recorder.blob && feedbackStatus?.provider === 'groq' ? (
-    <SpeakingFeedbackPanel
-      audio={recorder.blob}
-      contentId={test.id}
-      part={part}
-      promptIndex={part === 2 ? cardIndex : index}
-    />
+  const feedbackPanel = recorder.blob && answer?.blob === recorder.blob ? (
+    <>
+      {saveError ? <p role="alert" className="mt-2 text-sm text-rose-600">{t('speaking.history.localSaveError')}</p> : null}
+      {!mock && feedbackStatus?.provider === 'groq'
+        ? <SpeakingFeedbackPanel key={answer.id} recording={answer} />
+        : null}
+    </>
   ) : null;
 
   const recorderError = recorder.error ? t(`speaking.${recorder.error}`) : null;
@@ -426,7 +444,7 @@ function SpeakingPaper({ mock, testId, microphone }: { mock?: MockStage<Speaking
                     className="btn-ghost mt-1 text-xs"
                     onClick={() => recorder.clear()}
                   >
-                    <Trash2 className="h-3.5 w-3.5" /> {t('speaking.deleteRecording')}
+                    <Trash2 className="h-3.5 w-3.5" /> {t('speaking.hidePlayback')}
                   </button>
                   {feedbackPanel}
                 </div>

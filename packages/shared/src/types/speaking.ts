@@ -10,3 +10,15 @@ export interface SpeakingFeedback {
   grammar: string;
   improvements: string[];
 }
+
+export interface SpeakingHistoryItem {
+  id: string;
+  client_id: string | null;
+  content_id: string;
+  part: 1 | 2 | 3;
+  prompt: string | null;
+  duration_sec: number | null;
+  created_at: string;
+  title: string;
+  feedback: SpeakingFeedback | null;
+}

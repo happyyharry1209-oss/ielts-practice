@@ -121,10 +121,11 @@ export default function Admin() {
     <div>
       <PageHeader title={t('admin.title')} subtitle={t('admin.overview')} />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <Stat label={t('admin.totalUsers')} value={counts?.users ?? '—'} hint={`${counts?.admins ?? 0} admin`} />
         <Stat label={t('admin.totalAttempts')} value={counts?.attempts ?? '—'} />
         <Stat label={t('admin.submissions')} value={counts?.submissions ?? '—'} />
+        <Stat label={t('admin.speakingRecordings')} value={counts?.recordings ?? '—'} hint={t('admin.speakingRecordingsHint')} />
         <Stat
           label={t('admin.aiCalls')}
           value={counts?.ai_calls ?? '—'}

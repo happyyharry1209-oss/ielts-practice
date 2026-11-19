@@ -1,10 +1,14 @@
 /**
  * Saved Speaking recordings live in this browser's IndexedDB.
  */
+import { api, getToken } from './api';
+
 export interface SavedRecording {
   id: string;
+  userId?: string;
+  synced?: boolean;
   contentId: string;
-  part: number;
+  part: 1 | 2 | 3;
   mockId?: string;
   promptIndex?: number;
   topic: string;
@@ -39,15 +43,8 @@ function requestToPromise<T>(request: IDBRequest<T>): Promise<T> {
   });
 }
 
-export async function saveRecording(
-  input: Omit<SavedRecording, 'id' | 'createdAt'> & { createdAt?: number },
-): Promise<SavedRecording> {
+export async function saveRecording(recording: SavedRecording): Promise<void> {
   const db = await openDb();
-  const recording: SavedRecording = {
-    ...input,
-    id: crypto.randomUUID(),
-    createdAt: input.createdAt ?? Date.now(),
-  };
   await new Promise<void>((resolve, reject) => {
     const tx = db.transaction(STORE, 'readwrite');
     tx.objectStore(STORE).put(recording);
@@ -55,7 +52,6 @@ export async function saveRecording(
     tx.onerror = () => reject(tx.error ?? new Error('Could not save recording'));
   });
   db.close();
-  return recording;
 }
 
 export async function listRecordings(): Promise<SavedRecording[]> {
@@ -63,6 +59,61 @@ export async function listRecordings(): Promise<SavedRecording[]> {
   const all = await requestToPromise<SavedRecording[]>(db.transaction(STORE).objectStore(STORE).getAll());
   db.close();
   return all.sort((a, b) => b.createdAt - a.createdAt);
+}
+
+export async function claimLegacyRecordings(userId: string): Promise<void> {
+  const db = await openDb();
+  try {
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(STORE, 'readwrite');
+      const request = tx.objectStore(STORE).openCursor();
+      request.onsuccess = () => {
+        const cursor = request.result;
+        if (!cursor) return;
+        const recording: SavedRecording = cursor.value;
+        if (!recording.userId) cursor.update({ ...recording, userId });
+        cursor.continue();
+      };
+      tx.oncomplete = () => resolve();
+      tx.onabort = () => reject(tx.error);
+    });
+  } finally {
+    db.close();
+  }
+}
+
+export async function syncSpeakingRecording(recording: SavedRecording, token: string | null): Promise<void> {
+  if (!recording.userId || !token || token !== getToken()) throw new Error('Signed-in account changed');
+  const { clientId } = await api<{ clientId: string }>('/api/speaking/recordings', {
+    method: 'POST',
+    json: {
+      clientId: recording.id,
+      contentId: recording.contentId,
+      part: recording.part,
+      promptIndex: recording.promptIndex,
+      prompt: recording.topic.slice(0, 2000),
+      durationSec: recording.durationSec,
+      createdAt: new Date(recording.createdAt).toISOString(),
+    },
+  });
+  if (clientId !== recording.id) throw new Error('Recording history is unavailable');
+
+  const db = await openDb();
+  try {
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(STORE, 'readwrite');
+      const store = tx.objectStore(STORE);
+      const request = store.get(recording.id);
+      request.onsuccess = () => {
+        const saved: SavedRecording | undefined = request.result;
+        if (saved && saved.userId === recording.userId) store.put({ ...saved, synced: true });
+      };
+      tx.oncomplete = () => resolve();
+      tx.onabort = () => reject(tx.error);
+    });
+  } finally {
+    db.close();
+  }
 }
 
 export async function deleteRecording(id: string): Promise<void> {

@@ -252,12 +252,13 @@ using the most recent response per question so a later correct answer clears it.
 
 - Every finished recording is saved to **IndexedDB** automatically and listed under **Saved
   recordings** on the Speaking page, with playback, download and delete. The saved copy survives a
-  refresh on the same device.
+  refresh in the same browser. Recording details sync to the account's **Speaking feedback**
+  section on Home. Use **Import older recordings** there to add older recordings from this browser.
 - With **`GROQ_API_KEY`** configured, **Get AI feedback** sends the latest recording (up to 10 MB)
   through the API to Whisper Large V3 Turbo. GPT OSS 120B reviews the transcript against the
-  practice prompt and gives feedback on coherence, vocabulary and grammar. The API returns the
-  transcript and feedback to the browser and saves only AI usage totals. Practice recordings can
-  be made and played back locally without requesting AI feedback.
+  practice prompt and gives feedback on coherence, vocabulary and grammar. The estimated band,
+  transcript and feedback are saved to the account. Practice recordings can be made and played
+  back locally without requesting AI feedback.
 - **Dark mode** is toggled from the moon/sun icon in the header. The choice is stored in
   `localStorage` and applied before first paint, so there is no flash.
 

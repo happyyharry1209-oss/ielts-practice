@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { ArrowRight, BookOpen, ClipboardList, NotebookPen } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { SpeakingHistory } from '../components/SpeakingHistory';
 import { Spinner } from '../components/ui';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
@@ -187,6 +188,7 @@ export default function Home() {
           </ul>
         </section>
       ) : null}
+      {user ? <SpeakingHistory key={user.id} userId={user.id} /> : null}
     </div>
   );
 }

@@ -76,6 +76,13 @@ create table if not exists speaking_recordings (
   created_at timestamptz not null default now()
 );
 
+alter table speaking_recordings add column if not exists client_id uuid;
+alter table speaking_recordings add column if not exists prompt_index integer;
+alter table speaking_recordings add column if not exists ai_feedback jsonb;
+
+create unique index if not exists speaking_recordings_client_idx on speaking_recordings (user_id, client_id);
+create index if not exists speaking_recordings_history_idx on speaking_recordings (user_id, created_at desc, id desc);
+
 create table if not exists ai_usage (
   id bigserial primary key,
   user_id uuid not null references users(id) on delete cascade,

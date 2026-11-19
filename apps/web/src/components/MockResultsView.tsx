@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import type { MockObjectiveResult, MockResults, MockWritingResult, WritingFeedback } from '@ielts/shared';
 import { SavedItem } from '../pages/SpeakingExam';
 import { api } from '../lib/api';
+import { useAuth } from '../lib/auth';
 import { deleteRecording, listRecordings } from '../lib/recordings';
 import { skillLabel } from '../lib/skills';
 import { SpeakingFeedbackPanel } from './SpeakingFeedbackPanel';
@@ -11,10 +12,11 @@ import { WritingPaperEstimate } from './WritingPaperEstimate';
 
 export function MockResultsView({ id, results }: { id: string; results: MockResults }) {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const { writing } = results;
   const recordings = useQuery({
-    queryKey: ['mock-recordings', id],
-    queryFn: async () => (await listRecordings()).filter((rec) => rec.mockId === id),
+    queryKey: ['mock-recordings', user?.id, id],
+    queryFn: async () => (await listRecordings()).filter((rec) => rec.mockId === id && rec.userId === user?.id),
   });
   const feedbackStatus = useQuery({
     queryKey: ['speaking', 'feedback-status'],
@@ -24,7 +26,7 @@ export function MockResultsView({ id, results }: { id: string; results: MockResu
   const queryClient = useQueryClient();
   const remove = useMutation({
     mutationFn: deleteRecording,
-    onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['mock-recordings', id] }),
+    onSuccess: () => void queryClient.invalidateQueries({ queryKey: ['mock-recordings', user?.id, id] }),
   });
 
   return (
@@ -41,11 +43,7 @@ export function MockResultsView({ id, results }: { id: string; results: MockResu
         {!recordings.isLoading && !recordings.data?.length ? <p className="text-sm text-muted">{t('speaking.savedEmpty')}</p> : null}
         {recordings.data?.map((recording) => (
           <SavedItem key={recording.id} recording={recording} onDelete={(id) => remove.mutate(id)}>
-            {feedbackStatus.data?.provider === 'groq' && recording.promptIndex !== undefined
-              && (recording.part === 1 || recording.part === 2 || recording.part === 3) ? (
-              <SpeakingFeedbackPanel audio={recording.blob} contentId={recording.contentId}
-                part={recording.part} promptIndex={recording.promptIndex} />
-            ) : null}
+            {feedbackStatus.data?.provider === 'groq' ? <SpeakingFeedbackPanel recording={recording} /> : null}
           </SavedItem>
         ))}
       </section>
