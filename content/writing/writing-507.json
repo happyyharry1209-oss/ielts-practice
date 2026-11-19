@@ -1,0 +1,57 @@
+{
+  "id": "writing-507",
+  "skill": "writing",
+  "title": "Academic Writing — Recycled glass tiles",
+  "description": "Academic Task 1 visual report and Task 2 essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The diagram shows how waste glass is converted into tiles for interior walls.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "diagram": {
+        "kind": "process",
+        "panels": [
+          {
+            "title": "Recycled glass tiles",
+            "items": [
+              {
+                "label": "Collect",
+                "detail": "Used glass is collected from communal bins."
+              },
+              {
+                "label": "Sort",
+                "detail": "Workers remove metal and separate the glass by colour."
+              },
+              {
+                "label": "Crush",
+                "detail": "The clean glass passes through a crusher."
+              },
+              {
+                "label": "Form",
+                "detail": "Glass granules are placed in moulds with a binder."
+              },
+              {
+                "label": "Heat",
+                "detail": "The filled moulds are heated in a kiln."
+              },
+              {
+                "label": "Finish",
+                "detail": "Cooled tiles are polished and checked for cracks."
+              }
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some argue that recycling targets should be mandatory for companies. Others favour voluntary schemes. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

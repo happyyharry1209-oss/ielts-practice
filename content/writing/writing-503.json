@@ -1,0 +1,62 @@
+{
+  "id": "writing-503",
+  "skill": "writing",
+  "title": "Academic Writing — Community theatre spending",
+  "description": "Academic Task 1 visual report and Task 2 essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The pie chart shows how a community theatre allocated its operating budget in one year.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "visualKind": "pie",
+      "dataTable": {
+        "unit": "%",
+        "columns": [
+          "Share"
+        ],
+        "rows": [
+          {
+            "label": "Staff",
+            "values": [
+              38
+            ]
+          },
+          {
+            "label": "Venue",
+            "values": [
+              24
+            ]
+          },
+          {
+            "label": "Productions",
+            "values": [
+              19
+            ]
+          },
+          {
+            "label": "Outreach",
+            "values": [
+              12
+            ]
+          },
+          {
+            "label": "Administration",
+            "values": [
+              7
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people think public funding should give priority to small cultural venues, while others favour large institutions. Discuss both views and give your opinion.\n\nGive reasons for your answer and include any relevant examples.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

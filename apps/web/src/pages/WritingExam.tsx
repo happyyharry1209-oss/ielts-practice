@@ -5,6 +5,7 @@ import { useParams, useSearchParams } from 'react-router-dom';
 import type { WritingTest } from '@ielts/shared';
 import { ExamBackLink, ExamLoadState, TimerPill } from '../components/ExamShell';
 import { Markdown } from '../components/Markdown';
+import { WritingVisual } from '../components/WritingVisual';
 import { Badge } from '../components/ui';
 import { api, errorMessage } from '../lib/api';
 import { useExamTimer } from '../lib/useExam';
@@ -40,9 +41,14 @@ function countWords(text: string): number {
 const draftKey = (testId: string, taskId: string) => `ielts.draft.${testId}.${taskId}`;
 
 export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } = {}) {
+  const { testId } = useParams<{ testId: string }>();
+  const [params] = useSearchParams();
+  return <WritingPaper key={mock?.id ?? `${testId}:${params.get('mode')}`} testId={testId} mock={mock} />;
+}
+
+function WritingPaper({ mock, testId }: { mock?: MockStage<WritingTest>; testId?: string }) {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
-  const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
   const mode = mock || params.get('mode') === 'mock' ? 'mock' : 'practice';
 
@@ -57,7 +63,10 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
     queryFn: () => api<{ provider: 'groq' | 'deepseek' | null }>('/api/writing/status'),
     enabled: !mock,
   });
-  const submitLabel = t(mock ? 'mock.finishSection' : gradingStatus?.provider === null ? 'writing.submitOffline' : 'writing.submit');
+  const [timedDone, setTimedDone] = useState(false);
+  const standaloneMock = mode === 'mock' && !mock;
+  const timing = standaloneMock && !timedDone;
+  const submitLabel = t(mock || timing ? 'mock.finishSection' : gradingStatus?.provider === null ? 'writing.submitOffline' : 'writing.submit');
   const test = mock?.test ?? data?.test;
   const storageId = mock ? `mock.${mock.id}` : test?.id;
   const [taskIndex, setTaskIndex] = useState(0);
@@ -69,7 +78,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
   const [savedLabel, setSavedLabel] = useState(false);
   const savedTimer = useRef<number | null>(null);
 
-  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting, mock?.deadline);
+  const timer = useExamTimer(test?.durationSec ?? 3600, mode, Boolean(test) && !submitting && !timedDone, mock?.deadline);
   const task = test?.tasks[taskIndex];
 
   const draft = useMemo(() => {
@@ -135,17 +144,8 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
     }
   };
 
-  useEffect(() => {
-    if (mock && timer.expired) void submit();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timer.expired]);
-
-  if (isLoading) return <ExamLoadState skill="writing" />;
-  if (loadError || !test || !task || !storageId) {
-    return <ExamLoadState skill="writing" error={errorMessage(loadError)} />;
-  }
-
   const saveDraftsBeforeLeaving = () => {
+    if (!storageId) return;
     try {
       for (const [taskId, text] of Object.entries(drafts)) {
         localStorage.setItem(draftKey(storageId, taskId), text);
@@ -154,6 +154,20 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
       /* Storage can be unavailable in private mode. */
     }
   };
+
+  useEffect(() => {
+    if (mock && timer.expired) void submit();
+    if (standaloneMock && timer.expired) {
+      saveDraftsBeforeLeaving();
+      setTimedDone(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timer.expired]);
+
+  if (isLoading) return <ExamLoadState skill="writing" />;
+  if (loadError || !test || !task || !storageId) {
+    return <ExamLoadState skill="writing" error={errorMessage(loadError)} />;
+  }
 
   return (
     <div className="exam-surface min-h-screen">
@@ -181,14 +195,19 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
           >
             {t('writing.wordCount', { count: words })}
           </span>
-          <TimerPill remaining={timer.remaining} mode={mode} />
+          <TimerPill remaining={timer.remaining} elapsed={timer.elapsed} mode={mode} />
           <button
             type="button"
             className="btn bg-brand-600 text-white hover:bg-brand-500"
             onClick={() => {
-              if (!mock || timer.expired || window.confirm(t('mock.confirmFinish'))) void submit();
+              if (timing) {
+                if (window.confirm(t('mock.confirmFinish'))) {
+                  saveDraftsBeforeLeaving();
+                  setTimedDone(true);
+                }
+              } else if (!mock || timer.expired || window.confirm(t('mock.confirmFinish'))) void submit();
             }}
-            disabled={submitting || (!mock && words < 30)}
+            disabled={submitting || (!mock && !timing && words < 30)}
           >
             {submitting ? t('writing.submitting') : submitLabel}
           </button>
@@ -203,6 +222,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
                 key={item.id}
                 type="button"
                 onClick={() => setTaskIndex(index)}
+                disabled={submitting}
                 className={cn(
                   'min-h-10 rounded-sm px-3 py-1.5 text-xs font-semibold transition',
                   index === taskIndex
@@ -223,7 +243,10 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
             <div className="mt-4 border-t border-line pt-4">
               <Markdown text={task.prompt} />
             </div>
+            <WritingVisual key={task.id} task={task} />
             {task.dataTable && !task.imageUrl ? (
+              <details className="mt-4" open={!task.visualKind}>
+                <summary className="cursor-pointer text-sm font-semibold">{t('writing.dataValues')}</summary>
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full border-collapse text-sm text-ink">
                   <caption className="pb-2 text-left text-xs text-muted">
@@ -257,6 +280,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
                   </tbody>
                 </table>
               </div>
+              </details>
             ) : null}
             {task.imageUrl ? (
               <img
@@ -267,7 +291,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
             ) : null}
           </div>
 
-          {!mock ? <div className="card p-5 text-xs leading-5 text-slate-500">
+          {!mock && !timing ? <div className="card p-5 text-xs leading-5 text-slate-500">
             <p className="font-semibold text-slate-700">{t('writing.feedback')}</p>
             <p className="mt-1">
               {t(gradingStatus?.provider === null ? 'writing.offlineDisclaimer' : 'writing.aiDisclaimer')}
@@ -279,6 +303,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
         </div>
 
         <div className="space-y-4">
+          {timedDone ? <p className="card p-4 text-sm" role="status">{t('writing.timedReview')}</p> : null}
           <div className="card border-t-2 border-t-brand-600 p-4 sm:p-5">
             <textarea
               value={draft}
@@ -286,7 +311,7 @@ export default function WritingExam({ mock }: { mock?: MockStage<WritingTest> } 
                 setDrafts((previous) => ({ ...previous, [task.id]: event.target.value }))
               }
               placeholder={t('writing.startTyping')}
-              readOnly={Boolean(mock && (timer.expired || submitting))}
+              readOnly={timedDone || Boolean(mock && (timer.expired || submitting))}
               maxLength={30_000}
               className="min-h-[420px] w-full resize-y rounded-sm border border-line bg-surface p-4 font-serif text-[16px] leading-7 text-ink outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
               spellCheck

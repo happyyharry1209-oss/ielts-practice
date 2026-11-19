@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import type { Question, QuestionType } from '@ielts/shared';
 import { Markdown } from '../components/Markdown';
 import { QuestionInput } from '../components/QuestionInput';
@@ -43,6 +43,7 @@ interface AttemptDetail {
 export default function Result() {
   const { t } = useTranslation();
   const { attemptId } = useParams<{ attemptId: string }>();
+  const { state } = useLocation();
 
   const { data, isLoading, error } = useQuery({
     queryKey: ['attempt', attemptId],
@@ -61,10 +62,14 @@ export default function Result() {
   }
 
   const { attempt, items } = data;
-  const title =
-    manifest?.[attempt.skill as keyof ContentManifest]?.find(
+  const paper = manifest?.[attempt.skill as keyof ContentManifest]?.find(
       (entry) => entry.id === attempt.content_id,
-    )?.title ?? attempt.content_id;
+    );
+  const title = paper?.title ?? attempt.content_id;
+  const backToBank = {
+    pathname: `/practice/${attempt.skill}`,
+    search: typeof state?.practiceSearch === 'string' ? state.practiceSearch : paper?.bank === 'academic' ? '?bank=academic' : '',
+  };
 
   const answered = items.filter((item) => {
     const value = item.userAnswer;
@@ -77,7 +82,7 @@ export default function Result() {
         title={t('results.title')}
         subtitle={title}
         actions={
-          <Link to={`/practice/${attempt.skill}`} className="btn-secondary">
+          <Link to={backToBank} className="btn-secondary">
             {t('results.tryAgain')}
           </Link>
         }
@@ -178,7 +183,7 @@ export default function Result() {
       </div>
 
       <div className="mt-8 flex gap-2">
-        <Link to={`/practice/${attempt.skill}`} className="btn-primary">
+        <Link to={backToBank} className="btn-primary">
           {t('results.tryAgain')}
         </Link>
         <Link to="/" className="btn-secondary">

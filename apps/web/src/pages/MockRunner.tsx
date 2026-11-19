@@ -1,9 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { MOCK_DURATION, MOCK_ORDER } from '@ielts/shared';
 import type { MockSession, MockSubmission, Skill } from '@ielts/shared';
 import { MockResultsView } from '../components/MockResultsView';
+import { MicrophoneCheck } from '../components/MicrophoneCheck';
 import { LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
 import { useAuth } from '../lib/auth';
@@ -18,6 +20,7 @@ export default function MockRunner() {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const { user } = useAuth();
+  const [checkedMicFor, setCheckedMicFor] = useState<string>();
   const queryClient = useQueryClient();
   const queryKey = ['mock-session', user?.id, id];
   const path = `/api/mock/${id}`;
@@ -91,9 +94,11 @@ export default function MockRunner() {
                   {t('practice.minutes', { count: MOCK_DURATION[current] / 60 })} · {t(`mock.${current}Format`)}
                 </p>
                 <p className="mb-4 text-sm text-muted">{t('mock.timerNotice')}</p>
-                <button type="button" className="btn-primary" onClick={() => start.mutate(current)} disabled={start.isPending}>
+                {current === 'speaking' && checkedMicFor !== session.id ? (
+                  <MicrophoneCheck key={session.id} onReady={() => setCheckedMicFor(session.id)} />
+                ) : <button type="button" className="btn-primary" onClick={() => start.mutate(current)} disabled={start.isPending}>
                   {t(start.isPending ? 'common.loading' : 'mock.startSection')}
-                </button>
+                </button>}
                 {start.isError ? <p className="mt-3 text-sm text-rose-600" role="alert">{t('mock.error')}</p> : null}
               </>
             ) : <p className="text-sm text-muted">{t('mock.resultsNotice')}</p>}

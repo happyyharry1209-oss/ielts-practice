@@ -2,7 +2,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Play } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { ListeningTest } from '@ielts/shared';
 import { ConfirmDialog, ExamBackLink, ExamLoadState, ExamShell, TimerPill } from '../components/ExamShell';
 import { QuestionInput } from '../components/QuestionInput';
@@ -15,6 +15,7 @@ export default function ListeningExam({ mock }: { mock?: MockStage<ListeningTest
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+  const { state } = useLocation();
   const { testId } = useParams<{ testId: string }>();
   const [params] = useSearchParams();
   const mode = !mock && params.get('mode') === 'practice' ? 'practice' : 'mock';
@@ -85,7 +86,7 @@ export default function ListeningExam({ mock }: { mock?: MockStage<ListeningTest
       });
       void queryClient.invalidateQueries({ queryKey: ['stats'] });
       void queryClient.invalidateQueries({ queryKey: ['review'] });
-      if (!leftExam.current) navigate(`/result/${created.attemptId}`, { replace: true });
+      if (!leftExam.current) navigate(`/result/${created.attemptId}`, { replace: true, state });
     } catch (err) {
       setError(errorMessage(err));
       submittingRef.current = false;
@@ -140,7 +141,7 @@ export default function ListeningExam({ mock }: { mock?: MockStage<ListeningTest
         }
         title={test.title}
         subtitle={`${t('exam.section', { number: sectionIndex + 1 })} · ${section.title}`}
-        timer={<TimerPill remaining={timer.remaining} mode={mode} />}
+        timer={<TimerPill remaining={timer.remaining} elapsed={timer.elapsed} mode={mode} />}
         answered={exam.answeredCount}
         total={questions.length}
         onSubmit={() => setConfirmOpen(true)}

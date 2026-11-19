@@ -198,6 +198,24 @@ export function validateTest(test: AnyTest): ValidationResult {
           issues.push({ level: 'error', path: `${base}/${task.id}/dataTable`, message: 'invalid Task 1 data table' });
         }
       }
+      if (task.visualKind) {
+        const data = task.dataTable;
+        const valid = task.task === 1 && data && (
+          task.visualKind === 'pie'
+            ? data.columns.length === 1 && data.rows.every((row) => row.values[0]! > 0)
+              && Math.abs(data.rows.reduce((total, row) => total + row.values[0]!, 0) - 100) < 0.001
+            : task.visualKind === 'bar' || task.visualKind === 'line'
+        );
+        if (!valid) issues.push({ level: 'error', path: `${base}/${task.id}/visualKind`, message: 'invalid Task 1 chart data' });
+      }
+      if (task.diagram) {
+        const { kind, panels } = task.diagram;
+        const valid = task.task === 1 && !task.dataTable && (kind === 'map' ? panels.length >= 2 : kind === 'process' && panels.length >= 1)
+          && panels.every((panel) => panel.title.trim() && panel.items.length >= 3 && panel.items.every((item) =>
+            item.label.trim() && item.detail.trim() && (kind !== 'map' || item.position?.length === 2
+              && item.position.every((coordinate) => Number.isFinite(coordinate) && coordinate >= 0 && coordinate <= 100))));
+        if (!valid) issues.push({ level: 'error', path: `${base}/${task.id}/diagram`, message: 'invalid Task 1 map or process' });
+      }
     }
   } else if (test.skill === 'speaking') {
     if (test.part1.length === 0) issues.push({ level: 'error', path: base, message: 'speaking test has no part 1 topics' });

@@ -133,6 +133,16 @@
     "noDataHint": "Completed reading and listening tests will appear here."
   },
   "practice": {
+    "bank": "Question bank",
+    "bank-academic": "Academic",
+    "bank-practice": "Practice",
+    "bank-academic-hint": "Complete papers for this skill. Mock mode is timed by default.",
+    "bank-practice-hint": "Focused practice sets. Compare estimated difficulty within this bank.",
+    "difficulty": "Estimated difficulty",
+    "difficulty-all": "All levels",
+    "difficulty-easy": "Easy",
+    "difficulty-medium": "Medium",
+    "difficulty-hard": "Hard",
     "tasks": "{{count}} tasks",
     "title": "Choose a test",
     "chooseTest": "Available tests",
@@ -200,6 +210,8 @@
     "error": "Could not complete this mock exam action. Please try again."
   },
   "exam": {
+    "elapsed": "Elapsed",
+    "timedFinished": "This timed session has ended. Your recordings are below.",
     "backToSkill": "Back to {{skill}}",
     "leaveUnsubmitted": "Leave this test? Your answers have not been submitted and will be cleared when you start a new attempt.",
     "leaveRecording": "Leave this test? Leaving stops the current recording, which may not be saved.",
@@ -256,6 +268,15 @@
     "scoreLine": "{{correct}} / {{total}} correct"
   },
   "writing": {
+    "dataValues": "Source data",
+    "timedReview": "Timed writing finished. Select either task below to request feedback on your saved answer.",
+    "visual-bar": "Bar chart",
+    "visual-line": "Line graph",
+    "visual-pie": "Pie chart",
+    "visual-map": "Map or plan",
+    "visual-process": "Process diagram",
+    "visual-table": "Table",
+    "visual-chart": "Chart",
     "practiceData": "Original practice data ({{unit}})",
     "category": "Category",
     "task1": "Task 1",
@@ -292,6 +313,14 @@
     "newSubmission": "Rewrite and resubmit"
   },
   "speaking": {
+    "micCheck": "Microphone check",
+    "micInstruction": "Say a short sentence during the test, then play it back. The exam timer starts after this check.",
+    "micChecking": "Recording your microphone test…",
+    "micTestButton": "Record a test clip",
+    "micConfirm": "I can hear my recording",
+    "signal-detected": "Sound detected. Play it back to check your voice is clear.",
+    "signal-silent": "Very little sound was detected. Check your microphone, then try again.",
+    "signal-listen": "Play the clip to check that your voice was recorded clearly.",
     "part1": "Part 1",
     "part2": "Part 2",
     "part3": "Part 3",

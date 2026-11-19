@@ -1,0 +1,118 @@
+{
+  "id": "writing-505",
+  "skill": "writing",
+  "title": "Academic Writing — Coastal reserve visitor plan",
+  "description": "Academic Task 1 visual report and Task 2 essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The maps show how visitor facilities at a coastal reserve changed after a conservation project.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "diagram": {
+        "kind": "map",
+        "panels": [
+          {
+            "title": "Before",
+            "items": [
+              {
+                "label": "Viewing platform",
+                "detail": "north-west near the shore",
+                "position": [
+                  23,
+                  25
+                ]
+              },
+              {
+                "label": "Dune path",
+                "detail": "north-east crosses the dunes",
+                "position": [
+                  75,
+                  25
+                ]
+              },
+              {
+                "label": "Picnic field",
+                "detail": "centre of the reserve",
+                "position": [
+                  50,
+                  50
+                ]
+              },
+              {
+                "label": "Car park",
+                "detail": "south-west",
+                "position": [
+                  24,
+                  75
+                ]
+              },
+              {
+                "label": "Entrance",
+                "detail": "south-east",
+                "position": [
+                  76,
+                  75
+                ]
+              }
+            ]
+          },
+          {
+            "title": "After",
+            "items": [
+              {
+                "label": "Viewing platform",
+                "detail": "unchanged in the north-west",
+                "position": [
+                  23,
+                  25
+                ]
+              },
+              {
+                "label": "Protected dunes",
+                "detail": "replaced the north-east path",
+                "position": [
+                  75,
+                  25
+                ]
+              },
+              {
+                "label": "Boardwalk",
+                "detail": "crosses the site where the picnic field lay",
+                "position": [
+                  50,
+                  50
+                ]
+              },
+              {
+                "label": "Visitor centre",
+                "detail": "replaced the south-west car park",
+                "position": [
+                  24,
+                  75
+                ]
+              },
+              {
+                "label": "Entrance",
+                "detail": "unchanged in the south-east",
+                "position": [
+                  76,
+                  75
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Some people argue that access to sensitive natural areas should be restricted. Discuss the benefits and drawbacks of this policy.\n\nGive reasons for your answer and include any relevant examples.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

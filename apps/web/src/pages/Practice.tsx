@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { ArrowRight, Check, Clock3, ListChecks, Search } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import type { ContentManifest, TestSummary } from '@ielts/shared';
+import type { ContentManifest, PaperBank, TestSummary } from '@ielts/shared';
 import { EmptyState, LoadError, Spinner } from '../components/ui';
 import { api } from '../lib/api';
 import { SKILLS, skillLabel } from '../lib/skills';
@@ -34,14 +34,18 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   const { user } = useAuth();
   const navigate = useNavigate();
   const { search: practiceSearch } = useLocation();
-  const [mode, setMode] = useState<Mode>('mock');
   const [params, setParams] = useSearchParams();
+  const bank: PaperBank = params.get('bank') === 'academic' ? 'academic' : 'practice';
+  const selectedMode = params.get('mode');
+  const mode: Mode = selectedMode === 'mock' || selectedMode === 'practice' ? selectedMode : bank === 'academic' ? 'mock' : 'practice';
+  const difficultyParam = params.get('difficulty');
+  const difficulty = difficultyParam === 'easy' || difficultyParam === 'medium' || difficultyParam === 'hard' ? difficultyParam : 'all';
   const resultsHeading = useRef<HTMLHeadingElement>(null);
   const query = params.get('q') ?? '';
   const filterParam = params.get('status');
   const filter: Filter = filterParam === 'new' || filterParam === 'done' ? filterParam : 'all';
   const skill = current.key;
-  const hasExamModes = skill === 'reading' || skill === 'listening';
+  const hasStats = skill === 'reading' || skill === 'listening';
 
   const manifest = useQuery({
     queryKey: ['manifest'],
@@ -50,10 +54,10 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   const stats = useQuery({
     queryKey: ['stats', user?.id],
     queryFn: () => api<StatsResponse>('/api/attempts/stats'),
-    enabled: hasExamModes,
+    enabled: hasStats,
   });
 
-  const tests = manifest.data?.[skill] ?? [];
+  const tests = (manifest.data?.[skill] ?? []).filter((test) => (test.bank ?? 'practice') === bank);
   const progress = new Map(
     stats.data?.byContent
       .filter((entry) => entry.skill === skill)
@@ -61,12 +65,14 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   );
   const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   const results = tests.filter((test) => {
+    if (difficulty !== 'all' && test.difficulty !== difficulty) return false;
     const done = progress.has(test.id);
-    if (hasExamModes && stats.data) {
+    if (hasStats && stats.data) {
       if (filter === 'new' && done) return false;
       if (filter === 'done' && !done) return false;
     }
-    const searchable = [test.id, test.title, test.description].join(' ').toLowerCase();
+    const searchable = [test.id, test.title, test.description, test.visualKind,
+      test.visualKind ? t(`writing.visual-${test.visualKind}`) : ''].join(' ').toLowerCase();
     return searchTerms.every((term) => searchable.includes(term));
   });
   const pageCount = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
@@ -96,8 +102,8 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
   };
 
   const start = (test: TestSummary) => {
-    if (hasExamModes) clearStoredAnswers(test.id);
-    navigate(`/exam/${skill}/${test.id}${hasExamModes ? `?mode=${mode}` : ''}`, {
+    if (hasStats) clearStoredAnswers(test.id);
+    navigate(`/exam/${skill}/${test.id}?mode=${mode}`, {
       state: { practiceSearch },
     });
   };
@@ -122,6 +128,22 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
         ))}
       </nav>
 
+      <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label={t('practice.bank')}>
+        {(['academic', 'practice'] as const).map((value) => (
+          <button key={value} type="button" aria-pressed={bank === value}
+            className={bank === value ? 'btn-primary' : 'btn-secondary'}
+            onClick={() => {
+              if (bank === value) return;
+              const next = new URLSearchParams();
+              if (value === 'academic') next.set('bank', 'academic');
+              setParams(next);
+            }}>
+            {t(`practice.bank-${value}`)}
+          </button>
+        ))}
+      </div>
+      <p className="mb-5 text-sm text-muted">{t(`practice.bank-${bank}-hint`)}</p>
+
       {manifest.isLoading ? (
         <Spinner label={t('common.loading')} />
       ) : !manifest.data ? (
@@ -130,7 +152,6 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
         <EmptyState title={t('practice.empty')} />
       ) : (
         <>
-          {hasExamModes ? (
             <fieldset className="mb-6">
               <legend className="mb-3 text-sm font-semibold text-ink">{t('practice.mode')}</legend>
               <div className="grid gap-3 sm:grid-cols-2">
@@ -139,7 +160,11 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
                     'flex cursor-pointer items-start gap-3 rounded-lg border bg-surface p-4 transition focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand-500',
                     mode === value ? 'border-brand-600' : 'border-line hover:border-ink/50',
                   )}>
-                    <input className="mt-1 h-4 w-4 shrink-0 accent-brand-600" type="radio" name="mode" value={value} checked={mode === value} onChange={() => setMode(value)} />
+                    <input className="mt-1 h-4 w-4 shrink-0 accent-brand-600" type="radio" name="mode" value={value} checked={mode === value} onChange={() => {
+                      const next = new URLSearchParams(params);
+                      next.set('mode', value);
+                      setParams(next, { replace: true });
+                    }} />
                     <span>
                       <span className="block text-sm font-semibold text-ink">{t(value === 'mock' ? 'exam.mockMode' : 'exam.practiceMode')}</span>
                       <span className="mt-1 block text-sm leading-5 text-muted">{t(`practice.${value}Hint`)}</span>
@@ -148,14 +173,22 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
                 ))}
               </div>
             </fieldset>
-          ) : null}
 
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <div className="relative w-full sm:min-w-52 sm:flex-1">
               <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
               <input type="search" aria-label={t('practice.search')} className="input pl-9" placeholder={t('practice.search')} value={query} onChange={(event) => changeFilters(event.target.value, filter)} />
             </div>
-            {hasExamModes && stats.data ? (
+            <select className="input w-auto" aria-label={t('practice.difficulty')} value={difficulty} onChange={(event) => {
+              const next = new URLSearchParams(params);
+              if (event.target.value === 'all') next.delete('difficulty');
+              else next.set('difficulty', event.target.value);
+              next.delete('page');
+              setParams(next, { replace: true });
+            }}>
+              {(['all', 'easy', 'medium', 'hard'] as const).map((value) => <option key={value} value={value}>{t(`practice.difficulty-${value}`)}</option>)}
+            </select>
+            {hasStats && stats.data ? (
               <div role="group" aria-label={t('practice.filterStatus')} className="flex flex-wrap gap-2">
                 {FILTERS.map((value) => (
                   <button key={value} type="button" aria-pressed={filter === value} onClick={() => changeFilters(query, value)}
@@ -167,14 +200,14 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
             ) : null}
           </div>
 
-          {hasExamModes && stats.isError && !stats.data ? (
+          {hasStats && stats.isError && !stats.data ? (
             <p role="status" className="mb-4 text-sm text-muted">{t('errors.progress')}</p>
           ) : null}
 
           {results.length === 0 ? (
             <div className="card p-8 text-center">
               <p role="status" className="text-sm text-muted">{t('practice.noMatch')}</p>
-              <button className="btn-secondary mt-4" type="button" onClick={() => changeFilters('', 'all')}>
+              <button className="btn-secondary mt-4" type="button" onClick={() => setParams(bank === 'academic' ? { bank } : {}, { replace: true })}>
                 {t('practice.clearFilters')}
               </button>
             </div>
@@ -186,14 +219,17 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
               <ul className="space-y-3">
                 {pageTests.map((test) => {
                   const best = progress.get(test.id);
-                  const done = hasExamModes && progress.has(test.id);
-                  const testNumber = test.id.slice(test.id.lastIndexOf('-') + 1);
+                  const done = hasStats && progress.has(test.id);
+                  const testNumber = test.id.match(/^(?:practice-)?(?:reading|listening|writing|speaking)-(\d+)/)?.[1]
+                    ?? test.id.slice(test.id.lastIndexOf('-') + 1);
                   return (
                     <li key={test.id} className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
                       <div className="min-w-0">
                         <h3 className="break-words font-serif text-[25px] font-semibold leading-tight text-ink">{test.title}</h3>
                         {test.description ? <p className="mt-1.5 text-sm leading-6 text-muted">{test.description}</p> : null}
                         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-muted">
+                          <span className="rounded-sm border border-line px-2 py-1 text-ink">{t(`practice.difficulty-${test.difficulty ?? 'medium'}`)}</span>
+                          {test.visualKind ? <span>{t(`writing.visual-${test.visualKind}`)}</span> : null}
                           <span className="tabular-nums">{t('practice.setNumber', { number: testNumber })}</span>
                           <span className="inline-flex items-center gap-1.5"><Clock3 aria-hidden="true" size={14} />{t('practice.minutes', { count: Math.round(test.durationSec / 60) })}</span>
                           <span className="inline-flex items-center gap-1.5"><ListChecks aria-hidden="true" size={14} />{t(skill === 'writing' ? 'practice.tasks' : 'practice.questions', { count: test.questionCount })}</span>

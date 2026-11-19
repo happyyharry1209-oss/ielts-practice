@@ -133,6 +133,16 @@
     "noDataHint": "完成閱讀或聽力試卷後，紀錄會顯示在這裏。"
   },
   "practice": {
+    "bank": "題庫類型",
+    "bank-academic": "Academic 完整試卷",
+    "bank-practice": "Practice 練習",
+    "bank-academic-hint": "完整單科試卷，預設使用限時模擬模式。",
+    "bank-practice-hint": "分項練習。難度為此題庫內的相對估計。",
+    "difficulty": "估計難度",
+    "difficulty-all": "所有難度",
+    "difficulty-easy": "簡單",
+    "difficulty-medium": "中等",
+    "difficulty-hard": "困難",
     "tasks": "{{count}} 項任務",
     "title": "選擇試卷",
     "chooseTest": "可用試卷",
@@ -199,6 +209,8 @@
     "error": "暫時無法完成模擬考操作，請再試一次。"
   },
   "exam": {
+    "elapsed": "已用時間",
+    "timedFinished": "限時測驗已結束，你可以在下方回聽錄音。",
     "backToSkill": "返回{{skill}}練習",
     "leaveUnsubmitted": "要離開這份測驗嗎？目前的答案尚未提交，重新開始測驗時會清除。",
     "leaveRecording": "要離開這份測驗嗎？離開會停止錄音，這段錄音可能無法儲存。",
@@ -255,6 +267,15 @@
     "scoreLine": "答對 {{correct}} / {{total}} 題"
   },
   "writing": {
+    "dataValues": "原始數據",
+    "timedReview": "限時寫作已結束。切換至相應 Task，即可選擇取得已儲存答案的回饋。",
+    "visual-bar": "柱狀圖",
+    "visual-line": "折線圖",
+    "visual-pie": "圓餅圖",
+    "visual-map": "地圖／平面圖",
+    "visual-process": "流程圖",
+    "visual-table": "表格",
+    "visual-chart": "圖表",
     "practiceData": "原創練習數據（{{unit}}）",
     "category": "類別",
     "task1": "Task 1",
@@ -291,6 +312,14 @@
     "newSubmission": "重寫並重新提交"
   },
   "speaking": {
+    "micCheck": "麥克風測試",
+    "micInstruction": "錄一小段說話並回聽。確認收音後，才開始正式計時。",
+    "micChecking": "正在錄製測試片段…",
+    "micTestButton": "錄製測試片段",
+    "micConfirm": "我聽到自己的錄音",
+    "signal-detected": "已偵測到聲音，請回聽並確認人聲清楚。",
+    "signal-silent": "偵測到的聲音很微弱。請檢查麥克風後重試。",
+    "signal-listen": "請回聽片段，確認已清楚錄到你的聲音。",
     "part1": "Part 1",
     "part2": "Part 2",
     "part3": "Part 3",

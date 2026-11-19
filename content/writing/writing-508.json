@@ -1,0 +1,118 @@
+{
+  "id": "writing-508",
+  "skill": "writing",
+  "title": "Academic Writing — College study floor",
+  "description": "Academic Task 1 visual report and Task 2 essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The plans show a college study floor before and after a reorganisation.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "diagram": {
+        "kind": "map",
+        "panels": [
+          {
+            "title": "Before",
+            "items": [
+              {
+                "label": "Reading room",
+                "detail": "north-west",
+                "position": [
+                  23,
+                  25
+                ]
+              },
+              {
+                "label": "Storage",
+                "detail": "north-east",
+                "position": [
+                  75,
+                  25
+                ]
+              },
+              {
+                "label": "Reception",
+                "detail": "centre",
+                "position": [
+                  50,
+                  49
+                ]
+              },
+              {
+                "label": "Group room",
+                "detail": "south-west",
+                "position": [
+                  23,
+                  73
+                ]
+              },
+              {
+                "label": "Entrance",
+                "detail": "south-east",
+                "position": [
+                  76,
+                  73
+                ]
+              }
+            ]
+          },
+          {
+            "title": "After",
+            "items": [
+              {
+                "label": "Quiet study",
+                "detail": "replaced the north-west reading room",
+                "position": [
+                  23,
+                  25
+                ]
+              },
+              {
+                "label": "Media studio",
+                "detail": "replaced north-east storage",
+                "position": [
+                  75,
+                  25
+                ]
+              },
+              {
+                "label": "Reception",
+                "detail": "unchanged in the centre",
+                "position": [
+                  50,
+                  49
+                ]
+              },
+              {
+                "label": "Group room",
+                "detail": "unchanged in the south-west",
+                "position": [
+                  23,
+                  73
+                ]
+              },
+              {
+                "label": "Entrance",
+                "detail": "unchanged in the south-east",
+                "position": [
+                  76,
+                  73
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Colleges should provide more spaces for group projects than for individual study. To what extent do you agree or disagree?\n\nGive reasons for your answer and include any relevant examples.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

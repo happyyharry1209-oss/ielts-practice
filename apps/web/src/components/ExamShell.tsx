@@ -57,7 +57,7 @@ export function ExamLoadState({ skill, error }: { skill: Skill; error?: string }
   );
 }
 
-export function TimerPill({ remaining, mode }: { remaining: number; mode: 'mock' | 'practice' }) {
+export function TimerPill({ remaining, mode, elapsed = 0 }: { remaining: number; mode: 'mock' | 'practice'; elapsed?: number }) {
   const { t } = useTranslation();
   const urgent = mode === 'mock' && remaining <= 300;
   return (
@@ -69,9 +69,9 @@ export function TimerPill({ remaining, mode }: { remaining: number; mode: 'mock'
       title={mode === 'mock' ? t('exam.mockMode') : t('exam.practiceMode')}
     >
       <span className="text-xs font-medium uppercase tracking-wide opacity-70">
-        {t('exam.timeLeft')}
+        {t(mode === 'mock' ? 'exam.timeLeft' : 'exam.elapsed')}
       </span>
-      {mode === 'mock' ? formatClock(remaining) : '∞'}
+      {formatClock(mode === 'mock' ? remaining : elapsed)}
     </div>
   );
 }

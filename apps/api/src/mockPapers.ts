@@ -1,6 +1,7 @@
 import { randomInt } from 'node:crypto';
 import { MOCK_DURATION } from '@ielts/shared';
-import type { AnyTest, ListeningTest, Question, ReadingTest, Skill } from '@ielts/shared';
+import type { AnyTest, ListeningTest, ReadingTest, Skill } from '@ielts/shared';
+import { renumberGroups } from './catalog';
 import { getContent } from './content';
 import { HttpError } from './http';
 
@@ -14,7 +15,7 @@ function draw<T>(pool: readonly T[]): T {
 export function drawMockPapers(): MockPapers {
   const bank = Array.from(getContent().tests.values());
   const passages = bank.flatMap((test) =>
-    test.skill === 'reading' && test.variant === 'academic' ? test.passages : [],
+    test.skill === 'reading' && test.variant === 'academic' && !test.id.startsWith('academic-') && !test.shortPractice ? test.passages : [],
   );
   const thirteen = passages.filter((passage) => passage.questions.length === 13);
   const first = draw(thirteen);
@@ -27,17 +28,6 @@ export function drawMockPapers(): MockPapers {
     draw(listeningPapers.map((test) => test.sections[index]!)),
   );
 
-  function renumber<T extends { id: string; questions: Question[] }>(groups: T[]): T[] {
-    let number = 0;
-    return groups.map((group, index) => ({
-      ...group,
-      id: `group-${index + 1}`,
-      questions: group.questions.map((question) => {
-        number += 1;
-        return { ...question, id: `q${number}`, number };
-      }),
-    }));
-  }
 
   const reading: ReadingTest = {
     id: 'mock-reading',
@@ -45,14 +35,14 @@ export function drawMockPapers(): MockPapers {
     variant: 'academic',
     title: 'IELTS Academic Reading',
     durationSec: MOCK_DURATION.reading,
-    passages: renumber([first, second, third]),
+    passages: renumberGroups([first, second, third]),
   };
   const listening: ListeningTest = {
     id: 'mock-listening',
     skill: 'listening',
     title: 'IELTS Listening',
     durationSec: MOCK_DURATION.listening,
-    sections: renumber(listeningSections),
+    sections: renumberGroups(listeningSections),
   };
   const writing = draw(bank.filter((test) => test.skill === 'writing'
     && test.tasks.length === 2 && test.tasks.some((task) => task.task === 1)

@@ -5,13 +5,16 @@ import { fileURLToPath } from 'node:url';
 import type {
   AnyTest,
   ContentManifest,
+  Difficulty,
   ListeningTest,
   Question,
+  PaperBank,
   ReadingTest,
   Skill,
   TestSummary,
 } from '@ielts/shared';
 import { env } from './env';
+import { buildCatalog, combineDrills, withWritingVisual } from './catalog';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 
@@ -53,7 +56,8 @@ function questionCount(test: AnyTest): number {
   }
 }
 
-function toSummary(test: AnyTest): TestSummary {
+function toSummary(test: AnyTest, bank: PaperBank, difficulty: Difficulty): TestSummary {
+  const task = test.skill === 'writing' ? test.tasks.find((item) => item.task === 1) : undefined;
   return {
     id: test.id,
     skill: test.skill,
@@ -61,6 +65,11 @@ function toSummary(test: AnyTest): TestSummary {
     description: test.description,
     durationSec: test.durationSec,
     questionCount: questionCount(test),
+    bank,
+    difficulty,
+    ...(task && {
+      visualKind: task.diagram?.kind ?? task.visualKind ?? (task.imageUrl ? 'chart' : task.dataTable ? 'table' : undefined),
+    }),
     ...(test.skill === 'reading' ? { variant: test.variant } : {}),
   };
 }
@@ -95,9 +104,12 @@ export async function loadContent(): Promise<ContentStore> {
       }
       const key = `${parsed.skill}:${parsed.id}`;
       if (tests.has(key)) throw new Error(`Duplicate test id: ${key}`);
-      tests.set(key, parsed);
-      manifest[skill].push(toSummary(parsed));
+      tests.set(key, parsed.skill === 'writing' ? withWritingVisual(parsed) : parsed);
     }
+  }
+  for (const { test, bank, difficulty } of buildCatalog(Array.from(tests.values()))) {
+    tests.set(`${test.skill}:${test.id}`, test);
+    manifest[test.skill].push(toSummary(test, bank, difficulty));
   }
 
   store = { dir, manifest, tests };
@@ -110,7 +122,18 @@ export function getContent(): ContentStore {
 }
 
 export function findTest(skill: Skill, id: string): AnyTest | null {
-  return getContent().tests.get(`${skill}:${id}`) ?? null;
+  const { tests } = getContent();
+  const exact = tests.get(`${skill}:${id}`);
+  if (exact) return exact;
+  if (skill !== 'reading' && skill !== 'listening') return null;
+  const pieces = /^practice-(reading|listening)-(\d+)-(\d+)-(\d+)$/.exec(id);
+  if (!pieces || pieces[1] !== skill) return null;
+  const [first, ...partners] = pieces.slice(2).map((number) => tests.get(`${skill}:${skill}-${number}`));
+  if ((first?.skill !== 'reading' && first?.skill !== 'listening') || !first.shortPractice) return null;
+  const validPartners = partners.filter((test): test is ReadingTest | ListeningTest =>
+    (test?.skill === 'reading' || test?.skill === 'listening') && test.shortPractice === true);
+  if (validPartners.length !== 2 || new Set([first, ...validPartners]).size !== 3) return null;
+  return combineDrills(first, validPartners);
 }
 
 function stripQuestion(q: Question): Question {

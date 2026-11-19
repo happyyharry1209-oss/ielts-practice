@@ -6,7 +6,11 @@ accounts, saved progress, automatic marking and optional AI feedback on essays.
 - Web app: React 19 + Vite + TypeScript + Tailwind, deployable to **GitHub Pages**
 - API: Node 22 + Hono + Postgres
 - Bilingual UI: English / 繁體中文
-- Original practice content: 501 Reading sets, 501 Listening sets, 500 Writing sets, and 100 Speaking sets.
+- Original practice content: 501 source Reading sets, 501 source Listening sets, 512 Writing sets, and 100 Speaking sets.
+- Each skill separates complete Academic papers from Practice and shows estimated difficulty based
+  on features of the content. Most focused Listening and Reading sets group three source drills.
+- Writing Task 1 includes tables, bar and line charts, pie charts, maps and process diagrams.
+  Speaking checks the microphone and offers playback before starting its timer.
 - Full Academic mock exams draw 40 Listening questions, 40 Reading questions, both Writing tasks,
   and all three Speaking parts from the practice banks.
 - The Reading and Listening banks include short drills and full papers. New short drills report raw

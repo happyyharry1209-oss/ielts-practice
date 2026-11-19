@@ -41,6 +41,11 @@ writingRoutes.post('/submit', async (c) => {
     ];
     prompt += `\n\nPractice data (${unit}):\n${tableLines.join('\n')}`;
   }
+  if (task.diagram) {
+    const panels = task.diagram.panels.map((panel) =>
+      `${panel.title}\n${panel.items.map(({ label, detail }) => `- ${label}: ${detail}`).join('\n')}`);
+    prompt += `\n\nSource ${task.diagram.kind} shown to the student:\n${panels.join('\n\n')}`;
+  }
   const { feedback, usage } = await scoreWriting(task.task, prompt, body.text, task.minWords);
 
   const rows = await query<{ id: string; created_at: string }>(

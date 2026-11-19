@@ -91,11 +91,16 @@ export function useExamTimer(
   const [ticks, setTicks] = useState(0);
   const [expired, setExpired] = useState(false);
   const firedRef = useRef(false);
+  const elapsedMs = useRef(0);
 
   useEffect(() => {
     if (!active) return;
-    const id = window.setInterval(() => setTicks((value) => value + 1), 1000);
-    return () => window.clearInterval(id);
+    const start = Date.now();
+    const id = window.setInterval(() => setTicks(Math.floor((elapsedMs.current + Date.now() - start) / 1000)), 1000);
+    return () => {
+      window.clearInterval(id);
+      elapsedMs.current += Math.max(0, Date.now() - start);
+    };
   }, [active]);
 
   const elapsed = deadline === undefined

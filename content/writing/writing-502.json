@@ -1,0 +1,118 @@
+{
+  "id": "writing-502",
+  "skill": "writing",
+  "title": "Academic Writing — Station square redesign",
+  "description": "Academic Task 1 visual report and Task 2 essay. Suggested time: 60 minutes.",
+  "durationSec": 3600,
+  "tasks": [
+    {
+      "id": "t1",
+      "task": 1,
+      "prompt": "The maps show a station square before and after a scheme to make it easier to cross on foot.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.",
+      "diagram": {
+        "kind": "map",
+        "panels": [
+          {
+            "title": "Before",
+            "items": [
+              {
+                "label": "Station entrance",
+                "detail": "north-west corner",
+                "position": [
+                  23,
+                  24
+                ]
+              },
+              {
+                "label": "Bus stops",
+                "detail": "north-east side",
+                "position": [
+                  75,
+                  24
+                ]
+              },
+              {
+                "label": "Taxi lane",
+                "detail": "middle of the square",
+                "position": [
+                  50,
+                  49
+                ]
+              },
+              {
+                "label": "Car park",
+                "detail": "south-west corner",
+                "position": [
+                  25,
+                  73
+                ]
+              },
+              {
+                "label": "News kiosk",
+                "detail": "south-east corner",
+                "position": [
+                  74,
+                  73
+                ]
+              }
+            ]
+          },
+          {
+            "title": "After",
+            "items": [
+              {
+                "label": "Station entrance",
+                "detail": "unchanged in the north-west",
+                "position": [
+                  23,
+                  24
+                ]
+              },
+              {
+                "label": "Bicycle parking",
+                "detail": "replaced the north-east bus stops",
+                "position": [
+                  75,
+                  24
+                ]
+              },
+              {
+                "label": "Pedestrian plaza",
+                "detail": "replaced the central taxi lane",
+                "position": [
+                  50,
+                  49
+                ]
+              },
+              {
+                "label": "Bus interchange",
+                "detail": "replaced the south-west car park",
+                "position": [
+                  25,
+                  73
+                ]
+              },
+              {
+                "label": "News kiosk",
+                "detail": "unchanged in the south-east",
+                "position": [
+                  74,
+                  73
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "minWords": 150,
+      "suggestedMinutes": 20
+    },
+    {
+      "id": "t2",
+      "task": 2,
+      "prompt": "Should governments invest more in walking and cycling facilities than in expanding roads? Give reasons for your view.\n\nGive reasons for your answer and include any relevant examples.\n\nWrite at least 250 words.",
+      "minWords": 250,
+      "suggestedMinutes": 40
+    }
+  ]
+}

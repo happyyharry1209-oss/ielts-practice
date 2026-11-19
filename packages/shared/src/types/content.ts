@@ -1,4 +1,6 @@
 export type Skill = 'listening' | 'reading' | 'writing' | 'speaking';
+export type PaperBank = 'academic' | 'practice';
+export type Difficulty = 'easy' | 'medium' | 'hard';
 
 export type ReadingVariant = 'academic' | 'general';
 
@@ -100,6 +102,12 @@ export interface WritingTask {
   prompt: string;
   /** Optional chart/diagram image for Task 1. */
   imageUrl?: string;
+  visualKind?: 'bar' | 'line' | 'pie';
+  /** Structured visual supplies the same facts to the renderer and the grader. */
+  diagram?: {
+    kind: 'process' | 'map';
+    panels: { title: string; items: { label: string; detail: string; position?: [number, number] }[] }[];
+  };
   /** Optional original practice data for an Academic Task 1 report. */
   dataTable?: {
     unit: string;
@@ -155,6 +163,9 @@ export interface TestSummary {
   description?: string;
   durationSec: number;
   questionCount: number;
+  bank: PaperBank;
+  difficulty: Difficulty;
+  visualKind?: 'bar' | 'line' | 'pie' | 'table' | 'map' | 'process' | 'chart';
   variant?: ReadingVariant;
 }
 
