@@ -80,7 +80,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 border-b border-line bg-paper">
+      <header className="site-header sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-shell items-center gap-3 px-4 sm:px-6 lg:gap-6">
           <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={t('common.appName')}>
             <span className="brand-mark"><BookOpen aria-hidden="true" size={19} /></span>
@@ -151,7 +151,7 @@ export function Layout() {
           <nav
             id="mobile-navigation"
             aria-label={t('nav.mobile')}
-            className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper px-4 py-3 lg:hidden"
+            className="max-h-[calc(100dvh-4rem-var(--header-top-inset))] overflow-y-auto border-t border-line bg-paper px-4 py-3 lg:hidden"
           >
             <div className="mx-auto max-w-shell">
               {navItems.map((item) => (

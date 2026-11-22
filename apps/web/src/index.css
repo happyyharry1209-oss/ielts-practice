@@ -135,6 +135,17 @@
   margin-bottom: 1rem;
 }
 
+.site-header {
+  --header-top-inset: env(safe-area-inset-top, 0px);
+  padding-top: var(--header-top-inset);
+}
+
+@media (min-width: 768px) and (any-pointer: coarse) {
+  .site-header {
+    --header-top-inset: max(12px, env(safe-area-inset-top, 0px));
+  }
+}
+
 .desktop-nav-link {
   position: relative;
   padding: 25px 0 22px;
