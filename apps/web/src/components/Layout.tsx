@@ -80,7 +80,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur-md">
+      <header className="sticky top-0 z-30 border-b border-line bg-paper">
         <div className="mx-auto flex h-16 max-w-shell items-center gap-3 px-4 sm:px-6 lg:gap-6">
           <Link to="/" className="flex min-w-0 items-center gap-3" aria-label={t('common.appName')}>
             <span className="brand-mark"><BookOpen aria-hidden="true" size={19} /></span>
