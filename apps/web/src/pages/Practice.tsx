@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { ArrowRight, Check, Clock3, ListChecks, Search } from 'lucide-react';
+import { ArrowRight, Check, Clock3, ExternalLink, ListChecks, Search } from 'lucide-react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
@@ -17,6 +17,7 @@ interface StatsResponse {
 
 const FILTERS = ['all', 'new', 'done'] as const;
 const PAGE_SIZE = 20;
+const OFFICIAL_SAMPLE_BASE = 'https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic';
 type Filter = (typeof FILTERS)[number];
 type Mode = 'mock' | 'practice';
 
@@ -143,6 +144,16 @@ function TestPicker({ current }: { current: (typeof SKILLS)[number] }) {
         ))}
       </div>
       <p className="mb-5 text-sm text-muted">{t(`practice.bank-${bank}-hint`)}</p>
+
+      <a
+        className="mb-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink underline underline-offset-4"
+        href={`${OFFICIAL_SAMPLE_BASE}/${skill}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t('practice.officialSamples')}
+        <ExternalLink aria-hidden="true" size={14} />
+      </a>
 
       {manifest.isLoading ? (
         <Spinner label={t('common.loading')} />
